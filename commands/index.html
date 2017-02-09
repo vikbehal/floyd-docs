@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+
+	<title>Commands - FloydHub Docs</title>
+
+        <link href="../css/bootstrap-3.0.3.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <link href="../css/base.css" rel="stylesheet">
+        <link href="../css/bootstrap_paper.min.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="..">FloydHub Docs</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="..">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../installation/">Installation</a>
+                </li>
+            
+            
+            
+                <li class="active">
+                    <a href="./">Commands</a>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a rel="next" href="../installation/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li class="disabled">
+                    <a rel="prev" >
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#floyd-commands">Floyd Commands</a></li>
+        
+            <li><a href="#floyd-init">floyd init</a></li>
+        
+            <li><a href="#floyd-login">floyd login</a></li>
+        
+            <li><a href="#floyd-logout">floyd logout</a></li>
+        
+            <li><a href="#floyd-run">floyd run</a></li>
+        
+            <li><a href="#floyd-logs">floyd logs</a></li>
+        
+            <li><a href="#floyd-output">floyd output</a></li>
+        
+            <li><a href="#floyd-status">floyd status</a></li>
+        
+            <li><a href="#floyd-stop">floyd stop</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="floyd-commands">Floyd Commands</h1>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../docs/commands#init">floyd init</a></td>
+<td>Create a local project</td>
+</tr>
+<tr>
+<td>floyd login</td>
+<td>Login to your Floyd account</td>
+</tr>
+<tr>
+<td>floyd logout</td>
+<td>Logout from your Floyd account</td>
+</tr>
+<tr>
+<td>floyd run</td>
+<td>Run a job on AWS</td>
+</tr>
+<tr>
+<td>floyd logs</td>
+<td>View the logs of a run job</td>
+</tr>
+<tr>
+<td>floyd output</td>
+<td>View the output files of your job</td>
+</tr>
+<tr>
+<td>floyd status</td>
+<td>View the status of your jobs</td>
+</tr>
+<tr>
+<td>floyd stop</td>
+<td>Stop a running job</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="floyd-init">floyd init</h2>
+<h3 id="description">Description</h3>
+<p>Create a Floyd project in your local directory</p>
+<h3 id="usage">Usage</h3>
+<pre><code class="bash">floyd init [OPTIONS]
+</code></pre>
+
+<h3 id="options">Options</h3>
+<table>
+<thead>
+<tr>
+<th>Name, shorthand</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--project</code>, <code>-p</code></td>
+<td></td>
+<td>Name your project (No spaces. Use letters, numbers, dash and underscore)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extended-description">Extended Description</h3>
+<p>Create a Floyd project in your local directory. As you make changes to your code, 
+Floyd will keep track of them and upload the latest version when you run your project.</p>
+<h3 id="examples">Examples</h3>
+<h4 id="create-a-project-called-my-project-in-your-current-dir">Create a project called my-project in your current dir</h4>
+<pre><code class="bash">$ floyd init my-project
+</code></pre>
+
+<hr />
+<h2 id="floyd-login">floyd login</h2>
+<h3 id="description_1">Description</h3>
+<p>Login to your Floyd account</p>
+<h3 id="usage_1">Usage</h3>
+<pre><code class="bash">floyd login [OPTIONS]
+</code></pre>
+
+<h3 id="options_1">Options</h3>
+<table>
+<thead>
+<tr>
+<th>Name, shorthand</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--username</code>, <code>-u</code></td>
+<td></td>
+<td>Username</td>
+</tr>
+<tr>
+<td><code>--password</code>, <code>-p</code></td>
+<td></td>
+<td>Password</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extended-description_1">Extended Description</h3>
+<p>Login to your Floyd account. </p>
+<h3 id="examples_1">Examples</h3>
+<h4 id="login-using-your-username">Login using your username</h4>
+<pre><code class="bash">$ floyd login --username johndoe
+# You will be prompted for your password
+</code></pre>
+
+<hr />
+<h2 id="floyd-logout">floyd logout</h2>
+<h3 id="description_2">Description</h3>
+<p>Logout from your Floyd account</p>
+<h3 id="usage_2">Usage</h3>
+<pre><code class="bash">floyd logout
+</code></pre>
+
+<h3 id="extended-description_2">Extended Description</h3>
+<p>Logout from your Floyd account. </p>
+<h3 id="examples_2">Examples</h3>
+<h4 id="logout">Logout</h4>
+<pre><code class="bash">$ floyd logout
+</code></pre>
+
+<hr />
+<h2 id="floyd-run">floyd run</h2>
+<h3 id="description_3">Description</h3>
+<p>Run the current version of your project on AWS</p>
+<h3 id="usage_3">Usage</h3>
+<pre><code class="bash">floyd run [OPTIONS] [COMMAND]
+</code></pre>
+
+<h3 id="options_2">Options</h3>
+<table>
+<thead>
+<tr>
+<th>Name, shorthand</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--gpu</code></td>
+<td></td>
+<td>If specified, runs the job on GPU on AWS</td>
+</tr>
+<tr>
+<td>command</td>
+<td></td>
+<td>Command to use to run your project</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extended-description_3">Extended Description</h3>
+<p>Runs the current version of your project on AWS using the provided command.</p>
+<h3 id="examples_3">Examples</h3>
+<h4 id="run-latest-version-of-code">Run latest version of code</h4>
+<pre><code class="bash">$ floyd run &quot;python train_tf.py -lr 0.01 -output /output/model.bin&quot;
+</code></pre>
+
+<hr />
+<h2 id="floyd-logs">floyd logs</h2>
+<h3 id="description_4">Description</h3>
+<p>Display the logs of a run of your project</p>
+<h3 id="usage_4">Usage</h3>
+<pre><code class="bash">floyd logs [OPTIONS] ID
+</code></pre>
+
+<h3 id="options_3">Options</h3>
+<table>
+<thead>
+<tr>
+<th>Name, shorthand</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--url</code>, <code>-u</code></td>
+<td></td>
+<td>Only print the URL for accessing logs in browser</td>
+</tr>
+<tr>
+<td>ID</td>
+<td></td>
+<td>ID of your job</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extended-description_4">Extended Description</h3>
+<p>Display the logs of a run of your project</p>
+<h3 id="examples_4">Examples</h3>
+<h4 id="login-using-your-username_1">Login using your username</h4>
+<pre><code class="bash">$ floyd logs qYPdvbE5KS3TwANJFZdame
+</code></pre>
+
+<hr />
+<h2 id="floyd-output">floyd output</h2>
+<h3 id="description_5">Description</h3>
+<p>Shows the output url of the run</p>
+<h3 id="usage_5">Usage</h3>
+<pre><code class="bash">floyd output [OPTIONS] ID
+</code></pre>
+
+<h3 id="options_4">Options</h3>
+<table>
+<thead>
+<tr>
+<th>Name, shorthand</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--url</code>, <code>-u</code></td>
+<td></td>
+<td>Only print the URL for accessing logs in browser</td>
+</tr>
+<tr>
+<td>ID</td>
+<td></td>
+<td>ID of your job</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extended-description_5">Extended Description</h3>
+<p>Shows the output url of the run. By default opens the output page in your 
+default browser</p>
+<h3 id="examples_5">Examples</h3>
+<h4 id="view-the-output-dir-of-project-with-id-qypdvbe5ks3twanjfzdame">View the output dir of project with id qYPdvbE5KS3TwANJFZdame</h4>
+<pre><code class="bash">$ floyd output qYPdvbE5KS3TwANJFZdame
+# This will open the output dir link in browser
+</code></pre>
+
+<hr />
+<h2 id="floyd-status">floyd status</h2>
+<h3 id="description_6">Description</h3>
+<p>Shows the status of your jobs</p>
+<h3 id="usage_6">Usage</h3>
+<pre><code class="bash">floyd status [ID]
+</code></pre>
+
+<h3 id="options_5">Options</h3>
+<table>
+<thead>
+<tr>
+<th>Name, shorthand</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td></td>
+<td>ID of your job</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extended-description_6">Extended Description</h3>
+<p>Shows the status of a run, if the ID is specified. It can also list the status of all 
+the runs in the project</p>
+<h3 id="examples_6">Examples</h3>
+<h4 id="view-the-status-of-all-runs-of-current-project">View the status of all runs of current project</h4>
+<pre><code class="bash">$ floyd ps
+</code></pre>
+
+<h4 id="view-the-status-of-particular-run">View the status of particular run</h4>
+<pre><code class="bash">$ floyd ps qYPdvbE5KS3TwANJFZdame
+</code></pre>
+
+<hr />
+<h2 id="floyd-stop">floyd stop</h2>
+<h3 id="description_7">Description</h3>
+<p>Stop a run before it finishes</p>
+<h3 id="usage_7">Usage</h3>
+<pre><code class="bash">floyd statop ID
+</code></pre>
+
+<h3 id="options_6">Options</h3>
+<table>
+<thead>
+<tr>
+<th>Name, shorthand</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td></td>
+<td>ID of your job</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extended-description_7">Extended Description</h3>
+<p>Stop a run before it finishes</p>
+<h3 id="examples_7">Examples</h3>
+<h4 id="stop-a-run-by-id">Stop a run by ID</h4>
+<pre><code class="bash">$ floyd stop qYPdvbE5KS3TwANJFZdame
+</code></pre>
+
+<hr /></div>
+        </div>
+
+	<footer class="col-md-12">
+		<hr>
+		
+		<p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+	</footer>
+
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script src="../js/base.js"></script>
+    </body>
+</html>

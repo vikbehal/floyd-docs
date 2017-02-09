@@ -58,7 +58,13 @@
             
             
                 <li >
-                    <a href="about/">About</a>
+                    <a href="installation/">Installation</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="commands/">Commands</a>
                 </li>
             
             
@@ -72,7 +78,7 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="about/">
+                    <a rel="prev" href="installation/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -86,32 +92,149 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#welcome-to-mkdocs">Welcome to MkDocs</a></li>
+        <li class="main active"><a href="#get-started">Get Started</a></li>
         
-            <li><a href="#commands">Commands</a></li>
+            <li><a href="#installing-floyd-cli">Installing Floyd CLI</a></li>
         
-            <li><a href="#project-layout">Project layout</a></li>
+            <li><a href="#creating-an-account">Creating an account</a></li>
+        
+            <li><a href="#logging-in-to-floyd">Logging in to Floyd</a></li>
+        
+            <li><a href="#creating-a-new-project">Creating a new project</a></li>
+        
+            <li><a href="#running-your-project-on-floyd">Running your project on Floyd</a></li>
+        
+            <li><a href="#viewing-logs-of-your-run">Viewing logs of your run</a></li>
+        
+            <li><a href="#check-the-status-of-your-runs">Check the status of your runs</a></li>
+        
+            <li><a href="#re-running-your-project">Re-running your project</a></li>
+        
+            <li><a href="#storing-output-files">Storing output files</a></li>
+        
+            <li><a href="#viewing-and-downloading-output-files">Viewing and downloading output files</a></li>
+        
+            <li><a href="#installing-additional-python-packages">Installing additional Python packages</a></li>
+        
+            <li><a href="#running-on-a-gpu-instance">Running on a GPU Instance</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="http://mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre></div>
+<h1 id="get-started">Get Started</h1>
+<p>To get started with Floyd, you can use the Floyd CLI to 
+run Tensorflow and Keras experiments and view the output.</p>
+<h3 id="installing-floyd-cli">Installing Floyd CLI</h3>
+<p>See <a href="./docs/installation">here</a> for install instructions of 
+Floyd CLI.</p>
+<h3 id="creating-an-account">Creating an account</h3>
+<p>If you don't have an account already, visit the Floyd 
+website(https://beta.floydhub.com/signup) to create one.</p>
+<p>You can also try out the tool with a temporary demo account.</p>
+<h3 id="logging-in-to-floyd">Logging in to Floyd</h3>
+<p>You need to first login to the Floyd server. Use the login 
+command for that.</p>
+<pre><code>$ floyd login
+Username: alice
+Password:
+Login Successful
+</code></pre>
+<p>You need to do this only once across all your projects.</p>
+<h3 id="creating-a-new-project">Creating a new project</h3>
+<p>To create a new project, go to the directory that has the 
+tensorflow code to run. If you do not have any code handy, you 
+can clone an examples repo from github.</p>
+<pre><code>$ git clone https://github.com/floydhub/tensorflow-examples.git
+Cloning into 'tensorflow-examples'...
+$ cd tensorflow-examples
+</code></pre>
+<p>Now initialize a new Floyd project with the <code>init</code> command and 
+choose a project name.</p>
+<pre><code>$ floyd init
+Project: tf-demo
+Project tf-demo initialized in current directory
+</code></pre>
+<p>Now you are ready to run your first project on Floyd!</p>
+<h3 id="running-your-project-on-floyd">Running your project on Floyd</h3>
+<p>Running your project on Floyd is very straightforward. It is very similar 
+to running on your computer. Let us run one of the python files in 
+the examples repo</p>
+<pre><code>$ floyd run python 1_Introduction/helloworld.py
+Creating module. Uploading 20 files ...
+RUN ID                  NAME                 VERSION
+----------------------  -----------------  ---------
+mBDHCqro9Hd2dHTYdRReGd  alice/tf-demo:1          1
+</code></pre>
+<p>Congratulations! your first experiment is now running on Floyd. 
+Store the <code>RUN ID</code> for future commands.</p>
+<h3 id="viewing-logs-of-your-run">Viewing logs of your run</h3>
+<p>You may now want to view the logs of the experiment you just kicked off. 
+Use the <code>logs</code> command for that.</p>
+<pre><code>$ floyd logs mBDHCqro9Hd2dHTYdRReGd
+...
+################################################################################
+
+2017-01-20 19:18:41,353 INFO - Run Output:
+2017-01-20 19:18:42,306 INFO - b'Hello, TensorFlow!'
+2017-01-20 19:18:42,447 INFO -
+################################################################################
+...
+</code></pre>
+<p>You can see the output of your code in the <code>Run Output</code> section of the logs.
+Any thing you log or print in your code will appear here.</p>
+<h3 id="check-the-status-of-your-runs">Check the status of your runs</h3>
+<p>To see the status of your experiments, use the <code>status</code> command. You can specify 
+a single <code>RUN ID</code> to get its status. Otherwise the CLI will show the results of 
+all your experiments in that project.</p>
+<pre><code>$ floyd status
+RUN ID                  CREATED        STATUS      DURATION  NAME               INSTANCE      VERSION
+----------------------  -------------  --------  ----------  -----------------  ----------  ---------
+ncGPzDrm7XV58pBeKGUxd6  just now       success            3  alice/tf-demo:2     cpu                 2
+mBDHCqro9Hd2dHTYdRReGd  4 minutes ago  success            4  alice/tf-demo:1     cpu                 1
+</code></pre>
+<h3 id="re-running-your-project">Re-running your project</h3>
+<p>If you would like to edit your code an re-run your project, you just use the <code>run</code>
+command again. The CLI will upload the new version of your code and start another 
+experiment.</p>
+<h3 id="storing-output-files">Storing output files</h3>
+<p>Most of the experiments generate output like model files. In Floyd, any file 
+or directory you create under <code>/output/</code> directory at run time will be available 
+to you for download after the experiment finishes.</p>
+<p>An example command for this:</p>
+<pre><code>$ floyd run "python 1_Introduction/helloworld.py &gt; /output/tf-output.txt"
+Creating module. Uploading 20 files ...
+RUN ID                  NAME                 VERSION
+----------------------  -----------------  ---------
+mBDHCqro9Hd2dHTYdRReGd  alice/tf-demo:3          3
+</code></pre>
+<p>The file created under <code>/output</code> will be saved.</p>
+<h3 id="viewing-and-downloading-output-files">Viewing and downloading output files</h3>
+<p>To view the output files, you can use the <code>output</code> command of floyd.</p>
+<pre><code>$ floyd output mBDHCqro9Hd2dHTYdRReGd
+Opening output directory in your browser ...
+</code></pre>
+<p>This will open the browser and direct you to the output directory. You will be able to view 
+and download any file you prefer.</p>
+<h3 id="installing-additional-python-packages">Installing additional Python packages</h3>
+<p>Floyd by default runs on a docker image with <code>tensorflow-0.12.1</code> on <code>Python 3.5</code>.
+If your code needs additional Python packages to be available at run time, you 
+can add them to a <code>floyd_requirements.txt</code> file. This is a special file that 
+will be read at runtime and the packages listed here will be installed before 
+running your command.</p>
+<pre><code>$ echo "keras" &gt; floyd_requirements.txt
+</code></pre>
+<h3 id="running-on-a-gpu-instance">Running on a GPU Instance</h3>
+<p>It is very easy to run your code on a GPU instance of Floyd. Just add <code>--gpu</code> flag 
+to the floyd <code>run</code> command.</p>
+<pre><code>$ floyd run --gpu "python 1_Introduction/helloworld.py &gt; /output/tf-output.txt"
+Creating module. Uploading 20 files ...
+RUN ID                  NAME                 VERSION
+----------------------  -----------------  ---------
+KYBMnXZo3DsGGCiRdcYNUc  narenst/tf-demo:4          4
+</code></pre>
+<p>Make sure your code is optimized to use the available GPU.</p></div>
         </div>
 
 	<footer class="col-md-12">
