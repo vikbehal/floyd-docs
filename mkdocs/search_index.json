@@ -547,7 +547,7 @@
         }, 
         {
             "location": "/faq/", 
-            "text": "Billing\n\n\nWhat payment types do you accept?\n\n\nCurrently, we accept credit or debit cards, including Visa, MasterCard and American Express.\n\n\nDo you keep my credit card information?\n\n\nNo we do not retain any credit card information. We use \nStripe\n to \nprocess payments.", 
+            "text": "Billing\n\n\nWhat payment types do you accept?\n\n\nCurrently, we accept credit or debit cards, including Visa, MasterCard and American Express.\n\n\nDo you keep my credit card information?\n\n\nNo, we do not retain any credit card information. We use \nStripe\n to \nprocess payments.\n\n\nWhen will my credit card be charged?\n\n\nYou can see your billing due date in the \nUsage\n tab on your Floydhub dashboard.", 
             "title": "FAQs"
         }, 
         {
@@ -562,8 +562,13 @@
         }, 
         {
             "location": "/faq/#do-you-keep-my-credit-card-information", 
-            "text": "No we do not retain any credit card information. We use  Stripe  to \nprocess payments.", 
+            "text": "No, we do not retain any credit card information. We use  Stripe  to \nprocess payments.", 
             "title": "Do you keep my credit card information?"
+        }, 
+        {
+            "location": "/faq/#when-will-my-credit-card-be-charged", 
+            "text": "You can see your billing due date in the  Usage  tab on your Floydhub dashboard.", 
+            "title": "When will my credit card be charged?"
         }
     ]
 }
