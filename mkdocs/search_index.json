@@ -544,6 +544,26 @@
             "location": "/commands/stop/#usage_1", 
             "text": "floyd logout", 
             "title": "Usage"
+        }, 
+        {
+            "location": "/faq/", 
+            "text": "Billing\n\n\nWhat payment types do you accept?\n\n\nCurrently, we accept credit or debit cards, including Visa, MasterCard and American Express.\n\n\nDo you keep my credit card information?\n\n\nNo we do not retain any credit card information. We use \nStripe\n to \nprocess payments.", 
+            "title": "FAQs"
+        }, 
+        {
+            "location": "/faq/#billing", 
+            "text": "", 
+            "title": "Billing"
+        }, 
+        {
+            "location": "/faq/#what-payment-types-do-you-accept", 
+            "text": "Currently, we accept credit or debit cards, including Visa, MasterCard and American Express.", 
+            "title": "What payment types do you accept?"
+        }, 
+        {
+            "location": "/faq/#do-you-keep-my-credit-card-information", 
+            "text": "No we do not retain any credit card information. We use  Stripe  to \nprocess payments.", 
+            "title": "Do you keep my credit card information?"
         }
     ]
 }
