@@ -4,12 +4,6 @@
     
         
     <url>
-     <loc>https://www.floydhub.com/</loc>
-     <lastmod>2017-02-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>https://www.floydhub.com/home/getting_started/</loc>
      <lastmod>2017-02-14</lastmod>
      <changefreq>daily</changefreq>
@@ -17,12 +11,6 @@
         
     <url>
      <loc>https://www.floydhub.com/home/installation/</loc>
-     <lastmod>2017-02-14</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://www.floydhub.com/home/infrastructure/</loc>
      <lastmod>2017-02-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
