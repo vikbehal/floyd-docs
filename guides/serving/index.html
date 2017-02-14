@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://www.floydhub.com/home/infrastructure/">
+        <link rel="canonical" href="https://www.floydhub.com/guides/serving/">
       
       
         <meta name="author" content="FloydHub Team">
@@ -19,7 +19,7 @@
     
     
       
-        <title>Infrastructure - FloydHub</title>
+        <title>Floyd Serving - FloydHub</title>
       
     
     
@@ -81,11 +81,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  Home
+                  Guides
                 </span>
               
             
-            Infrastructure
+            Floyd Serving
           
         </span>
       </div>
@@ -142,7 +142,7 @@
       
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
     
     <label class="md-nav__link" for="nav-1">
       Home
@@ -169,7 +169,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../getting_started/" title="Get Started" class="md-nav__link">
+      <a href="../../home/getting_started/" title="Get Started" class="md-nav__link">
         Get Started
       </a>
     
@@ -180,7 +180,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../installation/" title="Installing CLI" class="md-nav__link">
+      <a href="../../home/installation/" title="Installing CLI" class="md-nav__link">
         Installing CLI
       </a>
     
@@ -191,39 +191,9 @@
           
   <li class="md-nav__item">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
+      <a href="../../home/infrastructure/" title="Infrastructure" class="md-nav__link">
         Infrastructure
-      </label>
-    
-    <a href="./" title="Infrastructure" class="md-nav__link md-nav__link--active">
-      Infrastructure
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
-    Prerequisites
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+      </a>
     
   </li>
 
@@ -232,7 +202,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../environments/" title="Environments" class="md-nav__link">
+      <a href="../../home/environments/" title="Environments" class="md-nav__link">
         Environments
       </a>
     
@@ -248,7 +218,7 @@
       
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Guides
@@ -264,7 +234,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../guides/jupyter/" title="Jupyter Notebook" class="md-nav__link">
+      <a href="../jupyter/" title="Jupyter Notebook" class="md-nav__link">
         Jupyter Notebook
       </a>
     
@@ -275,9 +245,67 @@
           
   <li class="md-nav__item">
     
-      <a href="../../guides/serving/" title="Floyd Serving" class="md-nav__link">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
         Floyd Serving
-      </a>
+      </label>
+    
+    <a href="./" title="Floyd Serving" class="md-nav__link md-nav__link--active">
+      Floyd Serving
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup-project" title="Setup project" class="md-nav__link">
+    Setup project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#train-a-model" title="Train a model" class="md-nav__link">
+    Train a model
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluate-your-model" title="Evaluate your model" class="md-nav__link">
+    Evaluate your model
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluate-pre-trained-model" title="Evaluate pre-trained model" class="md-nav__link">
+    Evaluate pre-trained model
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-api" title="Model API" class="md-nav__link">
+    Model API
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -439,8 +467,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#setup-project" title="Setup project" class="md-nav__link">
+    Setup project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#train-a-model" title="Train a model" class="md-nav__link">
+    Train a model
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluate-your-model" title="Evaluate your model" class="md-nav__link">
+    Evaluate your model
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluate-pre-trained-model" title="Evaluate pre-trained model" class="md-nav__link">
+    Evaluate pre-trained model
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-api" title="Model API" class="md-nav__link">
+    Model API
   </a>
   
 </li>
@@ -458,14 +514,96 @@
                
               
                 
-                <h1 id="installing-floyd">Installing Floyd</h1>
-<p>Floyd CLI is a python based command line tool to interact with Floyd.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p><code>floyd-cli</code> is available on <a href="https://pypi.python.org/pypi/floyd-cli">pypi</a> and
-runs on both Python 2.7 and Python 3.5.</p>
-<p>Use pip to install the cli.</p>
-<pre><code class="bash">pip install -U floyd-cli
+                <h1 id="floyd-serving">Floyd Serving</h1>
+<p>Floyd can be used to host REST apis of your trained models which can be accessed over the web. This feature 
+is very useful if you want to quickly compare models or have others play with your models. This guide will 
+walk you through how to do this.</p>
+<h3 id="setup-project">Setup project</h3>
+<p>Clone your favorite deep learning project. For this guide we will be using <a href="https://github.com/floydhub/fast-style-transfer">Fast Style Transfer</a>
+project.</p>
+<pre><code class="bash">$ git clone https://github.com/floydhub/fast-style-transfer
+$ floyd init fast-style-transfer
 </code></pre>
+
+<h3 id="train-a-model">Train a model</h3>
+<p>You can train your model by running the <code>train.py</code> script on Floyd. Specify the style image to use. This project also requires access to pre-trained
+model - imagenet-vgg-verydeep-19.mat and some training data. Floyd already has this data source available <a href="../link">here</a>.</p>
+<p>Note that the command uses a tensorflow_py2 environment because this code can run only on Python2.</p>
+<pre><code class="bash">$ floyd run --gpu --data &lt;id&gt; &quot;python style.py --style ./examples/style/wave.jpg \
+  --checkpoint-dir /output \
+  --test-dir ./images/ \
+  --content-weight 1.5e1 \
+  --checkpoint-iterations 10 \
+  --batch-size 20&quot;
+
+</code></pre>
+
+<p>This will kick off a new job on Floyd. This will take 30 minutes to run and will generate the model. Record the ID of the 
+output generated by this run.</p>
+<pre><code class="bash">$ floyd info &lt;id&gt;
+</code></pre>
+
+<h3 id="evaluate-your-model">Evaluate your model</h3>
+<p>You can evaluate the generated model by running <code>evaluation.py</code> on sample images. Use the output id from the training step
+as the datasource in this step. Add any image you want to evaluate to the <code>images</code> directory.</p>
+<pre><code class="bash">$ floyd run --env tensorflow_py2 --data &lt;OUTPUT_ID_FROM_TRAINING&gt; &quot;python evaluate.py --checkpoint /input/wave.ckpt --in-path ./images/ --out-path /output/&quot;
+</code></pre>
+
+<p>You can track the status of the run with the status or logs command.</p>
+<pre><code class="bash">$ floyd status &lt;RUN_ID&gt;
+$ floyd logs &lt;RUN_ID&gt;
+</code></pre>
+
+<p>Now open the output to see the style transfered images.</p>
+<pre><code class="bash">$ floyd output &lt;RUN_ID&gt;
+</code></pre>
+
+<h3 id="evaluate-pre-trained-model">Evaluate pre-trained model</h3>
+<p>If you want to try out some awesome pre-trained models, we have a datasource for that available <a href="../link">ID:Js534T344XYBPMvWqhxJNj</a> publicly.
+You can use that style transfer on any image you prefer. Just add them to <code>images</code> directory.</p>
+<pre><code class="bash">$ floyd run --env tensorflow_py2 --data Js534T344XYBPMvWqhxJNj &quot;python evaluate.py --checkpoint /input/wave.ckpt --in-path ./images/ --out-path /output/&quot;
+</code></pre>
+
+<p>You can track the status of the run with the status command.</p>
+<pre><code class="bash">$ floyd status &lt;RUN_ID&gt;
+</code></pre>
+
+<p>When the experiment is finished, you can see the style transfered images by running:</p>
+<pre><code class="bash">$ floyd output &lt;RUN_ID&gt;
+</code></pre>
+
+<p><img alt="Jupyter" src="../img/taipei101_wave.jpg" /></p>
+<h3 id="model-api">Model API</h3>
+<p>You can now host this model as a REST API. This means you can send any image to this API as a HTTP request and it will be style transfered. </p>
+<p>Floyd <a href="#run">run</a> command has a <code>serving</code> mode. This will upload the files in the current directory and run <code>python app.py</code>. Floyd expects 
+this file to contain the code to run a web server and listen on port <code>5000</code>. You can see the 
+<a href="https://github.com/floydhub/fast-style-transfer/blob/master/app.py">app.py</a> file in the sample repository. This file should handle the 
+incoming request and execute the code in <code>evaluate.py</code> and returns the output.</p>
+<pre><code class="bash">$ floyd run --env tensorflow_py2 --data Js534T344XYBPMvWqhxJNj --mode serving
+Syncing code ...
+RUN ID                  NAME                              VERSION
+----------------------  ------------------------------  ---------
+DJSdJAVa3u7AsFEMZMBBL5  floydhub/fast-style-transfer:5          5
+
+Path to service endpoint: https://www.floydhub.com:8000/t4AdkU6awahkT3ooNazw8c
+
+To view logs enter:
+    floyd logs DJSdJAVa3u7AsFEMZMBBL5
+</code></pre>
+
+<p>Now you can send any image file as request to this api and it will return the style transfered image.</p>
+<pre><code class="bash">curl -o taipei_output.jpg -F &quot;file=@./images/taipei101.jpg&quot; https://www.floydhub.com:8000/t4AdkU6awahkT3ooNazw8c
+</code></pre>
+
+<p><img alt="Jupyter" src="../img/taipei_muse.jpg" /></p>
+<p>You will see the default style (<a href="#la_muse">la_muse</a>) is applied to the input image.</p>
+<p>You can also pass in the checkpoint to use and the image will be style transfered accordingly:</p>
+<pre><code class="bash">curl -o taipei_udnie.jpg -F &quot;file=@./images/taipei101.jpg&quot; -F &quot;checkpoint=udnie.ckpt&quot;  https://www.floydhub.com:8000/MUDFXViCLArG2drppvU3nm
+</code></pre>
+
+<p><img alt="Jupyter" src="../img/taipei_udnie.jpg" /></p>
+<p>This uses a different style checkpoint to render the image. All the logic for this is present in the <code>app.py</code> file. You can update it to 
+be as complex as you prefer.</p>
               
             </article>
           </div>
@@ -478,7 +616,7 @@ runs on both Python 2.7 and Python 3.5.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../installation/" title="Installing CLI" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../jupyter/" title="Jupyter Notebook" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -487,19 +625,19 @@ runs on both Python 2.7 and Python 3.5.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Installing CLI
+                Jupyter Notebook
               </span>
             </div>
           </a>
         
         
-          <a href="../environments/" title="Environments" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../commands/" title="floyd" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Environments
+                floyd
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -158,8 +158,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../.." title="Floyd" class="md-nav__link">
-        Floyd
+      <a href="../.." title="FloydHub" class="md-nav__link">
+        FloydHub
       </a>
     
   </li>
@@ -207,10 +207,6 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Environments
-      </label>
-    
     <a href="./" title="Environments" class="md-nav__link md-nav__link--active">
       Environments
     </a>
@@ -221,18 +217,6 @@
   
     
   
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
-    Prerequisites
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
     
@@ -246,23 +230,175 @@
     
       
       
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Guides
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-2">
+        Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
   <li class="md-nav__item">
     
-      <a href="../../guides/" title="Guides" class="md-nav__link">
-        Guides
+      <a href="../../guides/jupyter/" title="Jupyter Notebook" class="md-nav__link">
+        Jupyter Notebook
       </a>
     
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../guides/serving/" title="Floyd Serving" class="md-nav__link">
+        Floyd Serving
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
       
       
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Commands
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-3">
+        Commands
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
   <li class="md-nav__item">
     
-      <a href="../../commands/" title="Commands" class="md-nav__link">
-        Commands
+      <a href="../../commands/" title="floyd" class="md-nav__link">
+        floyd
       </a>
     
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../commands/login/" title="floyd login" class="md-nav__link">
+        floyd login
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../commands/init/" title="floyd init" class="md-nav__link">
+        floyd init
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../commands/run/" title="floyd run" class="md-nav__link">
+        floyd run
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../commands/data/" title="floyd data" class="md-nav__link">
+        floyd data
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../commands/logs/" title="floyd logs" class="md-nav__link">
+        floyd logs
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../commands/status/" title="floyd status" class="md-nav__link">
+        floyd status
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../commands/output/" title="floyd output" class="md-nav__link">
+        floyd output
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../commands/info/" title="floyd info" class="md-nav__link">
+        floyd info
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../commands/stop/" title="floyd stop" class="md-nav__link">
+        floyd stop
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -283,18 +419,6 @@
     
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
-    Prerequisites
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -306,14 +430,57 @@
                
               
                 
-                <h1 id="installing-floyd">Installing Floyd</h1>
-<p>Floyd CLI is a python based command line tool to interact with Floyd.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p><code>floyd-cli</code> is available on <a href="https://pypi.python.org/pypi/floyd-cli">pypi</a> and
-runs on both Python 2.7 and Python 3.5.</p>
-<p>Use pip to install the cli.</p>
-<pre><code class="bash">pip install -U floyd-cli
-</code></pre>
+                <h1 id="environments">Environments</h1>
+<p>Below is the list of Deep Learning environments supported by Floyd. Any of 
+these can be specified in the floyd <a href="../../commands/run/">run</a> command.</p>
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th>Env name (--env parameter)</th>
+<th>Description</th>
+<th>Docker Image</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tensorflow</td>
+<td>tensorflow</td>
+<td>Tensorflow 0.12.1 on Python3.</td>
+<td><a href="https://hub.docker.com/r/floydhub/tensorflow/">floydhub/tensorflow:latest-py3</a></td>
+</tr>
+<tr>
+<td></td>
+<td>tensorflow-py2</td>
+<td>Tensorflow 0.12.1 on Python2.</td>
+<td><a href="https://hub.docker.com/r/floydhub/tensorflow/">floydhub/tensorflow:latest-py2</a></td>
+</tr>
+<tr>
+<td>Keras</td>
+<td>keras</td>
+<td>Keras 1.2.2 on Python3.</td>
+<td><a href="https://hub.docker.com/r/floydhub/keras/">floydhub/keras:latest-py3</a></td>
+</tr>
+<tr>
+<td></td>
+<td>keras-py2</td>
+<td>Keras 1.2.2 on Python2.</td>
+<td><a href="https://hub.docker.com/r/floydhub/keras/">floydhub/keras:latest-py2</a></td>
+</tr>
+<tr>
+<td>Theano</td>
+<td>theano</td>
+<td>Theano rel-0.8.2 on Python3.</td>
+<td><a href="https://hub.docker.com/r/floydhub/theano/">floydhub/theano:latest-py3</a></td>
+</tr>
+<tr>
+<td></td>
+<td>theano-py2</td>
+<td>Theano rel-0.8.2 on Python2.</td>
+<td><a href="https://hub.docker.com/r/floydhub/theano/">floydhub/theano:latest-py2</a></td>
+</tr>
+</tbody>
+</table>
               
             </article>
           </div>
@@ -341,13 +508,13 @@ runs on both Python 2.7 and Python 3.5.</p>
           </a>
         
         
-          <a href="../../guides/" title="Guides" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../guides/jupyter/" title="Jupyter Notebook" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Guides
+                Jupyter Notebook
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

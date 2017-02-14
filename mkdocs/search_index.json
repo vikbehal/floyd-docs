@@ -2,13 +2,23 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome To Floyd Documentation\n\n\nFloyd is a Deep Learning experimentation platform. You can train and deploy your\nmodels in the cloud with a few simple commands.", 
+            "text": "Documentation\n\n\nFloyd\n\n\nFloyd is a Deep Learning experimentation platform. You can train and deploy your\nmodels in the cloud with a few simple commands.\n\n\nFloyd CLI\n\n\nFloyd CLI is a command line tool to interact with Floyd.", 
+            "title": "FloydHub"
+        }, 
+        {
+            "location": "/#documentation", 
+            "text": "", 
+            "title": "Documentation"
+        }, 
+        {
+            "location": "/#floyd", 
+            "text": "Floyd is a Deep Learning experimentation platform. You can train and deploy your\nmodels in the cloud with a few simple commands.", 
             "title": "Floyd"
         }, 
         {
-            "location": "/#welcome-to-floyd-documentation", 
-            "text": "Floyd is a Deep Learning experimentation platform. You can train and deploy your\nmodels in the cloud with a few simple commands.", 
-            "title": "Welcome To Floyd Documentation"
+            "location": "/#floyd-cli", 
+            "text": "Floyd CLI is a command line tool to interact with Floyd.", 
+            "title": "Floyd CLI"
         }, 
         {
             "location": "/home/getting_started/", 
@@ -112,98 +122,93 @@
         }, 
         {
             "location": "/home/environments/", 
-            "text": "Installing Floyd\n\n\nFloyd CLI is a python based command line tool to interact with Floyd.\n\n\nPrerequisites\n\n\nfloyd-cli\n is available on \npypi\n and\nruns on both Python 2.7 and Python 3.5.\n\n\nUse pip to install the cli.\n\n\npip install -U floyd-cli", 
+            "text": "Environments\n\n\nBelow is the list of Deep Learning environments supported by Floyd. Any of \nthese can be specified in the floyd \nrun\n command.\n\n\n\n\n\n\n\n\nFramework\n\n\nEnv name (--env parameter)\n\n\nDescription\n\n\nDocker Image\n\n\n\n\n\n\n\n\n\n\nTensorflow\n\n\ntensorflow\n\n\nTensorflow 0.12.1 on Python3.\n\n\nfloydhub/tensorflow:latest-py3\n\n\n\n\n\n\n\n\ntensorflow-py2\n\n\nTensorflow 0.12.1 on Python2.\n\n\nfloydhub/tensorflow:latest-py2\n\n\n\n\n\n\nKeras\n\n\nkeras\n\n\nKeras 1.2.2 on Python3.\n\n\nfloydhub/keras:latest-py3\n\n\n\n\n\n\n\n\nkeras-py2\n\n\nKeras 1.2.2 on Python2.\n\n\nfloydhub/keras:latest-py2\n\n\n\n\n\n\nTheano\n\n\ntheano\n\n\nTheano rel-0.8.2 on Python3.\n\n\nfloydhub/theano:latest-py3\n\n\n\n\n\n\n\n\ntheano-py2\n\n\nTheano rel-0.8.2 on Python2.\n\n\nfloydhub/theano:latest-py2", 
             "title": "Environments"
         }, 
         {
-            "location": "/home/environments/#installing-floyd", 
-            "text": "Floyd CLI is a python based command line tool to interact with Floyd.", 
-            "title": "Installing Floyd"
+            "location": "/home/environments/#environments", 
+            "text": "Below is the list of Deep Learning environments supported by Floyd. Any of \nthese can be specified in the floyd  run  command.     Framework  Env name (--env parameter)  Description  Docker Image      Tensorflow  tensorflow  Tensorflow 0.12.1 on Python3.  floydhub/tensorflow:latest-py3     tensorflow-py2  Tensorflow 0.12.1 on Python2.  floydhub/tensorflow:latest-py2    Keras  keras  Keras 1.2.2 on Python3.  floydhub/keras:latest-py3     keras-py2  Keras 1.2.2 on Python2.  floydhub/keras:latest-py2    Theano  theano  Theano rel-0.8.2 on Python3.  floydhub/theano:latest-py3     theano-py2  Theano rel-0.8.2 on Python2.  floydhub/theano:latest-py2", 
+            "title": "Environments"
         }, 
         {
-            "location": "/home/environments/#prerequisites", 
-            "text": "floyd-cli  is available on  pypi  and\nruns on both Python 2.7 and Python 3.5.  Use pip to install the cli.  pip install -U floyd-cli", 
-            "title": "Prerequisites"
+            "location": "/guides/jupyter/", 
+            "text": "Jupyter Notebook\n\n\nJupyter\n or \nIPython\n is an open source project that allows you \nto create and share documents that contain live code, equations, visualizations and explanatory text. This \nguide will show you how to run a Jupyter notebook on Floyd.\n\n\nSetup project\n\n\nClone a project which contain deep learning jupyter notebooks. For \nexample: \naymericdamien/TensorFlow-Examples\n.\nThen initialize a floyd project inside that.\n\n\n$ cd TensorFlow-Examples/notebooks/3_NeuralNetworks\n$ floyd init neural-networks\n\n\n\n\nRun in Jupyter mode\n\n\nFloyd \nrun\n command has a \njupyter\n mode. This will run upload the jupyter notebooks in the current \ndirectory and start a jupyter server for you.\n\n\n$ floyd run --mode jupyter\nSyncing code ...\nRUN ID                  NAME                          VERSION\n----------------------  --------------------------  ---------\ndMoDZaCcvQMyfNbgwTx9f8  floydhub/neural-networks:1          1\n\nPath to jupyter notebook: https://www.floydhub.com:8000/EQDsTpeqB3RkjpHUgBGDyB\n\nTo view logs enter:\n    floyd logs dMoDZaCcvQMyfNbgwTx9f8\n\n\n\n\nYou can open the link to your jupyter notebook. The notebooks should be available and you can run \nany of them.\n\n\n\n\nSelecting the environment\n\n\nJupyter notebooks also run in the same environments as other jobs. You can select any environment you want \nalong with the \n--env\n parameter of the \nrun\n command. You can see the list of supported environments\n\nhere\n.\n\n\n$ floyd run --mode jupyter --env tensorflow_py2\nSyncing code ...\n\n\n\n\nAdditional dependencies\n\n\nIf you have any additional python dependencies, you can also add a \nfloyd_requirements.txt\n file to \nthe notebook directory before floyd run. The packages specified there will be installed before running the \njupyter server\n\n\nSaving Jupyter Notebooks\n\n\nFloyd does not save your Jupyter notebooks after you stop the floyd job. So you need to download any \nrelevant notebooks by selecting \nFile \n Download as\n menu from the Jupyter notebook.\n\n\nStopping the job\n\n\nOnce you have experimented with your code, you still need to stop the job. Run the \nstop\n command \nfor this.", 
+            "title": "Jupyter Notebook"
         }, 
         {
-            "location": "/guides/", 
-            "text": "Floyd Guides\n\n\nJupyter Notebook\n\n\nJupyter\n or \nIPython\n is an open source project that allows you \nto create and share documents that contain live code, equations, visualizations and explanatory text. This \nguide will show you how to run a Jupyter notebook on Floyd.\n\n\nSetup project\n\n\nClone a project which contain deep learning jupyter notebooks. For \nexample: \naymericdamien/TensorFlow-Examples\n.\nThen initialize a floyd project inside that.\n\n\n$ cd TensorFlow-Examples/notebooks/3_NeuralNetworks\n$ floyd init neural-networks\n\n\n\n\nRun in Jupyter mode\n\n\nFloyd \nrun\n command has a \njupyter\n mode. This will run upload the jupyter notebooks in the current \ndirectory and start a jupyter server for you.\n\n\n$ floyd run --mode jupyter\nSyncing code ...\nRUN ID                  NAME                          VERSION\n----------------------  --------------------------  ---------\ndMoDZaCcvQMyfNbgwTx9f8  floydhub/neural-networks:1          1\n\nPath to jupyter notebook: https://www.floydhub.com:8000/EQDsTpeqB3RkjpHUgBGDyB\n\nTo view logs enter:\n    floyd logs dMoDZaCcvQMyfNbgwTx9f8\n\n\n\n\nYou can open the link to your jupyter notebook. The notebooks should be available and you can run \nany of them.\n\n\n\n\nSelecting the environment\n\n\nJupyter notebooks also run in the same environments as other jobs. You can select any environment you want \nalong with the \n--env\n parameter of the \nrun\n command. You can see the list of supported environments\n\nhere\n.\n\n\n$ floyd run --mode jupyter --env tensorflow_py2\nSyncing code ...\n\n\n\n\nAdditional dependencies\n\n\nIf you have any additional python dependencies, you can also add a \nfloyd_requirements.txt\n file to \nthe notebook directory before floyd run. The packages specified there will be installed before running the \njupyter server\n\n\nSaving Jupyter Notebooks\n\n\nFloyd does not save your Jupyter notebooks after you stop the floyd job. So you need to download any \nrelevant notebooks by selecting \nFile \n Download as\n menu from the Jupyter notebook.\n\n\nStopping the job\n\n\nOnce you have experimented with your code, you still need to stop the job. Run the \nstop\n command \nfor this.\n\n\n\n\nFloyd Serving\n\n\nFloyd can be used to host REST apis of your trained models which can be accessed over the web. This feature \nis very useful if you want to quickly compare models or have others play with your models. This guide will \nwalk you through how to do this.\n\n\nSetup project\n\n\nClone your favorite deep learning project. For this guide we will be using \nFast Style Transfer\n\nproject.\n\n\n$ git clone https://github.com/floydhub/fast-style-transfer\n$ floyd init fast-style-transfer\n\n\n\n\nTrain a model\n\n\nYou can train your model by running the \ntrain.py\n script on Floyd. Specify the style image to use. This project also requires access to pre-trained\nmodel - imagenet-vgg-verydeep-19.mat and some training data. Floyd already has this data source available \nhere\n.\n\n\nNote that the command uses a tensorflow_py2 environment because this code can run only on Python2.\n\n\n$ floyd run --gpu --data \nid\n \npython style.py --style ./examples/style/wave.jpg \\\n  --checkpoint-dir /output \\\n  --test-dir ./images/ \\\n  --content-weight 1.5e1 \\\n  --checkpoint-iterations 10 \\\n  --batch-size 20\n\n\n\n\n\n\nThis will kick off a new job on Floyd. This will take 30 minutes to run and will generate the model. Record the ID of the \noutput generated by this run.\n\n\n$ floyd info \nid\n\n\n\n\n\nEvaluate your model\n\n\nYou can evaluate the generated model by running \nevaluation.py\n on sample images. Use the output id from the training step\nas the datasource in this step. Add any image you want to evaluate to the \nimages\n directory.\n\n\n$ floyd run --env tensorflow_py2 --data \nOUTPUT_ID_FROM_TRAINING\n \npython evaluate.py --checkpoint /input/wave.ckpt --in-path ./images/ --out-path /output/\n\n\n\n\n\nYou can track the status of the run with the status or logs command.\n\n\n$ floyd status \nRUN_ID\n\n$ floyd logs \nRUN_ID\n\n\n\n\n\nNow open the output to see the style transfered images.\n\n\n$ floyd output \nRUN_ID\n\n\n\n\n\nEvaluate pre-trained model\n\n\nIf you want to try out some awesome pre-trained models, we have a datasource for that available \nID:Js534T344XYBPMvWqhxJNj\n publicly.\nYou can use that style transfer on any image you prefer. Just add them to \nimages\n directory.\n\n\n$ floyd run --env tensorflow_py2 --data Js534T344XYBPMvWqhxJNj \npython evaluate.py --checkpoint /input/wave.ckpt --in-path ./images/ --out-path /output/\n\n\n\n\n\nYou can track the status of the run with the status command.\n\n\n$ floyd status \nRUN_ID\n\n\n\n\n\nWhen the experiment is finished, you can see the style transfered images by running:\n\n\n$ floyd output \nRUN_ID\n\n\n\n\n\n\n\nModel API\n\n\nYou can now host this model as a REST API. This means you can send any image to this API as a HTTP request and it will be style transfered. \n\n\nFloyd \nrun\n command has a \nserving\n mode. This will upload the files in the current directory and run \npython app.py\n. Floyd expects \nthis file to contain the code to run a web server and listen on port \n5000\n. You can see the \n\napp.py\n file in the sample repository. This file should handle the \nincoming request and execute the code in \nevaluate.py\n and returns the output.\n\n\n$ floyd run --env tensorflow_py2 --data Js534T344XYBPMvWqhxJNj --mode serving\nSyncing code ...\nRUN ID                  NAME                              VERSION\n----------------------  ------------------------------  ---------\nDJSdJAVa3u7AsFEMZMBBL5  floydhub/fast-style-transfer:5          5\n\nPath to service endpoint: https://www.floydhub.com:8000/t4AdkU6awahkT3ooNazw8c\n\nTo view logs enter:\n    floyd logs DJSdJAVa3u7AsFEMZMBBL5\n\n\n\n\nNow you can send any image file as request to this api and it will return the style transfered image.\n\n\ncurl -o taipei_output.jpg -F \nfile=@./images/taipei101.jpg\n https://www.floydhub.com:8000/t4AdkU6awahkT3ooNazw8c\n\n\n\n\n\n\nYou will see the default style (\nla_muse\n) is applied to the input image.\n\n\nYou can also pass in the checkpoint to use and the image will be style transfered accordingly:\n\n\ncurl -o taipei_udnie.jpg -F \nfile=@./images/taipei101.jpg\n -F \ncheckpoint=udnie.ckpt\n  https://www.floydhub.com:8000/MUDFXViCLArG2drppvU3nm\n\n\n\n\n\n\nThis uses a different style checkpoint to render the image. All the logic for this is present in the \napp.py\n file. You can update it to \nbe as complex as you prefer.", 
-            "title": "Guides"
-        }, 
-        {
-            "location": "/guides/#floyd-guides", 
-            "text": "", 
-            "title": "Floyd Guides"
-        }, 
-        {
-            "location": "/guides/#jupyter-notebook", 
+            "location": "/guides/jupyter/#jupyter-notebook", 
             "text": "Jupyter  or  IPython  is an open source project that allows you \nto create and share documents that contain live code, equations, visualizations and explanatory text. This \nguide will show you how to run a Jupyter notebook on Floyd.", 
             "title": "Jupyter Notebook"
         }, 
         {
-            "location": "/guides/#setup-project", 
+            "location": "/guides/jupyter/#setup-project", 
             "text": "Clone a project which contain deep learning jupyter notebooks. For \nexample:  aymericdamien/TensorFlow-Examples .\nThen initialize a floyd project inside that.  $ cd TensorFlow-Examples/notebooks/3_NeuralNetworks\n$ floyd init neural-networks", 
             "title": "Setup project"
         }, 
         {
-            "location": "/guides/#run-in-jupyter-mode", 
+            "location": "/guides/jupyter/#run-in-jupyter-mode", 
             "text": "Floyd  run  command has a  jupyter  mode. This will run upload the jupyter notebooks in the current \ndirectory and start a jupyter server for you.  $ floyd run --mode jupyter\nSyncing code ...\nRUN ID                  NAME                          VERSION\n----------------------  --------------------------  ---------\ndMoDZaCcvQMyfNbgwTx9f8  floydhub/neural-networks:1          1\n\nPath to jupyter notebook: https://www.floydhub.com:8000/EQDsTpeqB3RkjpHUgBGDyB\n\nTo view logs enter:\n    floyd logs dMoDZaCcvQMyfNbgwTx9f8  You can open the link to your jupyter notebook. The notebooks should be available and you can run \nany of them.", 
             "title": "Run in Jupyter mode"
         }, 
         {
-            "location": "/guides/#selecting-the-environment", 
+            "location": "/guides/jupyter/#selecting-the-environment", 
             "text": "Jupyter notebooks also run in the same environments as other jobs. You can select any environment you want \nalong with the  --env  parameter of the  run  command. You can see the list of supported environments here .  $ floyd run --mode jupyter --env tensorflow_py2\nSyncing code ...", 
             "title": "Selecting the environment"
         }, 
         {
-            "location": "/guides/#additional-dependencies", 
+            "location": "/guides/jupyter/#additional-dependencies", 
             "text": "If you have any additional python dependencies, you can also add a  floyd_requirements.txt  file to \nthe notebook directory before floyd run. The packages specified there will be installed before running the \njupyter server", 
             "title": "Additional dependencies"
         }, 
         {
-            "location": "/guides/#saving-jupyter-notebooks", 
+            "location": "/guides/jupyter/#saving-jupyter-notebooks", 
             "text": "Floyd does not save your Jupyter notebooks after you stop the floyd job. So you need to download any \nrelevant notebooks by selecting  File   Download as  menu from the Jupyter notebook.", 
             "title": "Saving Jupyter Notebooks"
         }, 
         {
-            "location": "/guides/#stopping-the-job", 
+            "location": "/guides/jupyter/#stopping-the-job", 
             "text": "Once you have experimented with your code, you still need to stop the job. Run the  stop  command \nfor this.", 
             "title": "Stopping the job"
         }, 
         {
-            "location": "/guides/#floyd-serving", 
+            "location": "/guides/serving/", 
+            "text": "Floyd Serving\n\n\nFloyd can be used to host REST apis of your trained models which can be accessed over the web. This feature \nis very useful if you want to quickly compare models or have others play with your models. This guide will \nwalk you through how to do this.\n\n\nSetup project\n\n\nClone your favorite deep learning project. For this guide we will be using \nFast Style Transfer\n\nproject.\n\n\n$ git clone https://github.com/floydhub/fast-style-transfer\n$ floyd init fast-style-transfer\n\n\n\n\nTrain a model\n\n\nYou can train your model by running the \ntrain.py\n script on Floyd. Specify the style image to use. This project also requires access to pre-trained\nmodel - imagenet-vgg-verydeep-19.mat and some training data. Floyd already has this data source available \nhere\n.\n\n\nNote that the command uses a tensorflow_py2 environment because this code can run only on Python2.\n\n\n$ floyd run --gpu --data \nid\n \npython style.py --style ./examples/style/wave.jpg \\\n  --checkpoint-dir /output \\\n  --test-dir ./images/ \\\n  --content-weight 1.5e1 \\\n  --checkpoint-iterations 10 \\\n  --batch-size 20\n\n\n\n\n\n\nThis will kick off a new job on Floyd. This will take 30 minutes to run and will generate the model. Record the ID of the \noutput generated by this run.\n\n\n$ floyd info \nid\n\n\n\n\n\nEvaluate your model\n\n\nYou can evaluate the generated model by running \nevaluation.py\n on sample images. Use the output id from the training step\nas the datasource in this step. Add any image you want to evaluate to the \nimages\n directory.\n\n\n$ floyd run --env tensorflow_py2 --data \nOUTPUT_ID_FROM_TRAINING\n \npython evaluate.py --checkpoint /input/wave.ckpt --in-path ./images/ --out-path /output/\n\n\n\n\n\nYou can track the status of the run with the status or logs command.\n\n\n$ floyd status \nRUN_ID\n\n$ floyd logs \nRUN_ID\n\n\n\n\n\nNow open the output to see the style transfered images.\n\n\n$ floyd output \nRUN_ID\n\n\n\n\n\nEvaluate pre-trained model\n\n\nIf you want to try out some awesome pre-trained models, we have a datasource for that available \nID:Js534T344XYBPMvWqhxJNj\n publicly.\nYou can use that style transfer on any image you prefer. Just add them to \nimages\n directory.\n\n\n$ floyd run --env tensorflow_py2 --data Js534T344XYBPMvWqhxJNj \npython evaluate.py --checkpoint /input/wave.ckpt --in-path ./images/ --out-path /output/\n\n\n\n\n\nYou can track the status of the run with the status command.\n\n\n$ floyd status \nRUN_ID\n\n\n\n\n\nWhen the experiment is finished, you can see the style transfered images by running:\n\n\n$ floyd output \nRUN_ID\n\n\n\n\n\n\n\nModel API\n\n\nYou can now host this model as a REST API. This means you can send any image to this API as a HTTP request and it will be style transfered. \n\n\nFloyd \nrun\n command has a \nserving\n mode. This will upload the files in the current directory and run \npython app.py\n. Floyd expects \nthis file to contain the code to run a web server and listen on port \n5000\n. You can see the \n\napp.py\n file in the sample repository. This file should handle the \nincoming request and execute the code in \nevaluate.py\n and returns the output.\n\n\n$ floyd run --env tensorflow_py2 --data Js534T344XYBPMvWqhxJNj --mode serving\nSyncing code ...\nRUN ID                  NAME                              VERSION\n----------------------  ------------------------------  ---------\nDJSdJAVa3u7AsFEMZMBBL5  floydhub/fast-style-transfer:5          5\n\nPath to service endpoint: https://www.floydhub.com:8000/t4AdkU6awahkT3ooNazw8c\n\nTo view logs enter:\n    floyd logs DJSdJAVa3u7AsFEMZMBBL5\n\n\n\n\nNow you can send any image file as request to this api and it will return the style transfered image.\n\n\ncurl -o taipei_output.jpg -F \nfile=@./images/taipei101.jpg\n https://www.floydhub.com:8000/t4AdkU6awahkT3ooNazw8c\n\n\n\n\n\n\nYou will see the default style (\nla_muse\n) is applied to the input image.\n\n\nYou can also pass in the checkpoint to use and the image will be style transfered accordingly:\n\n\ncurl -o taipei_udnie.jpg -F \nfile=@./images/taipei101.jpg\n -F \ncheckpoint=udnie.ckpt\n  https://www.floydhub.com:8000/MUDFXViCLArG2drppvU3nm\n\n\n\n\n\n\nThis uses a different style checkpoint to render the image. All the logic for this is present in the \napp.py\n file. You can update it to \nbe as complex as you prefer.", 
+            "title": "Floyd Serving"
+        }, 
+        {
+            "location": "/guides/serving/#floyd-serving", 
             "text": "Floyd can be used to host REST apis of your trained models which can be accessed over the web. This feature \nis very useful if you want to quickly compare models or have others play with your models. This guide will \nwalk you through how to do this.", 
             "title": "Floyd Serving"
         }, 
         {
-            "location": "/guides/#setup-project_1", 
+            "location": "/guides/serving/#setup-project", 
             "text": "Clone your favorite deep learning project. For this guide we will be using  Fast Style Transfer \nproject.  $ git clone https://github.com/floydhub/fast-style-transfer\n$ floyd init fast-style-transfer", 
             "title": "Setup project"
         }, 
         {
-            "location": "/guides/#train-a-model", 
+            "location": "/guides/serving/#train-a-model", 
             "text": "You can train your model by running the  train.py  script on Floyd. Specify the style image to use. This project also requires access to pre-trained\nmodel - imagenet-vgg-verydeep-19.mat and some training data. Floyd already has this data source available  here .  Note that the command uses a tensorflow_py2 environment because this code can run only on Python2.  $ floyd run --gpu --data  id   python style.py --style ./examples/style/wave.jpg \\\n  --checkpoint-dir /output \\\n  --test-dir ./images/ \\\n  --content-weight 1.5e1 \\\n  --checkpoint-iterations 10 \\\n  --batch-size 20   This will kick off a new job on Floyd. This will take 30 minutes to run and will generate the model. Record the ID of the \noutput generated by this run.  $ floyd info  id", 
             "title": "Train a model"
         }, 
         {
-            "location": "/guides/#evaluate-your-model", 
+            "location": "/guides/serving/#evaluate-your-model", 
             "text": "You can evaluate the generated model by running  evaluation.py  on sample images. Use the output id from the training step\nas the datasource in this step. Add any image you want to evaluate to the  images  directory.  $ floyd run --env tensorflow_py2 --data  OUTPUT_ID_FROM_TRAINING   python evaluate.py --checkpoint /input/wave.ckpt --in-path ./images/ --out-path /output/   You can track the status of the run with the status or logs command.  $ floyd status  RUN_ID \n$ floyd logs  RUN_ID   Now open the output to see the style transfered images.  $ floyd output  RUN_ID", 
             "title": "Evaluate your model"
         }, 
         {
-            "location": "/guides/#evaluate-pre-trained-model", 
+            "location": "/guides/serving/#evaluate-pre-trained-model", 
             "text": "If you want to try out some awesome pre-trained models, we have a datasource for that available  ID:Js534T344XYBPMvWqhxJNj  publicly.\nYou can use that style transfer on any image you prefer. Just add them to  images  directory.  $ floyd run --env tensorflow_py2 --data Js534T344XYBPMvWqhxJNj  python evaluate.py --checkpoint /input/wave.ckpt --in-path ./images/ --out-path /output/   You can track the status of the run with the status command.  $ floyd status  RUN_ID   When the experiment is finished, you can see the style transfered images by running:  $ floyd output  RUN_ID", 
             "title": "Evaluate pre-trained model"
         }, 
         {
-            "location": "/guides/#model-api", 
+            "location": "/guides/serving/#model-api", 
             "text": "You can now host this model as a REST API. This means you can send any image to this API as a HTTP request and it will be style transfered.   Floyd  run  command has a  serving  mode. This will upload the files in the current directory and run  python app.py . Floyd expects \nthis file to contain the code to run a web server and listen on port  5000 . You can see the  app.py  file in the sample repository. This file should handle the \nincoming request and execute the code in  evaluate.py  and returns the output.  $ floyd run --env tensorflow_py2 --data Js534T344XYBPMvWqhxJNj --mode serving\nSyncing code ...\nRUN ID                  NAME                              VERSION\n----------------------  ------------------------------  ---------\nDJSdJAVa3u7AsFEMZMBBL5  floydhub/fast-style-transfer:5          5\n\nPath to service endpoint: https://www.floydhub.com:8000/t4AdkU6awahkT3ooNazw8c\n\nTo view logs enter:\n    floyd logs DJSdJAVa3u7AsFEMZMBBL5  Now you can send any image file as request to this api and it will return the style transfered image.  curl -o taipei_output.jpg -F  file=@./images/taipei101.jpg  https://www.floydhub.com:8000/t4AdkU6awahkT3ooNazw8c   You will see the default style ( la_muse ) is applied to the input image.  You can also pass in the checkpoint to use and the image will be style transfered accordingly:  curl -o taipei_udnie.jpg -F  file=@./images/taipei101.jpg  -F  checkpoint=udnie.ckpt   https://www.floydhub.com:8000/MUDFXViCLArG2drppvU3nm   This uses a different style checkpoint to render the image. All the logic for this is present in the  app.py  file. You can update it to \nbe as complex as you prefer.", 
             "title": "Model API"
         }, 
         {
             "location": "/commands/", 
-            "text": "Floyd Commands\n\n\nBelow are the commands that are part of Floyd CLI.\n\n\n\n\n\n\n\n\nCommand\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfloyd login\n\n\nLogin to Floyd.\n\n\n\n\n\n\nfloyd init\n\n\nInitialize a Floyd project\n\n\n\n\n\n\nfloyd run\n\n\nRun your project on Floyd.\n\n\n\n\n\n\nfloyd data\n\n\nManage data on Floyd\n\n\n\n\n\n\nfloyd logs\n\n\nStream logs of your run\n\n\n\n\n\n\nfloyd status\n\n\nCheck status of your jobs\n\n\n\n\n\n\nfloyd output\n\n\nView the output of a job\n\n\n\n\n\n\nfloyd info\n\n\nSee details of a job\n\n\n\n\n\n\nfloyd stop\n\n\nTerminate a job\n\n\n\n\n\n\n\n\n\n\nfloyd login\n\n\nLogin to Floyd.\n\n\nUsage\n\n\nfloyd login\n\n\n\n\nDescription\n\n\nYou need to login to Floyd before running any other command. The login flow will require an access token from the Floydhub \nwebsite. You will be prompted to enter you credentials to see your access token. Copy and past the token on the command line \nto complete login.\n\n\nExample\n\n\n$ floyd login\nAccess token page will now open in your browser. Continue? [Y/n]:\nPlease paste the code here:\nLogin Successful\n\n\n\n\n\n\nfloyd init\n\n\nInitialize a Floyd project.\n\n\nUsage\n\n\nfloyd init PROJECT_NAME\n\n\n\n\nOptions\n\n\n\n\n\n\n\n\nName, shorthand\n\n\nDefault\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nPROJECT_NAME\n\n\n\n\nName of your project (No spaces. Use letters, numbers, dash and underscore)\n\n\n\n\n\n\n\n\nDescription\n\n\nFloyd tracks projects based on the location of your code. This command initializes a new project at the current directory and \ntracks all files and subdirectories. These files will be uploaded when you run your project on Floyd.\n\n\nThe init command also creates a \n.floydignore\n file. Any files and directories you do not want Floyd to track can be added \nto this file. When you run your project on Floyd, these files will not be uploaded.\n\n\nExample\n\n\nInitialize a floyd project in your project directory.\n\n\n$ cd /code/project\n$ floyd init style-transfer\nProject \nstyle-transfer\n initialized in current directory\n\n\n\n\n\n\nfloyd run\n\n\nRun your project on Floyd.\n\n\nUsage\n\n\nfloyd run [OPTIONS] [COMMAND]\n\n\n\n\nOptions\n\n\n\n\n\n\n\n\nName, shorthand\n\n\nDefault\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n--gpu/--cpu\n\n\ncpu\n\n\nIf specified, runs the job on a GPU (G1) instance or CPU (C1) instance. See instance specifications on the \npricing\n page.\n\n\n\n\n\n\n--data \nID\n\n\n\n\nID of the data source to link to. See \ndata\n section for more details.\n\n\n\n\n\n\n--mode [command|jupyter|serving]\n\n\ncommand\n\n\nSpecify the mode you want to run the project. The default behavior executes the command you specify. See \njupyter\n and \nserving\n sections for more info on them.\n\n\n\n\n\n\n--env [tensorflow_py3|tensorflow_py2]\n\n\ntensorflow_py3\n\n\nSpecify the environment you want to use for your project. See \nenvironments\n for the full list.\n\n\n\n\n\n\ncommand\n\n\n\n\nCommand to execute when running your project on Floyd.\n\n\n\n\n\n\n\n\nDescription\n\n\nThis command syncs the code tracked by the CLI to the Floyd servers and executes your command. You can see the progress \nwith \nstatus\n command. To view the logs from your code use \nlogs\n command.\n\n\nExample\n\n\n$ floyd run \npython train_tf.py -lr 0.01 -output /output/model.bin\n\nSyncing code ...\nRUN ID                  NAME                           VERSION\n----------------------  ---------------------------  ---------\ndTe2cJJrNR2CBD74rSZXPA  floydhub/tensorflow-project:7        7\n...\n$ floyd logs dTe2cJJrNR2CBD74rSZXPA\n\n\n\n\nfloyd_requirements.txt\n\n\nFloyd runs standard Docker images for various deep learning frameworks.(See \nenvironments\n for details). If your \ncode requires additional Python dependencies you can specify them in a \nfloyd_requirements.txt\n file and place it at the root \ndirectory of your project. These dependencies will be installed before running your code.\n\n\nExample\n\n\n$ cat floyd_requirements.txt\nPillow\nscipy\n$ floyd run \npython train_tf.py -lr 0.01 -output /output/model.bin\n\n\n\n\n\nJupyter notebook\n\n\nFloyd supports running Jupyter/iPython notebooks on the server. Make sure that the notebook (.ipynb) files are present in the \ncurrent directory. Use \n--mode jupyter\n and you will be presented with a URL to view your Jupyter environment. You do not need \nto specify a command in this mode. See \njupyter\n page for more details.\n\n\nExample\n\n\n$ floyd run --mode jupyter\n...\nPath to jupyter notebook: https://www.floydhub.com:8000/g8uGRZFQz85meArJGToEcs\n\n\n\n\nServing\n\n\nFloyd can be used to host the model you generated as a REST api. This api can be used to evaluate your model over HTTP.\nUse \n--mode serving\n and you will be presented with a URL to access your API. Floyd currently supports only Flask apps.\nIt runs app.py file and expects the service to run on port 5000. You do not need to specify a command in this mode.\nSee \nserving\n page for more details.\n\n\nExample\n\n\n$ floyd run --mode serving\n...\nPath to service endpoint: https://www.floydhub.com:8000/vbKSKgVYGgZqmM9i3LjLBb\n\n\n\n\n\n\nfloyd data\n\n\nManage your data sets on Floyd. The subcommands are:\n\n\n\n\n\n\n\n\nCommand\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfloyd data init\n\n\nInitialize a new dataset\n\n\n\n\n\n\nfloyd data upload\n\n\nCreate a new dataset by uploading data\n\n\n\n\n\n\nfloyd data status\n\n\nList all your datasets\n\n\n\n\n\n\nfloyd data output\n\n\nView contents of a dataset\n\n\n\n\n\n\n\n\n\n\nfloyd data init\n\n\nInitialize a new dataset.\n\n\nUsage\n\n\nfloyd data init DATASET_NAME\n\n\n\n\nOptions\n\n\n\n\n\n\n\n\nName, shorthand\n\n\nDefault\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nDATASET_NAME\n\n\n\n\nName of the dataset (No spaces. Use letters, numbers, dash and underscore)\n\n\n\n\n\n\n\n\nDescription\n\n\nFloyd can manage your experiment datasets and make them available when running your projects.This command initializes a new \ndataset at the current directory and tracks all files and subdirectories. These files will be uploaded when you run \nupload\n.\n\n\nThe init command also creates a \n.floydignore\n file. Any files and directories you do not want Floyd to track can be added \nto this file. When you upload this dataset to Floyd, these files will not be uploaded.\n\n\nExample\n\n\nInitialize a floyd data in your project directory.\n\n\n$ cd /data/mnist\n$ floyd data init mnist-data\nData source \nmnist-data\n initialized in current directory\n\n\n\n\n\n\nfloyd data upload\n\n\nUpload a new dataset\n\n\nUsage\n\n\nfloyd data upload\n\n\n\n\nDescription\n\n\nUpload contents of the current directory as a new dataset. This data can now be referred to in the \nrun\n command.\nAt run time the data will be available at the \n/input\n path.\n\n\nFloyd also versions your data so you can choose any specific version to use in your runs.\n\n\nExample\n\n\n$ floyd data upload\nCreating data source. Uploading files ...\n\n\n\n\n\n\nfloyd data status\n\n\nView your datasets on Floyd\n\n\nUsage\n\n\nfloyd data status [ID]\n\n\n\n\nOptions\n\n\n\n\n\n\n\n\nName, shorthand\n\n\nDefault\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nID\n\n\n\n\nID of your data.\n\n\n\n\n\n\n\n\nDescription\n\n\nLists all your data sets on Floyd with more details.\n\n\nExample\n\n\n$ floyd data status\nDATA ID                 CREATED         DISK USAGE    NAME                                        VERSION\n----------------------  --------------  ------------  ----------------------------------------  ---------\nHYLEc2czGKRpYVm7rGtBoY  12 minutes ago  372.0 MB      floydhub/mnist:1                                  1\nqNcS5bXHtFdSiMZ35kkEPh  an hour ago     456.2 MB      floydhub/csr:7                                    7\n\n\n\n\n\n\nfloyd data output\n\n\nView datasets\n\n\nUsage\n\n\nfloyd data output [OPTIONS] ID\n\n\n\n\nOptions\n\n\n\n\n\n\n\n\nName, shorthand\n\n\nDefault\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n--url\n, \n-u\n\n\n\n\nOnly print the URL. The data directory can be viewed in the browser.\n\n\n\n\n\n\nID\n\n\n\n\nID of your data.\n\n\n\n\n\n\n\n\nDescription\n\n\nThe output command gives the url to access a dataset. This command by default opens the data url in your default browser.\n\n\nExample\n\n\n$ floyd data output dTe2cJJrNR2CBD74rSZXPA\nOpening output directory in your browser ...\n\n\n\n\n\n\nfloyd logs\n\n\nView the logs of your run\n\n\nUsage\n\n\nfloyd logs [OPTIONS] ID\n\n\n\n\nOptions\n\n\n\n\n\n\n\n\nName, shorthand\n\n\nDefault\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n--url\n, \n-u\n\n\n\n\nOnly print the URL. The logs can be viewed in the browser.\n\n\n\n\n\n\n--tail\n, \n-t\n\n\n\n\nStream the output of your code in real-time.\n\n\n\n\n\n\nID\n\n\n\n\nID of your job. You can get the ID by running the \nstatus\n command.\n\n\n\n\n\n\n\n\nDescription\n\n\nAny data sent to STDOUT and STDERR by your code will become available here. Make sure your \nlogs are flushed out if you prefer to view logs in real-time. There will be some information from \nFloyd servers before and after your project logs. They are usually useful for debugging purposes.\n\n\nExample\n\n\n$ floyd logs qYPdvbE5KS3TwANJFZdame\nPreparing to run \nStarting container...\n\n#################################################\n\nRun Output:\n...\n\n#################################################\n\nWaiting for container to complete...\n[success] Finishing execution\n\n\n\n\n\n\nfloyd status\n\n\nView status of your jobs.\n\n\nUsage\n\n\nfloyd status [ID]\n\n\n\n\nOptions\n\n\n\n\n\n\n\n\nName, shorthand\n\n\nDefault\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nID\n\n\n\n\nID of your job.\n\n\n\n\n\n\n\n\nExtended Description\n\n\nShows the status of a run, if the ID is specified. It can also list the status of all \nthe runs in the current project. You need to be in the project directory for this command to work.\n\n\nExample\n\n\n$ floyd status\nRUN ID                  CREATED         STATUS      DURATION(s)  NAME                           INSTANCE      VERSION\n----------------------  --------------  --------  -------------  -----------------------------  ----------  ---------\ndTe2cJJrNR2CBD74rSZXPA  31 minutes ago  success             108  floydhub/tensorflow-project:7  cpu                 2\nB8wkLbuGs2mtjhe9jqrkYT  2 hours ago     success            2349  floydhub/tensorflow-project:7  gpu                 1\n\n\n\n\n\n\nfloyd output\n\n\nView the output of a job.\n\n\nUsage\n\n\nfloyd output [OPTIONS] ID\n\n\n\n\nOptions\n\n\n\n\n\n\n\n\nName, shorthand\n\n\nDefault\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n--url\n, \n-u\n\n\n\n\nOnly print the URL. The output directory can be viewed in the browser.\n\n\n\n\n\n\nID\n\n\n\n\nID of your job. You can get the ID by running the \nstatus\n command.\n\n\n\n\n\n\n\n\nDescription\n\n\nMost jobs generate output. Any output that needs to be retained after the job is finised should be send to \n/output\n path.\nThis is the only path Floyd will preserve. The output command gives the url to access this output. This command by default opens the \noutput url in your default browser.\n\n\nExample\n\n\n$ floyd output dTe2cJJrNR2CBD74rSZXPA\nOpening output directory in your browser ...\n\n\n\n\n\n\nfloyd info\n\n\nView the details of the job.\n\n\nUsage\n\n\nfloyd info [OPTIONS] ID\n\n\n\n\nOptions\n\n\n\n\n\n\n\n\nName, shorthand\n\n\nDefault\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nID\n\n\n\n\nID of your job. You can get the ID by running the \nstatus\n command.\n\n\n\n\n\n\n\n\nDescription\n\n\nThis command gives detailed information about your job. Some useful information here:\n\n\nOutput ID\n\n\nOutput ID is the reference to the output generated by your run. If you want to use this as the \ninput for your next job, use this ID and pass it as \n--data ID\n in the \nrun\n command.\n\n\nUrl\n\n\nIf your job is running in \njupyter\n or \nserving\n mode, you can get their URL here.\n\n\nExample\n\n\n$ floyd info Faa2xpokjAfJL5Jd7vCVXo\n-----------  ----------------------------------------------------\nRun ID       Faa2xpokjAfJL5Jd7vCVXo\nName         floydhub/jupyter-notebook:1\nCreated      2 minutes ago\nStatus       running\nDuration(s)  0\nOutput ID    VB9bF6vtyvrHLdUsFbUuvW\nInstance     cpu\nVersion      1\nMode         jupyter\nUrl          https://www.floydhub.com:8000/VB9bF6vtyvrHLdUsFbUuvW\n-----------  ----------------------------------------------------\n\n\n\n\n\n\nfloyd stop\n\n\nTerminate a queued or running job.\n\n\nUsage\n\n\nfloyd stop ID\n\n\n\n\nOptions\n\n\n\n\n\n\n\n\nName, shorthand\n\n\nDefault\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nID\n\n\n\n\nID of your job. You can get the ID by running the \nstatus\n command.\n\n\n\n\n\n\n\n\nDescription\n\n\nSometimes you want to terminate a job before it can finish. The stop command sends a request \nto the server to stop the job. You can view the \nstatus\n of the job to confirm. When you stop \na job, you will be charged only for the duration your job was running.\n\n\nExample\n\n\n$ floyd stop FAGrKvd6GqwVdHMxxMwBZG\nExperiment shutdown request submitted. Check status to confirm shutdown\n\n\n\n\n\n\nfloyd logout\n\n\nDescription\n\n\nLogout the CLI from Floyd \n\n\nUsage\n\n\nfloyd logout", 
-            "title": "Commands"
+            "text": "Floyd Commands\n\n\nBelow are the commands that are part of Floyd CLI.\n\n\n\n\n\n\n\n\nCommand\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfloyd login\n\n\nLogin to Floyd.\n\n\n\n\n\n\nfloyd init\n\n\nInitialize a Floyd project\n\n\n\n\n\n\nfloyd run\n\n\nRun your project on Floyd.\n\n\n\n\n\n\nfloyd data\n\n\nManage data on Floyd\n\n\n\n\n\n\nfloyd logs\n\n\nStream logs of your run\n\n\n\n\n\n\nfloyd status\n\n\nCheck status of your jobs\n\n\n\n\n\n\nfloyd output\n\n\nView the output of a job\n\n\n\n\n\n\nfloyd info\n\n\nSee details of a job\n\n\n\n\n\n\nfloyd stop\n\n\nTerminate a job", 
+            "title": "floyd"
         }, 
         {
             "location": "/commands/#floyd-commands", 
@@ -211,352 +216,352 @@
             "title": "Floyd Commands"
         }, 
         {
-            "location": "/commands/#floyd-login", 
-            "text": "Login to Floyd.", 
+            "location": "/commands/login/", 
+            "text": "Login to Floyd.\n\n\nUsage\n\n\nfloyd login\n\n\n\n\nDescription\n\n\nYou need to login to Floyd before running any other command. The login flow will require an access token from the Floydhub \nwebsite. You will be prompted to enter you credentials to see your access token. Copy and past the token on the command line \nto complete login.\n\n\nExample\n\n\n$ floyd login\nAccess token page will now open in your browser. Continue? [Y/n]:\nPlease paste the code here:\nLogin Successful", 
             "title": "floyd login"
         }, 
         {
-            "location": "/commands/#usage", 
+            "location": "/commands/login/#usage", 
             "text": "floyd login", 
             "title": "Usage"
         }, 
         {
-            "location": "/commands/#description", 
+            "location": "/commands/login/#description", 
             "text": "You need to login to Floyd before running any other command. The login flow will require an access token from the Floydhub \nwebsite. You will be prompted to enter you credentials to see your access token. Copy and past the token on the command line \nto complete login.", 
             "title": "Description"
         }, 
         {
-            "location": "/commands/#example", 
+            "location": "/commands/login/#example", 
             "text": "$ floyd login\nAccess token page will now open in your browser. Continue? [Y/n]:\nPlease paste the code here:\nLogin Successful", 
             "title": "Example"
         }, 
         {
-            "location": "/commands/#floyd-init", 
-            "text": "Initialize a Floyd project.", 
+            "location": "/commands/init/", 
+            "text": "Initialize a Floyd project.\n\n\nUsage\n\n\nfloyd init PROJECT_NAME\n\n\n\n\nOptions\n\n\n\n\n\n\n\n\nName, shorthand\n\n\nDefault\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nPROJECT_NAME\n\n\n\n\nName of your project (No spaces. Use letters, numbers, dash and underscore)\n\n\n\n\n\n\n\n\nDescription\n\n\nFloyd tracks projects based on the location of your code. This command initializes a new project at the current directory and \ntracks all files and subdirectories. These files will be uploaded when you run your project on Floyd.\n\n\nThe init command also creates a \n.floydignore\n file. Any files and directories you do not want Floyd to track can be added \nto this file. When you run your project on Floyd, these files will not be uploaded.\n\n\nExample\n\n\nInitialize a floyd project in your project directory.\n\n\n$ cd /code/project\n$ floyd init style-transfer\nProject \nstyle-transfer\n initialized in current directory", 
             "title": "floyd init"
         }, 
         {
-            "location": "/commands/#usage_1", 
+            "location": "/commands/init/#usage", 
             "text": "floyd init PROJECT_NAME", 
             "title": "Usage"
         }, 
         {
-            "location": "/commands/#options", 
+            "location": "/commands/init/#options", 
             "text": "Name, shorthand  Default  Description      PROJECT_NAME   Name of your project (No spaces. Use letters, numbers, dash and underscore)", 
             "title": "Options"
         }, 
         {
-            "location": "/commands/#description_1", 
+            "location": "/commands/init/#description", 
             "text": "Floyd tracks projects based on the location of your code. This command initializes a new project at the current directory and \ntracks all files and subdirectories. These files will be uploaded when you run your project on Floyd.  The init command also creates a  .floydignore  file. Any files and directories you do not want Floyd to track can be added \nto this file. When you run your project on Floyd, these files will not be uploaded.", 
             "title": "Description"
         }, 
         {
-            "location": "/commands/#example_1", 
+            "location": "/commands/init/#example", 
             "text": "Initialize a floyd project in your project directory.  $ cd /code/project\n$ floyd init style-transfer\nProject  style-transfer  initialized in current directory", 
             "title": "Example"
         }, 
         {
-            "location": "/commands/#floyd-run", 
-            "text": "Run your project on Floyd.", 
+            "location": "/commands/run/", 
+            "text": "Run your project on Floyd.\n\n\nUsage\n\n\nfloyd run [OPTIONS] [COMMAND]\n\n\n\n\nOptions\n\n\n\n\n\n\n\n\nName, shorthand\n\n\nDefault\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n--gpu/--cpu\n\n\ncpu\n\n\nIf specified, runs the job on a GPU (G1) instance or CPU (C1) instance. See instance specifications on the \npricing\n page.\n\n\n\n\n\n\n--data \nID\n\n\n\n\nID of the data source to link to. See \ndata\n section for more details.\n\n\n\n\n\n\n--mode [command|jupyter|serving]\n\n\ncommand\n\n\nSpecify the mode you want to run the project. The default behavior executes the command you specify. See \njupyter\n and \nserving\n sections for more info on them.\n\n\n\n\n\n\n--env [tensorflow_py3|tensorflow_py2]\n\n\ntensorflow_py3\n\n\nSpecify the environment you want to use for your project. See \nenvironments\n for the full list.\n\n\n\n\n\n\ncommand\n\n\n\n\nCommand to execute when running your project on Floyd.\n\n\n\n\n\n\n\n\nDescription\n\n\nThis command syncs the code tracked by the CLI to the Floyd servers and executes your command. You can see the progress \nwith \nstatus\n command. To view the logs from your code use \nlogs\n command.\n\n\nExample\n\n\n$ floyd run \npython train_tf.py -lr 0.01 -output /output/model.bin\n\nSyncing code ...\nRUN ID                  NAME                           VERSION\n----------------------  ---------------------------  ---------\ndTe2cJJrNR2CBD74rSZXPA  floydhub/tensorflow-project:7        7\n...\n$ floyd logs dTe2cJJrNR2CBD74rSZXPA\n\n\n\n\nfloyd_requirements.txt\n\n\nFloyd runs standard Docker images for various deep learning frameworks.(See \nenvironments\n for details). If your \ncode requires additional Python dependencies you can specify them in a \nfloyd_requirements.txt\n file and place it at the root \ndirectory of your project. These dependencies will be installed before running your code.\n\n\nExample\n\n\n$ cat floyd_requirements.txt\nPillow\nscipy\n$ floyd run \npython train_tf.py -lr 0.01 -output /output/model.bin\n\n\n\n\n\nJupyter notebook\n\n\nFloyd supports running Jupyter/iPython notebooks on the server. Make sure that the notebook (.ipynb) files are present in the \ncurrent directory. Use \n--mode jupyter\n and you will be presented with a URL to view your Jupyter environment. You do not need \nto specify a command in this mode. See \njupyter\n page for more details.\n\n\nExample\n\n\n$ floyd run --mode jupyter\n...\nPath to jupyter notebook: https://www.floydhub.com:8000/g8uGRZFQz85meArJGToEcs\n\n\n\n\nServing\n\n\nFloyd can be used to host the model you generated as a REST api. This api can be used to evaluate your model over HTTP.\nUse \n--mode serving\n and you will be presented with a URL to access your API. Floyd currently supports only Flask apps.\nIt runs app.py file and expects the service to run on port 5000. You do not need to specify a command in this mode.\nSee \nserving\n page for more details.\n\n\nExample\n\n\n$ floyd run --mode serving\n...\nPath to service endpoint: https://www.floydhub.com:8000/vbKSKgVYGgZqmM9i3LjLBb", 
             "title": "floyd run"
         }, 
         {
-            "location": "/commands/#usage_2", 
+            "location": "/commands/run/#usage", 
             "text": "floyd run [OPTIONS] [COMMAND]", 
             "title": "Usage"
         }, 
         {
-            "location": "/commands/#options_1", 
+            "location": "/commands/run/#options", 
             "text": "Name, shorthand  Default  Description      --gpu/--cpu  cpu  If specified, runs the job on a GPU (G1) instance or CPU (C1) instance. See instance specifications on the  pricing  page.    --data  ID   ID of the data source to link to. See  data  section for more details.    --mode [command|jupyter|serving]  command  Specify the mode you want to run the project. The default behavior executes the command you specify. See  jupyter  and  serving  sections for more info on them.    --env [tensorflow_py3|tensorflow_py2]  tensorflow_py3  Specify the environment you want to use for your project. See  environments  for the full list.    command   Command to execute when running your project on Floyd.", 
             "title": "Options"
         }, 
         {
-            "location": "/commands/#description_2", 
+            "location": "/commands/run/#description", 
             "text": "This command syncs the code tracked by the CLI to the Floyd servers and executes your command. You can see the progress \nwith  status  command. To view the logs from your code use  logs  command.", 
             "title": "Description"
         }, 
         {
-            "location": "/commands/#example_2", 
+            "location": "/commands/run/#example", 
             "text": "$ floyd run  python train_tf.py -lr 0.01 -output /output/model.bin \nSyncing code ...\nRUN ID                  NAME                           VERSION\n----------------------  ---------------------------  ---------\ndTe2cJJrNR2CBD74rSZXPA  floydhub/tensorflow-project:7        7\n...\n$ floyd logs dTe2cJJrNR2CBD74rSZXPA", 
             "title": "Example"
         }, 
         {
-            "location": "/commands/#floyd_requirementstxt", 
+            "location": "/commands/run/#floyd_requirementstxt", 
             "text": "Floyd runs standard Docker images for various deep learning frameworks.(See  environments  for details). If your \ncode requires additional Python dependencies you can specify them in a  floyd_requirements.txt  file and place it at the root \ndirectory of your project. These dependencies will be installed before running your code.", 
             "title": "floyd_requirements.txt"
         }, 
         {
-            "location": "/commands/#example_3", 
+            "location": "/commands/run/#example_1", 
             "text": "$ cat floyd_requirements.txt\nPillow\nscipy\n$ floyd run  python train_tf.py -lr 0.01 -output /output/model.bin", 
             "title": "Example"
         }, 
         {
-            "location": "/commands/#jupyter-notebook", 
+            "location": "/commands/run/#jupyter-notebook", 
             "text": "Floyd supports running Jupyter/iPython notebooks on the server. Make sure that the notebook (.ipynb) files are present in the \ncurrent directory. Use  --mode jupyter  and you will be presented with a URL to view your Jupyter environment. You do not need \nto specify a command in this mode. See  jupyter  page for more details.", 
             "title": "Jupyter notebook"
         }, 
         {
-            "location": "/commands/#example_4", 
+            "location": "/commands/run/#example_2", 
             "text": "$ floyd run --mode jupyter\n...\nPath to jupyter notebook: https://www.floydhub.com:8000/g8uGRZFQz85meArJGToEcs", 
             "title": "Example"
         }, 
         {
-            "location": "/commands/#serving", 
+            "location": "/commands/run/#serving", 
             "text": "Floyd can be used to host the model you generated as a REST api. This api can be used to evaluate your model over HTTP.\nUse  --mode serving  and you will be presented with a URL to access your API. Floyd currently supports only Flask apps.\nIt runs app.py file and expects the service to run on port 5000. You do not need to specify a command in this mode.\nSee  serving  page for more details.", 
             "title": "Serving"
         }, 
         {
-            "location": "/commands/#example_5", 
+            "location": "/commands/run/#example_3", 
             "text": "$ floyd run --mode serving\n...\nPath to service endpoint: https://www.floydhub.com:8000/vbKSKgVYGgZqmM9i3LjLBb", 
             "title": "Example"
         }, 
         {
-            "location": "/commands/#floyd-data", 
-            "text": "Manage your data sets on Floyd. The subcommands are:     Command  Description      floyd data init  Initialize a new dataset    floyd data upload  Create a new dataset by uploading data    floyd data status  List all your datasets    floyd data output  View contents of a dataset", 
+            "location": "/commands/data/", 
+            "text": "Manage your data sets on Floyd. The subcommands are:\n\n\n\n\n\n\n\n\nCommand\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfloyd data init\n\n\nInitialize a new dataset\n\n\n\n\n\n\nfloyd data upload\n\n\nCreate a new dataset by uploading data\n\n\n\n\n\n\nfloyd data status\n\n\nList all your datasets\n\n\n\n\n\n\nfloyd data output\n\n\nView contents of a dataset\n\n\n\n\n\n\n\n\nfloyd data init\n\n\nInitialize a new dataset.\n\n\nUsage\n\n\nfloyd data init DATASET_NAME\n\n\n\n\nOptions\n\n\n\n\n\n\n\n\nName, shorthand\n\n\nDefault\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nDATASET_NAME\n\n\n\n\nName of the dataset (No spaces. Use letters, numbers, dash and underscore)\n\n\n\n\n\n\n\n\nDescription\n\n\nFloyd can manage your experiment datasets and make them available when running your projects.This command initializes a new \ndataset at the current directory and tracks all files and subdirectories. These files will be uploaded when you run \nupload\n.\n\n\nThe init command also creates a \n.floydignore\n file. Any files and directories you do not want Floyd to track can be added \nto this file. When you upload this dataset to Floyd, these files will not be uploaded.\n\n\nExample\n\n\nInitialize a floyd data in your project directory.\n\n\n$ cd /data/mnist\n$ floyd data init mnist-data\nData source \nmnist-data\n initialized in current directory\n\n\n\n\n\n\nfloyd data upload\n\n\nUpload a new dataset\n\n\nUsage\n\n\nfloyd data upload\n\n\n\n\nDescription\n\n\nUpload contents of the current directory as a new dataset. This data can now be referred to in the \nrun\n command.\nAt run time the data will be available at the \n/input\n path.\n\n\nFloyd also versions your data so you can choose any specific version to use in your runs.\n\n\nExample\n\n\n$ floyd data upload\nCreating data source. Uploading files ...\n\n\n\n\n\n\nfloyd data status\n\n\nView your datasets on Floyd\n\n\nUsage\n\n\nfloyd data status [ID]\n\n\n\n\nOptions\n\n\n\n\n\n\n\n\nName, shorthand\n\n\nDefault\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nID\n\n\n\n\nID of your data.\n\n\n\n\n\n\n\n\nDescription\n\n\nLists all your data sets on Floyd with more details.\n\n\nExample\n\n\n$ floyd data status\nDATA ID                 CREATED         DISK USAGE    NAME                                        VERSION\n----------------------  --------------  ------------  ----------------------------------------  ---------\nHYLEc2czGKRpYVm7rGtBoY  12 minutes ago  372.0 MB      floydhub/mnist:1                                  1\nqNcS5bXHtFdSiMZ35kkEPh  an hour ago     456.2 MB      floydhub/csr:7                                    7\n\n\n\n\n\n\nfloyd data output\n\n\nView datasets\n\n\nUsage\n\n\nfloyd data output [OPTIONS] ID\n\n\n\n\nOptions\n\n\n\n\n\n\n\n\nName, shorthand\n\n\nDefault\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n--url\n, \n-u\n\n\n\n\nOnly print the URL. The data directory can be viewed in the browser.\n\n\n\n\n\n\nID\n\n\n\n\nID of your data.\n\n\n\n\n\n\n\n\nDescription\n\n\nThe output command gives the url to access a dataset. This command by default opens the data url in your default browser.\n\n\nExample\n\n\n$ floyd data output dTe2cJJrNR2CBD74rSZXPA\nOpening output directory in your browser ...", 
             "title": "floyd data"
         }, 
         {
-            "location": "/commands/#floyd-data-init", 
+            "location": "/commands/data/#floyd-data-init", 
             "text": "Initialize a new dataset.", 
             "title": "floyd data init"
         }, 
         {
-            "location": "/commands/#usage_3", 
+            "location": "/commands/data/#usage", 
             "text": "floyd data init DATASET_NAME", 
             "title": "Usage"
         }, 
         {
-            "location": "/commands/#options_2", 
+            "location": "/commands/data/#options", 
             "text": "Name, shorthand  Default  Description      DATASET_NAME   Name of the dataset (No spaces. Use letters, numbers, dash and underscore)", 
             "title": "Options"
         }, 
         {
-            "location": "/commands/#description_3", 
+            "location": "/commands/data/#description", 
             "text": "Floyd can manage your experiment datasets and make them available when running your projects.This command initializes a new \ndataset at the current directory and tracks all files and subdirectories. These files will be uploaded when you run  upload .  The init command also creates a  .floydignore  file. Any files and directories you do not want Floyd to track can be added \nto this file. When you upload this dataset to Floyd, these files will not be uploaded.", 
             "title": "Description"
         }, 
         {
-            "location": "/commands/#example_6", 
+            "location": "/commands/data/#example", 
             "text": "Initialize a floyd data in your project directory.  $ cd /data/mnist\n$ floyd data init mnist-data\nData source  mnist-data  initialized in current directory", 
             "title": "Example"
         }, 
         {
-            "location": "/commands/#floyd-data-upload", 
+            "location": "/commands/data/#floyd-data-upload", 
             "text": "Upload a new dataset", 
             "title": "floyd data upload"
         }, 
         {
-            "location": "/commands/#usage_4", 
+            "location": "/commands/data/#usage_1", 
             "text": "floyd data upload", 
             "title": "Usage"
         }, 
         {
-            "location": "/commands/#description_4", 
+            "location": "/commands/data/#description_1", 
             "text": "Upload contents of the current directory as a new dataset. This data can now be referred to in the  run  command.\nAt run time the data will be available at the  /input  path.  Floyd also versions your data so you can choose any specific version to use in your runs.", 
             "title": "Description"
         }, 
         {
-            "location": "/commands/#example_7", 
+            "location": "/commands/data/#example_1", 
             "text": "$ floyd data upload\nCreating data source. Uploading files ...", 
             "title": "Example"
         }, 
         {
-            "location": "/commands/#floyd-data-status", 
+            "location": "/commands/data/#floyd-data-status", 
             "text": "View your datasets on Floyd", 
             "title": "floyd data status"
         }, 
         {
-            "location": "/commands/#usage_5", 
+            "location": "/commands/data/#usage_2", 
             "text": "floyd data status [ID]", 
             "title": "Usage"
         }, 
         {
-            "location": "/commands/#options_3", 
+            "location": "/commands/data/#options_1", 
             "text": "Name, shorthand  Default  Description      ID   ID of your data.", 
             "title": "Options"
         }, 
         {
-            "location": "/commands/#description_5", 
+            "location": "/commands/data/#description_2", 
             "text": "Lists all your data sets on Floyd with more details.", 
             "title": "Description"
         }, 
         {
-            "location": "/commands/#example_8", 
+            "location": "/commands/data/#example_2", 
             "text": "$ floyd data status\nDATA ID                 CREATED         DISK USAGE    NAME                                        VERSION\n----------------------  --------------  ------------  ----------------------------------------  ---------\nHYLEc2czGKRpYVm7rGtBoY  12 minutes ago  372.0 MB      floydhub/mnist:1                                  1\nqNcS5bXHtFdSiMZ35kkEPh  an hour ago     456.2 MB      floydhub/csr:7                                    7", 
             "title": "Example"
         }, 
         {
-            "location": "/commands/#floyd-data-output", 
+            "location": "/commands/data/#floyd-data-output", 
             "text": "View datasets", 
             "title": "floyd data output"
         }, 
         {
-            "location": "/commands/#usage_6", 
+            "location": "/commands/data/#usage_3", 
             "text": "floyd data output [OPTIONS] ID", 
             "title": "Usage"
         }, 
         {
-            "location": "/commands/#options_4", 
+            "location": "/commands/data/#options_2", 
             "text": "Name, shorthand  Default  Description      --url ,  -u   Only print the URL. The data directory can be viewed in the browser.    ID   ID of your data.", 
             "title": "Options"
         }, 
         {
-            "location": "/commands/#description_6", 
+            "location": "/commands/data/#description_3", 
             "text": "The output command gives the url to access a dataset. This command by default opens the data url in your default browser.", 
             "title": "Description"
         }, 
         {
-            "location": "/commands/#example_9", 
+            "location": "/commands/data/#example_3", 
             "text": "$ floyd data output dTe2cJJrNR2CBD74rSZXPA\nOpening output directory in your browser ...", 
             "title": "Example"
         }, 
         {
-            "location": "/commands/#floyd-logs", 
-            "text": "View the logs of your run", 
+            "location": "/commands/logs/", 
+            "text": "View the logs of your run\n\n\nUsage\n\n\nfloyd logs [OPTIONS] ID\n\n\n\n\nOptions\n\n\n\n\n\n\n\n\nName, shorthand\n\n\nDefault\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n--url\n, \n-u\n\n\n\n\nOnly print the URL. The logs can be viewed in the browser.\n\n\n\n\n\n\n--tail\n, \n-t\n\n\n\n\nStream the output of your code in real-time.\n\n\n\n\n\n\nID\n\n\n\n\nID of your job. You can get the ID by running the \nstatus\n command.\n\n\n\n\n\n\n\n\nDescription\n\n\nAny data sent to STDOUT and STDERR by your code will become available here. Make sure your \nlogs are flushed out if you prefer to view logs in real-time. There will be some information from \nFloyd servers before and after your project logs. They are usually useful for debugging purposes.\n\n\nExample\n\n\n$ floyd logs qYPdvbE5KS3TwANJFZdame\nPreparing to run \nStarting container...\n\n#################################################\n\nRun Output:\n...\n\n#################################################\n\nWaiting for container to complete...\n[success] Finishing execution", 
             "title": "floyd logs"
         }, 
         {
-            "location": "/commands/#usage_7", 
+            "location": "/commands/logs/#usage", 
             "text": "floyd logs [OPTIONS] ID", 
             "title": "Usage"
         }, 
         {
-            "location": "/commands/#options_5", 
+            "location": "/commands/logs/#options", 
             "text": "Name, shorthand  Default  Description      --url ,  -u   Only print the URL. The logs can be viewed in the browser.    --tail ,  -t   Stream the output of your code in real-time.    ID   ID of your job. You can get the ID by running the  status  command.", 
             "title": "Options"
         }, 
         {
-            "location": "/commands/#description_7", 
+            "location": "/commands/logs/#description", 
             "text": "Any data sent to STDOUT and STDERR by your code will become available here. Make sure your \nlogs are flushed out if you prefer to view logs in real-time. There will be some information from \nFloyd servers before and after your project logs. They are usually useful for debugging purposes.", 
             "title": "Description"
         }, 
         {
-            "location": "/commands/#example_10", 
+            "location": "/commands/logs/#example", 
             "text": "$ floyd logs qYPdvbE5KS3TwANJFZdame\nPreparing to run \nStarting container...\n\n#################################################\n\nRun Output:\n...\n\n#################################################\n\nWaiting for container to complete...\n[success] Finishing execution", 
             "title": "Example"
         }, 
         {
-            "location": "/commands/#floyd-status", 
-            "text": "View status of your jobs.", 
+            "location": "/commands/status/", 
+            "text": "View status of your jobs.\n\n\nUsage\n\n\nfloyd status [ID]\n\n\n\n\nOptions\n\n\n\n\n\n\n\n\nName, shorthand\n\n\nDefault\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nID\n\n\n\n\nID of your job.\n\n\n\n\n\n\n\n\nDescription\n\n\nShows the status of a run, if the ID is specified. It can also list the status of all \nthe runs in the current project. You need to be in the project directory for this command to work.\n\n\nExample\n\n\n$ floyd status\nRUN ID                  CREATED         STATUS      DURATION(s)  NAME                           INSTANCE      VERSION\n----------------------  --------------  --------  -------------  -----------------------------  ----------  ---------\ndTe2cJJrNR2CBD74rSZXPA  31 minutes ago  success             108  floydhub/tensorflow-project:7  cpu                 2\nB8wkLbuGs2mtjhe9jqrkYT  2 hours ago     success            2349  floydhub/tensorflow-project:7  gpu                 1", 
             "title": "floyd status"
         }, 
         {
-            "location": "/commands/#usage_8", 
+            "location": "/commands/status/#usage", 
             "text": "floyd status [ID]", 
             "title": "Usage"
         }, 
         {
-            "location": "/commands/#options_6", 
+            "location": "/commands/status/#options", 
             "text": "Name, shorthand  Default  Description      ID   ID of your job.", 
             "title": "Options"
         }, 
         {
-            "location": "/commands/#extended-description", 
+            "location": "/commands/status/#description", 
             "text": "Shows the status of a run, if the ID is specified. It can also list the status of all \nthe runs in the current project. You need to be in the project directory for this command to work.", 
-            "title": "Extended Description"
+            "title": "Description"
         }, 
         {
-            "location": "/commands/#example_11", 
+            "location": "/commands/status/#example", 
             "text": "$ floyd status\nRUN ID                  CREATED         STATUS      DURATION(s)  NAME                           INSTANCE      VERSION\n----------------------  --------------  --------  -------------  -----------------------------  ----------  ---------\ndTe2cJJrNR2CBD74rSZXPA  31 minutes ago  success             108  floydhub/tensorflow-project:7  cpu                 2\nB8wkLbuGs2mtjhe9jqrkYT  2 hours ago     success            2349  floydhub/tensorflow-project:7  gpu                 1", 
             "title": "Example"
         }, 
         {
-            "location": "/commands/#floyd-output", 
-            "text": "View the output of a job.", 
+            "location": "/commands/output/", 
+            "text": "View the output of a job.\n\n\nUsage\n\n\nfloyd output [OPTIONS] ID\n\n\n\n\nOptions\n\n\n\n\n\n\n\n\nName, shorthand\n\n\nDefault\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n--url\n, \n-u\n\n\n\n\nOnly print the URL. The output directory can be viewed in the browser.\n\n\n\n\n\n\nID\n\n\n\n\nID of your job. You can get the ID by running the \nstatus\n command.\n\n\n\n\n\n\n\n\nDescription\n\n\nMost jobs generate output. Any output that needs to be retained after the job is finised should be send to \n/output\n path.\nThis is the only path Floyd will preserve. The output command gives the url to access this output. This command by default opens the \noutput url in your default browser.\n\n\nExample\n\n\n$ floyd output dTe2cJJrNR2CBD74rSZXPA\nOpening output directory in your browser ...", 
             "title": "floyd output"
         }, 
         {
-            "location": "/commands/#usage_9", 
+            "location": "/commands/output/#usage", 
             "text": "floyd output [OPTIONS] ID", 
             "title": "Usage"
         }, 
         {
-            "location": "/commands/#options_7", 
+            "location": "/commands/output/#options", 
             "text": "Name, shorthand  Default  Description      --url ,  -u   Only print the URL. The output directory can be viewed in the browser.    ID   ID of your job. You can get the ID by running the  status  command.", 
             "title": "Options"
         }, 
         {
-            "location": "/commands/#description_8", 
+            "location": "/commands/output/#description", 
             "text": "Most jobs generate output. Any output that needs to be retained after the job is finised should be send to  /output  path.\nThis is the only path Floyd will preserve. The output command gives the url to access this output. This command by default opens the \noutput url in your default browser.", 
             "title": "Description"
         }, 
         {
-            "location": "/commands/#example_12", 
+            "location": "/commands/output/#example", 
             "text": "$ floyd output dTe2cJJrNR2CBD74rSZXPA\nOpening output directory in your browser ...", 
             "title": "Example"
         }, 
         {
-            "location": "/commands/#floyd-info", 
-            "text": "View the details of the job.", 
+            "location": "/commands/info/", 
+            "text": "View the details of a job.\n\n\nUsage\n\n\nfloyd info [OPTIONS] ID\n\n\n\n\nOptions\n\n\n\n\n\n\n\n\nName, shorthand\n\n\nDefault\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nID\n\n\n\n\nID of your job. You can get the ID by running the \nstatus\n command.\n\n\n\n\n\n\n\n\nDescription\n\n\nThis command gives detailed information about your job. Some useful information here:\n\n\nOutput ID\n\n\nOutput ID is the reference to the output generated by your run. If you want to use this as the \ninput for your next job, use this ID and pass it as \n--data ID\n in the \nrun\n command.\n\n\nUrl\n\n\nIf your job is running in \njupyter\n or \nserving\n mode, you can get their URL here.\n\n\nExample\n\n\n$ floyd info Faa2xpokjAfJL5Jd7vCVXo\n-----------  ----------------------------------------------------\nRun ID       Faa2xpokjAfJL5Jd7vCVXo\nName         floydhub/jupyter-notebook:1\nCreated      2 minutes ago\nStatus       running\nDuration(s)  0\nOutput ID    VB9bF6vtyvrHLdUsFbUuvW\nInstance     cpu\nVersion      1\nMode         jupyter\nUrl          https://www.floydhub.com:8000/VB9bF6vtyvrHLdUsFbUuvW\n-----------  ----------------------------------------------------", 
             "title": "floyd info"
         }, 
         {
-            "location": "/commands/#usage_10", 
+            "location": "/commands/info/#usage", 
             "text": "floyd info [OPTIONS] ID", 
             "title": "Usage"
         }, 
         {
-            "location": "/commands/#options_8", 
+            "location": "/commands/info/#options", 
             "text": "Name, shorthand  Default  Description      ID   ID of your job. You can get the ID by running the  status  command.", 
             "title": "Options"
         }, 
         {
-            "location": "/commands/#description_9", 
+            "location": "/commands/info/#description", 
             "text": "This command gives detailed information about your job. Some useful information here:", 
             "title": "Description"
         }, 
         {
-            "location": "/commands/#output-id", 
+            "location": "/commands/info/#output-id", 
             "text": "Output ID is the reference to the output generated by your run. If you want to use this as the \ninput for your next job, use this ID and pass it as  --data ID  in the  run  command.", 
             "title": "Output ID"
         }, 
         {
-            "location": "/commands/#url", 
+            "location": "/commands/info/#url", 
             "text": "If your job is running in  jupyter  or  serving  mode, you can get their URL here.", 
             "title": "Url"
         }, 
         {
-            "location": "/commands/#example_13", 
+            "location": "/commands/info/#example", 
             "text": "$ floyd info Faa2xpokjAfJL5Jd7vCVXo\n-----------  ----------------------------------------------------\nRun ID       Faa2xpokjAfJL5Jd7vCVXo\nName         floydhub/jupyter-notebook:1\nCreated      2 minutes ago\nStatus       running\nDuration(s)  0\nOutput ID    VB9bF6vtyvrHLdUsFbUuvW\nInstance     cpu\nVersion      1\nMode         jupyter\nUrl          https://www.floydhub.com:8000/VB9bF6vtyvrHLdUsFbUuvW\n-----------  ----------------------------------------------------", 
             "title": "Example"
         }, 
         {
-            "location": "/commands/#floyd-stop", 
-            "text": "Terminate a queued or running job.", 
+            "location": "/commands/stop/", 
+            "text": "Terminate a queued or running job.\n\n\nUsage\n\n\nfloyd stop ID\n\n\n\n\nOptions\n\n\n\n\n\n\n\n\nName, shorthand\n\n\nDefault\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nID\n\n\n\n\nID of your job. You can get the ID by running the \nstatus\n command.\n\n\n\n\n\n\n\n\nDescription\n\n\nSometimes you want to terminate a job before it can finish. The stop command sends a request \nto the server to stop the job. You can view the \nstatus\n of the job to confirm. When you stop \na job, you will be charged only for the duration your job was running.\n\n\nExample\n\n\n$ floyd stop FAGrKvd6GqwVdHMxxMwBZG\nExperiment shutdown request submitted. Check status to confirm shutdown\n\n\n\n\n\n\nfloyd logout\n\n\nDescription\n\n\nLogout the CLI from Floyd \n\n\nUsage\n\n\nfloyd logout", 
             "title": "floyd stop"
         }, 
         {
-            "location": "/commands/#usage_11", 
+            "location": "/commands/stop/#usage", 
             "text": "floyd stop ID", 
             "title": "Usage"
         }, 
         {
-            "location": "/commands/#options_9", 
+            "location": "/commands/stop/#options", 
             "text": "Name, shorthand  Default  Description      ID   ID of your job. You can get the ID by running the  status  command.", 
             "title": "Options"
         }, 
         {
-            "location": "/commands/#description_10", 
+            "location": "/commands/stop/#description", 
             "text": "Sometimes you want to terminate a job before it can finish. The stop command sends a request \nto the server to stop the job. You can view the  status  of the job to confirm. When you stop \na job, you will be charged only for the duration your job was running.", 
             "title": "Description"
         }, 
         {
-            "location": "/commands/#example_14", 
+            "location": "/commands/stop/#example", 
             "text": "$ floyd stop FAGrKvd6GqwVdHMxxMwBZG\nExperiment shutdown request submitted. Check status to confirm shutdown", 
             "title": "Example"
         }, 
         {
-            "location": "/commands/#floyd-logout", 
+            "location": "/commands/stop/#floyd-logout", 
             "text": "", 
             "title": "floyd logout"
         }, 
         {
-            "location": "/commands/#description_11", 
+            "location": "/commands/stop/#description_1", 
             "text": "Logout the CLI from Floyd", 
             "title": "Description"
         }, 
         {
-            "location": "/commands/#usage_12", 
+            "location": "/commands/stop/#usage_1", 
             "text": "floyd logout", 
             "title": "Usage"
         }

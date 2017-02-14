@@ -36,19 +36,83 @@
     
 
     
+        
     <url>
-     <loc>https://www.floydhub.com/guides/</loc>
+     <loc>https://www.floydhub.com/guides/jupyter/</loc>
      <lastmod>2017-02-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>https://www.floydhub.com/guides/serving/</loc>
+     <lastmod>2017-02-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
+        
     <url>
      <loc>https://www.floydhub.com/commands/</loc>
      <lastmod>2017-02-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>https://www.floydhub.com/commands/login/</loc>
+     <lastmod>2017-02-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://www.floydhub.com/commands/init/</loc>
+     <lastmod>2017-02-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://www.floydhub.com/commands/run/</loc>
+     <lastmod>2017-02-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://www.floydhub.com/commands/data/</loc>
+     <lastmod>2017-02-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://www.floydhub.com/commands/logs/</loc>
+     <lastmod>2017-02-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://www.floydhub.com/commands/status/</loc>
+     <lastmod>2017-02-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://www.floydhub.com/commands/output/</loc>
+     <lastmod>2017-02-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://www.floydhub.com/commands/info/</loc>
+     <lastmod>2017-02-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://www.floydhub.com/commands/stop/</loc>
+     <lastmod>2017-02-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>

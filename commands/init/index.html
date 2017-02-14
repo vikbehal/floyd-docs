@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://www.floydhub.com/home/infrastructure/">
+        <link rel="canonical" href="https://www.floydhub.com/commands/init/">
       
       
         <meta name="author" content="FloydHub Team">
@@ -19,7 +19,7 @@
     
     
       
-        <title>Infrastructure - FloydHub</title>
+        <title>floyd init - FloydHub</title>
       
     
     
@@ -81,11 +81,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  Home
+                  Commands
                 </span>
               
             
-            Infrastructure
+            floyd init
           
         </span>
       </div>
@@ -142,7 +142,7 @@
       
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
     
     <label class="md-nav__link" for="nav-1">
       Home
@@ -169,7 +169,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../getting_started/" title="Get Started" class="md-nav__link">
+      <a href="../../home/getting_started/" title="Get Started" class="md-nav__link">
         Get Started
       </a>
     
@@ -180,7 +180,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../installation/" title="Installing CLI" class="md-nav__link">
+      <a href="../../home/installation/" title="Installing CLI" class="md-nav__link">
         Installing CLI
       </a>
     
@@ -191,39 +191,9 @@
           
   <li class="md-nav__item">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
+      <a href="../../home/infrastructure/" title="Infrastructure" class="md-nav__link">
         Infrastructure
-      </label>
-    
-    <a href="./" title="Infrastructure" class="md-nav__link md-nav__link--active">
-      Infrastructure
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
-    Prerequisites
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+      </a>
     
   </li>
 
@@ -232,7 +202,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../environments/" title="Environments" class="md-nav__link">
+      <a href="../../home/environments/" title="Environments" class="md-nav__link">
         Environments
       </a>
     
@@ -291,7 +261,7 @@
       
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Commands
@@ -307,7 +277,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/" title="floyd" class="md-nav__link">
+      <a href="../" title="floyd" class="md-nav__link">
         floyd
       </a>
     
@@ -318,7 +288,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/login/" title="floyd login" class="md-nav__link">
+      <a href="../login/" title="floyd login" class="md-nav__link">
         floyd login
       </a>
     
@@ -329,9 +299,56 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/init/" title="floyd init" class="md-nav__link">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
         floyd init
-      </a>
+      </label>
+    
+    <a href="./" title="floyd init" class="md-nav__link md-nav__link--active">
+      floyd init
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" title="Description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -340,7 +357,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/run/" title="floyd run" class="md-nav__link">
+      <a href="../run/" title="floyd run" class="md-nav__link">
         floyd run
       </a>
     
@@ -351,7 +368,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/data/" title="floyd data" class="md-nav__link">
+      <a href="../data/" title="floyd data" class="md-nav__link">
         floyd data
       </a>
     
@@ -362,7 +379,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/logs/" title="floyd logs" class="md-nav__link">
+      <a href="../logs/" title="floyd logs" class="md-nav__link">
         floyd logs
       </a>
     
@@ -373,7 +390,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/status/" title="floyd status" class="md-nav__link">
+      <a href="../status/" title="floyd status" class="md-nav__link">
         floyd status
       </a>
     
@@ -384,7 +401,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/output/" title="floyd output" class="md-nav__link">
+      <a href="../output/" title="floyd output" class="md-nav__link">
         floyd output
       </a>
     
@@ -395,7 +412,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/info/" title="floyd info" class="md-nav__link">
+      <a href="../info/" title="floyd info" class="md-nav__link">
         floyd info
       </a>
     
@@ -406,7 +423,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/stop/" title="floyd stop" class="md-nav__link">
+      <a href="../stop/" title="floyd stop" class="md-nav__link">
         floyd stop
       </a>
     
@@ -432,15 +449,34 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#usage" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" title="Description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" title="Example" class="md-nav__link">
+    Example
   </a>
   
 </li>
@@ -458,13 +494,40 @@
                
               
                 
-                <h1 id="installing-floyd">Installing Floyd</h1>
-<p>Floyd CLI is a python based command line tool to interact with Floyd.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p><code>floyd-cli</code> is available on <a href="https://pypi.python.org/pypi/floyd-cli">pypi</a> and
-runs on both Python 2.7 and Python 3.5.</p>
-<p>Use pip to install the cli.</p>
-<pre><code class="bash">pip install -U floyd-cli
+                  <h1>floyd init</h1>
+                
+                <p>Initialize a Floyd project.</p>
+<h3 id="usage">Usage</h3>
+<pre><code class="bash">floyd init PROJECT_NAME
+</code></pre>
+
+<h3 id="options">Options</h3>
+<table>
+<thead>
+<tr>
+<th>Name, shorthand</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PROJECT_NAME</td>
+<td></td>
+<td>Name of your project (No spaces. Use letters, numbers, dash and underscore)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="description">Description</h3>
+<p>Floyd tracks projects based on the location of your code. This command initializes a new project at the current directory and 
+tracks all files and subdirectories. These files will be uploaded when you run your project on Floyd.</p>
+<p>The init command also creates a <code>.floydignore</code> file. Any files and directories you do not want Floyd to track can be added 
+to this file. When you run your project on Floyd, these files will not be uploaded.</p>
+<h3 id="example">Example</h3>
+<p>Initialize a floyd project in your project directory.</p>
+<pre><code class="bash">$ cd /code/project
+$ floyd init style-transfer
+Project &quot;style-transfer&quot; initialized in current directory
 </code></pre>
               
             </article>
@@ -478,7 +541,7 @@ runs on both Python 2.7 and Python 3.5.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../installation/" title="Installing CLI" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../login/" title="floyd login" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -487,19 +550,19 @@ runs on both Python 2.7 and Python 3.5.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Installing CLI
+                floyd login
               </span>
             </div>
           </a>
         
         
-          <a href="../environments/" title="Environments" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../run/" title="floyd run" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Environments
+                floyd run
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
