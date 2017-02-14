@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://www.floydhub.com/home/installation/">
+        <link rel="canonical" href="https://www.floydhub.com/home/installing_dependencies/">
       
       
         <meta name="author" content="FloydHub Team">
@@ -19,7 +19,7 @@
     
     
       
-        <title>Installing CLI - FloydHub</title>
+        <title>Installing Dependencies - FloydHub</title>
       
     
     
@@ -85,7 +85,7 @@
                 </span>
               
             
-            Installing CLI
+            Installing Dependencies
           
         </span>
       </div>
@@ -169,21 +169,55 @@
           
   <li class="md-nav__item">
     
+      <a href="../using_datasets/" title="Using Datasets" class="md-nav__link">
+        Using Datasets
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../managing_output/" title="Managing Output" class="md-nav__link">
+        Managing Output
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
-      
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Installing Dependencies
+      </label>
     
-    <a href="./" title="Installing CLI" class="md-nav__link md-nav__link--active">
-      Installing CLI
+    <a href="./" title="Installing Dependencies" class="md-nav__link md-nav__link--active">
+      Installing Dependencies
     </a>
     
       
 <nav class="md-nav md-nav--secondary">
   
   
-    
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python-dependencies" title="Python Dependencies" class="md-nav__link">
+    Python Dependencies
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
     
@@ -394,8 +428,18 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python-dependencies" title="Python Dependencies" class="md-nav__link">
+    Python Dependencies
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -408,7 +452,16 @@
                
               
                 
-                <h1 id="installing-floyd">Installing Floyd</h1>
+                  <h1>Installing Dependencies</h1>
+                
+                <h2 id="python-dependencies">Python Dependencies</h2>
+<p>Floyd uses pre-defined docker <a href="../environments/">images</a> to run your projects.
+If your code needs additional Python packages to be available at run time, you 
+can add them to a <code>floyd_requirements.txt</code> file. This is a special file that 
+will be read at runtime and the packages listed here will be installed before 
+running your command.</p>
+<pre><code class="bash">$ echo &quot;Pillow&quot; &gt; floyd_requirements.txt
+</code></pre>
               
             </article>
           </div>
@@ -421,7 +474,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../getting_started/" title="Get Started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../managing_output/" title="Managing Output" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -430,7 +483,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Get Started
+                Managing Output
               </span>
             </div>
           </a>
