@@ -2,25 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     
+        
     <url>
      <loc>https://www.floydhub.com/</loc>
-     <lastmod>2017-02-13</lastmod>
+     <lastmod>2017-02-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
-     <loc>https://www.floydhub.com/installation/</loc>
-     <lastmod>2017-02-13</lastmod>
+     <loc>https://www.floydhub.com/home/getting_started/</loc>
+     <lastmod>2017-02-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>https://www.floydhub.com/home/installation/</loc>
+     <lastmod>2017-02-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://www.floydhub.com/home/infrastructure/</loc>
+     <lastmod>2017-02-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://www.floydhub.com/home/environments/</loc>
+     <lastmod>2017-02-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
     <url>
      <loc>https://www.floydhub.com/guides/</loc>
-     <lastmod>2017-02-13</lastmod>
+     <lastmod>2017-02-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -28,7 +46,7 @@
     
     <url>
      <loc>https://www.floydhub.com/commands/</loc>
-     <lastmod>2017-02-13</lastmod>
+     <lastmod>2017-02-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
