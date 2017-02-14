@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="FloydHub Team">
-        <link rel="canonical" href="https://www.floydhub.com/installation/">
+        <link rel="canonical" href="https://www.floydhub.com/guides/">
         <link rel="shortcut icon" href="../img/favicon.ico">
 
-	<title>Installation - FloydHub</title>
+	<title>Guides - FloydHub</title>
 
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -57,14 +57,14 @@
             
             
             
-                <li class="active">
-                    <a href="./">Installation</a>
+                <li >
+                    <a href="../installation/">Installation</a>
                 </li>
             
             
             
-                <li >
-                    <a href="../guides/">Guides</a>
+                <li class="active">
+                    <a href="./">Guides</a>
                 </li>
             
             
@@ -84,12 +84,12 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="..">
+                    <a rel="next" href="../installation/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../guides/">
+                    <a rel="prev" href="../commands/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -103,23 +103,64 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#installing-floyd">Installing Floyd</a></li>
+        <li class="main active"><a href="#floyd-guides">Floyd Guides</a></li>
         
-            <li><a href="#prerequisites">Prerequisites</a></li>
+            <li><a href="#jupyter-notebook">Jupyter Notebook</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="installing-floyd">Installing Floyd</h1>
-<p>Floyd CLI is a python based command line tool to interact with Floyd.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p><code>floyd-cli</code> is available on <a href="https://pypi.python.org/pypi/floyd-cli">pypi</a> and
-runs on both Python 2.7 and Python 3.5.</p>
-<p>Use pip to install the cli.</p>
-<pre><code class="bash">pip install -U floyd-cli
-</code></pre></div>
+<h1 id="floyd-guides">Floyd Guides</h1>
+<h2 id="jupyter-notebook">Jupyter Notebook</h2>
+<p><a href="http://jupyter.org/">Jupyter</a> or <a href="https://ipython.org/">IPython</a> is an open source project that allows you 
+to create and share documents that contain live code, equations, visualizations and explanatory text. This 
+guide will show you how to run a Jupyter notebook on Floyd.</p>
+<h3 id="setup-project">Setup project</h3>
+<p>Clone a project which contain deep learning jupyter notebooks. For 
+example: <a href="https://github.com/aymericdamien/TensorFlow-Examples">aymericdamien/TensorFlow-Examples</a>.
+Then initialize a floyd project inside that.</p>
+<pre><code class="bash">$ cd TensorFlow-Examples/notebooks/3_NeuralNetworks
+$ floyd init neural-networks
+</code></pre>
+
+<h3 id="run-in-jupyter-mode">Run in Jupyter mode</h3>
+<p>Floyd <a href="#run">run</a> command has a <code>jupyter</code> mode. This will run upload the jupyter notebooks in the current 
+directory and start a jupyter server for you.</p>
+<pre><code class="bash">$ floyd run --mode jupyter
+Syncing code ...
+RUN ID                  NAME                          VERSION
+----------------------  --------------------------  ---------
+dMoDZaCcvQMyfNbgwTx9f8  floydhub/neural-networks:1          1
+
+Path to jupyter notebook: https://www.floydhub.com:8000/EQDsTpeqB3RkjpHUgBGDyB
+
+To view logs enter:
+    floyd logs dMoDZaCcvQMyfNbgwTx9f8
+</code></pre>
+
+<p>You can open the link to your jupyter notebook. The notebooks should be available and you can run 
+any of them.</p>
+<p><img alt="Jupyter" src="../img/jupyter_home.png" /></p>
+<h3 id="selecting-the-environment">Selecting the environment</h3>
+<p>Jupyter notebooks also run in the same environments as other jobs. You can select any environment you want 
+along with the <code>--env</code> parameter of the <a href="#run">run</a> command. You can see the list of supported environments
+<a href="#environments">here</a>.</p>
+<pre><code class="bash">$ floyd run --mode jupyter --env tensorflow_py2
+Syncing code ...
+</code></pre>
+
+<h3 id="additional-dependencies">Additional dependencies</h3>
+<p>If you have any additional python dependencies, you can also add a <code>floyd_requirements.txt</code> file to 
+the notebook directory before floyd run. The packages specified there will be installed before running the 
+jupyter server</p>
+<h3 id="saving-jupyter-notebooks">Saving Jupyter Notebooks</h3>
+<p>Floyd does not save your Jupyter notebooks after you stop the floyd job. So you need to download any 
+relevant notebooks by selecting <code>File &gt; Download as</code> menu from the Jupyter notebook.</p>
+<h3 id="stopping-the-job">Stopping the job</h3>
+<p>Once you have experimented with your code, you still need to stop the job. Run the <a href="#stop">stop</a> command 
+for this.</p></div>
         </div>
 
         <footer class="col-md-12">

@@ -63,6 +63,12 @@
             
             
             
+                <li >
+                    <a href="../guides/">Guides</a>
+                </li>
+            
+            
+            
                 <li class="active">
                     <a href="./">Commands</a>
                 </li>
@@ -78,7 +84,7 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="../installation/">
+                    <a rel="next" href="../guides/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
@@ -99,21 +105,25 @@
     
         <li class="main active"><a href="#floyd-commands">Floyd Commands</a></li>
         
-            <li><a href="#floyd-init">floyd init</a></li>
-        
             <li><a href="#floyd-login">floyd login</a></li>
         
-            <li><a href="#floyd-logout">floyd logout</a></li>
+            <li><a href="#floyd-init">floyd init</a></li>
         
             <li><a href="#floyd-run">floyd run</a></li>
         
-            <li><a href="#floyd-logs">floyd logs</a></li>
+            <li><a href="#floyd-data">floyd data</a></li>
         
-            <li><a href="#floyd-output">floyd output</a></li>
+            <li><a href="#floyd-logs">floyd logs</a></li>
         
             <li><a href="#floyd-status">floyd status</a></li>
         
+            <li><a href="#floyd-output">floyd output</a></li>
+        
+            <li><a href="#floyd-info">floyd info</a></li>
+        
             <li><a href="#floyd-stop">floyd stop</a></li>
+        
+            <li><a href="#floyd-logout">floyd logout</a></li>
         
     
     </ul>
@@ -121,6 +131,7 @@
             <div class="col-md-9" role="main">
 
 <h1 id="floyd-commands">Floyd Commands</h1>
+<p>Below are the commands that are part of Floyd CLI.</p>
 <table>
 <thead>
 <tr>
@@ -130,45 +141,66 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../docs/commands#init">floyd init</a></td>
-<td>Create a local project</td>
-</tr>
-<tr>
 <td>floyd login</td>
-<td>Login to your Floyd account</td>
+<td>Login to Floyd.</td>
 </tr>
 <tr>
-<td>floyd logout</td>
-<td>Logout from your Floyd account</td>
+<td>floyd init</td>
+<td>Initialize a Floyd project</td>
 </tr>
 <tr>
 <td>floyd run</td>
-<td>Run a job on AWS</td>
+<td>Run your project on Floyd.</td>
+</tr>
+<tr>
+<td>floyd data</td>
+<td>Manage data on Floyd</td>
 </tr>
 <tr>
 <td>floyd logs</td>
-<td>View the logs of a run job</td>
-</tr>
-<tr>
-<td>floyd output</td>
-<td>View the output files of your job</td>
+<td>Stream logs of your run</td>
 </tr>
 <tr>
 <td>floyd status</td>
-<td>View the status of your jobs</td>
+<td>Check status of your jobs</td>
+</tr>
+<tr>
+<td>floyd output</td>
+<td>View the output of a job</td>
+</tr>
+<tr>
+<td>floyd info</td>
+<td>See details of a job</td>
 </tr>
 <tr>
 <td>floyd stop</td>
-<td>Stop a running job</td>
+<td>Terminate a job</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="floyd-init">floyd init</h2>
-<h3 id="description">Description</h3>
-<p>Create a Floyd project in your local directory</p>
+<h2 id="floyd-login">floyd login</h2>
+<p>Login to Floyd.</p>
 <h3 id="usage">Usage</h3>
-<pre><code class="bash">floyd init [OPTIONS]
+<pre><code class="bash">floyd login
+</code></pre>
+
+<h3 id="description">Description</h3>
+<p>You need to login to Floyd before running any other command. The login flow will require an access token from the Floydhub 
+website. You will be prompted to enter you credentials to see your access token. Copy and past the token on the command line 
+to complete login.</p>
+<h3 id="example">Example</h3>
+<pre><code class="bash">$ floyd login
+Access token page will now open in your browser. Continue? [Y/n]:
+Please paste the code here:
+Login Successful
+</code></pre>
+
+<hr />
+<h2 id="floyd-init">floyd init</h2>
+<p>Initialize a Floyd project.</p>
+<h3 id="usage_1">Usage</h3>
+<pre><code class="bash">floyd init PROJECT_NAME
 </code></pre>
 
 <h3 id="options">Options</h3>
@@ -182,26 +214,29 @@
 </thead>
 <tbody>
 <tr>
-<td><code>--project</code>, <code>-p</code></td>
+<td>PROJECT_NAME</td>
 <td></td>
-<td>Name your project (No spaces. Use letters, numbers, dash and underscore)</td>
+<td>Name of your project (No spaces. Use letters, numbers, dash and underscore)</td>
 </tr>
 </tbody>
 </table>
-<h3 id="extended-description">Extended Description</h3>
-<p>Create a Floyd project in your local directory. As you make changes to your code, 
-Floyd will keep track of them and upload the latest version when you run your project.</p>
-<h3 id="examples">Examples</h3>
-<h4 id="create-a-project-called-my-project-in-your-current-dir">Create a project called my-project in your current dir</h4>
-<pre><code class="bash">$ floyd init my-project
+<h3 id="description_1">Description</h3>
+<p>Floyd tracks projects based on the location of your code. This command initializes a new project at the current directory and 
+tracks all files and subdirectories. These files will be uploaded when you run your project on Floyd.</p>
+<p>The init command also creates a <code>.floydignore</code> file. Any files and directories you do not want Floyd to track can be added 
+to this file. When you run your project on Floyd, these files will not be uploaded.</p>
+<h3 id="example_1">Example</h3>
+<p>Initialize a floyd project in your project directory.</p>
+<pre><code class="bash">$ cd /code/project
+$ floyd init style-transfer
+Project &quot;style-transfer&quot; initialized in current directory
 </code></pre>
 
 <hr />
-<h2 id="floyd-login">floyd login</h2>
-<h3 id="description_1">Description</h3>
-<p>Login to your Floyd account</p>
-<h3 id="usage_1">Usage</h3>
-<pre><code class="bash">floyd login [OPTIONS]
+<h2 id="floyd-run">floyd run</h2>
+<p>Run your project on Floyd.</p>
+<h3 id="usage_2">Usage</h3>
+<pre><code class="bash">floyd run [OPTIONS] [COMMAND]
 </code></pre>
 
 <h3 id="options_1">Options</h3>
@@ -215,46 +250,111 @@ Floyd will keep track of them and upload the latest version when you run your pr
 </thead>
 <tbody>
 <tr>
-<td><code>--username</code>, <code>-u</code></td>
-<td></td>
-<td>Username</td>
+<td><code>--gpu/--cpu</code></td>
+<td>cpu</td>
+<td>If specified, runs the job on a GPU (G1) instance or CPU (C1) instance. See instance specifications on the <a href="https://www.floydhub.com/pricing">pricing</a> page.</td>
 </tr>
 <tr>
-<td><code>--password</code>, <code>-p</code></td>
+<td><code>--data &lt;ID&gt;</code></td>
 <td></td>
-<td>Password</td>
+<td>ID of the data source to link to. See <a href="#data">data</a> section for more details.</td>
+</tr>
+<tr>
+<td><code>--mode [command|jupyter|serving]</code></td>
+<td>command</td>
+<td>Specify the mode you want to run the project. The default behavior executes the command you specify. See <a href="#jupyter">jupyter</a> and <a href="#serving">serving</a> sections for more info on them.</td>
+</tr>
+<tr>
+<td><code>--env [tensorflow_py3|tensorflow_py2]</code></td>
+<td>tensorflow_py3</td>
+<td>Specify the environment you want to use for your project. See <a href="#environments">environments</a> for the full list.</td>
+</tr>
+<tr>
+<td>command</td>
+<td></td>
+<td>Command to execute when running your project on Floyd.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="extended-description_1">Extended Description</h3>
-<p>Login to your Floyd account. </p>
-<h3 id="examples_1">Examples</h3>
-<h4 id="login-using-your-username">Login using your username</h4>
-<pre><code class="bash">$ floyd login --username johndoe
-# You will be prompted for your password
-</code></pre>
-
-<hr />
-<h2 id="floyd-logout">floyd logout</h2>
 <h3 id="description_2">Description</h3>
-<p>Logout from your Floyd account</p>
-<h3 id="usage_2">Usage</h3>
-<pre><code class="bash">floyd logout
+<p>This command syncs the code tracked by the CLI to the Floyd servers and executes your command. You can see the progress 
+with <a href="#status">status</a> command. To view the logs from your code use <a href="#logs">logs</a> command.</p>
+<h4 id="example_2">Example</h4>
+<pre><code class="bash">$ floyd run &quot;python train_tf.py -lr 0.01 -output /output/model.bin&quot;
+Syncing code ...
+RUN ID                  NAME                           VERSION
+----------------------  ---------------------------  ---------
+dTe2cJJrNR2CBD74rSZXPA  floydhub/tensorflow-project:7        7
+...
+$ floyd logs dTe2cJJrNR2CBD74rSZXPA
 </code></pre>
 
-<h3 id="extended-description_2">Extended Description</h3>
-<p>Logout from your Floyd account. </p>
-<h3 id="examples_2">Examples</h3>
-<h4 id="logout">Logout</h4>
-<pre><code class="bash">$ floyd logout
+<h4 id="floyd_requirementstxt">floyd_requirements.txt</h4>
+<p>Floyd runs standard Docker images for various deep learning frameworks.(See <a href="#environments">environments</a> for details). If your 
+code requires additional Python dependencies you can specify them in a <code>floyd_requirements.txt</code> file and place it at the root 
+directory of your project. These dependencies will be installed before running your code.</p>
+<h4 id="example_3">Example</h4>
+<pre><code class="bash">$ cat floyd_requirements.txt
+Pillow
+scipy
+$ floyd run &quot;python train_tf.py -lr 0.01 -output /output/model.bin&quot;
+</code></pre>
+
+<h4 id="jupyter-notebook">Jupyter notebook</h4>
+<p>Floyd supports running Jupyter/iPython notebooks on the server. Make sure that the notebook (.ipynb) files are present in the 
+current directory. Use <code>--mode jupyter</code> and you will be presented with a URL to view your Jupyter environment. You do not need 
+to specify a command in this mode. See <a href="#jupyter">jupyter</a> page for more details.</p>
+<h4 id="example_4">Example</h4>
+<pre><code class="bash">$ floyd run --mode jupyter
+...
+Path to jupyter notebook: https://www.floydhub.com:8000/g8uGRZFQz85meArJGToEcs
+</code></pre>
+
+<h4 id="serving">Serving</h4>
+<p>Floyd can be used to host the model you generated as a REST api. This api can be used to evaluate your model over HTTP.
+Use <code>--mode serving</code> and you will be presented with a URL to access your API. Floyd currently supports only Flask apps.
+It runs app.py file and expects the service to run on port 5000. You do not need to specify a command in this mode.
+See <a href="#serving">serving</a> page for more details.</p>
+<h4 id="example_5">Example</h4>
+<pre><code class="bash">$ floyd run --mode serving
+...
+Path to service endpoint: https://www.floydhub.com:8000/vbKSKgVYGgZqmM9i3LjLBb
 </code></pre>
 
 <hr />
-<h2 id="floyd-run">floyd run</h2>
-<h3 id="description_3">Description</h3>
-<p>Run the current version of your project on AWS</p>
+<h2 id="floyd-data">floyd data</h2>
+<p>Manage your data sets on Floyd. The subcommands are:</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>floyd data init</td>
+<td>Initialize a new dataset</td>
+</tr>
+<tr>
+<td>floyd data upload</td>
+<td>Create a new dataset by uploading data</td>
+</tr>
+<tr>
+<td>floyd data status</td>
+<td>List all your datasets</td>
+</tr>
+<tr>
+<td>floyd data output</td>
+<td>View contents of a dataset</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="floyd-data-init">floyd data init</h3>
+<p>Initialize a new dataset.</p>
 <h3 id="usage_3">Usage</h3>
-<pre><code class="bash">floyd run [OPTIONS] [COMMAND]
+<pre><code class="bash">floyd data init DATASET_NAME
 </code></pre>
 
 <h3 id="options_2">Options</h3>
@@ -268,30 +368,45 @@ Floyd will keep track of them and upload the latest version when you run your pr
 </thead>
 <tbody>
 <tr>
-<td><code>--gpu</code></td>
+<td>DATASET_NAME</td>
 <td></td>
-<td>If specified, runs the job on GPU on AWS</td>
-</tr>
-<tr>
-<td>command</td>
-<td></td>
-<td>Command to use to run your project</td>
+<td>Name of the dataset (No spaces. Use letters, numbers, dash and underscore)</td>
 </tr>
 </tbody>
 </table>
-<h3 id="extended-description_3">Extended Description</h3>
-<p>Runs the current version of your project on AWS using the provided command.</p>
-<h3 id="examples_3">Examples</h3>
-<h4 id="run-latest-version-of-code">Run latest version of code</h4>
-<pre><code class="bash">$ floyd run &quot;python train_tf.py -lr 0.01 -output /output/model.bin&quot;
+<h3 id="description_3">Description</h3>
+<p>Floyd can manage your experiment datasets and make them available when running your projects.This command initializes a new 
+dataset at the current directory and tracks all files and subdirectories. These files will be uploaded when you run <a href="#upload">upload</a>.</p>
+<p>The init command also creates a <code>.floydignore</code> file. Any files and directories you do not want Floyd to track can be added 
+to this file. When you upload this dataset to Floyd, these files will not be uploaded.</p>
+<h3 id="example_6">Example</h3>
+<p>Initialize a floyd data in your project directory.</p>
+<pre><code class="bash">$ cd /data/mnist
+$ floyd data init mnist-data
+Data source &quot;mnist-data&quot; initialized in current directory
 </code></pre>
 
 <hr />
-<h2 id="floyd-logs">floyd logs</h2>
-<h3 id="description_4">Description</h3>
-<p>Display the logs of a run of your project</p>
+<h3 id="floyd-data-upload">floyd data upload</h3>
+<p>Upload a new dataset</p>
 <h3 id="usage_4">Usage</h3>
-<pre><code class="bash">floyd logs [OPTIONS] ID
+<pre><code class="bash">floyd data upload
+</code></pre>
+
+<h3 id="description_4">Description</h3>
+<p>Upload contents of the current directory as a new dataset. This data can now be referred to in the <a href="#run">run</a> command.
+At run time the data will be available at the <code>/input</code> path.</p>
+<p>Floyd also versions your data so you can choose any specific version to use in your runs.</p>
+<h3 id="example_7">Example</h3>
+<pre><code class="bash">$ floyd data upload
+Creating data source. Uploading files ...
+</code></pre>
+
+<hr />
+<h3 id="floyd-data-status">floyd data status</h3>
+<p>View your datasets on Floyd</p>
+<h3 id="usage_5">Usage</h3>
+<pre><code class="bash">floyd data status [ID]
 </code></pre>
 
 <h3 id="options_3">Options</h3>
@@ -305,30 +420,27 @@ Floyd will keep track of them and upload the latest version when you run your pr
 </thead>
 <tbody>
 <tr>
-<td><code>--url</code>, <code>-u</code></td>
-<td></td>
-<td>Only print the URL for accessing logs in browser</td>
-</tr>
-<tr>
 <td>ID</td>
 <td></td>
-<td>ID of your job</td>
+<td>ID of your data.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="extended-description_4">Extended Description</h3>
-<p>Display the logs of a run of your project</p>
-<h3 id="examples_4">Examples</h3>
-<h4 id="login-using-your-username_1">Login using your username</h4>
-<pre><code class="bash">$ floyd logs qYPdvbE5KS3TwANJFZdame
+<h3 id="description_5">Description</h3>
+<p>Lists all your data sets on Floyd with more details.</p>
+<h4 id="example_8">Example</h4>
+<pre><code class="bash">$ floyd data status
+DATA ID                 CREATED         DISK USAGE    NAME                                        VERSION
+----------------------  --------------  ------------  ----------------------------------------  ---------
+HYLEc2czGKRpYVm7rGtBoY  12 minutes ago  372.0 MB      floydhub/mnist:1                                  1
+qNcS5bXHtFdSiMZ35kkEPh  an hour ago     456.2 MB      floydhub/csr:7                                    7
 </code></pre>
 
 <hr />
-<h2 id="floyd-output">floyd output</h2>
-<h3 id="description_5">Description</h3>
-<p>Shows the output url of the run</p>
-<h3 id="usage_5">Usage</h3>
-<pre><code class="bash">floyd output [OPTIONS] ID
+<h3 id="floyd-data-output">floyd data output</h3>
+<p>View datasets</p>
+<h3 id="usage_6">Usage</h3>
+<pre><code class="bash">floyd data output [OPTIONS] ID
 </code></pre>
 
 <h3 id="options_4">Options</h3>
@@ -344,30 +456,27 @@ Floyd will keep track of them and upload the latest version when you run your pr
 <tr>
 <td><code>--url</code>, <code>-u</code></td>
 <td></td>
-<td>Only print the URL for accessing logs in browser</td>
+<td>Only print the URL. The data directory can be viewed in the browser.</td>
 </tr>
 <tr>
 <td>ID</td>
 <td></td>
-<td>ID of your job</td>
+<td>ID of your data.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="extended-description_5">Extended Description</h3>
-<p>Shows the output url of the run. By default opens the output page in your 
-default browser</p>
-<h3 id="examples_5">Examples</h3>
-<h4 id="view-the-output-dir-of-project-with-id-qypdvbe5ks3twanjfzdame">View the output dir of project with id qYPdvbE5KS3TwANJFZdame</h4>
-<pre><code class="bash">$ floyd output qYPdvbE5KS3TwANJFZdame
-# This will open the output dir link in browser
+<h3 id="description_6">Description</h3>
+<p>The output command gives the url to access a dataset. This command by default opens the data url in your default browser.</p>
+<h3 id="example_9">Example</h3>
+<pre><code class="bash">$ floyd data output dTe2cJJrNR2CBD74rSZXPA
+Opening output directory in your browser ...
 </code></pre>
 
 <hr />
-<h2 id="floyd-status">floyd status</h2>
-<h3 id="description_6">Description</h3>
-<p>Shows the status of your jobs</p>
-<h3 id="usage_6">Usage</h3>
-<pre><code class="bash">floyd status [ID]
+<h2 id="floyd-logs">floyd logs</h2>
+<p>View the logs of your run</p>
+<h3 id="usage_7">Usage</h3>
+<pre><code class="bash">floyd logs [OPTIONS] ID
 </code></pre>
 
 <h3 id="options_5">Options</h3>
@@ -381,30 +490,47 @@ default browser</p>
 </thead>
 <tbody>
 <tr>
+<td><code>--url</code>, <code>-u</code></td>
+<td></td>
+<td>Only print the URL. The logs can be viewed in the browser.</td>
+</tr>
+<tr>
+<td><code>--tail</code>, <code>-t</code></td>
+<td></td>
+<td>Stream the output of your code in real-time.</td>
+</tr>
+<tr>
 <td>ID</td>
 <td></td>
-<td>ID of your job</td>
+<td>ID of your job. You can get the ID by running the <a href="#status">status</a> command.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="extended-description_6">Extended Description</h3>
-<p>Shows the status of a run, if the ID is specified. It can also list the status of all 
-the runs in the project</p>
-<h3 id="examples_6">Examples</h3>
-<h4 id="view-the-status-of-all-runs-of-current-project">View the status of all runs of current project</h4>
-<pre><code class="bash">$ floyd ps
-</code></pre>
+<h3 id="description_7">Description</h3>
+<p>Any data sent to STDOUT and STDERR by your code will become available here. Make sure your 
+logs are flushed out if you prefer to view logs in real-time. There will be some information from 
+Floyd servers before and after your project logs. They are usually useful for debugging purposes.</p>
+<h3 id="example_10">Example</h3>
+<pre><code class="bash">$ floyd logs qYPdvbE5KS3TwANJFZdame
+Preparing to run 
+Starting container...
 
-<h4 id="view-the-status-of-particular-run">View the status of particular run</h4>
-<pre><code class="bash">$ floyd ps qYPdvbE5KS3TwANJFZdame
+#################################################
+
+Run Output:
+...
+
+#################################################
+
+Waiting for container to complete...
+[success] Finishing execution
 </code></pre>
 
 <hr />
-<h2 id="floyd-stop">floyd stop</h2>
-<h3 id="description_7">Description</h3>
-<p>Stop a run before it finishes</p>
-<h3 id="usage_7">Usage</h3>
-<pre><code class="bash">floyd statop ID
+<h2 id="floyd-status">floyd status</h2>
+<p>View status of your jobs.</p>
+<h3 id="usage_8">Usage</h3>
+<pre><code class="bash">floyd status [ID]
 </code></pre>
 
 <h3 id="options_6">Options</h3>
@@ -420,15 +546,145 @@ the runs in the project</p>
 <tr>
 <td>ID</td>
 <td></td>
-<td>ID of your job</td>
+<td>ID of your job.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="extended-description_7">Extended Description</h3>
-<p>Stop a run before it finishes</p>
-<h3 id="examples_7">Examples</h3>
-<h4 id="stop-a-run-by-id">Stop a run by ID</h4>
-<pre><code class="bash">$ floyd stop qYPdvbE5KS3TwANJFZdame
+<h3 id="extended-description">Extended Description</h3>
+<p>Shows the status of a run, if the ID is specified. It can also list the status of all 
+the runs in the current project. You need to be in the project directory for this command to work.</p>
+<h4 id="example_11">Example</h4>
+<pre><code class="bash">$ floyd status
+RUN ID                  CREATED         STATUS      DURATION(s)  NAME                           INSTANCE      VERSION
+----------------------  --------------  --------  -------------  -----------------------------  ----------  ---------
+dTe2cJJrNR2CBD74rSZXPA  31 minutes ago  success             108  floydhub/tensorflow-project:7  cpu                 2
+B8wkLbuGs2mtjhe9jqrkYT  2 hours ago     success            2349  floydhub/tensorflow-project:7  gpu                 1
+</code></pre>
+
+<hr />
+<h2 id="floyd-output">floyd output</h2>
+<p>View the output of a job.</p>
+<h3 id="usage_9">Usage</h3>
+<pre><code class="bash">floyd output [OPTIONS] ID
+</code></pre>
+
+<h3 id="options_7">Options</h3>
+<table>
+<thead>
+<tr>
+<th>Name, shorthand</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--url</code>, <code>-u</code></td>
+<td></td>
+<td>Only print the URL. The output directory can be viewed in the browser.</td>
+</tr>
+<tr>
+<td>ID</td>
+<td></td>
+<td>ID of your job. You can get the ID by running the <a href="#status">status</a> command.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="description_8">Description</h3>
+<p>Most jobs generate output. Any output that needs to be retained after the job is finised should be send to <code>/output</code> path.
+This is the only path Floyd will preserve. The output command gives the url to access this output. This command by default opens the 
+output url in your default browser.</p>
+<h3 id="example_12">Example</h3>
+<pre><code class="bash">$ floyd output dTe2cJJrNR2CBD74rSZXPA
+Opening output directory in your browser ...
+</code></pre>
+
+<hr />
+<h2 id="floyd-info">floyd info</h2>
+<p>View the details of the job.</p>
+<h3 id="usage_10">Usage</h3>
+<pre><code class="bash">floyd info [OPTIONS] ID
+</code></pre>
+
+<h3 id="options_8">Options</h3>
+<table>
+<thead>
+<tr>
+<th>Name, shorthand</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td></td>
+<td>ID of your job. You can get the ID by running the <a href="#status">status</a> command.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="description_9">Description</h3>
+<p>This command gives detailed information about your job. Some useful information here:</p>
+<h4 id="output-id">Output ID</h4>
+<p>Output ID is the reference to the output generated by your run. If you want to use this as the 
+input for your next job, use this ID and pass it as <code>--data ID</code> in the <a href="#run">run</a> command.</p>
+<h4 id="url">Url</h4>
+<p>If your job is running in <a href="#jupyter">jupyter</a> or <a href="#serving">serving</a> mode, you can get their URL here.</p>
+<h3 id="example_13">Example</h3>
+<pre><code class="bash">$ floyd info Faa2xpokjAfJL5Jd7vCVXo
+-----------  ----------------------------------------------------
+Run ID       Faa2xpokjAfJL5Jd7vCVXo
+Name         floydhub/jupyter-notebook:1
+Created      2 minutes ago
+Status       running
+Duration(s)  0
+Output ID    VB9bF6vtyvrHLdUsFbUuvW
+Instance     cpu
+Version      1
+Mode         jupyter
+Url          https://www.floydhub.com:8000/VB9bF6vtyvrHLdUsFbUuvW
+-----------  ----------------------------------------------------
+</code></pre>
+
+<hr />
+<h2 id="floyd-stop">floyd stop</h2>
+<p>Terminate a queued or running job.</p>
+<h3 id="usage_11">Usage</h3>
+<pre><code class="bash">floyd stop ID
+</code></pre>
+
+<h3 id="options_9">Options</h3>
+<table>
+<thead>
+<tr>
+<th>Name, shorthand</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td></td>
+<td>ID of your job. You can get the ID by running the <a href="#status">status</a> command.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="description_10">Description</h3>
+<p>Sometimes you want to terminate a job before it can finish. The stop command sends a request 
+to the server to stop the job. You can view the <a href="#status">status</a> of the job to confirm. When you stop 
+a job, you will be charged only for the duration your job was running.</p>
+<h3 id="example_14">Example</h3>
+<pre><code class="bash">$ floyd stop FAGrKvd6GqwVdHMxxMwBZG
+Experiment shutdown request submitted. Check status to confirm shutdown
+</code></pre>
+
+<hr />
+<h2 id="floyd-logout">floyd logout</h2>
+<h3 id="description_11">Description</h3>
+<p>Logout the CLI from Floyd </p>
+<h3 id="usage_12">Usage</h3>
+<pre><code class="bash">floyd logout
 </code></pre>
 
 <hr /></div>
