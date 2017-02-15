@@ -328,6 +328,17 @@
   </li>
 
         
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../datasets/" title="Public Datasets" class="md-nav__link">
+        Public Datasets
+      </a>
+    
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -563,7 +574,7 @@ $ floyd init neural-networks
 </code></pre>
 
 <h3 id="run-in-jupyter-mode">Run in Jupyter mode</h3>
-<p>Floyd <a href="#run">run</a> command has a <code>jupyter</code> mode. This will run upload the jupyter notebooks in the current 
+<p>Floyd <a href="#run">run</a> command has a <code>jupyter</code> mode. This will upload the jupyter notebooks in the current 
 directory and start a jupyter server for you.</p>
 <pre><code class="bash">$ floyd run --mode jupyter
 Syncing code ...
@@ -581,7 +592,7 @@ To view logs enter:
 any of them.</p>
 <p><img alt="Jupyter" src="../../img/jupyter_home.png" /></p>
 <h3 id="selecting-the-environment">Selecting the environment</h3>
-<p>Jupyter notebooks also run in the same environments as other jobs. You can select any environment you want 
+<p>Jupyter notebooks run in the same environments as other jobs. You can select any environment you want 
 along with the <code>--env</code> parameter of the <a href="#run">run</a> command. You can see the list of supported environments
 <a href="#environments">here</a>.</p>
 <pre><code class="bash">$ floyd run --mode jupyter --env tensorflow_py2
