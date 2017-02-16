@@ -256,8 +256,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../../guides/serving/" title="Floyd Serving" class="md-nav__link">
-        Floyd Serving
+      <a href="../../guides/style_transfer/" title="Style Transfer" class="md-nav__link">
+        Style Transfer
       </a>
     
   </li>
@@ -346,6 +346,13 @@
         <li class="md-nav__item">
   <a href="#example" title="Example" class="md-nav__link">
     Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-tokens" title="Authentication Tokens" class="md-nav__link">
+    Authentication Tokens
   </a>
   
 </li>
@@ -500,6 +507,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#authentication-tokens" title="Authentication Tokens" class="md-nav__link">
+    Authentication Tokens
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -530,6 +544,11 @@ Access token page will now open in your browser. Continue? [Y/n]:
 Please paste the code here:
 Login Successful
 </code></pre>
+
+<h3 id="authentication-tokens">Authentication Tokens</h3>
+<p>Floyd uses <a href="https://jwt.io/introduction/">Json Web Tokens</a> for authentication. Your 
+token will be stored in the <code>~/.floydconfig</code> file. They are valid for 7 days after 
+which you need to login again. This file will be removed when you <a href="logout.md">logout</a>.</p>
               
             </article>
           </div>

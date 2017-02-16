@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://www.floydhub.com/guides/serving/">
+        <link rel="canonical" href="https://www.floydhub.com/guides/style_transfer/">
       
       
         <meta name="author" content="FloydHub Team">
@@ -19,7 +19,7 @@
     
     
       
-        <title>Floyd Serving - FloydHub</title>
+        <title>Style Transfer - FloydHub</title>
       
     
     
@@ -85,7 +85,7 @@
                 </span>
               
             
-            Floyd Serving
+            Style Transfer
           
         </span>
       </div>
@@ -260,11 +260,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Floyd Serving
+        Style Transfer
       </label>
     
-    <a href="./" title="Floyd Serving" class="md-nav__link md-nav__link--active">
-      Floyd Serving
+    <a href="./" title="Style Transfer" class="md-nav__link md-nav__link--active">
+      Style Transfer
     </a>
     
       
@@ -287,6 +287,26 @@
     Train a model
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#training-data" title="Training data" class="md-nav__link">
+    Training data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training" title="Training" class="md-nav__link">
+    Training
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -294,11 +314,24 @@
     Evaluate your model
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#improving-the-model" title="Improving the model" class="md-nav__link">
+    Improving the model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#evaluate-pre-trained-model" title="Evaluate pre-trained model" class="md-nav__link">
-    Evaluate pre-trained model
+  <a href="#evaluate-pre-trained-models" title="Evaluate pre-trained models" class="md-nav__link">
+    Evaluate pre-trained models
   </a>
   
 </li>
@@ -307,6 +340,33 @@
   <a href="#model-api" title="Model API" class="md-nav__link">
     Model API
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#serving-mode" title="Serving mode" class="md-nav__link">
+    Serving mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sending-requests-to-the-rest-api" title="Sending requests to the REST API" class="md-nav__link">
+    Sending requests to the REST API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trying-out-different-models" title="Trying out different models" class="md-nav__link">
+    Trying out different models
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -505,6 +565,26 @@
     Train a model
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#training-data" title="Training data" class="md-nav__link">
+    Training data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training" title="Training" class="md-nav__link">
+    Training
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -512,11 +592,24 @@
     Evaluate your model
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#improving-the-model" title="Improving the model" class="md-nav__link">
+    Improving the model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#evaluate-pre-trained-model" title="Evaluate pre-trained model" class="md-nav__link">
-    Evaluate pre-trained model
+  <a href="#evaluate-pre-trained-models" title="Evaluate pre-trained models" class="md-nav__link">
+    Evaluate pre-trained models
   </a>
   
 </li>
@@ -525,6 +618,33 @@
   <a href="#model-api" title="Model API" class="md-nav__link">
     Model API
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#serving-mode" title="Serving mode" class="md-nav__link">
+    Serving mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sending-requests-to-the-rest-api" title="Sending requests to the REST API" class="md-nav__link">
+    Sending requests to the REST API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trying-out-different-models" title="Trying out different models" class="md-nav__link">
+    Trying out different models
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -541,7 +661,7 @@
                
               
                 
-                  <h1>Floyd Serving</h1>
+                  <h1>Style Transfer</h1>
                 
                 <p>Floyd can be used to host REST API of your trained models which can be accessed over the web. This feature 
 is very useful if you want to quickly compare models or have others play with your models. This guide will 
@@ -555,36 +675,50 @@ $ floyd init fast-style-transfer
 </code></pre>
 
 <h2 id="train-a-model">Train a model</h2>
-<p>You can train your model by running the <code>style.py</code> script on Floyd. Specify the style image to use. This project also requires access to pre-trained
-model - imagenet-vgg-verydeep-19.mat and some training data. Floyd already has this data source available <a href="../link">here</a>.</p>
-<p>Note that the command uses a tensorflow_py2 environment because this code can run only on Python2.</p>
-<pre><code class="bash">$ floyd  run --gpu --env keras:py2 --data jq4ZXUCSVer4t65rWeyieG &quot;python style.py --style images/modernism.jpg --checkpoint-dir /output --content-weight 1.5e1  --checkpoint-iterations 5 --batch-size 20&quot;
+<p>You can train your model by running the <code>style.py</code> script in this repo on Floyd. You can specify any style image to use in the command line. Just 
+download it and keep it in current path.</p>
+<h3 id="training-data">Training data</h3>
+<p>This project also requires access to a the imagenet-vgg-verydeep-19 model and image training data. Floyd already has this data source available with id 
+<a href="https://www.floydhub.com/viewer/data/VhrTiJzhuvMZKUVurG7cGT/2JEQ7sC53Aik7i7sPx3EjY/">jq4ZXUCSVer4t65rWeyieG</a>. You can specify this at the 
+<code>--data</code> paramter. For more information on how data inputs work, see <a href="../../home/using_datasets/">Using Datasets</a>.</p>
+<h3 id="training">Training</h3>
+<pre><code class="bash">$ floyd run --gpu --env keras:py2 --data jq4ZXUCSVer4t65rWeyieG &quot;python style.py --style examples/style/la_muse.jpg --epoch 1 --total-iterations 10 --checkpoint-dir /output --content-weight 1.5e1 --batch-size 20&quot;
 </code></pre>
 
-<p>This will kick off a new job on Floyd. This will take 30 minutes to run and will generate the model. Record the ID of the 
-output generated by this run.</p>
-<pre><code class="bash">$ floyd info &lt;id&gt;
+<p>This will kick off a new job on Floyd. This will take a few minutes to run and will generate the model. You can follow along the progress 
+by using the <a href="../../commands/logs/">logs</a> command.</p>
+<pre><code class="bash">$ floyd logs &lt;RUN_ID&gt; -t
+</code></pre>
+
+<p>Now you need to get the ID of the <code>Output</code> generated by your job. Floyd <a href="../../commands/info/">info</a> can give you that information.</p>
+<pre><code class="bash">$ floyd info &lt;RUN_ID&gt;
 </code></pre>
 
 <h2 id="evaluate-your-model">Evaluate your model</h2>
 <p>You can evaluate the generated model by running <code>evaluate.py</code> on sample images. Use the output id from the training step
-as the datasource in this step. Add any image you want to evaluate to the <code>images</code> directory.</p>
-<pre><code class="bash">$ floyd run --env tensorflow_py2 --data &lt;OUTPUT_ID_FROM_TRAINING&gt; &quot;python evaluate.py --checkpoint /input/wave.ckpt --in-path ./images/ --out-path /output/&quot;
+as the datasource in this step. Add any image you want to style transfer to the <code>images</code> directory. Then run <code>evaluate.py</code>.</p>
+<pre><code class="bash">floyd run --gpu --env keras:py2 --data &lt;REPLACE_WITH_OUTPUT_ID&gt; &quot;python evaluate.py --allow-different-dimensions  --checkpoint /input/fns.ckpt --in-path ./images/ --out-path /output/&quot;
 </code></pre>
 
 <p>You can track the status of the run with the status or logs command.</p>
 <pre><code class="bash">$ floyd status &lt;RUN_ID&gt;
-$ floyd logs &lt;RUN_ID&gt;
+$ floyd logs &lt;RUN_ID&gt; -t
 </code></pre>
 
-<p>Now open the output to see the style transfered images.</p>
+<p>After the job finishes successfuly, view the output directory to see the style transfered images. Run the floyd <a href="../../commands/output/">output</a>
+for this.</p>
 <pre><code class="bash">$ floyd output &lt;RUN_ID&gt;
 </code></pre>
 
-<h2 id="evaluate-pre-trained-model">Evaluate pre-trained model</h2>
-<p>If you want to try out some awesome pre-trained models, we have a datasource for that available <a href="../link">ID:Js534T344XYBPMvWqhxJNj</a> publicly.
-You can use that style transfer on any image you prefer. Just add them to <code>images</code> directory.</p>
-<pre><code class="bash">$ floyd run --env tensorflow_py2 --data Js534T344XYBPMvWqhxJNj &quot;python evaluate.py --checkpoint /input/wave.ckpt --in-path ./images/ --out-path /output/&quot;
+<h3 id="improving-the-model">Improving the model</h3>
+<p>You may notice that the output does not look great. That is because we ran the training for a small number of iterations. To train 
+a fully working model try the train step again, this time without setting <code>--total-iterations</code> and increasing the <code>--epoch</code> to 2.
+It takes about 8 hours to train a model that works well. You can instead try one of our pre-trained models in the next section.</p>
+<h2 id="evaluate-pre-trained-models">Evaluate pre-trained models</h2>
+<p>If you want to try out some awesome pre-trained models, we have a datasource for that available (<a href="https://www.floydhub.com/viewer/data/Wociv8zwEmdRSSmNXbFwoK/">Js534T344XYBPMvWqhxJNj</a>) publicly.
+You can play with any of these model and style transfer any image you prefer. Just add them to <code>images</code> directory. And point to the 
+right model in the <code>--checkpoint</code> parameter.</p>
+<pre><code class="bash">floyd run --gpu --env keras:py2 --data Js534T344XYBPMvWqhxJNj &quot;python evaluate.py --allow-different-dimensions --checkpoint /input/wave.ckpt --in-path ./images/ --out-path /output/&quot;
 </code></pre>
 
 <p>You can track the status of the run with the status command.</p>
@@ -598,11 +732,12 @@ You can use that style transfer on any image you prefer. Just add them to <code>
 <p><img alt="Jupyter" src="../../img/taipei101_wave.jpg" /></p>
 <h2 id="model-api">Model API</h2>
 <p>You can now host this model as a REST API. This means you can send any image to this API as a HTTP request and it will be style transfered. </p>
-<p>Floyd <a href="#run">run</a> command has a <code>serving</code> mode. This will upload the files in the current directory and run <code>python app.py</code>. Floyd expects 
-this file to contain the code to run a web server and listen on port <code>5000</code>. You can see the 
-<a href="https://github.com/floydhub/fast-style-transfer/blob/master/app.py">app.py</a> file in the sample repository. This file should handle the 
+<h3 id="serving-mode">Serving mode</h3>
+<p>Floyd <a href="../../commands/run/">run</a> command has a <code>serving</code> mode. This will upload the files in the current directory and run a special command - 
+<code>python app.py</code>. Floyd expects this file to contain the code to run a web server and listen on port <code>5000</code>. You can see the 
+<a href="https://github.com/floydhub/fast-style-transfer/blob/master/app.py">app.py</a> file in the sample repository. This file should handles the 
 incoming request and execute the code in <code>evaluate.py</code> and returns the output.</p>
-<pre><code class="bash">$ floyd run --env tensorflow_py2 --data Js534T344XYBPMvWqhxJNj --mode serving
+<pre><code class="bash">$ floyd run --env keras:py2 --data Js534T344XYBPMvWqhxJNj --mode serving
 Syncing code ...
 RUN ID                  NAME                              VERSION
 ----------------------  ------------------------------  ---------
@@ -614,13 +749,15 @@ To view logs enter:
     floyd logs DJSdJAVa3u7AsFEMZMBBL5
 </code></pre>
 
+<h3 id="sending-requests-to-the-rest-api">Sending requests to the REST API</h3>
 <p>Now you can send any image file as request to this api and it will return the style transfered image.</p>
 <pre><code class="bash">curl -o taipei_output.jpg -F &quot;file=@./images/taipei101.jpg&quot; https://www.floydhub.com:8000/t4AdkU6awahkT3ooNazw8c
 </code></pre>
 
 <p><img alt="Jupyter" src="../../img/taipei_muse.jpg" /></p>
-<p>You will see the default style (<a href="#la_muse">la_muse</a>) is applied to the input image.</p>
-<p>You can also pass in the checkpoint to use and the image will be style transfered accordingly:</p>
+<p>You will see the default style (<a href="https://github.com/floydhub/fast-style-transfer/blob/master/examples/style/la_muse.jpg">la_muse</a>) is applied to the input image.</p>
+<h3 id="trying-out-different-models">Trying out different models</h3>
+<p>You can also pass in the name of the checkpoint to use and the image will be style transfered accordingly:</p>
 <pre><code class="bash">curl -o taipei_udnie.jpg -F &quot;file=@./images/taipei101.jpg&quot; -F &quot;checkpoint=udnie.ckpt&quot;  https://www.floydhub.com:8000/MUDFXViCLArG2drppvU3nm
 </code></pre>
 
