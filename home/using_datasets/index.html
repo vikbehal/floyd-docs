@@ -570,22 +570,22 @@
                   <h1>Using Datasets</h1>
                 
                 <h2 id="data-sources">Data Sources</h2>
-<p>Floyd manages data separately from your code. You can upload your data sets 
-separately and use them when running your project.</p>
+<p>Floyd manages data separately from your code. If you want to provide input data to your code, 
+you should upload your data sets separately. You can then use them when running your project.</p>
 <h2 id="uploading-a-new-dataset">Uploading a new dataset</h2>
 <p>To upload a new dataset, use the floyd <a href="../../commands/data/">data</a> command.
-Create/navigate to the directory where the data resides and run <code>floyd data init</code> to initialize.</p>
+Create or navigate to the directory where the data resides and run <code>floyd data init</code> to initialize.</p>
 <pre><code class="bash">$ cd models/
-$ floyd data init data-model
-Data source &quot;data-model&quot; initialized in current directory
+$ floyd data init sent-data
+Data source &quot;sent-data&quot; initialized in current directory
 </code></pre>
 
-<p>Then you can upload it to Floyd.</p>
+<p>Then you can upload your dataset to Floyd.</p>
 <pre><code class="bash">$ floyd data upload
 Creating data source. Uploading files ...
 DATA ID                 NAME                    VERSION
 ----------------------  --------------------  ---------
-GY3QRFFUA8KpbnqvroTPPW  alice/data-model:1            1
+GY3QRFFUA8KpbnqvroTPPW  alice/sent-data:1            1
 </code></pre>
 
 <p>Floyd will generate a data id for the uploaded dataset. This uploaded dataset can be used in your future experiments, if needed,
@@ -593,9 +593,16 @@ using this data id. Read below for details.</p>
 <h2 id="using-data-set-in-experiments">Using data set in experiments</h2>
 <p>To use a public or your presonal dataset in your project you can use 
 the <code>--data</code> parameter in the floyd <a href="../../commands/run/">run</a> command.
-The data will be available in <code>/input</code> directory at project run time.</p>
+The data will be mounted and available in <code>/input</code> directory at project during run time.</p>
 <pre><code class="bash">$ floyd run --data GY3QRFFUA8KpbnqvroTPPW &quot;ls -la /input&quot;
 Syncing code ...
+...
+
+$ floyd logs -t GY3QRFFUA8KpbnqvroTPPW
+...
+2017-02-16 03:41:15,863 INFO - -rw-r--r--  1 root root 4151 Feb 16 11:38 positive_sentences.txt
+2017-02-16 03:41:15,863 INFO - -rw-r--r--  1 root root 4621 Feb 16 11:38 negative_sentences.txt
+2017-02-16 03:41:15,863 INFO - -rw-r--r--  1 root root 7797 Feb 16 11:38 neutral_sentences.txt
 ...
 </code></pre>
               

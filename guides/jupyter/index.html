@@ -297,6 +297,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#passing-input-data-and-storing-output-data" title="Passing Input data and storing Output data" class="md-nav__link">
+    Passing Input data and storing Output data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#saving-jupyter-notebooks" title="Saving Jupyter Notebooks" class="md-nav__link">
     Saving Jupyter Notebooks
   </a>
@@ -304,8 +311,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#stopping-the-job" title="Stopping the job" class="md-nav__link">
-    Stopping the job
+  <a href="#stopping-jupyter-server" title="Stopping Jupyter Server" class="md-nav__link">
+    Stopping Jupyter Server
   </a>
   
 </li>
@@ -589,6 +596,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#passing-input-data-and-storing-output-data" title="Passing Input data and storing Output data" class="md-nav__link">
+    Passing Input data and storing Output data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#saving-jupyter-notebooks" title="Saving Jupyter Notebooks" class="md-nav__link">
     Saving Jupyter Notebooks
   </a>
@@ -596,8 +610,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#stopping-the-job" title="Stopping the job" class="md-nav__link">
-    Stopping the job
+  <a href="#stopping-jupyter-server" title="Stopping Jupyter Server" class="md-nav__link">
+    Stopping Jupyter Server
   </a>
   
 </li>
@@ -616,14 +630,15 @@
               
                 
                 <h1 id="jupyter-notebook">Jupyter Notebook</h1>
-<p><a href="http://jupyter.org/">Jupyter</a> or <a href="https://ipython.org/">IPython</a> is an open source project that allows you 
-to create and share documents that contain live code, equations, visualizations and explanatory text. This 
-guide will show you how to run a Jupyter notebook on Floyd.</p>
+<p><a href="http://jupyter.org/">Jupyter</a> or <a href="https://ipython.org/">IPython</a> Notebooks allow you 
+to create and share documents that contain live code, equations, visualizations and explanatory text. It is 
+great for interactive development of code. This guide will show you how to run a Jupyter notebook on Floyd.</p>
 <h3 id="setup-project">Setup project</h3>
-<p>Clone a project which contain deep learning jupyter notebooks. For 
-example: <a href="https://github.com/aymericdamien/TensorFlow-Examples">aymericdamien/TensorFlow-Examples</a>.
+<p>Clone a project which contain deep learning jupyter notebooks. See some great 
+Tensorflow Notebook examples at <a href="https://github.com/floydhub/tensorflow-notebooks-examples">floydhub/tensorflow-notebooks-examples</a>.
 Then initialize a floyd project inside that.</p>
-<pre><code class="bash">$ cd TensorFlow-Examples/notebooks/3_NeuralNetworks
+<pre><code class="bash">$ git clone git@github.com:floydhub/tensorflow-notebooks-examples.git
+$ cd tensorFlow-notebooks-examples/3_NeuralNetworks
 $ floyd init neural-networks
 </code></pre>
 
@@ -642,26 +657,31 @@ To view logs enter:
     floyd logs dMoDZaCcvQMyfNbgwTx9f8
 </code></pre>
 
-<p>You can open the link to your jupyter notebook. The notebooks should be available and you can run 
-any of them.</p>
+<p>You can open the link to your jupyter server (example <code>https://www.floydhub.com:8000/EQDsTpeqB3RkjpHUgBGDyB</code>). 
+All the notebooks in your project should be available for you to run.</p>
 <p><img alt="Jupyter" src="../../img/jupyter_home.png" /></p>
 <h3 id="selecting-the-environment">Selecting the environment</h3>
 <p>Jupyter notebooks run in the same environments as other jobs. You can select any environment you want 
 along with the <code>--env</code> parameter of the <a href="../../commands/run/">run</a> command. You can see the list of supported environments
 <a href="../../home/environments/">here</a>.</p>
-<pre><code class="bash">$ floyd run --mode jupyter --env tensorflow_py2
+<pre><code class="bash">$ floyd run --mode jupyter --env tensorflow:py2
 Syncing code ...
 </code></pre>
 
+<p>To use Jupyter Notebook in a GPU instance, use the <code>--gpu</code> flag with the <code>run</code> command.</p>
 <h3 id="additional-dependencies">Additional dependencies</h3>
 <p>If you have any additional python dependencies, you can also add a <code>floyd_requirements.txt</code> file to 
 the notebook directory before floyd run. The packages specified there will be installed before running the 
 jupyter server</p>
+<h3 id="passing-input-data-and-storing-output-data">Passing Input data and storing Output data</h3>
+<p>Similar to regular jobs, any data passed during <code>floyd run</code> using the <code>--data</code> flag will be mounted 
+at <code>/input</code> (see <a href="../../home/using_datasets/">Using Datasets</a>). Any data that you write to <code>/output</code> will be stored for you, even after you end your 
+interactive Jupyter session (see <a href="../../home/managing_output">Managing Output</a>).</p>
 <h3 id="saving-jupyter-notebooks">Saving Jupyter Notebooks</h3>
-<p>Floyd does not save your Jupyter notebooks after you stop the floyd job. So you need to download any 
-relevant notebooks by selecting <code>File &gt; Download as</code> menu from the Jupyter notebook.</p>
-<h3 id="stopping-the-job">Stopping the job</h3>
-<p>Once you have experimented with your code, you still need to stop the job. Run the <a href="../../commands/stop/">stop</a> command 
+<p><strong>IMPORTANT</strong>: Floyd does not save your Jupyter notebooks after you stop the floyd job. So you need to download any 
+relevant notebooks by selecting <code>File &gt; Download As</code> menu from the Jupyter notebook.</p>
+<h3 id="stopping-jupyter-server">Stopping Jupyter Server</h3>
+<p>Once you have experimented with your code, you need to manually stop your "job". Run the <a href="../../commands/stop/">stop</a> command 
 for this.</p>
               
             </article>

@@ -717,11 +717,17 @@
                 
                   <h1>Style Transfer</h1>
                 
-                <p>Floyd can be used to host REST API of your trained models which can be accessed over the web. This feature 
-is very useful if you want to quickly compare models or have others play with your models. This guide will 
+                <p>Neural Style Transfer is an algorithm for combining the content of one image with the style of another image 
+using convolutional neural networks. Here's an example that maps the artistic style of The Starry Night 
+onto a night-time photograph of the Stanford campus:</p>
+<p><img src="https://raw.githubusercontent.com/jcjohnson/neural-style/master/examples/inputs/starry_night_google.jpg" height="200px">
+<img src="https://raw.githubusercontent.com/jcjohnson/neural-style/master/examples/inputs/hoovertowernight.jpg" height="200px">
+<img src="https://raw.githubusercontent.com/jcjohnson/neural-style/master/examples/outputs/starry_stanford_bigger.png" width="710px"></p>
+<p>We will use this example to demonstrate how Floyd can be used to deploy your trained model as a REST API endpoint that can be accessed over the web. 
+This feature is very useful if you want to quickly compare models or have others play with your models. This guide will 
 walk you through how to do this.</p>
 <h2 id="setup-project">Setup project</h2>
-<p>Clone your favorite deep learning project. For this guide we will be using <a href="https://github.com/floydhub/fast-style-transfer">Fast Style Transfer</a>
+<p>For this guide we will be using <a href="https://github.com/floydhub/fast-style-transfer">Fast Style Transfer</a>
 project.</p>
 <pre><code class="bash">$ git clone https://github.com/floydhub/fast-style-transfer
 $ cd fast-style-transfer
@@ -730,17 +736,18 @@ $ floyd init fast-style-transfer
 
 <h2 id="train-a-model">Train a model</h2>
 <p>You can train your model by running the <code>style.py</code> script in this repo on Floyd. You can specify any style image to use in the command line. Just 
-download it and keep it in current path.</p>
+download it and keep it in current path. In this example we will be starting from a 
+<a href="https://github.com/floydhub/fast-style-transfer#evaluating-style-transfer-networks">pre-trained model</a>.</p>
 <h3 id="training-data">Training data</h3>
 <p>This project also requires access to the imagenet-vgg-verydeep-19 model and image training data. Floyd already has this data source available with id 
-<a href="https://www.floydhub.com/viewer/data/VhrTiJzhuvMZKUVurG7cGT/2JEQ7sC53Aik7i7sPx3EjY/">jq4ZXUCSVer4t65rWeyieG</a>. You can specify this at the 
+<a href="https://www.floydhub.com/viewer/data/VhrTiJzhuvMZKUVurG7cGT/2JEQ7sC53Aik7i7sPx3EjY/">jq4ZXUCSVer4t65rWeyieG</a>. You can mount this at runtime using the 
 <code>--data</code> paramter. For more information on how data inputs work, see <a href="../../home/using_datasets/">Using Datasets</a>.</p>
 <h3 id="training">Training</h3>
-<pre><code class="bash">$ floyd run --gpu --env keras:py2 --data jq4ZXUCSVer4t65rWeyieG &quot;python style.py --style examples/style/la_muse.jpg --epoch 1 --total-iterations 10 --checkpoint-dir /output --content-weight 1.5e1 --batch-size 20&quot;
+<pre><code class="bash">$ floyd run --gpu --env keras:py2 --data jq4ZXUCSVer4t65rWeyieG &quot;python style.py --style examples/style/la_muse.jpg --base-model-path /input/pre-trained-tf/la_muse.ckpt --epoch 1 --total-iterations 10 --checkpoint-dir /output&quot;
 </code></pre>
 
 <p>This will kick off a new job on Floyd. This will take a few minutes to run and will generate the model. You can follow along the progress 
-by using the <a href="../../commands/logs/">logs</a> command.</p>
+by using the <a href="../../commands/logs/">logs</a> command. </p>
 <pre><code class="bash">$ floyd logs &lt;RUN_ID&gt; -t
 </code></pre>
 
@@ -751,7 +758,7 @@ by using the <a href="../../commands/logs/">logs</a> command.</p>
 <h2 id="evaluate-your-model">Evaluate your model</h2>
 <p>You can evaluate the generated model by running <code>evaluate.py</code> on sample images. Use the output id from the training step
 as the datasource in this step. Add any image you want to style transfer to the <code>images</code> directory. Then run <code>evaluate.py</code>.</p>
-<pre><code class="bash">floyd run --gpu --env keras:py2 --data &lt;REPLACE_WITH_OUTPUT_ID&gt; &quot;python evaluate.py --allow-different-dimensions  --checkpoint /input/fns.ckpt --in-path ./images/ --out-path /output/&quot;
+<pre><code class="bash">floyd run --env keras:py2 --data &lt;REPLACE_WITH_OUTPUT_ID&gt; &quot;python evaluate.py --allow-different-dimensions  --checkpoint /input/fns.ckpt --in-path ./images/ --out-path /output/&quot;
 </code></pre>
 
 <p>You can track the status of the run with the status or logs command.</p>
@@ -769,7 +776,8 @@ for this.</p>
 a fully working model try the train step again, this time without setting <code>--total-iterations</code> and increasing the <code>--epoch</code> to 2.
 It takes about 8 hours to train a model that works well. You can instead try one of our pre-trained models in the next section.</p>
 <h2 id="evaluate-pre-trained-models">Evaluate pre-trained models</h2>
-<p>If you want to try out some awesome pre-trained models, we have a datasource for that available (<a href="https://www.floydhub.com/viewer/data/Wociv8zwEmdRSSmNXbFwoK/">Js534T344XYBPMvWqhxJNj</a>) publicly.
+<p>If you want to try out some awesome pre-trained models for various styles, we have a datasource for that available 
+(<a href="https://www.floydhub.com/viewer/data/Wociv8zwEmdRSSmNXbFwoK/">Js534T344XYBPMvWqhxJNj</a>) publicly. 
 You can play with any of these model and style transfer any image you prefer. Just add them to <code>images</code> directory. And point to the 
 right model in the <code>--checkpoint</code> parameter.</p>
 <pre><code class="bash">floyd run --gpu --env keras:py2 --data Js534T344XYBPMvWqhxJNj &quot;python evaluate.py --allow-different-dimensions --checkpoint /input/wave.ckpt --in-path ./images/ --out-path /output/&quot;
@@ -789,8 +797,9 @@ right model in the <code>--checkpoint</code> parameter.</p>
 <h3 id="serve-mode">Serve mode</h3>
 <p>Floyd <a href="../../commands/run/">run</a> command has a <code>serve</code> mode. This will upload the files in the current directory and run a special command - 
 <code>python app.py</code>. Floyd expects this file to contain the code to run a web server and listen on port <code>5000</code>. You can see the 
-<a href="https://github.com/floydhub/fast-style-transfer/blob/master/app.py">app.py</a> file in the sample repository. This file should handles the 
-incoming request and execute the code in <code>evaluate.py</code> and returns the output.</p>
+<a href="https://github.com/floydhub/fast-style-transfer/blob/master/app.py">app.py</a> file in the sample repository. This file handles the 
+incoming request, executes the code in <code>evaluate.py</code> and returns the output.</p>
+<p><em>Note that this feature is in preview mode and is not production ready yet</em></p>
 <pre><code class="bash">$ floyd run --env keras:py2 --data Js534T344XYBPMvWqhxJNj --mode serve
 Syncing code ...
 RUN ID                  NAME                              VERSION

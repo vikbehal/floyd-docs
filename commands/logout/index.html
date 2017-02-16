@@ -411,6 +411,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="toc">
         floyd logout
@@ -423,6 +425,8 @@
       
 <nav class="md-nav md-nav--secondary">
   
+  
+    
   
   
     <label class="md-nav__title" for="toc">Table of contents</label>
@@ -438,6 +442,20 @@
         <li class="md-nav__item">
   <a href="#usage" title="Usage" class="md-nav__link">
     Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description_1" title="Description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" title="Example" class="md-nav__link">
+    Example
   </a>
   
 </li>
@@ -522,6 +540,8 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -540,6 +560,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#description_1" title="Description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -553,12 +587,17 @@
                
               
                 
-                  <h1>floyd logout</h1>
-                
-                <h3 id="description">Description</h3>
+                <h1 id="logout-from-floyd">Logout from Floyd.</h1>
+<h3 id="description">Description</h3>
 <p>Logout the CLI from Floyd</p>
 <h3 id="usage">Usage</h3>
 <pre><code class="bash">floyd logout
+</code></pre>
+
+<h3 id="description_1">Description</h3>
+<p>Logs you out and expires your current token. You will need to login again to run further commands.</p>
+<h3 id="example">Example</h3>
+<pre><code class="bash">$ floyd logout
 </code></pre>
               
             </article>

@@ -519,7 +519,9 @@
                 
                 <h1 id="environments">Environments</h1>
 <p>Below is the list of Deep Learning environments supported by Floyd. Any of 
-these can be specified in the floyd <a href="../../commands/run/">run</a> command.</p>
+these can be specified in the floyd <a href="../../commands/run/">run</a> command using the <code>--env</code> option.</p>
+<p>If no <code>--env</code> is provided, it uses the <code>keras</code> image, which comes with a Python 3 image containing 
+Keras 1.2.2, Tensorflow 0.12.1 and Theano rel-0.8.2 pre-installed.</p>
 <table>
 <thead>
 <tr>
@@ -538,7 +540,7 @@ these can be specified in the floyd <a href="../../commands/run/">run</a> comman
 </tr>
 <tr>
 <td></td>
-<td>tensorflow-py2</td>
+<td>tensorflow:py2</td>
 <td>Tensorflow 0.12.1 on Python2.</td>
 <td><a href="https://hub.docker.com/r/floydhub/tensorflow/">floydhub/tensorflow:latest-py2</a></td>
 </tr>
@@ -550,7 +552,7 @@ these can be specified in the floyd <a href="../../commands/run/">run</a> comman
 </tr>
 <tr>
 <td></td>
-<td>keras-py2</td>
+<td>keras:py2</td>
 <td>Keras 1.2.2 on Python2.</td>
 <td><a href="https://hub.docker.com/r/floydhub/keras/">floydhub/keras:latest-py2</a></td>
 </tr>
@@ -562,12 +564,26 @@ these can be specified in the floyd <a href="../../commands/run/">run</a> comman
 </tr>
 <tr>
 <td></td>
-<td>theano-py2</td>
+<td>theano:py2</td>
 <td>Theano rel-0.8.2 on Python2.</td>
 <td><a href="https://hub.docker.com/r/floydhub/theano/">floydhub/theano:latest-py2</a></td>
 </tr>
+<tr>
+<td>Torch (coming soon)</td>
+<td></td>
+<td></td>
+<td><a href="https://hub.docker.com/r/floydhub/torch/">floydhub/torch:latest-py3</a></td>
+</tr>
 </tbody>
 </table>
+<p>All environments are available for both CPU and GPU execution. For example, </p>
+<p>To run a Tensorflow job on CPU</p>
+<pre><code class="bash">$ floyd run --env tensorflow:py2 &quot;python mnist_cnn.py&quot; 
+</code></pre>
+
+<p>To run a Tensorflow job on GPU (CUDA, cuDNN, etc. installed)</p>
+<pre><code class="bash">$ floyd run --env tensorflow:py2 --gpu &quot;python mnist_cnn.py&quot; 
+</code></pre>
               
             </article>
           </div>

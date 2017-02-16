@@ -224,6 +224,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#training-on-cpu-vs-gpu" title="Training on CPU vs. GPU" class="md-nav__link">
+    Training on CPU vs. GPU
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#checking-run-status" title="Checking run status" class="md-nav__link">
     Checking run status
   </a>
@@ -604,6 +611,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#training-on-cpu-vs-gpu" title="Training on CPU vs. GPU" class="md-nav__link">
+    Training on CPU vs. GPU
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#checking-run-status" title="Checking run status" class="md-nav__link">
     Checking run status
   </a>
@@ -639,18 +653,20 @@
                 
                   <h1>First Floyd Project</h1>
                 
-                <p>This page will walk you through running your first project on Floyd. 
+                <p>This page will walk you through running your first project on Floyd. We will train a 
+convolutional neural network (CNN) model for handwritten digit recognition using the MNIST database. 
+For more information on this, visit <a href="https://www.tensorflow.org/versions/r0.10/tutorials/mnist/pros/">Tensorflow's tutorial</a>.
 We will be using Tensorflow but Floyd 
-can be used for a wide range of <a href="../environments/">frameworks</a>.</p>
+supports a wide variety of other popular <a href="../environments/">deep learning frameworks</a> also.</p>
 <h2 id="installing-floyd-cli">Installing Floyd CLI</h2>
-<p>Floyd CLI is a python based command line tool to interact with Floyd.</p>
+<p>Floyd CLI is a python based command line tool to interact with FloydHub.</p>
 <p><code>floyd-cli</code> is available on <a href="https://pypi.python.org/pypi/floyd-cli">pypi</a> and
 runs on both Python 2.7 and Python 3.5.</p>
 <p>Use pip to install the cli.</p>
 <pre><code class="bash">pip install -U floyd-cli
 </code></pre>
 
-<p>You can view the command supported by the CLI using the <code>--help</code> option.</p>
+<p>You can view the commands supported by the CLI using the <code>--help</code> option.</p>
 <pre><code class="bash">$ floyd --help
 Usage: floyd [OPTIONS] COMMAND [ARGS]...
 
@@ -662,21 +678,23 @@ Usage: floyd [OPTIONS] COMMAND [ARGS]...
 
 <p>Detailed documentation for the floyd commands is available in the <a href="../../commands/">documentation</a>.</p>
 <h2 id="create-an-account">Create an account</h2>
-<p>If you do not have an account already, visit the Floyd <a href="https://www.floydhub.com/">website</a>
+<p>If you do not have an account already, visit the FloydHub <a href="https://www.floydhub.com/">website</a>
 to create one.</p>
 <h2 id="login-to-floyd">Login to Floyd</h2>
 <p>You can now use the command line to <a href="../../commands/login/">login</a> to Floyd.</p>
 <pre><code class="bash">$ floyd login
-Access token page will now open in your browser. Continue? [Y/n]:
-Please paste the code here:
+Authentication token page will now open in your browser. Continue? [Y/n]:
+Please paste the token here:
 Login Successful
 </code></pre>
 
+<p>Copy the authentication token from your browser (available after you login) and paste it in your terminal.</p>
 <h2 id="creating-a-new-project">Creating a new project</h2>
-<p>Clone any tensorflow project you want to run on Floyd.</p>
+<p>We will clone and use a <a href="https://github.com/floydhub/tensorflow-examples">tensorflow-examples</a> repository. Alternatively, 
+you can use any of your own projects you want to run on Floyd.</p>
 <pre><code class="bash">$ git clone https://github.com/floydhub/tensorflow-examples.git
 Cloning into 'tensorflow-examples'...
-$ cd tensorflow-examples
+$ cd tensorflow-examples/3_NeuralNetworks
 </code></pre>
 
 <p>Now initialize a new Floyd project with the <a href="../../commands/init/">init</a> command and 
@@ -690,9 +708,9 @@ Project &quot;first_proj&quot; initialized in current directory
 <p>Running your project on Floyd is simple. It is very similar to running code 
 on your computer. Instead, the CLI syncs your code to Floyd servers and 
 runs it on the cloud. Lets train and test a tensorflow implementation of 
-handwriting digit recognition with MNIST dataset.</p>
+handwriting digit recognition using CNNs and the MNIST dataset.</p>
 <p>Use the floyd <a href="../../commands/run/">run</a> command to run the code.</p>
-<pre><code class="bash">$ floyd run &quot;python 2_BasicModels/nearest_neighbor.py&quot; 
+<pre><code class="bash">$ floyd run --gpu &quot;python mnist_cnn.py&quot; 
 Syncing code ...
 RUN ID                  NAME                      VERSION
 ----------------------  ----------------     ---------
@@ -700,44 +718,64 @@ AKpnXqj9BEU6d8KhmygTyb  alice/first_proj:1         2
 ...
 </code></pre>
 
-<p>Congratulations! Your first experiment is now running on Floyd. </p>
+<p>Congratulations! Your first experiment is now running on Floyd. Behind the scenes, Floyd did the following:</p>
+<ul>
+<li>Synced your local code to the cloud</li>
+<li>Spun up a GPU instance (because <code>--gpu</code>)</li>
+<li>Setup an environment with Tensorflow installed</li>
+<li>Started executing your command inside this environment</li>
+</ul>
+<p>Make note of the RUN_ID. You will be using this to issue additional commands related to your job.</p>
+<h2 id="training-on-cpu-vs-gpu">Training on CPU vs. GPU</h2>
+<p>When using the <code>floyd run</code> command, by default, a CPU machine is used to execute your job. If you 
+want to use a GPU instance (Nvidia Tesla K80 with 12GB memory), use the <code>--gpu</code> flag.</p>
+<p>To run job on CPU</p>
+<pre><code class="bash">$ floyd run &quot;python mnist_cnn.py&quot; 
+</code></pre>
+
+<p>To run job on GPU</p>
+<pre><code class="bash">$ floyd run --gpu &quot;python mnist_cnn.py&quot; 
+</code></pre>
+
 <h2 id="checking-run-status">Checking run status</h2>
 <p>To see the status of your project runs, use the <a href="../../commands/status/">status</a> command. You can specify 
-a single <code>RUN ID</code> to get its status. Or the CLI will show the results of all your experiments 
-in that project.</p>
-<pre><code class="bash">RUN ID                  CREATED        STATUS    DURATION(s)  NAME                INSTANCE     VERSION
+a single <code>RUN ID</code> to get its status. Or the CLI will show the results of all your runs of the current<br />
+project.</p>
+<pre><code class="bash">$ floyd status
+RUN ID                  CREATED        STATUS    DURATION(s)  NAME                INSTANCE     VERSION
 ----------------------  ---------      --------  -----------  ------------------- ---------   --------
-AKpnXqj9BEU6d8KhmygTyb  just now       running            13  alice/first_proj:1  cpu                2
+AKpnXqj9BEU6d8KhmygTyb  just now       running            13  alice/first_proj:1  gpu                2
 mBDHCqro9Hd2dHTYdRReGd  4 minutes ago  success           426  alice/tf-demo:1     cpu                1
 </code></pre>
 
 <h2 id="viewing-logs">Viewing logs</h2>
 <p>You can view the logs of the experiment you just kicked off with the 
 <a href="../../commands/logs/">logs</a> command. You need to pass the <code>RUN ID</code> from the 
-previous step to get the logs.</p>
-<pre><code class="bash">$ floyd logs AKpnXqj9BEU6d8KhmygTyb
+previous step to get the logs. </p>
+<pre><code class="bash">$ floyd logs AKpnXqj9BEU6d8KhmygTyb -t
 ...
 ##############################################################################
 
 2017-02-15 22:25:20,315 INFO - Run Output:
 ...
-2017-02-15 22:25:26,540 INFO - Test 0 Prediction: 7 True Class: 7
-2017-02-15 22:25:26,555 INFO - Test 1 Prediction: 2 True Class: 2
-2017-02-15 22:25:26,569 INFO - Test 2 Prediction: 1 True Class: 1
+2017-02-15 22:25:26,540 INFO - Iter 1280, Minibatch Loss= 19537.398438, Training Accuracy= 0.25781
+2017-02-15 22:25:26,555 INFO - Iter 2560, Minibatch Loss= 8323.721680, Training Accuracy= 0.49219
+2017-02-15 22:25:26,569 INFO - Iter 3840, Minibatch Loss= 7442.384766, Training Accuracy= 0.64844
 ....
-2017-02-15 22:25:29,783 INFO - Done!
-2017-02-15 22:25:29,784 INFO - Accuracy: 0.9200000000000007
+2017-02-15 22:25:29,783 INFO - Optimization Finished!
+2017-02-15 22:25:29,784 INFO - Testing Accuracy: 0.980469
 2017-02-15 22:25:29,942 INFO - 
 ##############################################################################
 ...
 </code></pre>
 
 <p>You can see the output of your code in the <code>Run Output</code> section of the logs.
-Any thing you log or print in your code will appear here.</p>
+Any thing you log or print in your code will appear here. Using the <code>-t</code> (tail) flag 
+streams the logs as they are generated.</p>
 <h2 id="iterating-on-your-project">Iterating on your project</h2>
-<p>If you would like to edit your code an re-run your project, you just use the <code>run</code>
-command again. The CLI will upload the new version of your code and start another 
-run of your project.</p>
+<p>You can edit your code locally and re-run your project using the <code>run</code> command. 
+The CLI will upload the new version of your code and start another 
+run of your project. Floyd manages and keeps track of all revisions of your experiments.</p>
               
             </article>
           </div>
