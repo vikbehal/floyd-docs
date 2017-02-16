@@ -214,8 +214,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-data-set-in-runs" title="Using data set in runs" class="md-nav__link">
-    Using data set in runs
+  <a href="#using-data-set-in-experiments" title="Using data set in experiments" class="md-nav__link">
+    Using data set in experiments
   </a>
   
 </li>
@@ -445,6 +445,17 @@
   </li>
 
         
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../commands/logout/" title="floyd logout" class="md-nav__link">
+        floyd logout
+      </a>
+    
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -537,8 +548,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-data-set-in-runs" title="Using data set in runs" class="md-nav__link">
-    Using data set in runs
+  <a href="#using-data-set-in-experiments" title="Using data set in experiments" class="md-nav__link">
+    Using data set in experiments
   </a>
   
 </li>
@@ -563,26 +574,30 @@
 separately and use them when running your project.</p>
 <h2 id="uploading-a-new-dataset">Uploading a new dataset</h2>
 <p>To upload a new dataset, use the floyd <a href="../../commands/data/">data</a> command.
-Create a directory with the data and initialize it for data.</p>
-<pre><code class="bash">$ cd /data/mnist
-$ floyd data init mnist-data
-Data source &quot;mnist-data&quot; initialized in current directory
+Create/navigate to the directory where the data resides and run <code>floyd data init</code> to initialize.</p>
+<pre><code class="bash">$ cd models/
+$ floyd data init data-model
+Data source &quot;data-model&quot; initialized in current directory
 </code></pre>
 
-<p>Then you can upload it to Floyd</p>
+<p>Then you can upload it to Floyd.</p>
 <pre><code class="bash">$ floyd data upload
 Creating data source. Uploading files ...
+DATA ID                 NAME                    VERSION
+----------------------  --------------------  ---------
+GY3QRFFUA8KpbnqvroTPPW  alice/data-model:1            1
 </code></pre>
 
-<h2 id="using-data-set-in-runs">Using data set in runs</h2>
+<p>Floyd will generate a data id for the uploaded dataset. This uploaded dataset can be used in your future experiments, if needed,
+using this data id. Read below for details.</p>
+<h2 id="using-data-set-in-experiments">Using data set in experiments</h2>
 <p>To use a public or your presonal dataset in your project you can use 
-the <code>--data</code> parameter in the floyd <a href="../../commands/run/">run</a> command.</p>
-<pre><code class="bash">$ floyd run --data dTe2cJJrNR2CBD74rSZXPA &quot;python train_tf.py -lr 0.01 -output /output/model.bin&quot;
+the <code>--data</code> parameter in the floyd <a href="../../commands/run/">run</a> command.
+The data will be available in <code>/input</code> directory at project run time.</p>
+<pre><code class="bash">$ floyd run --data GY3QRFFUA8KpbnqvroTPPW &quot;ls -la /input&quot;
 Syncing code ...
 ...
 </code></pre>
-
-<p>The attached data set will be available at <code>/input</code> at project runtime.</p>
               
             </article>
           </div>

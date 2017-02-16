@@ -345,8 +345,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#serving-mode" title="Serving mode" class="md-nav__link">
-    Serving mode
+  <a href="#serve-mode" title="Serve mode" class="md-nav__link">
+    Serve mode
   </a>
   
 </li>
@@ -519,6 +519,17 @@
   </li>
 
         
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../commands/logout/" title="floyd logout" class="md-nav__link">
+        floyd logout
+      </a>
+    
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -666,8 +677,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#serving-mode" title="Serving mode" class="md-nav__link">
-    Serving mode
+  <a href="#serve-mode" title="Serve mode" class="md-nav__link">
+    Serve mode
   </a>
   
 </li>
@@ -721,7 +732,7 @@ $ floyd init fast-style-transfer
 <p>You can train your model by running the <code>style.py</code> script in this repo on Floyd. You can specify any style image to use in the command line. Just 
 download it and keep it in current path.</p>
 <h3 id="training-data">Training data</h3>
-<p>This project also requires access to a the imagenet-vgg-verydeep-19 model and image training data. Floyd already has this data source available with id 
+<p>This project also requires access to the imagenet-vgg-verydeep-19 model and image training data. Floyd already has this data source available with id 
 <a href="https://www.floydhub.com/viewer/data/VhrTiJzhuvMZKUVurG7cGT/2JEQ7sC53Aik7i7sPx3EjY/">jq4ZXUCSVer4t65rWeyieG</a>. You can specify this at the 
 <code>--data</code> paramter. For more information on how data inputs work, see <a href="../../home/using_datasets/">Using Datasets</a>.</p>
 <h3 id="training">Training</h3>
@@ -775,12 +786,12 @@ right model in the <code>--checkpoint</code> parameter.</p>
 <p><img alt="Jupyter" src="../../img/taipei101_wave.jpg" /></p>
 <h2 id="model-api">Model API</h2>
 <p>You can now host this model as a REST API. This means you can send any image to this API as a HTTP request and it will be style transfered. </p>
-<h3 id="serving-mode">Serving mode</h3>
-<p>Floyd <a href="../../commands/run/">run</a> command has a <code>serving</code> mode. This will upload the files in the current directory and run a special command - 
+<h3 id="serve-mode">Serve mode</h3>
+<p>Floyd <a href="../../commands/run/">run</a> command has a <code>serve</code> mode. This will upload the files in the current directory and run a special command - 
 <code>python app.py</code>. Floyd expects this file to contain the code to run a web server and listen on port <code>5000</code>. You can see the 
 <a href="https://github.com/floydhub/fast-style-transfer/blob/master/app.py">app.py</a> file in the sample repository. This file should handles the 
 incoming request and execute the code in <code>evaluate.py</code> and returns the output.</p>
-<pre><code class="bash">$ floyd run --env keras:py2 --data Js534T344XYBPMvWqhxJNj --mode serving
+<pre><code class="bash">$ floyd run --env keras:py2 --data Js534T344XYBPMvWqhxJNj --mode serve
 Syncing code ...
 RUN ID                  NAME                              VERSION
 ----------------------  ------------------------------  ---------

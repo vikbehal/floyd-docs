@@ -431,6 +431,17 @@
   </li>
 
         
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../commands/logout/" title="floyd logout" class="md-nav__link">
+        floyd logout
+      </a>
+    
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -535,7 +546,8 @@
 If your code needs additional Python packages to be available at run time, you 
 can add them to a <code>floyd_requirements.txt</code> file. This is a special file that 
 will be read at runtime and the packages listed here will be installed before 
-running your command.</p>
+running your command. Note that this file has to be in the same directory where
+the floyd commands are run from.</p>
 <pre><code class="bash">$ echo &quot;Pillow&quot; &gt; floyd_requirements.txt
 </code></pre>
               

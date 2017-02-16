@@ -224,15 +224,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#viewing-logs" title="Viewing logs" class="md-nav__link">
-    Viewing logs
+  <a href="#checking-run-status" title="Checking run status" class="md-nav__link">
+    Checking run status
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#checking-run-status" title="Checking run status" class="md-nav__link">
-    Checking run status
+  <a href="#viewing-logs" title="Viewing logs" class="md-nav__link">
+    Viewing logs
   </a>
   
 </li>
@@ -480,6 +480,17 @@
   </li>
 
         
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../commands/logout/" title="floyd logout" class="md-nav__link">
+        floyd logout
+      </a>
+    
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -593,15 +604,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#viewing-logs" title="Viewing logs" class="md-nav__link">
-    Viewing logs
+  <a href="#checking-run-status" title="Checking run status" class="md-nav__link">
+    Checking run status
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#checking-run-status" title="Checking run status" class="md-nav__link">
-    Checking run status
+  <a href="#viewing-logs" title="Viewing logs" class="md-nav__link">
+    Viewing logs
   </a>
   
 </li>
@@ -670,8 +681,8 @@ $ cd tensorflow-examples
 
 <p>Now initialize a new Floyd project with the <a href="../../commands/init/">init</a> command and 
 choose a project name.</p>
-<pre><code class="bash">$ floyd init mnist
-Project &quot;mnist&quot; initialized in current directory
+<pre><code class="bash">$ floyd init first_proj
+Project &quot;first_proj&quot; initialized in current directory
 </code></pre>
 
 <p>Now you are ready to run your first project on Floyd!</p>
@@ -681,44 +692,48 @@ on your computer. Instead, the CLI syncs your code to Floyd servers and
 runs it on the cloud. Lets train and test a tensorflow implementation of 
 handwriting digit recognition with MNIST dataset.</p>
 <p>Use the floyd <a href="../../commands/run/">run</a> command to run the code.</p>
-<pre><code class="bash">$ floyd run &quot;python train_tf.py -lr 0.01 -output /output/model.bin&quot;
+<pre><code class="bash">$ floyd run &quot;python 2_BasicModels/nearest_neighbor.py&quot; 
 Syncing code ...
-RUN ID                  NAME                           VERSION
-----------------------  ---------------------------  ---------
-dTe2cJJrNR2CBD74rSZXPA  floydhub/tensorflow-project:7        7
+RUN ID                  NAME                      VERSION
+----------------------  ----------------     ---------
+AKpnXqj9BEU6d8KhmygTyb  alice/first_proj:1         2
 ...
 </code></pre>
 
-<p>Congratulations! your first experiment is now running on Floyd. </p>
+<p>Congratulations! Your first experiment is now running on Floyd. </p>
+<h2 id="checking-run-status">Checking run status</h2>
+<p>To see the status of your project runs, use the <a href="../../commands/status/">status</a> command. You can specify 
+a single <code>RUN ID</code> to get its status. Or the CLI will show the results of all your experiments 
+in that project.</p>
+<pre><code class="bash">RUN ID                  CREATED        STATUS    DURATION(s)  NAME                INSTANCE     VERSION
+----------------------  ---------      --------  -----------  ------------------- ---------   --------
+AKpnXqj9BEU6d8KhmygTyb  just now       running            13  alice/first_proj:1  cpu                2
+mBDHCqro9Hd2dHTYdRReGd  4 minutes ago  success           426  alice/tf-demo:1     cpu                1
+</code></pre>
+
 <h2 id="viewing-logs">Viewing logs</h2>
 <p>You can view the logs of the experiment you just kicked off with the 
 <a href="../../commands/logs/">logs</a> command. You need to pass the <code>RUN ID</code> from the 
 previous step to get the logs.</p>
-<pre><code class="bash">$ floyd logs dTe2cJJrNR2CBD74rSZXPA
+<pre><code class="bash">$ floyd logs AKpnXqj9BEU6d8KhmygTyb
 ...
-################################################################################
+##############################################################################
 
-2017-01-20 19:18:41,353 INFO - Run Output:
-2017-01-20 19:18:42,306 INFO - Epoch: 0001 cost= 0.200682446
-2017-01-20 19:18:42,447 INFO - Epoch: 0002 cost= 0.165553480
+2017-02-15 22:25:20,315 INFO - Run Output:
 ...
-################################################################################
+2017-02-15 22:25:26,540 INFO - Test 0 Prediction: 7 True Class: 7
+2017-02-15 22:25:26,555 INFO - Test 1 Prediction: 2 True Class: 2
+2017-02-15 22:25:26,569 INFO - Test 2 Prediction: 1 True Class: 1
+....
+2017-02-15 22:25:29,783 INFO - Done!
+2017-02-15 22:25:29,784 INFO - Accuracy: 0.9200000000000007
+2017-02-15 22:25:29,942 INFO - 
+##############################################################################
 ...
 </code></pre>
 
 <p>You can see the output of your code in the <code>Run Output</code> section of the logs.
 Any thing you log or print in your code will appear here.</p>
-<h2 id="checking-run-status">Checking run status</h2>
-<p>To see the status of your project runs, use the <a href="../../commands/status/">status</a> command. You can specify 
-a single <code>RUN ID</code> to get its status. Or the CLI will show the results of all your experiments 
-in that project.</p>
-<pre><code class="bash">$ floyd status
-RUN ID                  CREATED        STATUS      DURATION  NAME               INSTANCE      VERSION
-----------------------  -------------  --------  ----------  -----------------  ----------  ---------
-ncGPzDrm7XV58pBeKGUxd6  just now       success            3  alice/tf-demo:2     cpu                 2
-mBDHCqro9Hd2dHTYdRReGd  4 minutes ago  success            4  alice/tf-demo:1     cpu                 1
-</code></pre>
-
 <h2 id="iterating-on-your-project">Iterating on your project</h2>
 <p>If you would like to edit your code an re-run your project, you just use the <code>run</code>
 command again. The CLI will upload the new version of your code and start another 

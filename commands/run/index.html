@@ -420,8 +420,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#serving" title="Serving" class="md-nav__link">
-    Serving
+  <a href="#serve" title="Serve" class="md-nav__link">
+    Serve
   </a>
   
     <nav class="md-nav">
@@ -507,6 +507,17 @@
     
       <a href="../stop/" title="floyd stop" class="md-nav__link">
         floyd stop
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../logout/" title="floyd logout" class="md-nav__link">
+        floyd logout
       </a>
     
   </li>
@@ -658,8 +669,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#serving" title="Serving" class="md-nav__link">
-    Serving
+  <a href="#serve" title="Serve" class="md-nav__link">
+    Serve
   </a>
   
     <nav class="md-nav">
@@ -715,17 +726,17 @@
 <tr>
 <td><code>--data &lt;ID&gt;</code></td>
 <td></td>
-<td>ID of the data source to link to. See <a href="#data">data</a> section for more details.</td>
+<td>ID of the data source to link to. See <a href="../../home/using_datasets">data</a> section for more details.</td>
 </tr>
 <tr>
-<td><code>--mode [command|jupyter|serving]</code></td>
+<td><code>--mode [jupyter|serve]</code></td>
 <td>command</td>
-<td>Specify the mode you want to run the project. The default behavior executes the command you specify. See <a href="#jupyter">jupyter</a> and <a href="#serving">serving</a> sections for more info on them.</td>
+<td>Specify the mode you want to run the project. The default behavior executes the command you specify. See <a href="../../guides/jupyter">jupyter</a> and <a href="#serve">serve</a> sections for more info on them.</td>
 </tr>
 <tr>
 <td><code>--env [tensorflow_py3|tensorflow_py2]</code></td>
 <td>tensorflow_py3</td>
-<td>Specify the environment you want to use for your project. See <a href="#environments">environments</a> for the full list.</td>
+<td>Specify the environment you want to use for your project. See <a href="../../home/environments">environments</a> for the full list.</td>
 </tr>
 <tr>
 <td>command</td>
@@ -736,7 +747,7 @@
 </table>
 <h3 id="description">Description</h3>
 <p>This command syncs the code tracked by the CLI to the Floyd servers and executes your command. You can see the progress 
-with <a href="#status">status</a> command. To view the logs from your code use <a href="#logs">logs</a> command.</p>
+with <a href="../status">status</a> command. To view the logs from your code use <a href="../logs">logs</a> command.</p>
 <h3 id="example">Example</h3>
 <pre><code class="bash">$ floyd run &quot;python train_tf.py -lr 0.01 -output /output/model.bin&quot;
 Syncing code ...
@@ -748,7 +759,7 @@ $ floyd logs dTe2cJJrNR2CBD74rSZXPA
 </code></pre>
 
 <h3 id="floyd_requirementstxt">floyd_requirements.txt</h3>
-<p>Floyd runs standard Docker images for various deep learning frameworks.(See <a href="#environments">environments</a> for details). If your 
+<p>Floyd runs standard Docker images for various deep learning frameworks.(See <a href="../../home/environments">environments</a> for details). If your 
 code requires additional Python dependencies you can specify them in a <code>floyd_requirements.txt</code> file and place it at the root 
 directory of your project. These dependencies will be installed before running your code.</p>
 <h4 id="example_1">Example</h4>
@@ -761,20 +772,20 @@ $ floyd run &quot;python train_tf.py -lr 0.01 -output /output/model.bin&quot;
 <h3 id="jupyter-notebook">Jupyter notebook</h3>
 <p>Floyd supports running Jupyter/iPython notebooks on the server. Make sure that the notebook (.ipynb) files are present in the 
 current directory. Use <code>--mode jupyter</code> and you will be presented with a URL to view your Jupyter environment. You do not need 
-to specify a command in this mode. See <a href="#jupyter">jupyter</a> page for more details.</p>
+to specify a command in this mode. See <a href="../../guides/jupyter">jupyter</a> page for more details.</p>
 <h4 id="example_2">Example</h4>
 <pre><code class="bash">$ floyd run --mode jupyter
 ...
 Path to jupyter notebook: https://www.floydhub.com:8000/g8uGRZFQz85meArJGToEcs
 </code></pre>
 
-<h3 id="serving">Serving</h3>
+<h3 id="serve">Serve</h3>
 <p>Floyd can be used to host the model you generated as a REST api. This api can be used to evaluate your model over HTTP.
-Use <code>--mode serving</code> and you will be presented with a URL to access your API. Floyd currently supports only Flask apps.
+Use <code>--mode serve</code> and you will be presented with a URL to access your API. Floyd currently supports only Flask apps.
 It runs app.py file and expects the service to run on port 5000. You do not need to specify a command in this mode.
-See <a href="#serving">serving</a> page for more details.</p>
+See <a href="../../guides/style_transfer/#serve-mode">serve</a> page for more details.</p>
 <h4 id="example_3">Example</h4>
-<pre><code class="bash">$ floyd run --mode serving
+<pre><code class="bash">$ floyd run --mode serve
 ...
 Path to service endpoint: https://www.floydhub.com:8000/vbKSKgVYGgZqmM9i3LjLBb
 </code></pre>

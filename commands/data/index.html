@@ -587,6 +587,17 @@
   </li>
 
         
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../logout/" title="floyd logout" class="md-nav__link">
+        floyd logout
+      </a>
+    
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -852,19 +863,19 @@
 </thead>
 <tbody>
 <tr>
-<td>floyd data init</td>
+<td><code>floyd data init</code></td>
 <td>Initialize a new dataset</td>
 </tr>
 <tr>
-<td>floyd data upload</td>
+<td><code>floyd data upload</code></td>
 <td>Create a new dataset by uploading data</td>
 </tr>
 <tr>
-<td>floyd data status</td>
+<td><code>floyd data status</code></td>
 <td>List all your datasets</td>
 </tr>
 <tr>
-<td>floyd data output</td>
+<td><code>floyd data output</code></td>
 <td>View contents of a dataset</td>
 </tr>
 </tbody>
@@ -894,7 +905,7 @@
 </table>
 <h3 id="description">Description</h3>
 <p>Floyd can manage your experiment datasets and make them available when running your projects.This command initializes a new 
-dataset at the current directory and tracks all files and subdirectories. These files will be uploaded when you run <a href="#upload">upload</a>.</p>
+dataset at the current directory and tracks all files and subdirectories. These files will be uploaded when you run <a href="#floyd-data-upload">upload</a>.</p>
 <p>The init command also creates a <code>.floydignore</code> file. Any files and directories you do not want Floyd to track can be added 
 to this file. When you upload this dataset to Floyd, these files will not be uploaded.</p>
 <h3 id="example">Example</h3>
@@ -912,14 +923,19 @@ Data source &quot;mnist-data&quot; initialized in current directory
 </code></pre>
 
 <h3 id="description_1">Description</h3>
-<p>Upload contents of the current directory as a new dataset. This data can now be referred to in the <a href="#run">run</a> command.
+<p>Upload contents of the current directory as a new dataset. This data can now be referred to in the <a href="../run/">run</a> command.
 At run time the data will be available at the <code>/input</code> path.</p>
 <p>Floyd also versions your data so you can choose any specific version to use in your runs.</p>
 <h3 id="example_1">Example</h3>
 <pre><code class="bash">$ floyd data upload
 Creating data source. Uploading files ...
+DATA ID                 NAME                    VERSION
+----------------------  --------------------  ---------
+GY3QRFFUA8KpbnqvroTPPW  alice/mnist-data:1            1
 </code></pre>
 
+<p>Floyd will generate a data id for the uploaded dataset. This uploaded dataset can be used in your future experiments, if needed,
+using this data id. See <a href="../../home/using_datasets/#using-data-set-in-experiments">here</a> for more details.</p>
 <hr />
 <h2 id="floyd-data-status">floyd data status</h2>
 <p>View your datasets on Floyd</p>
