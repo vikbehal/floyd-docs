@@ -566,6 +566,27 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#am-i-using-the-gpu-instance-by-default" title="Am I using the GPU instance by default?" class="md-nav__link">
+    Am I using the GPU instance by default?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-job-is-taking-a-while-to-sync-changes-how-do-i-make-it-go-faster" title="My job is taking a while to "sync changes". How do I make it go faster?" class="md-nav__link">
+    My job is taking a while to "sync changes". How do I make it go faster?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-job-finished-but-how-i-do-i-see-my-output" title="My job finished but how I do I see my output?" class="md-nav__link">
+    My job finished but how I do I see my output?
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -713,6 +734,27 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#am-i-using-the-gpu-instance-by-default" title="Am I using the GPU instance by default?" class="md-nav__link">
+    Am I using the GPU instance by default?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-job-is-taking-a-while-to-sync-changes-how-do-i-make-it-go-faster" title="My job is taking a while to "sync changes". How do I make it go faster?" class="md-nav__link">
+    My job is taking a while to "sync changes". How do I make it go faster?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-job-finished-but-how-i-do-i-see-my-output" title="My job finished but how I do I see my output?" class="md-nav__link">
+    My job finished but how I do I see my output?
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -802,7 +844,22 @@ The actual limit depends on your OS / machine specs.</p>
 <h3 id="i-ran-my-project-in-jupyter-mode-but-the-url-does-not-seem-to-work">I ran my project in Jupyter mode but the url does not seem to work.</h3>
 <p>Jupyter notebook server takes a couple of minutes to start. Until then you will get a "Bad Gateway" 
 or similar error when you access the URL. You can check the status of the Jupyter notebook 
-by runnin the <a href="../../commands/logs">logs</a> command.</p>
+by running the <a href="../../commands/logs">logs</a> command.</p>
+<h3 id="am-i-using-the-gpu-instance-by-default">Am I using the GPU instance by default?</h3>
+<p>Jobs are run on CPU instances by default. You can specify <code>--gpu</code> to run them on GPU instances.</p>
+<h3 id="my-job-is-taking-a-while-to-sync-changes-how-do-i-make-it-go-faster">My job is taking a while to "sync changes". How do I make it go faster?</h3>
+<p>Floyd CLI uploads <em>all</em> the files in your current directory before starting your experiment.
+There are a few ways to make this go faster:</p>
+<ol>
+<li>Remove unnecessary files from the directory (like build directory, docs etc.) </li>
+<li>Add sub-directories to <code>.floydignore</code> file. Floyd CLI will ignore and not upload these sub-directories.
+See the <a href="../../commands/init#description">init</a> command to understand how this can be configured.</li>
+<li>If you have large data files consider uploading them separately as a <a href="../../commands/data">data source</a>. 
+You can then <a href="../../home/using_datasets#using-data-set-in-experiments">refer</a> to them in your project.</li>
+</ol>
+<h3 id="my-job-finished-but-how-i-do-i-see-my-output">My job finished but how I do I see my output?</h3>
+<p>You can use the floyd <a href="../../commands/output">output</a> command to view the output of your 
+project. If you want to use this output in your next run view <a href="../../home/managing_output">this guide</a></p>
 <h2 id="billing">Billing</h2>
 <h3 id="what-payment-types-do-you-accept">What payment types do you accept?</h3>
 <p>Currently, we accept credit or debit cards, including Visa, MasterCard and American Express.</p>
