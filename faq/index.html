@@ -546,8 +546,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#what-do-i-do-when-i-get-what-do-you-do-when-you-get-you-are-over-the-allowed-limits-for-this" title="What do I do when I get "What do you do when you get “You are over the allowed limits for this" class="md-nav__link">
-    What do I do when I get "What do you do when you get “You are over the allowed limits for this
+  <a href="#what-do-i-do-when-i-get-what-do-you-do-when-you-get-you-are-over-the-allowed-limits-for-this-operation-consider-upgrading-your-account" title="What do I do when I get "What do you do when you get “You are over the allowed limits for this operation. Consider upgrading your account”?" class="md-nav__link">
+    What do I do when I get "What do you do when you get “You are over the allowed limits for this operation. Consider upgrading your account”?
   </a>
   
 </li>
@@ -714,8 +714,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#what-do-i-do-when-i-get-what-do-you-do-when-you-get-you-are-over-the-allowed-limits-for-this" title="What do I do when I get "What do you do when you get “You are over the allowed limits for this" class="md-nav__link">
-    What do I do when I get "What do you do when you get “You are over the allowed limits for this
+  <a href="#what-do-i-do-when-i-get-what-do-you-do-when-you-get-you-are-over-the-allowed-limits-for-this-operation-consider-upgrading-your-account" title="What do I do when I get "What do you do when you get “You are over the allowed limits for this operation. Consider upgrading your account”?" class="md-nav__link">
+    What do I do when I get "What do you do when you get “You are over the allowed limits for this operation. Consider upgrading your account”?
   </a>
   
 </li>
@@ -828,8 +828,7 @@ token right click on the top bar of the command shell and select Paste. See imag
 to be in the directory where you initialized the project and you should be able to see all your 
 runs. You can also use the <a href="https://www.floydhub.com/experiments">web dashboard</a> to view all your 
 projects in one place.</p>
-<h3 id="what-do-i-do-when-i-get-what-do-you-do-when-you-get-you-are-over-the-allowed-limits-for-this">What do I do when I get "What do you do when you get “You are over the allowed limits for this</h3>
-<p>operation. Consider upgrading your account”?</p>
+<h3 id="what-do-i-do-when-i-get-what-do-you-do-when-you-get-you-are-over-the-allowed-limits-for-this-operation-consider-upgrading-your-account">What do I do when I get "What do you do when you get “You are over the allowed limits for this operation. Consider upgrading your account”?</h3>
 <p>Floydhub currently allows only 5 active runs per user. If you require more concurrency, contact 
 us from the <a href="https://www.floydhub.com/pricing">pricing</a> page.</p>
 <h3 id="i-get-too-many-open-files-error-when-i-run-my-project">I get "Too many open files" error when I run my project.</h3>
@@ -838,9 +837,12 @@ The actual limit depends on your OS / machine specs.</p>
 <p>You can either:</p>
 <ol>
 <li>Remove unnecessary files from the directory (like build directory, docs etc.) </li>
-<li>Add them to <code>.floydignore</code> file. Floyd CLI will just ignore these directories.</li>
+<li>Add them to <code>.floydignore</code> file. Floyd CLI will just ignore these directories. See the <a href="../../commands/init#description">init</a> command to understand how this can be configured.</li>
+<li>Tar them into a single file and untar them at runtime.</li>
 </ol>
-<p>See the <a href="../../commands/init#description">init</a> command to understand how this can be configured.</p>
+<p>Alternatively, instead of uploading files from your local machine, you can also 
+<a href="http://docs.floydhub.com/home/using_datasets/#creating-a-dataset-from-downloads">download files</a> from a remote URL 
+directly into Floyd servers.</p>
 <h3 id="i-ran-my-project-in-jupyter-mode-but-the-url-does-not-seem-to-work">I ran my project in Jupyter mode but the url does not seem to work.</h3>
 <p>Jupyter notebook server takes a couple of minutes to start. Until then you will get a "Bad Gateway" 
 or similar error when you access the URL. You can check the status of the Jupyter notebook 
