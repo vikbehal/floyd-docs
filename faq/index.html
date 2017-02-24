@@ -587,6 +587,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#do-i-have-to-pay-for-the-entire-time-my-jupyter-notebook-is-running" title="Do I have to pay for the entire time my Jupyter Notebook is running?" class="md-nav__link">
+    Do I have to pay for the entire time my Jupyter Notebook is running?
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -755,6 +762,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#do-i-have-to-pay-for-the-entire-time-my-jupyter-notebook-is-running" title="Do I have to pay for the entire time my Jupyter Notebook is running?" class="md-nav__link">
+    Do I have to pay for the entire time my Jupyter Notebook is running?
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -862,6 +876,13 @@ You can then <a href="../../home/using_datasets#using-data-set-in-experiments">r
 <h3 id="my-job-finished-but-how-i-do-i-see-my-output">My job finished but how I do I see my output?</h3>
 <p>You can use the floyd <a href="../../commands/output">output</a> command to view the output of your 
 project. If you want to use this output in your next run view <a href="../../home/managing_output">this guide</a></p>
+<h3 id="do-i-have-to-pay-for-the-entire-time-my-jupyter-notebook-is-running">Do I have to pay for the entire time my Jupyter Notebook is running?</h3>
+<p>Unfortunately, yes. As much as we would like to, we are unable to charge you only for the <em>computation time</em>. </p>
+<p>This is an engineering challenge. When you start a Jupyter Notebook instance and start executing commands, 
+your state is maintained in memory (both CPU and GPU memory). So the instance has to be alive for the 
+entire duration of your notebook, not just when you are executing commands.</p>
+<p>For example, when you execute <code>import tensorflow</code> 
+command, Tensorflow will allocate the entire GPU memory to the current session and waits for the next command. This makes the instance unusable by anyone else, so we have to charge you for the duration your Notebook is alive.</p>
 <h2 id="billing">Billing</h2>
 <h3 id="what-payment-types-do-you-accept">What payment types do you accept?</h3>
 <p>Currently, we accept credit or debit cards, including Visa, MasterCard and American Express.</p>
