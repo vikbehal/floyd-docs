@@ -237,12 +237,12 @@
         },
         {
             "location": "/guides/contributing/",
-            "text": "Interested in helping us out? We are looking for help to port popular open source deep learning projects onto Floyd.\n\n\nWhat you need to do\n\n\n\n\nPick a deep learning project of your choice. Here are some popular ones \nhttp://deeplearninggallery.com/\n\n\nEmail us with your project before getting started: \ncommunity@floydhub.com\n. We'll make sure there's no redundancy.\n\n\nRun the project to Floyd. Make sure the README has instructions on how to replicate it. See a \nNeural Style Transfer\n example.\n\n\nEmail us with a link to your repo. Profit!\n\n\n\n\nWhat you get in return\n\n\nWe will offer 50 hours of free GPU credits for each complete project ported\n\n\nMiscellaneous\n\n\n\n\nThe project should be open source under a liberal license (think MIT)\n\n\nIt should use publicly available training and test data",
+            "text": "Interested in helping us out? We are looking for help to port popular open source deep learning projects onto Floyd.\n\n\nWhat you need to do\n\n\n\n\nPick a deep learning project of your choice. Here are some popular ones \nhttp://deeplearninggallery.com/\n\n\nEmail us with your project before getting started: \ncommunity@floydhub.com\n. We'll make sure there's no redundancy.\n\n\nRun the project on Floyd (Training and Evaluation). Make sure the README has instructions on how to replicate it. See a \nNeural Style Transfer\n example.\n\n\nEmail us with a link to your repo. Profit!\n\n\n\n\nWhat you get in return\n\n\nWe will offer 50 hours of free GPU credits for each complete project ported\n\n\nMiscellaneous\n\n\n\n\nThe project should be open source under a liberal license (think MIT)\n\n\nIt should use publicly available training and test data",
             "title": "Contributing"
         },
         {
             "location": "/guides/contributing/#what-you-need-to-do",
-            "text": "Pick a deep learning project of your choice. Here are some popular ones  http://deeplearninggallery.com/  Email us with your project before getting started:  community@floydhub.com . We'll make sure there's no redundancy.  Run the project to Floyd. Make sure the README has instructions on how to replicate it. See a  Neural Style Transfer  example.  Email us with a link to your repo. Profit!",
+            "text": "Pick a deep learning project of your choice. Here are some popular ones  http://deeplearninggallery.com/  Email us with your project before getting started:  community@floydhub.com . We'll make sure there's no redundancy.  Run the project on Floyd (Training and Evaluation). Make sure the README has instructions on how to replicate it. See a  Neural Style Transfer  example.  Email us with a link to your repo. Profit!",
             "title": "What you need to do"
         },
         {
