@@ -496,8 +496,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#floyd-data-output" title="floyd data output" class="md-nav__link">
-    floyd data output
+  <a href="#floyd-data-delete" title="floyd data delete" class="md-nav__link">
+    floyd data delete
   </a>
   
     <nav class="md-nav">
@@ -522,10 +522,57 @@
     Description
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#example_3" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#floyd-data-output" title="floyd data output" class="md-nav__link">
+    floyd data output
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_4" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options_3" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_4" title="Description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_4" title="Example" class="md-nav__link">
     Example
   </a>
   
@@ -593,6 +640,17 @@
     
       <a href="../stop/" title="floyd stop" class="md-nav__link">
         floyd stop
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../delete/" title="floyd delete" class="md-nav__link">
+        floyd delete
       </a>
     
   </li>
@@ -809,8 +867,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#floyd-data-output" title="floyd data output" class="md-nav__link">
-    floyd data output
+  <a href="#floyd-data-delete" title="floyd data delete" class="md-nav__link">
+    floyd data delete
   </a>
   
     <nav class="md-nav">
@@ -835,10 +893,57 @@
     Description
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#example_3" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#floyd-data-output" title="floyd data output" class="md-nav__link">
+    floyd data output
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage_4" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#options_3" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_4" title="Description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_4" title="Example" class="md-nav__link">
     Example
   </a>
   
@@ -884,6 +989,10 @@
 <tr>
 <td>floyd data status</td>
 <td>List all your datasets</td>
+</tr>
+<tr>
+<td>floyd data delete</td>
+<td>Delete your dataset</td>
 </tr>
 <tr>
 <td>floyd data output</td>
@@ -982,13 +1091,53 @@ qNcS5bXHtFdSiMZ35kkEPh  an hour ago     456.2 MB      floydhub/csr:7            
 </code></pre>
 
 <hr />
-<h2 id="floyd-data-output">floyd data output</h2>
-<p>View datasets</p>
+<h2 id="floyd-data-delete">floyd data delete</h2>
+<p>Delete datasets on FloydHub</p>
 <h3 id="usage_3">Usage</h3>
-<pre><code class="bash">floyd data output [OPTIONS] ID
+<pre><code class="bash">floyd data delete [OPTIONS] [ID]
 </code></pre>
 
 <h3 id="options_2">Options</h3>
+<table>
+<thead>
+<tr>
+<th>Name, shorthand</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td></td>
+<td>ID of your data.</td>
+</tr>
+<tr>
+<td><code>--yes</code>, <code>-y</code></td>
+<td>False</td>
+<td>Skip delete confirmation step</td>
+</tr>
+</tbody>
+</table>
+<h3 id="description_3">Description</h3>
+<p>Deletes your datasets from FloydHub. This data will no longer 
+be accessible. You can use the same command to delete output 
+data as well.</p>
+<p>Note: You do <em>not</em> have to be in the project directory to run this command.</p>
+<h4 id="example_3">Example</h4>
+<pre><code class="bash">$ floyd data delete HYLEc2czGKRpYVm7rGtBoY
+Delete Data: floydhub/mnist:1/output? [y/N]: y
+Data deleted
+</code></pre>
+
+<hr />
+<h2 id="floyd-data-output">floyd data output</h2>
+<p>View datasets</p>
+<h3 id="usage_4">Usage</h3>
+<pre><code class="bash">floyd data output [OPTIONS] ID
+</code></pre>
+
+<h3 id="options_3">Options</h3>
 <table>
 <thead>
 <tr>
@@ -1010,9 +1159,9 @@ qNcS5bXHtFdSiMZ35kkEPh  an hour ago     456.2 MB      floydhub/csr:7            
 </tr>
 </tbody>
 </table>
-<h3 id="description_3">Description</h3>
+<h3 id="description_4">Description</h3>
 <p>The output command gives the url to access a dataset. This command by default opens the data url in your default browser.</p>
-<h3 id="example_3">Example</h3>
+<h3 id="example_4">Example</h3>
 <pre><code class="bash">$ floyd data output dTe2cJJrNR2CBD74rSZXPA
 Opening output directory in your browser ...
 </code></pre>

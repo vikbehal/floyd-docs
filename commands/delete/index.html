@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://www.floydhub.com/commands/stop/">
+        <link rel="canonical" href="https://www.floydhub.com/commands/delete/">
       
       
         <meta name="author" content="FloydHub Team">
@@ -19,7 +19,7 @@
     
     
       
-        <title>floyd stop - FloydHub</title>
+        <title>floyd delete - FloydHub</title>
       
     
     
@@ -85,7 +85,7 @@
                 </span>
               
             
-            floyd stop
+            floyd delete
           
         </span>
       </div>
@@ -409,15 +409,26 @@
           
   <li class="md-nav__item">
     
+      <a href="../stop/" title="floyd stop" class="md-nav__link">
+        floyd stop
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        floyd stop
+        floyd delete
       </label>
     
-    <a href="./" title="floyd stop" class="md-nav__link md-nav__link--active">
-      floyd stop
+    <a href="./" title="floyd delete" class="md-nav__link md-nav__link--active">
+      floyd delete
     </a>
     
       
@@ -459,17 +470,6 @@
     </ul>
   
 </nav>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../delete/" title="floyd delete" class="md-nav__link">
-        floyd delete
-      </a>
     
   </li>
 
@@ -603,11 +603,11 @@
                
               
                 
-                  <h1>floyd stop</h1>
+                  <h1>floyd delete</h1>
                 
-                <p>Terminate a queued or running job.</p>
+                <p>Delete a job.</p>
 <h3 id="usage">Usage</h3>
-<pre><code class="bash">floyd stop ID
+<pre><code class="bash">floyd delete [ID]
 </code></pre>
 
 <h3 id="options">Options</h3>
@@ -623,17 +623,24 @@
 <tr>
 <td>ID</td>
 <td></td>
-<td>ID of your job. You can get the ID by running the <a href="../status">status</a> command.</td>
+<td>ID of your job.</td>
+</tr>
+<tr>
+<td><code>--yes</code>, <code>-y</code></td>
+<td>False</td>
+<td>Skip delete confirmation step</td>
 </tr>
 </tbody>
 </table>
 <h3 id="description">Description</h3>
-<p>Sometimes you want to terminate a job before it can finish. The stop command sends a request 
-to the server to stop the job. You can view the <a href="../status">status</a> of the job to confirm. When you stop 
-a job, you will be charged only for the duration your job was running.</p>
+<p>Deletes a job from FloydHub. The experiment information is no longer 
+available. You will not be able to access the code uploaded to run the 
+experiment.</p>
+<p>Note: You do <em>not</em> have to be in the project directory to run this command.</p>
 <h3 id="example">Example</h3>
-<pre><code class="bash">$ floyd stop FAGrKvd6GqwVdHMxxMwBZG
-Experiment shutdown request submitted. Check status to confirm shutdown
+<pre><code class="bash">$ floyd delete J2ggstKWTNmL24nQTgi36o
+Delete Run: floydhub/fastText:1? [y/N]: y
+Experiment deleted
 </code></pre>
               
             </article>
@@ -647,7 +654,7 @@ Experiment shutdown request submitted. Check status to confirm shutdown
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../info/" title="floyd info" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../stop/" title="floyd stop" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -656,19 +663,19 @@ Experiment shutdown request submitted. Check status to confirm shutdown
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                floyd info
+                floyd stop
               </span>
             </div>
           </a>
         
         
-          <a href="../delete/" title="floyd delete" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../logout/" title="floyd logout" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                floyd delete
+                floyd logout
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
