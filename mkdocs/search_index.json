@@ -236,6 +236,26 @@
             "title": "Public Datasets"
         },
         {
+            "location": "/guides/contributing/",
+            "text": "Interested in helping us out? We are looking for help to port popular open source deep learning projects onto Floyd.\n\n\nWhat you need to do\n\n\n\n\nPick a deep learning project of your choice. Here are some popular ones \nhttp://deeplearninggallery.com/\n\n\nEmail us with your project before getting started: \ncommunity@floydhub.com\n. We'll make sure there's no redundancy.\n\n\nRun the project to Floyd. Make sure the README has instructions on how to replicate it. See a \nNeural Style Transfer\n example.\n\n\nEmail us with a link to your repo. Profit!\n\n\n\n\nWhat you get in return\n\n\nWe will offer 50 hours of free GPU credits for each complete project ported\n\n\nMiscellaneous\n\n\n\n\nThe project should be open source under a liberal license (think MIT)\n\n\nIt should use publicly available training and test data",
+            "title": "Contributing"
+        },
+        {
+            "location": "/guides/contributing/#what-you-need-to-do",
+            "text": "Pick a deep learning project of your choice. Here are some popular ones  http://deeplearninggallery.com/  Email us with your project before getting started:  community@floydhub.com . We'll make sure there's no redundancy.  Run the project to Floyd. Make sure the README has instructions on how to replicate it. See a  Neural Style Transfer  example.  Email us with a link to your repo. Profit!",
+            "title": "What you need to do"
+        },
+        {
+            "location": "/guides/contributing/#what-you-get-in-return",
+            "text": "We will offer 50 hours of free GPU credits for each complete project ported",
+            "title": "What you get in return"
+        },
+        {
+            "location": "/guides/contributing/#miscellaneous",
+            "text": "The project should be open source under a liberal license (think MIT)  It should use publicly available training and test data",
+            "title": "Miscellaneous"
+        },
+        {
             "location": "/commands/",
             "text": "Floyd Commands\n\n\nBelow are the commands that are part of Floyd CLI.\n\n\n\n\n\n\n\n\nCommand\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfloyd login\n\n\nLogin to Floyd.\n\n\n\n\n\n\nfloyd init\n\n\nInitialize a Floyd project\n\n\n\n\n\n\nfloyd run\n\n\nRun your project on Floyd.\n\n\n\n\n\n\nfloyd data\n\n\nManage data on Floyd\n\n\n\n\n\n\nfloyd logs\n\n\nStream logs of your job\n\n\n\n\n\n\nfloyd status\n\n\nCheck status of your jobs\n\n\n\n\n\n\nfloyd output\n\n\nView the output of a job\n\n\n\n\n\n\nfloyd info\n\n\nSee details of a job\n\n\n\n\n\n\nfloyd stop\n\n\nTerminate a job\n\n\n\n\n\n\nfloyd logout\n\n\nLogout from Floyd",
             "title": "floyd"
