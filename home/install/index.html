@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://www.floydhub.com/commands/output/">
+        <link rel="canonical" href="https://www.floydhub.com/home/install/">
       
       
         <meta name="author" content="FloydHub Team">
@@ -19,7 +19,7 @@
     
     
       
-        <title>floyd output - FloydHub</title>
+        <title>Installation - FloydHub</title>
       
     
     
@@ -83,11 +83,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  Commands
+                  Get Started
                 </span>
               
             
-            floyd output
+            Installation
           
         </span>
       </div>
@@ -155,7 +155,7 @@
       
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Get Started
@@ -171,9 +171,56 @@
           
   <li class="md-nav__item">
     
-      <a href="../../home/install/" title="Installation" class="md-nav__link">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
         Installation
-      </a>
+      </label>
+    
+    <a href="./" title="Installation" class="md-nav__link md-nav__link--active">
+      Installation
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#virtualenv" title="Virtualenv" class="md-nav__link">
+    Virtualenv
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-sudo" title="Using sudo" class="md-nav__link">
+    Using sudo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#missing-dependencies" title="Missing dependencies" class="md-nav__link">
+    Missing dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pythonh-no-such-file-or-directory" title="Python.h: No such file or directory" class="md-nav__link">
+    Python.h: No such file or directory
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -182,7 +229,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../home/getting_started/" title="First Floyd Project" class="md-nav__link">
+      <a href="../getting_started/" title="First Floyd Project" class="md-nav__link">
         First Floyd Project
       </a>
     
@@ -193,7 +240,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../home/using_datasets/" title="Using Datasets" class="md-nav__link">
+      <a href="../using_datasets/" title="Using Datasets" class="md-nav__link">
         Using Datasets
       </a>
     
@@ -204,7 +251,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../home/managing_output/" title="Managing Output" class="md-nav__link">
+      <a href="../managing_output/" title="Managing Output" class="md-nav__link">
         Managing Output
       </a>
     
@@ -215,7 +262,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../home/installing_dependencies/" title="Installing Dependencies" class="md-nav__link">
+      <a href="../installing_dependencies/" title="Installing Dependencies" class="md-nav__link">
         Installing Dependencies
       </a>
     
@@ -226,7 +273,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../home/environments/" title="Environments" class="md-nav__link">
+      <a href="../environments/" title="Environments" class="md-nav__link">
         Environments
       </a>
     
@@ -237,7 +284,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../home/floyd_ignore/" title="FloydIgnore" class="md-nav__link">
+      <a href="../floyd_ignore/" title="FloydIgnore" class="md-nav__link">
         FloydIgnore
       </a>
     
@@ -329,7 +376,7 @@
       
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Commands
@@ -345,7 +392,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../" title="floyd" class="md-nav__link">
+      <a href="../../commands/" title="floyd" class="md-nav__link">
         floyd
       </a>
     
@@ -356,7 +403,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../login/" title="floyd login" class="md-nav__link">
+      <a href="../../commands/login/" title="floyd login" class="md-nav__link">
         floyd login
       </a>
     
@@ -367,7 +414,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../init/" title="floyd init" class="md-nav__link">
+      <a href="../../commands/init/" title="floyd init" class="md-nav__link">
         floyd init
       </a>
     
@@ -378,7 +425,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../run/" title="floyd run" class="md-nav__link">
+      <a href="../../commands/run/" title="floyd run" class="md-nav__link">
         floyd run
       </a>
     
@@ -389,7 +436,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../data/" title="floyd data" class="md-nav__link">
+      <a href="../../commands/data/" title="floyd data" class="md-nav__link">
         floyd data
       </a>
     
@@ -400,7 +447,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../logs/" title="floyd logs" class="md-nav__link">
+      <a href="../../commands/logs/" title="floyd logs" class="md-nav__link">
         floyd logs
       </a>
     
@@ -411,7 +458,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../status/" title="floyd status" class="md-nav__link">
+      <a href="../../commands/status/" title="floyd status" class="md-nav__link">
         floyd status
       </a>
     
@@ -422,56 +469,9 @@
           
   <li class="md-nav__item">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
+      <a href="../../commands/output/" title="floyd output" class="md-nav__link">
         floyd output
-      </label>
-    
-    <a href="./" title="floyd output" class="md-nav__link md-nav__link--active">
-      floyd output
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#usage" title="Usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#options" title="Options" class="md-nav__link">
-    Options
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#description" title="Description" class="md-nav__link">
-    Description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+      </a>
     
   </li>
 
@@ -480,7 +480,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../info/" title="floyd info" class="md-nav__link">
+      <a href="../../commands/info/" title="floyd info" class="md-nav__link">
         floyd info
       </a>
     
@@ -491,7 +491,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../stop/" title="floyd stop" class="md-nav__link">
+      <a href="../../commands/stop/" title="floyd stop" class="md-nav__link">
         floyd stop
       </a>
     
@@ -502,7 +502,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../delete/" title="floyd delete" class="md-nav__link">
+      <a href="../../commands/delete/" title="floyd delete" class="md-nav__link">
         floyd delete
       </a>
     
@@ -513,7 +513,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../logout/" title="floyd logout" class="md-nav__link">
+      <a href="../../commands/logout/" title="floyd logout" class="md-nav__link">
         floyd logout
       </a>
     
@@ -524,7 +524,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../upgrade/" title="floyd upgrade" class="md-nav__link">
+      <a href="../../commands/upgrade/" title="floyd upgrade" class="md-nav__link">
         floyd upgrade
       </a>
     
@@ -535,7 +535,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../version/" title="floyd version" class="md-nav__link">
+      <a href="../../commands/version/" title="floyd version" class="md-nav__link">
         floyd version
       </a>
     
@@ -620,29 +620,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage" title="Usage" class="md-nav__link">
-    Usage
+  <a href="#virtualenv" title="Virtualenv" class="md-nav__link">
+    Virtualenv
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#options" title="Options" class="md-nav__link">
-    Options
+  <a href="#using-sudo" title="Using sudo" class="md-nav__link">
+    Using sudo
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#description" title="Description" class="md-nav__link">
-    Description
+  <a href="#missing-dependencies" title="Missing dependencies" class="md-nav__link">
+    Missing dependencies
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
+  <a href="#pythonh-no-such-file-or-directory" title="Python.h: No such file or directory" class="md-nav__link">
+    Python.h: No such file or directory
   </a>
   
 </li>
@@ -660,42 +660,80 @@
                
               
                 
-                  <h1>floyd output</h1>
+                  <h1>Installation</h1>
                 
-                <p>View the output of a job.</p>
-<h3 id="usage">Usage</h3>
-<pre><code class="bash">floyd output [OPTIONS] ID
+                <p>Floyd CLI is a python based command line tool to interact with FloydHub.</p>
+<p><code>floyd-cli</code> is available on <a href="https://pypi.python.org/pypi/floyd-cli">pypi</a> and
+runs on both Python 2.7 and Python 3.5.</p>
+<p>Use pip to install the cli.</p>
+<pre><code class="bash">pip install -U floyd-cli
 </code></pre>
 
-<h3 id="options">Options</h3>
-<table>
-<thead>
-<tr>
-<th>Name, shorthand</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>--url</code>, <code>-u</code></td>
-<td></td>
-<td>Only print the URL. The output directory can be viewed in the browser.</td>
-</tr>
-<tr>
-<td>ID</td>
-<td></td>
-<td>ID of your job. You can get the ID by running the <a href="../status">status</a> command.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="description">Description</h3>
-<p>Most jobs generate output. Any output that needs to be retained after the job is finised should be send to <code>/output</code> path.
-This is the only path Floyd will preserve. The output command gives the url to access this output. This command by default opens the 
-output url in your default browser.</p>
-<h3 id="example">Example</h3>
-<pre><code class="bash">$ floyd output dTe2cJJrNR2CBD74rSZXPA
-Opening output directory in your browser ...
+<p>If successfully installed you can view the commands supported by the CLI using the 
+<code>--help</code> option.</p>
+<pre><code class="bash">$ floyd --help
+Usage: floyd [OPTIONS] COMMAND [ARGS]...
+
+  Floyd CLI interacts with Floyd server and executes your commands. More
+  help is available under each command listed below.
+
+...
+</code></pre>
+
+<p>Detailed documentation for the floyd commands is available in the <a href="../../commands/">documentation</a>.</p>
+<h2 id="virtualenv">Virtualenv</h2>
+<p>We highly recommend using <a href="https://virtualenv.pypa.io/en/stable/userguide/">virtualenv</a> for 
+installing floyd-cli. This helps to avoid any library version conflicts and results in smooth installation.</p>
+<pre><code class="bash">sudo pip install virtualenv
+</code></pre>
+
+<p>To create a virtualenv you need pass a path to store the virtualenv</p>
+<pre><code class="bash">virtualenv ~/floyd
+</code></pre>
+
+<p>You can activate the virtualenv by running:</p>
+<pre><code class="bash">source ~/floyd/bin/activate
+</code></pre>
+
+<p>Everytime you need to use floyd in a terminal, activate the virtualenv using the same command.</p>
+<p>To install floyd-cli in this virtualenv:</p>
+<pre><code class="bash">pip install -U floyd-cli
+</code></pre>
+
+<p>Virtualenv has helped a large number of floyd users to have an easy install experience.</p>
+<h2 id="using-sudo">Using sudo</h2>
+<p>If you are not using virtualenv and you are installing floyd globally you may need to use <code>sudo</code>:</p>
+<pre><code class="bash">sudo pip install -U floyd-cli
+</code></pre>
+
+<h2 id="missing-dependencies">Missing dependencies</h2>
+<p>Not all python environments are installed the same way. So sometimes you may run 
+into install issues. If <code>pip</code> cannot install dependencies itself, you may see errors like:</p>
+<pre><code class="bash">...
+Failed building wheel for scandir
+...
+</code></pre>
+
+<p>or</p>
+<pre><code class="bash">...
+No distributions matching the version for backports.tempfile (from floyd-cli)
+...
+</code></pre>
+
+<p>In such cases, you can install the dependencies directly:</p>
+<pre><code class="bash">pip install -U scandir
+pip install -U backports.tempfile
+</code></pre>
+
+<p>and then try installing floyd-cli</p>
+<h2 id="pythonh-no-such-file-or-directory">Python.h: No such file or directory</h2>
+<p>If you get this error in a linux environment:</p>
+<pre><code class="bash">...
+Python.h: No such file or directory
+</code></pre>
+
+<p>you need to install <code>python-dev</code> package</p>
+<pre><code class="bash">sudo apt-get install python-dev
 </code></pre>
               
             </article>
@@ -709,7 +747,7 @@ Opening output directory in your browser ...
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../status/" title="floyd status" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -718,19 +756,19 @@ Opening output directory in your browser ...
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                floyd status
+                Home
               </span>
             </div>
           </a>
         
         
-          <a href="../info/" title="floyd info" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../getting_started/" title="First Floyd Project" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                floyd info
+                First Floyd Project
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

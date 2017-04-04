@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://www.floydhub.com/commands/output/">
+        <link rel="canonical" href="https://www.floydhub.com/commands/upgrade/">
       
       
         <meta name="author" content="FloydHub Team">
@@ -19,7 +19,7 @@
     
     
       
-        <title>floyd output - FloydHub</title>
+        <title>floyd upgrade - FloydHub</title>
       
     
     
@@ -87,7 +87,7 @@
                 </span>
               
             
-            floyd output
+            floyd upgrade
           
         </span>
       </div>
@@ -422,56 +422,9 @@
           
   <li class="md-nav__item">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
+      <a href="../output/" title="floyd output" class="md-nav__link">
         floyd output
-      </label>
-    
-    <a href="./" title="floyd output" class="md-nav__link md-nav__link--active">
-      floyd output
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#usage" title="Usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#options" title="Options" class="md-nav__link">
-    Options
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#description" title="Description" class="md-nav__link">
-    Description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+      </a>
     
   </li>
 
@@ -524,9 +477,49 @@
           
   <li class="md-nav__item">
     
-      <a href="../upgrade/" title="floyd upgrade" class="md-nav__link">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
         floyd upgrade
-      </a>
+      </label>
+    
+    <a href="./" title="floyd upgrade" class="md-nav__link md-nav__link--active">
+      floyd upgrade
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" title="Description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -627,13 +620,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#options" title="Options" class="md-nav__link">
-    Options
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#description" title="Description" class="md-nav__link">
     Description
   </a>
@@ -660,42 +646,20 @@
                
               
                 
-                  <h1>floyd output</h1>
+                  <h1>floyd upgrade</h1>
                 
-                <p>View the output of a job.</p>
+                <p>Upgrade the floyd client.</p>
 <h3 id="usage">Usage</h3>
-<pre><code class="bash">floyd output [OPTIONS] ID
+<pre><code class="bash">floyd upgrade
 </code></pre>
 
-<h3 id="options">Options</h3>
-<table>
-<thead>
-<tr>
-<th>Name, shorthand</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>--url</code>, <code>-u</code></td>
-<td></td>
-<td>Only print the URL. The output directory can be viewed in the browser.</td>
-</tr>
-<tr>
-<td>ID</td>
-<td></td>
-<td>ID of your job. You can get the ID by running the <a href="../status">status</a> command.</td>
-</tr>
-</tbody>
-</table>
 <h3 id="description">Description</h3>
-<p>Most jobs generate output. Any output that needs to be retained after the job is finised should be send to <code>/output</code> path.
-This is the only path Floyd will preserve. The output command gives the url to access this output. This command by default opens the 
-output url in your default browser.</p>
+<p>This will upgrade the floyd cli to the latest version using pip.</p>
 <h3 id="example">Example</h3>
-<pre><code class="bash">$ floyd output dTe2cJJrNR2CBD74rSZXPA
-Opening output directory in your browser ...
+<pre><code class="bash">$ floyd upgrade
+Collecting floyd-cli from ...
+...
+Successfully installed floyd-cli-0.9.1
 </code></pre>
               
             </article>
@@ -709,7 +673,7 @@ Opening output directory in your browser ...
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../status/" title="floyd status" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../logout/" title="floyd logout" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -718,19 +682,19 @@ Opening output directory in your browser ...
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                floyd status
+                floyd logout
               </span>
             </div>
           </a>
         
         
-          <a href="../info/" title="floyd info" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../version/" title="floyd version" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                floyd info
+                floyd version
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
