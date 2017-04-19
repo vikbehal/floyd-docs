@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://www.floydhub.com/commands/init/">
+        <link rel="canonical" href="https://www.floydhub.com/guides/cyclegan/">
       
       
         <meta name="author" content="FloydHub Team">
@@ -19,7 +19,7 @@
     
     
       
-        <title>floyd init - FloydHub</title>
+        <title>CycleGAN - FloydHub</title>
       
     
     
@@ -83,11 +83,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  Commands
+                  Guides
                 </span>
               
             
-            floyd init
+            CycleGAN
           
         </span>
       </div>
@@ -253,7 +253,7 @@
       
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Guides
@@ -269,7 +269,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../guides/jupyter/" title="Jupyter Notebook" class="md-nav__link">
+      <a href="../jupyter/" title="Jupyter Notebook" class="md-nav__link">
         Jupyter Notebook
       </a>
     
@@ -280,7 +280,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../guides/style_transfer/" title="Style Transfer" class="md-nav__link">
+      <a href="../style_transfer/" title="Style Transfer" class="md-nav__link">
         Style Transfer
       </a>
     
@@ -291,84 +291,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../../guides/deep_corrector/" title="Deep Text Corrector" class="md-nav__link">
+      <a href="../deep_corrector/" title="Deep Text Corrector" class="md-nav__link">
         Deep Text Corrector
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../../guides/cyclegan/" title="CycleGAN" class="md-nav__link">
-        CycleGAN
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../../guides/datasets/" title="Public Datasets" class="md-nav__link">
-        Public Datasets
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../../guides/contributing/" title="Contributing" class="md-nav__link">
-        Contributing
-      </a>
-    
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
-    
-    <label class="md-nav__link" for="nav-4">
-      Commands
-    </label>
-    <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-4">
-        Commands
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../" title="floyd" class="md-nav__link">
-        floyd
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../login/" title="floyd login" class="md-nav__link">
-        floyd login
       </a>
     
   </li>
@@ -382,11 +306,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        floyd init
+        CycleGAN
       </label>
     
-    <a href="./" title="floyd init" class="md-nav__link md-nav__link--active">
-      floyd init
+    <a href="./" title="CycleGAN" class="md-nav__link md-nav__link--active">
+      CycleGAN
     </a>
     
       
@@ -398,29 +322,49 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage" title="Usage" class="md-nav__link">
-    Usage
+  <a href="#setup-project" title="Setup project" class="md-nav__link">
+    Setup project
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#options" title="Options" class="md-nav__link">
-    Options
+  <a href="#training" title="Training" class="md-nav__link">
+    Training
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dataset" title="Dataset" class="md-nav__link">
+    Dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training_1" title="Training" class="md-nav__link">
+    Training
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing" title="Testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#description" title="Description" class="md-nav__link">
-    Description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
+  <a href="#rest-api" title="Rest API" class="md-nav__link">
+    Rest API
   </a>
   
 </li>
@@ -436,7 +380,83 @@
           
   <li class="md-nav__item">
     
-      <a href="../run/" title="floyd run" class="md-nav__link">
+      <a href="../datasets/" title="Public Datasets" class="md-nav__link">
+        Public Datasets
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../contributing/" title="Contributing" class="md-nav__link">
+        Contributing
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Commands
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-4">
+        Commands
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../commands/" title="floyd" class="md-nav__link">
+        floyd
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../commands/login/" title="floyd login" class="md-nav__link">
+        floyd login
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../commands/init/" title="floyd init" class="md-nav__link">
+        floyd init
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../commands/run/" title="floyd run" class="md-nav__link">
         floyd run
       </a>
     
@@ -447,7 +467,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../data/" title="floyd data" class="md-nav__link">
+      <a href="../../commands/data/" title="floyd data" class="md-nav__link">
         floyd data
       </a>
     
@@ -458,7 +478,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../logs/" title="floyd logs" class="md-nav__link">
+      <a href="../../commands/logs/" title="floyd logs" class="md-nav__link">
         floyd logs
       </a>
     
@@ -469,7 +489,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../status/" title="floyd status" class="md-nav__link">
+      <a href="../../commands/status/" title="floyd status" class="md-nav__link">
         floyd status
       </a>
     
@@ -480,7 +500,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../output/" title="floyd output" class="md-nav__link">
+      <a href="../../commands/output/" title="floyd output" class="md-nav__link">
         floyd output
       </a>
     
@@ -491,7 +511,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../info/" title="floyd info" class="md-nav__link">
+      <a href="../../commands/info/" title="floyd info" class="md-nav__link">
         floyd info
       </a>
     
@@ -502,7 +522,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../stop/" title="floyd stop" class="md-nav__link">
+      <a href="../../commands/stop/" title="floyd stop" class="md-nav__link">
         floyd stop
       </a>
     
@@ -513,7 +533,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../delete/" title="floyd delete" class="md-nav__link">
+      <a href="../../commands/delete/" title="floyd delete" class="md-nav__link">
         floyd delete
       </a>
     
@@ -524,7 +544,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../logout/" title="floyd logout" class="md-nav__link">
+      <a href="../../commands/logout/" title="floyd logout" class="md-nav__link">
         floyd logout
       </a>
     
@@ -535,7 +555,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../upgrade/" title="floyd upgrade" class="md-nav__link">
+      <a href="../../commands/upgrade/" title="floyd upgrade" class="md-nav__link">
         floyd upgrade
       </a>
     
@@ -546,7 +566,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../version/" title="floyd version" class="md-nav__link">
+      <a href="../../commands/version/" title="floyd version" class="md-nav__link">
         floyd version
       </a>
     
@@ -631,29 +651,49 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage" title="Usage" class="md-nav__link">
-    Usage
+  <a href="#setup-project" title="Setup project" class="md-nav__link">
+    Setup project
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#options" title="Options" class="md-nav__link">
-    Options
+  <a href="#training" title="Training" class="md-nav__link">
+    Training
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dataset" title="Dataset" class="md-nav__link">
+    Dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training_1" title="Training" class="md-nav__link">
+    Training
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing" title="Testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#description" title="Description" class="md-nav__link">
-    Description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
+  <a href="#rest-api" title="Rest API" class="md-nav__link">
+    Rest API
   </a>
   
 </li>
@@ -671,43 +711,82 @@
                
               
                 
-                  <h1>floyd init</h1>
+                  <h1>CycleGAN</h1>
                 
-                <p>Initialize a Floyd project.</p>
-<h3 id="usage">Usage</h3>
-<pre><code class="bash">floyd init PROJECT_NAME
+                <p><a href="https://github.com/junyanz/CycleGAN">CycleGAN</a> is a powerful model that is capable of learning
+image-to-image translation without input-output pairs.</p>
+<p>In this guide, we will train a Torch model for replacing a horse in any image with a zebra.</p>
+<h2 id="setup-project">Setup project</h2>
+<p>For this guide we will be using a fork of <a href="https://github.com/houqp/CycleGAN">CycleGAN</a> adapted for floydhub.</p>
+<pre><code class="bash">$ git clone https://github.com/houqp/CycleGAN
+$ cd CycleGAN
+$ floyd init cyclegan
 </code></pre>
 
-<h3 id="options">Options</h3>
-<table>
-<thead>
-<tr>
-<th>Name, shorthand</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>PROJECT_NAME</td>
-<td></td>
-<td>Name of your project (No spaces. Use letters, numbers, dash and underscore)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="description">Description</h3>
-<p>Floyd tracks projects based on the location of your code. This command initializes a new project at the current directory and 
-tracks all files and subdirectories. These files will be uploaded when you run your project on Floyd.</p>
-<p>To initialize a new dataset you should use <a href="../data/#floyd-data-init">floyd data init</a> command.</p>
-<p>The init command also creates a <code>.floydignore</code> file. Any files and directories you do not want Floyd to track can be added 
-to this file. When you run your project on Floyd, these files will not be uploaded. More details on how floydignore 
-file works is available <a href="../../home/floyd_ignore">here</a>.</p>
-<h3 id="example">Example</h3>
-<p>Initialize a floyd project in your project directory.</p>
-<pre><code class="bash">$ cd /code/project
-$ floyd init style-transfer
-Project &quot;style-transfer&quot; initialized in current directory
+<h2 id="training">Training</h2>
+<h3 id="dataset">Dataset</h3>
+<p>The original CycleGAN already provides couple interesting datasets for
+training. You can assess those datasets through floydhub data id
+<a href="https://www.floydhub.com/viewer/data/f9RVzpea4vb9uCLaDggUgX/C96ydwuPgbHRdfu8hbH3L4/">f9RVzpea4vb9uCLaDggUgX</a>.
+You can mount this at runtime using the <code>--data</code> parameter. For more information
+on how data inputs work, see <a href="../../home/using_datasets/">Using Datasets</a> and
+the sample training command in the next section.</p>
+<h3 id="training_1">Training</h3>
+<p>Training a horse to zebra transformer model can be done in one simple <a href="../../commands/run">command</a>:</p>
+<pre><code class="bash">$ floyd run --gpu --env torch --data f9RVzpea4vb9uCLaDggUgX 'niter=3 niter_decay=3 bash ./floydhub/dream.sh horse2zebra'
 </code></pre>
+
+<p>Notes:</p>
+<ul>
+<li>The input dataset is passed using the <code>--data</code> parameter. This mounts the
+pre-uploaded datasets at <code>/input</code> path. <code>dream.sh</code> is setup to automatically
+lookup datasets from <code>/input</code>.</li>
+<li>The data id <a href="https://www.floydhub.com/viewer/data/f9RVzpea4vb9uCLaDggUgX/C96ydwuPgbHRdfu8hbH3L4/">f9RVzpea4vb9uCLaDggUgX</a>
+points to the pre-uploaded public dataset on FloydHub.</li>
+<li>The last argument for dream.sh tells it name of the dataset to use for
+training, in this example we are using
+<a href="https://www.floydhub.com/viewer/data/f9RVzpea4vb9uCLaDggUgX/C96ydwuPgbHRdfu8hbH3L4/datasets/horse2zebra/">horse2zebra</a>.</li>
+<li>The job is run on a GPU instance (because of the <code>--gpu</code> flag).</li>
+<li>This project uses Torch environment. (See the <code>--env</code> flag)</li>
+<li>For testing purpose, we pass in extra flags to restrict the iteration to
+only 6 rounds (<code>niter + iter_decay</code>) to reduce the training time. To get a good
+result, the project is setup to do 200 iterations by default, which will take
+roughly 23 hours to finish on FloydHub GPU instance.</li>
+</ul>
+<p>While the job is running, you can follow along the progress by using the
+<a href="../../commands/logs/">logs</a> command. Before the training starts, <code>dream.sh</code> will also install some
+extra needed dependencies that are not included in FloydHub's Torch environment.</p>
+<pre><code class="bash">$ floyd logs &lt;RUN_ID&gt; -t
+</code></pre>
+
+<p>Floyd saves any content stored in the <code>/output</code> directory after the job is
+finished. This output can be used as a data source in the next project using
+<code>--data</code> flag. To get the ID of the output generated by your job use the
+<a href="../../commands/info/">info</a> command.</p>
+<pre><code class="bash">$ floyd info &lt;RUN_ID&gt;
+</code></pre>
+
+<p>The final trained model are named <code>latest_net_G_A.t7</code> and <code>latest_net_G_B.t7</code>.
+The <code>net_G_A</code> model is trained to generate images like group B (zebra) using
+images from group A (horse). You can also visually inspect the training result
+for each epoch by viewing all the generated png files, which includes sampled
+result from both directions.</p>
+<h3 id="testing">Testing</h3>
+<p>To test a CycleGAN model you trained on FloydHub, you will need to first get
+the output ID for the training experiment using <code>floyd info</code> command.</p>
+<p>Then you can use the following command to spin up the test:</p>
+<pre><code class="bash">floyd run --gpu --env torch --data TRAINING_OUTPUT_ID 'bash ./floydhub/test.sh horse2zebra ./test_images'
+</code></pre>
+
+<p>Notes:</p>
+<ul>
+<li><code>./test_images</code> is a flat directory that contains images data you want to
+test with. The directory name is arbitrary.</li>
+</ul>
+<p>Once the test run is done, you should be able to view the result by opening the
+<code>index.html</code> file in your experiment output with a browser.</p>
+<h2 id="rest-api">Rest API</h2>
+<p>Coming Soon!</p>
               
             </article>
           </div>
@@ -720,7 +799,7 @@ Project &quot;style-transfer&quot; initialized in current directory
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../login/" title="floyd login" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../deep_corrector/" title="Deep Text Corrector" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -729,19 +808,19 @@ Project &quot;style-transfer&quot; initialized in current directory
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                floyd login
+                Deep Text Corrector
               </span>
             </div>
           </a>
         
         
-          <a href="../run/" title="floyd run" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../datasets/" title="Public Datasets" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                floyd run
+                Public Datasets
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
