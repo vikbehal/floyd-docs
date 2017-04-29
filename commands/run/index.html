@@ -477,6 +477,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#attaching-multiple-datasets" title="Attaching multiple datasets" class="md-nav__link">
+    Attaching multiple datasets
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_3" title="Example:" class="md-nav__link">
+    Example:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#serve" title="Serve" class="md-nav__link">
     Serve
   </a>
@@ -485,7 +505,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example_3" title="Example" class="md-nav__link">
+  <a href="#example_4" title="Example" class="md-nav__link">
     Example
   </a>
   
@@ -759,6 +779,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#attaching-multiple-datasets" title="Attaching multiple datasets" class="md-nav__link">
+    Attaching multiple datasets
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_3" title="Example:" class="md-nav__link">
+    Example:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#serve" title="Serve" class="md-nav__link">
     Serve
   </a>
@@ -767,7 +807,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example_3" title="Example" class="md-nav__link">
+  <a href="#example_4" title="Example" class="md-nav__link">
     Example
   </a>
   
@@ -814,9 +854,9 @@
 <td>If specified, runs the job on a GPU (G1) instance or CPU (C1) instance. See instance specifications on the <a href="https://www.floydhub.com/pricing">pricing</a> page.</td>
 </tr>
 <tr>
-<td><code>--data &lt;ID&gt;</code></td>
+<td><code>--data &lt;ID:mount&gt;</code></td>
 <td></td>
-<td>ID of the data source to link to. See <a href="../../home/using_datasets">data</a> section for more details.</td>
+<td><code>ID</code> of the data source to link to. <code>mount</code> specifies the path to mount it at. You can use this parameter multiple times. See <a href="../../home/using_datasets">data</a> section for more details.</td>
 </tr>
 <tr>
 <td><code>--mode [jupyter|serve]</code></td>
@@ -869,12 +909,23 @@ to specify a command in this mode. See <a href="../../guides/jupyter">jupyter</a
 Path to jupyter notebook: https://www.floydhub.com:8000/g8uGRZFQz85meArJGToEcs
 </code></pre>
 
+<h3 id="attaching-multiple-datasets">Attaching multiple datasets</h3>
+<p>You can attach upto 5 datasets when you run a project using the run command. You can specify both 
+datasets you uploaded and output datasets of your previous runs. You can specify the mount point 
+also when you specify the data id to mount.</p>
+<h4 id="example_3">Example:</h4>
+<pre><code class="bash">$ floyd run --data GY3QRFFUA8KpbnqvroTPPW:training --data 4T9bF6vtyvrHLdUsFbUumA:testing &quot;python script.py&quot;
+</code></pre>
+
+<p>The above datasets will be mounted at <code>/training</code> and <code>/testing</code> respectively.</p>
+<p>In case you do not specify the mount points, it will be mounted at <code>/&lt;ID&gt;</code>. i.e., it will use its own
+ID as the mount point.</p>
 <h3 id="serve">Serve</h3>
 <p>Floyd can be used to host the model you generated as a REST api. This api can be used to evaluate your model over HTTP.
 Use <code>--mode serve</code> and you will be presented with a URL to access your API. Floyd currently supports only Flask apps.
 It runs app.py file and expects the service to run on port 5000. You do not need to specify a command in this mode.
 See <a href="../../guides/style_transfer/#serve-mode">serve</a> page for more details.</p>
-<h4 id="example_3">Example</h4>
+<h4 id="example_4">Example</h4>
 <pre><code class="bash">$ floyd run --mode serve
 ...
 Path to service endpoint: https://www.floydhub.com:8000/vbKSKgVYGgZqmM9i3LjLBb

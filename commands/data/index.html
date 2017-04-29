@@ -1060,7 +1060,7 @@
 </tr>
 <tr>
 <td>floyd data delete</td>
-<td>Delete your dataset</td>
+<td>Delete your datasets</td>
 </tr>
 <tr>
 <td>floyd data output</td>
@@ -1162,7 +1162,7 @@ qNcS5bXHtFdSiMZ35kkEPh  an hour ago     456.2 MB      floydhub/csr:7            
 <h2 id="floyd-data-delete">floyd data delete</h2>
 <p>Delete datasets on FloydHub</p>
 <h3 id="usage_3">Usage</h3>
-<pre><code class="bash">floyd data delete [OPTIONS] [ID]
+<pre><code class="bash">floyd data delete [OPTIONS] [IDS]
 </code></pre>
 
 <h3 id="options_2">Options</h3>
@@ -1176,9 +1176,9 @@ qNcS5bXHtFdSiMZ35kkEPh  an hour ago     456.2 MB      floydhub/csr:7            
 </thead>
 <tbody>
 <tr>
-<td>ID</td>
+<td>IDS</td>
 <td></td>
-<td>ID of your data.</td>
+<td>One or more IDs of your data.</td>
 </tr>
 <tr>
 <td><code>--yes</code>, <code>-y</code></td>
@@ -1193,8 +1193,10 @@ be accessible. You can use the same command to delete output
 data as well.</p>
 <p>Note: You do <em>not</em> have to be in the project directory to run this command.</p>
 <h4 id="example_3">Example</h4>
-<pre><code class="bash">$ floyd data delete HYLEc2czGKRpYVm7rGtBoY
+<pre><code class="bash">$ floyd data delete HYLEc2czGKRpYVm7rGtBoY qNcS5bXHtFdSiMZ35kkEPh
 Delete Data: floydhub/mnist:1/output? [y/N]: y
+Data deleted
+Delete Data: floydhub/csr:7? [y/N]: y
 Data deleted
 </code></pre>
 

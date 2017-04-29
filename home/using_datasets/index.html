@@ -240,6 +240,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#attaching-multiple-datasets" title="Attaching multiple datasets" class="md-nav__link">
+    Attaching multiple datasets
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -658,6 +665,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#attaching-multiple-datasets" title="Attaching multiple datasets" class="md-nav__link">
+    Attaching multiple datasets
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -711,7 +725,7 @@ $ floyd logs -t GY3QRFFUA8KpbnqvroTPPW
 ...
 </code></pre>
 
-<p>You can get the id of the output using the <a href="../../commands/info/">info</a></p>
+<p>You can get the id of the output using the <a href="../../commands/info/">info</a> command.</p>
 <pre><code class="bash">$ floyd info GY3QRFFUA8KpbnqvroTPPW
 -----------  ----------------------------------------------------
 Run ID       GY3QRFFUA8KpbnqvroTPPW
@@ -736,6 +750,18 @@ $ floyd logs -t GY3QRFFUA8KpbnqvroTPPW
 2017-02-16 03:41:15,863 INFO - -rw-r--r--  1 root root 7797 Feb 16 11:38 neutral_sentences.txt
 ...
 </code></pre>
+
+<h2 id="attaching-multiple-datasets">Attaching multiple datasets</h2>
+<p>You can attach upto 5 datasets when you run a project using the run command. You can specify both 
+datasets you uploaded and output datasets of your previous runs. You can specify the mount point 
+also when you specify the data id to mount.</p>
+<p>For example: </p>
+<pre><code class="bash">$ floyd run --data GY3QRFFUA8KpbnqvroTPPW:training --data 4T9bF6vtyvrHLdUsFbUumA:testing &quot;python script.py&quot;
+</code></pre>
+
+<p>The above datasets will be mounted at <code>/training</code> and <code>/testing</code> respectively.</p>
+<p>In case you do not specify the mount points, it will be mounted at <code>/&lt;ID&gt;</code>. i.e., it will use its own
+ID as the mount point.</p>
               
             </article>
           </div>

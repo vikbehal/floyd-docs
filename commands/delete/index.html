@@ -673,9 +673,9 @@
                 
                   <h1>floyd delete</h1>
                 
-                <p>Delete a job.</p>
+                <p>Delete one or more floyd jobs.</p>
 <h3 id="usage">Usage</h3>
-<pre><code class="bash">floyd delete [ID]
+<pre><code class="bash">floyd delete [IDS]
 </code></pre>
 
 <h3 id="options">Options</h3>
@@ -689,9 +689,9 @@
 </thead>
 <tbody>
 <tr>
-<td>ID</td>
+<td>IDS</td>
 <td></td>
-<td>ID of your job.</td>
+<td>One or more IDs of your job.</td>
 </tr>
 <tr>
 <td><code>--yes</code>, <code>-y</code></td>
@@ -703,11 +703,14 @@
 <h3 id="description">Description</h3>
 <p>Deletes a job from FloydHub. The experiment information is no longer 
 available. You will not be able to access the code uploaded to run the 
-experiment.</p>
+experiment. You need to make sure that the project is currently not 
+running. If so, you can use the <a href="../stop/">stop</a> command for that.</p>
 <p>Note: You do <em>not</em> have to be in the project directory to run this command.</p>
 <h3 id="example">Example</h3>
-<pre><code class="bash">$ floyd delete J2ggstKWTNmL24nQTgi36o
+<pre><code class="bash">$ floyd delete J2ggstKWTNmL24nQTgi36o qNcS5bXHtFdSiMZ35kkEPh
 Delete Run: floydhub/fastText:1? [y/N]: y
+Experiment deleted
+Delete Run: floydhub/cnr:1? [y/N]: y
 Experiment deleted
 </code></pre>
               
