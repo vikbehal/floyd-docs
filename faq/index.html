@@ -659,6 +659,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#i-still-get-the-invalid-token-error-after-trying-the-above-suggestion" title="I still get the "Invalid Token" error after trying the above suggestion." class="md-nav__link">
+    I still get the "Invalid Token" error after trying the above suggestion.
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -841,6 +848,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#i-still-get-the-invalid-token-error-after-trying-the-above-suggestion" title="I still get the "Invalid Token" error after trying the above suggestion." class="md-nav__link">
+    I still get the "Invalid Token" error after trying the above suggestion.
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -986,6 +1000,18 @@ very soon :)</p>
 standard Ctrl + V. So you need to use the shell menu to paste the token. After copying the 
 token right click on the top bar of the command shell and select Paste. See image below:</p>
 <p><img alt="Windows 10 Login" src="../../img/login_win_10.jpg" /></p>
+<h3 id="i-still-get-the-invalid-token-error-after-trying-the-above-suggestion">I still get the "Invalid Token" error after trying the above suggestion.</h3>
+<p>In some windows shells (like Git Bash) there is an extra space added to the token field
+before you paste the token. So you need to backspace and clear out the field before pasting 
+the token. So the steps are:</p>
+<ol>
+<li>Type <code>floyd login</code> in the console.</li>
+<li>From the Floyd web page, select the token and click on the "Copy to clipboard" button.</li>
+<li>In the console, press "backspace" a few times to remove the extra characters from the token login prompt request.</li>
+<li>Right click on the menu bar, and select "Edit", and then "Paste"</li>
+<li>Then press "Enter"</li>
+</ol>
+<p>You should be able to login successfully now.</p>
 <h2 id="running-experiments">Running Experiments</h2>
 <h3 id="why-does-floyd-status-return-an-empty-list-even-though-i-have-several-runs-in-my-account">Why does <code>floyd status</code> return an empty list even though I have several runs in my account?</h3>
 <p>Floyd CLI uses the project directory to store the run information (similar to git). So you need 
