@@ -893,7 +893,7 @@ download it and keep it in current path. In this example we will be starting fro
 <a href="https://www.floydhub.com/viewer/data/VhrTiJzhuvMZKUVurG7cGT/2JEQ7sC53Aik7i7sPx3EjY/">jq4ZXUCSVer4t65rWeyieG</a>. You can mount this at runtime using the 
 <code>--data</code> parameter. For more information on how data inputs work, see <a href="../../home/using_datasets/">Using Datasets</a>.</p>
 <h3 id="training">Training</h3>
-<pre><code class="bash">$ floyd run --gpu --env keras:py2 --data jq4ZXUCSVer4t65rWeyieG &quot;python style.py --style examples/style/la_muse.jpg --base-model-path /input/pre-trained-tf/la_muse.ckpt --epoch 1 --total-iterations 10 --checkpoint-dir /output&quot;
+<pre><code class="bash">$ floyd run --gpu --env tensorflow-0.12:py2 --data jq4ZXUCSVer4t65rWeyieG &quot;python style.py --style examples/style/la_muse.jpg --base-model-path /input/pre-trained-tf/la_muse.ckpt --epoch 1 --total-iterations 10 --checkpoint-dir /output&quot;
 </code></pre>
 
 <p>This will kick off a new job on Floyd. This will take a few minutes to run and will generate the model. You can follow along the progress 
@@ -908,7 +908,7 @@ by using the <a href="../../commands/logs/">logs</a> command. </p>
 <h2 id="evaluate-your-model">Evaluate your model</h2>
 <p>You can evaluate the generated model by running <code>evaluate.py</code> on sample images. Use the output id from the training step
 as the datasource in this step. Add any image you want to style transfer to the <code>images</code> directory. Then run <code>evaluate.py</code>.</p>
-<pre><code class="bash">floyd run --env keras:py2 --data &lt;REPLACE_WITH_OUTPUT_ID&gt; &quot;python evaluate.py --allow-different-dimensions  --checkpoint /input/fns.ckpt --in-path ./images/ --out-path /output/&quot;
+<pre><code class="bash">floyd run --env tensorflow-0.12:py2 --data &lt;REPLACE_WITH_OUTPUT_ID&gt; &quot;python evaluate.py --allow-different-dimensions  --checkpoint /input/fns.ckpt --in-path ./images/ --out-path /output/&quot;
 </code></pre>
 
 <p>You can track the status of the run with the status or logs command.</p>
@@ -930,7 +930,7 @@ It takes about 8 hours to train a model that works well. You can instead try one
 (<a href="https://www.floydhub.com/viewer/data/Wociv8zwEmdRSSmNXbFwoK/">Js534T344XYBPMvWqhxJNj</a>) publicly. 
 You can play with any of these model and style transfer any image you prefer. Just add them to <code>images</code> directory. And point to the 
 right model in the <code>--checkpoint</code> parameter.</p>
-<pre><code class="bash">floyd run --gpu --env keras:py2 --data Js534T344XYBPMvWqhxJNj &quot;python evaluate.py --allow-different-dimensions --checkpoint /input/wave.ckpt --in-path ./images/ --out-path /output/&quot;
+<pre><code class="bash">floyd run --gpu --env tensorflow-0.12:py2 --data Js534T344XYBPMvWqhxJNj &quot;python evaluate.py --allow-different-dimensions --checkpoint /input/wave.ckpt --in-path ./images/ --out-path /output/&quot;
 </code></pre>
 
 <p>You can track the status of the run with the status command.</p>
@@ -950,7 +950,7 @@ right model in the <code>--checkpoint</code> parameter.</p>
 <a href="https://github.com/floydhub/fast-style-transfer/blob/master/app.py">app.py</a> file in the sample repository. This file handles the 
 incoming request, executes the code in <code>evaluate.py</code> and returns the output.</p>
 <p><em>Note that this feature is in preview mode and is not production ready yet</em></p>
-<pre><code class="bash">$ floyd run --env keras:py2 --data Js534T344XYBPMvWqhxJNj --mode serve
+<pre><code class="bash">$ floyd run --env tensorflow-0.12:py2 --data Js534T344XYBPMvWqhxJNj --mode serve
 Syncing code ...
 RUN ID                  NAME                              VERSION
 ----------------------  ------------------------------  ---------
