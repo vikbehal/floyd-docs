@@ -857,7 +857,7 @@ on your computer. Instead, the CLI syncs your code to Floyd servers and
 runs it on the cloud. Lets train and test a tensorflow implementation of 
 handwriting digit recognition using CNNs and the MNIST dataset.</p>
 <p>Use the floyd <a href="../../commands/run/">run</a> command to run the code.</p>
-<pre><code class="bash">$ floyd run --gpu &quot;python mnist_cnn.py&quot; 
+<pre><code class="bash">$ floyd run --gpu &quot;python convolutional_network.py&quot; 
 Syncing code ...
 RUN ID                  NAME                      VERSION
 ----------------------  ----------------     ---------
@@ -877,11 +877,11 @@ AKpnXqj9BEU6d8KhmygTyb  alice/first_proj:1         2
 <p>When using the <code>floyd run</code> command, by default, a CPU machine is used to execute your job. If you 
 want to use a GPU instance (Nvidia Tesla K80 with 12GB memory), use the <code>--gpu</code> flag.</p>
 <p>To run job on CPU</p>
-<pre><code class="bash">$ floyd run &quot;python mnist_cnn.py&quot; 
+<pre><code class="bash">$ floyd run &quot;python convolutional_network.py&quot; 
 </code></pre>
 
 <p>To run job on GPU</p>
-<pre><code class="bash">$ floyd run --gpu &quot;python mnist_cnn.py&quot; 
+<pre><code class="bash">$ floyd run --gpu &quot;python convolutional_network.py&quot; 
 </code></pre>
 
 <h2 id="checking-run-status">Checking run status</h2>
