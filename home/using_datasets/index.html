@@ -770,8 +770,20 @@ GY3QRFFUA8KpbnqvroTPPW  alice/sent-data:1            1
 using this data id. Read below for details.</p>
 <h2 id="creating-a-dataset-from-downloads">Creating a dataset from downloads</h2>
 <p>In the case where your datasets are available on the internet, you can download them directly into 
-Floyd. You can run your download script like any other job using the <a href="../../commands/run/">run</a> command.
-Just store the downloaded files to the <code>/output</code> directory.</p>
+Floyd using a custom download script that you provide. You can run your download script like any other 
+job using the <a href="../../commands/run/">run</a> command. Just store the downloaded files to the <code>/output</code> directory.</p>
+<p>Simple example script to download using wget and unzip a compressed data set:</p>
+<pre><code class="sh">#!/bin/sh
+# download_data.sh
+# Fetches data from remote site and saves it in the /output folder.
+# NOTE: Concatenate commands with &amp;&amp; to break execution immediately on 
+#       failure and get a valid exit code.
+
+wget http://somesite.me/data/mydata.zip &amp;&amp; \
+unzip -a -o mydata.zip -d /output &amp;&amp; \
+rm mydata.zip
+</code></pre>
+
 <pre><code class="bash"># Make sure the downloaded files are stored in /output
 $ floyd run &quot;sh download_data.sh&quot;
 Syncing code ...
