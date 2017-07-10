@@ -703,6 +703,15 @@ the floyd commands are run from.</p>
 <pre><code class="bash">$ echo &quot;Pillow&quot; &gt; floyd_requirements.txt
 </code></pre>
 
+<p>You can also install any dependency directly from your jupyter notebook in a cell like this:</p>
+<pre><code class="bash">!pip install name_of_the_package
+</code></pre>
+
+<p>For example, for tflearn you could run the code below in a cell.</p>
+<pre><code class="bash">!pip install tflearn
+</code></pre>
+
+<p>Note: Do not forget the initial (!), otherwise it would not work.</p>
 <hr />
 <h2 id="help-make-this-document-better">Help make this document better</h2>
 <p>This guide, as well as the rest of our docs, are open-source and available on 
