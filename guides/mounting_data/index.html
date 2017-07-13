@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://www.floydhub.com/commands/status/">
+        <link rel="canonical" href="https://www.floydhub.com/guides/mounting_data/">
       
       
         <meta name="author" content="FloydHub Team">
@@ -19,7 +19,7 @@
     
     
       
-        <title>floyd status - FloydHub</title>
+        <title>Mounting Data - FloydHub</title>
       
     
     
@@ -85,11 +85,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  Commands
+                  Guides
                 </span>
               
             
-            floyd status
+            Mounting Data
           
         </span>
       </div>
@@ -242,7 +242,7 @@
       
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Guides
@@ -274,7 +274,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../guides/basics/install/" title="Install Floyd CLI" class="md-nav__link">
+      <a href="../basics/install/" title="Install Floyd CLI" class="md-nav__link">
         Install Floyd CLI
       </a>
     
@@ -285,7 +285,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../guides/basics/login/" title="Login using Floyd CLI" class="md-nav__link">
+      <a href="../basics/login/" title="Login using Floyd CLI" class="md-nav__link">
         Login using Floyd CLI
       </a>
     
@@ -296,7 +296,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../guides/basics/create_new/" title="Create new Project and Dataset" class="md-nav__link">
+      <a href="../basics/create_new/" title="Create new Project and Dataset" class="md-nav__link">
         Create new Project and Dataset
       </a>
     
@@ -312,9 +312,83 @@
           
   <li class="md-nav__item">
     
-      <a href="../../guides/mounting_data/" title="Mounting Data" class="md-nav__link">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
         Mounting Data
-      </a>
+      </label>
+    
+    <a href="./" title="Mounting Data" class="md-nav__link md-nav__link--active">
+      Mounting Data
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-preparation-checklist" title="Quick Preparation Checklist" class="md-nav__link">
+    Quick Preparation Checklist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mounting-datasets" title="Mounting datasets" class="md-nav__link">
+    Mounting datasets
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-name" title="Data name" class="md-nav__link">
+    Data name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-command" title="Run command" class="md-nav__link">
+    Run command
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mounting-output-data" title="Mounting output data" class="md-nav__link">
+    Mounting output data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mounting-multiple-datasets" title="Mounting multiple datasets" class="md-nav__link">
+    Mounting multiple datasets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-dashboard" title="Web dashboard" class="md-nav__link">
+    Web dashboard
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -323,7 +397,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../guides/environments/" title="Environments" class="md-nav__link">
+      <a href="../environments/" title="Environments" class="md-nav__link">
         Environments
       </a>
     
@@ -334,7 +408,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../guides/floyd_ignore/" title="Ignore files" class="md-nav__link">
+      <a href="../floyd_ignore/" title="Ignore files" class="md-nav__link">
         Ignore files
       </a>
     
@@ -345,7 +419,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../guides/installing_dependencies/" title="Installing extra dependencies" class="md-nav__link">
+      <a href="../installing_dependencies/" title="Installing extra dependencies" class="md-nav__link">
         Installing extra dependencies
       </a>
     
@@ -437,7 +511,7 @@
       
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       Commands
@@ -453,7 +527,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../" title="floyd" class="md-nav__link">
+      <a href="../../commands/" title="floyd" class="md-nav__link">
         floyd
       </a>
     
@@ -464,7 +538,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../login/" title="floyd login" class="md-nav__link">
+      <a href="../../commands/login/" title="floyd login" class="md-nav__link">
         floyd login
       </a>
     
@@ -475,7 +549,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../init/" title="floyd init" class="md-nav__link">
+      <a href="../../commands/init/" title="floyd init" class="md-nav__link">
         floyd init
       </a>
     
@@ -486,7 +560,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../run/" title="floyd run" class="md-nav__link">
+      <a href="../../commands/run/" title="floyd run" class="md-nav__link">
         floyd run
       </a>
     
@@ -497,7 +571,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../data/" title="floyd data" class="md-nav__link">
+      <a href="../../commands/data/" title="floyd data" class="md-nav__link">
         floyd data
       </a>
     
@@ -508,7 +582,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../logs/" title="floyd logs" class="md-nav__link">
+      <a href="../../commands/logs/" title="floyd logs" class="md-nav__link">
         floyd logs
       </a>
     
@@ -519,63 +593,9 @@
           
   <li class="md-nav__item">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
+      <a href="../../commands/status/" title="floyd status" class="md-nav__link">
         floyd status
-      </label>
-    
-    <a href="./" title="floyd status" class="md-nav__link md-nav__link--active">
-      floyd status
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#usage" title="Usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#options" title="Options" class="md-nav__link">
-    Options
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#description" title="Description" class="md-nav__link">
-    Description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#help-make-this-document-better" title="Help make this document better" class="md-nav__link">
-    Help make this document better
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+      </a>
     
   </li>
 
@@ -584,7 +604,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../output/" title="floyd output" class="md-nav__link">
+      <a href="../../commands/output/" title="floyd output" class="md-nav__link">
         floyd output
       </a>
     
@@ -595,7 +615,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../clone/" title="floyd clone" class="md-nav__link">
+      <a href="../../commands/clone/" title="floyd clone" class="md-nav__link">
         floyd clone
       </a>
     
@@ -606,7 +626,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../info/" title="floyd info" class="md-nav__link">
+      <a href="../../commands/info/" title="floyd info" class="md-nav__link">
         floyd info
       </a>
     
@@ -617,7 +637,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../stop/" title="floyd stop" class="md-nav__link">
+      <a href="../../commands/stop/" title="floyd stop" class="md-nav__link">
         floyd stop
       </a>
     
@@ -628,7 +648,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../delete/" title="floyd delete" class="md-nav__link">
+      <a href="../../commands/delete/" title="floyd delete" class="md-nav__link">
         floyd delete
       </a>
     
@@ -639,7 +659,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../logout/" title="floyd logout" class="md-nav__link">
+      <a href="../../commands/logout/" title="floyd logout" class="md-nav__link">
         floyd logout
       </a>
     
@@ -650,7 +670,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../upgrade/" title="floyd upgrade" class="md-nav__link">
+      <a href="../../commands/upgrade/" title="floyd upgrade" class="md-nav__link">
         floyd upgrade
       </a>
     
@@ -661,7 +681,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../version/" title="floyd version" class="md-nav__link">
+      <a href="../../commands/version/" title="floyd version" class="md-nav__link">
         floyd version
       </a>
     
@@ -724,36 +744,56 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage" title="Usage" class="md-nav__link">
-    Usage
+  <a href="#quick-preparation-checklist" title="Quick Preparation Checklist" class="md-nav__link">
+    Quick Preparation Checklist
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#options" title="Options" class="md-nav__link">
-    Options
+  <a href="#mounting-datasets" title="Mounting datasets" class="md-nav__link">
+    Mounting datasets
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-name" title="Data name" class="md-nav__link">
+    Data name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-command" title="Run command" class="md-nav__link">
+    Run command
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mounting-output-data" title="Mounting output data" class="md-nav__link">
+    Mounting output data
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#description" title="Description" class="md-nav__link">
-    Description
+  <a href="#mounting-multiple-datasets" title="Mounting multiple datasets" class="md-nav__link">
+    Mounting multiple datasets
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#help-make-this-document-better" title="Help make this document better" class="md-nav__link">
-    Help make this document better
+  <a href="#web-dashboard" title="Web dashboard" class="md-nav__link">
+    Web dashboard
   </a>
   
 </li>
@@ -769,53 +809,56 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
                
-                 <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/commands/status.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+                 <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/guides/mounting_data.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
                
               
                 
-                  <h1>floyd status</h1>
+                  <h1>Mounting Data</h1>
                 
-                <p>View status of your jobs.</p>
-<h3 id="usage">Usage</h3>
-<pre><code class="bash">floyd status [NAME or ID]
-</code></pre>
-
-<h3 id="options">Options</h3>
-<table>
-<thead>
-<tr>
-<th>Name, shorthand</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Name or ID</td>
-<td></td>
-<td>ID of your job.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="description">Description</h3>
-<p>Shows the status of a run, if the ID is specified. It can also list the status of all 
-the runs in the current project. You need to be in the project directory for this command to work.</p>
-<h3 id="example">Example</h3>
-<pre><code class="bash">$ floyd status
-RUN ID                  CREATED         STATUS      DURATION(s)  NAME                           INSTANCE      VERSION
-----------------------  --------------  --------  -------------  -----------------------------  ----------  ---------
-dTe2cJJrNR2CBD74rSZXPA  31 minutes ago  success             108  floydhub/tensorflow-project:7  cpu                 2
-B8wkLbuGs2mtjhe9jqrkYT  2 hours ago     success            2349  floydhub/tensorflow-project:7  gpu                 1
-</code></pre>
-
-<hr />
-<h2 id="help-make-this-document-better">Help make this document better</h2>
-<p>This guide, as well as the rest of our docs, are open-source and available on 
-<a href="https://github.com/floydhub/floyd-docs">GitHub</a>. We welcome your contributions.</p>
+                <p>In this guide, we will explain how to attach a dataset to your project run.</p>
+<h3 id="quick-preparation-checklist">Quick Preparation Checklist</h3>
 <ul>
-<li>Suggest an edit to this page (by clicking the edit icon at the top next to the title).</li>
-<li><a href="https://github.com/floydhub/floyd-docs/issues/new?body=This%20issue%20is%20about%20%3C">Open an issue about this page</a> to report a problem.</li>
+<li>You must have a <a href="https://www.floydhub.com/signup">FloydHub account</a></li>
+<li>You must be <a href="https://www.floydhub.com/login">logged in to your web dashboard</a></li>
+<li>You must have <code>floyd-cli</code> <a href="../basics/install/">installed on your computer</a></li>
 </ul>
+<p>You can use the <a href="../../commands/login/">floyd login</a> command to login to your FloydHub account through your command line</p>
+<h2 id="mounting-datasets">Mounting datasets</h2>
+<p>Floyd datasets are directories of data files that can be used in a project run. You can view the datasets you 
+have uploaded in the <a href="https://www.floydhub.com/datasets">datasets page</a> in the dashboard. You can also view 
+public datasets by searching for it on FloydHub.</p>
+<h3 id="data-name">Data name</h3>
+<p>To mount a dataset you need to specify its names along with the version. The full name to use here consists of 3 
+parts: <code>&lt;username&gt;/datasets/&lt;dataset_name&gt;/&lt;version&gt;</code>. </p>
+<p>For example: <code>floydhub/datasets/mnist/2</code>.</p>
+<p>By default the mount path for the dataset is <code>/input</code>. But you can override that by specifying a mount path as 
+part of the data name.</p>
+<p>For example: <code>floydhub/datasets/mnist/2:mnist</code>.</p>
+<p>In this case the directory containing the mnist data files.</p>
+<h3 id="run-command">Run command</h3>
+<p>You can specify the name of the data in the <a href="../../commands/run/">run command</a> using the <code>--data</code> flag. For example:</p>
+<pre><code class="bash">$ floyd run --data floydhub/datasets/mnist/2:mnist &quot;python train.py&quot;
+</code></pre>
+
+<h2 id="mounting-output-data">Mounting output data</h2>
+<p>In Floyd the output of any project run (that you have access to) can be mounted to a different project run.
+You can refer to the output of a project run by its name with <code>/output</code> appended to it.</p>
+<p>For example: <code>floydhub/projects/handwriting-recognition/12/output</code></p>
+<p>This refers to the output of the job: <code>floydhub/projects/handwriting-recognition/12</code></p>
+<p>You can mount this using the run command similar to datasets. For example:</p>
+<pre><code class="bash">$ floyd run --data floydhub/projects/handwriting-recognition/12:filtered_training_data &quot;python train.py&quot;
+</code></pre>
+
+<h2 id="mounting-multiple-datasets">Mounting multiple datasets</h2>
+<p>You can attach upto 5 datasets when you run a project using the run command. This includes both datasets and 
+project run outputs. Ensure that the mount points for the datasets are unique.</p>
+<pre><code class="bash">$ floyd run --data floydhub/datasets/mnist/2:training --data floydhub/datasets/digits/1:testing &quot;python script.py&quot;
+</code></pre>
+
+<p>In this case the above datasets will be mounted at <code>/training</code> and <code>/testing</code> respectively.</p>
+<h2 id="web-dashboard">Web dashboard</h2>
+<p>You can view the mounted datasets in a specific job by going to the <code>data</code> tab:</p>
+<p><img alt="Data Mounts" src="../../img/job_data_view.png" /></p>
               
             </article>
           </div>
@@ -828,7 +871,7 @@ B8wkLbuGs2mtjhe9jqrkYT  2 hours ago     success            2349  floydhub/tensor
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../logs/" title="floyd logs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../basics/create_new/" title="Create new Project and Dataset" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -837,19 +880,19 @@ B8wkLbuGs2mtjhe9jqrkYT  2 hours ago     success            2349  floydhub/tensor
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                floyd logs
+                Create new Project and Dataset
               </span>
             </div>
           </a>
         
         
-          <a href="../output/" title="floyd output" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../environments/" title="Environments" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                floyd output
+                Environments
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://www.floydhub.com/commands/status/">
+        <link rel="canonical" href="https://www.floydhub.com/commands/clone/">
       
       
         <meta name="author" content="FloydHub Team">
@@ -19,7 +19,7 @@
     
     
       
-        <title>floyd status - FloydHub</title>
+        <title>floyd clone - FloydHub</title>
       
     
     
@@ -89,7 +89,7 @@
                 </span>
               
             
-            floyd status
+            floyd clone
           
         </span>
       </div>
@@ -519,15 +519,37 @@
           
   <li class="md-nav__item">
     
+      <a href="../status/" title="floyd status" class="md-nav__link">
+        floyd status
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../output/" title="floyd output" class="md-nav__link">
+        floyd output
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        floyd status
+        floyd clone
       </label>
     
-    <a href="./" title="floyd status" class="md-nav__link md-nav__link--active">
-      floyd status
+    <a href="./" title="floyd clone" class="md-nav__link md-nav__link--active">
+      floyd clone
     </a>
     
       
@@ -576,28 +598,6 @@
     </ul>
   
 </nav>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../output/" title="floyd output" class="md-nav__link">
-        floyd output
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../clone/" title="floyd clone" class="md-nav__link">
-        floyd clone
-      </a>
     
   </li>
 
@@ -769,15 +769,15 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
                
-                 <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/commands/status.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+                 <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/commands/clone.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
                
               
                 
-                  <h1>floyd status</h1>
+                  <h1>floyd clone</h1>
                 
-                <p>View status of your jobs.</p>
+                <p>Clone the code for a specific job.</p>
 <h3 id="usage">Usage</h3>
-<pre><code class="bash">floyd status [NAME or ID]
+<pre><code class="bash">floyd clone JOB_NAME
 </code></pre>
 
 <h3 id="options">Options</h3>
@@ -791,21 +791,21 @@
 </thead>
 <tbody>
 <tr>
-<td>Name or ID</td>
+<td>JOB_NAME or ID</td>
 <td></td>
-<td>ID of your job.</td>
+<td>Name or ID of your job.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="description">Description</h3>
-<p>Shows the status of a run, if the ID is specified. It can also list the status of all 
-the runs in the current project. You need to be in the project directory for this command to work.</p>
+<p>Use this command to clone an existing project on floyd. The code used for the job is downloaded to the 
+current directory. This will override any existing file or directory in the process.</p>
+<p>This command is a great way to get started on floyd by starting from an existing project.</p>
 <h3 id="example">Example</h3>
-<pre><code class="bash">$ floyd status
-RUN ID                  CREATED         STATUS      DURATION(s)  NAME                           INSTANCE      VERSION
-----------------------  --------------  --------  -------------  -----------------------------  ----------  ---------
-dTe2cJJrNR2CBD74rSZXPA  31 minutes ago  success             108  floydhub/tensorflow-project:7  cpu                 2
-B8wkLbuGs2mtjhe9jqrkYT  2 hours ago     success            2349  floydhub/tensorflow-project:7  gpu                 1
+<pre><code class="bash">$ floyd clone floydhub/projects/style-transfer/4
+Downloading the tar file to the current directory ...
+Untarring the contents of the file ...
+Cleaning up the tar file ...
 </code></pre>
 
 <hr />
@@ -828,7 +828,7 @@ B8wkLbuGs2mtjhe9jqrkYT  2 hours ago     success            2349  floydhub/tensor
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../logs/" title="floyd logs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../output/" title="floyd output" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -837,19 +837,19 @@ B8wkLbuGs2mtjhe9jqrkYT  2 hours ago     success            2349  floydhub/tensor
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                floyd logs
+                floyd output
               </span>
             </div>
           </a>
         
         
-          <a href="../output/" title="floyd output" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../info/" title="floyd info" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                floyd output
+                floyd info
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

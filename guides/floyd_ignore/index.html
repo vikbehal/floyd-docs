@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://www.floydhub.com/commands/status/">
+        <link rel="canonical" href="https://www.floydhub.com/guides/floyd_ignore/">
       
       
         <meta name="author" content="FloydHub Team">
@@ -19,7 +19,7 @@
     
     
       
-        <title>floyd status - FloydHub</title>
+        <title>Ignore files - FloydHub</title>
       
     
     
@@ -85,11 +85,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  Commands
+                  Guides
                 </span>
               
             
-            floyd status
+            Ignore files
           
         </span>
       </div>
@@ -242,7 +242,7 @@
       
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Guides
@@ -274,7 +274,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../guides/basics/install/" title="Install Floyd CLI" class="md-nav__link">
+      <a href="../basics/install/" title="Install Floyd CLI" class="md-nav__link">
         Install Floyd CLI
       </a>
     
@@ -285,7 +285,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../guides/basics/login/" title="Login using Floyd CLI" class="md-nav__link">
+      <a href="../basics/login/" title="Login using Floyd CLI" class="md-nav__link">
         Login using Floyd CLI
       </a>
     
@@ -296,7 +296,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../guides/basics/create_new/" title="Create new Project and Dataset" class="md-nav__link">
+      <a href="../basics/create_new/" title="Create new Project and Dataset" class="md-nav__link">
         Create new Project and Dataset
       </a>
     
@@ -312,7 +312,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../guides/mounting_data/" title="Mounting Data" class="md-nav__link">
+      <a href="../mounting_data/" title="Mounting Data" class="md-nav__link">
         Mounting Data
       </a>
     
@@ -323,7 +323,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../guides/environments/" title="Environments" class="md-nav__link">
+      <a href="../environments/" title="Environments" class="md-nav__link">
         Environments
       </a>
     
@@ -334,9 +334,49 @@
           
   <li class="md-nav__item">
     
-      <a href="../../guides/floyd_ignore/" title="Ignore files" class="md-nav__link">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
         Ignore files
-      </a>
+      </label>
+    
+    <a href="./" title="Ignore files" class="md-nav__link md-nav__link--active">
+      Ignore files
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initialization" title="Initialization" class="md-nav__link">
+    Initialization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#help-make-this-document-better" title="Help make this document better" class="md-nav__link">
+    Help make this document better
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -345,7 +385,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../guides/installing_dependencies/" title="Installing extra dependencies" class="md-nav__link">
+      <a href="../installing_dependencies/" title="Installing extra dependencies" class="md-nav__link">
         Installing extra dependencies
       </a>
     
@@ -437,7 +477,7 @@
       
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       Commands
@@ -453,7 +493,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../" title="floyd" class="md-nav__link">
+      <a href="../../commands/" title="floyd" class="md-nav__link">
         floyd
       </a>
     
@@ -464,7 +504,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../login/" title="floyd login" class="md-nav__link">
+      <a href="../../commands/login/" title="floyd login" class="md-nav__link">
         floyd login
       </a>
     
@@ -475,7 +515,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../init/" title="floyd init" class="md-nav__link">
+      <a href="../../commands/init/" title="floyd init" class="md-nav__link">
         floyd init
       </a>
     
@@ -486,7 +526,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../run/" title="floyd run" class="md-nav__link">
+      <a href="../../commands/run/" title="floyd run" class="md-nav__link">
         floyd run
       </a>
     
@@ -497,7 +537,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../data/" title="floyd data" class="md-nav__link">
+      <a href="../../commands/data/" title="floyd data" class="md-nav__link">
         floyd data
       </a>
     
@@ -508,7 +548,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../logs/" title="floyd logs" class="md-nav__link">
+      <a href="../../commands/logs/" title="floyd logs" class="md-nav__link">
         floyd logs
       </a>
     
@@ -519,63 +559,9 @@
           
   <li class="md-nav__item">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
+      <a href="../../commands/status/" title="floyd status" class="md-nav__link">
         floyd status
-      </label>
-    
-    <a href="./" title="floyd status" class="md-nav__link md-nav__link--active">
-      floyd status
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#usage" title="Usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#options" title="Options" class="md-nav__link">
-    Options
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#description" title="Description" class="md-nav__link">
-    Description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#help-make-this-document-better" title="Help make this document better" class="md-nav__link">
-    Help make this document better
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+      </a>
     
   </li>
 
@@ -584,7 +570,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../output/" title="floyd output" class="md-nav__link">
+      <a href="../../commands/output/" title="floyd output" class="md-nav__link">
         floyd output
       </a>
     
@@ -595,7 +581,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../clone/" title="floyd clone" class="md-nav__link">
+      <a href="../../commands/clone/" title="floyd clone" class="md-nav__link">
         floyd clone
       </a>
     
@@ -606,7 +592,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../info/" title="floyd info" class="md-nav__link">
+      <a href="../../commands/info/" title="floyd info" class="md-nav__link">
         floyd info
       </a>
     
@@ -617,7 +603,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../stop/" title="floyd stop" class="md-nav__link">
+      <a href="../../commands/stop/" title="floyd stop" class="md-nav__link">
         floyd stop
       </a>
     
@@ -628,7 +614,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../delete/" title="floyd delete" class="md-nav__link">
+      <a href="../../commands/delete/" title="floyd delete" class="md-nav__link">
         floyd delete
       </a>
     
@@ -639,7 +625,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../logout/" title="floyd logout" class="md-nav__link">
+      <a href="../../commands/logout/" title="floyd logout" class="md-nav__link">
         floyd logout
       </a>
     
@@ -650,7 +636,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../upgrade/" title="floyd upgrade" class="md-nav__link">
+      <a href="../../commands/upgrade/" title="floyd upgrade" class="md-nav__link">
         floyd upgrade
       </a>
     
@@ -661,7 +647,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../version/" title="floyd version" class="md-nav__link">
+      <a href="../../commands/version/" title="floyd version" class="md-nav__link">
         floyd version
       </a>
     
@@ -724,8 +710,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage" title="Usage" class="md-nav__link">
-    Usage
+  <a href="#initialization" title="Initialization" class="md-nav__link">
+    Initialization
   </a>
   
 </li>
@@ -733,20 +719,6 @@
         <li class="md-nav__item">
   <a href="#options" title="Options" class="md-nav__link">
     Options
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#description" title="Description" class="md-nav__link">
-    Description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
   </a>
   
 </li>
@@ -769,45 +741,76 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
                
-                 <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/commands/status.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+                 <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/guides/floyd_ignore.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
                
               
                 
-                  <h1>floyd status</h1>
+                  <h1>Ignore files</h1>
                 
-                <p>View status of your jobs.</p>
-<h3 id="usage">Usage</h3>
-<pre><code class="bash">floyd status [NAME or ID]
+                <p>Floydignore is a special floyd cli construct that allows you to specify
+which files need to be uploaded to the server. This is very similar to
+how gitignore works.</p>
+<p>Minimizing the number of files to upload saves upload time and disk space used
+by your experiments.</p>
+<h2 id="initialization">Initialization</h2>
+<p>Everytime a new dataset or project is <a href="../../commands/init">initialized</a> using <code>floyd-cli</code> a new
+<code>.floydignore</code> file is created in the current path.</p>
+<pre><code class="bash">$ cd /code/project
+$ floyd init style-transfer
+Project &quot;style-transfer&quot; initialized in current directory
+$ cat .floydignore
+
+# Directories and files to ignore when uploading code to floyd
+
+.git
+.eggs
+eggs
+lib
+lib64
+parts
+sdist
+var
 </code></pre>
 
-<h3 id="options">Options</h3>
-<table>
-<thead>
-<tr>
-<th>Name, shorthand</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Name or ID</td>
-<td></td>
-<td>ID of your job.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="description">Description</h3>
-<p>Shows the status of a run, if the ID is specified. It can also list the status of all 
-the runs in the current project. You need to be in the project directory for this command to work.</p>
-<h3 id="example">Example</h3>
-<pre><code class="bash">$ floyd status
-RUN ID                  CREATED         STATUS      DURATION(s)  NAME                           INSTANCE      VERSION
-----------------------  --------------  --------  -------------  -----------------------------  ----------  ---------
-dTe2cJJrNR2CBD74rSZXPA  31 minutes ago  success             108  floydhub/tensorflow-project:7  cpu                 2
-B8wkLbuGs2mtjhe9jqrkYT  2 hours ago     success            2349  floydhub/tensorflow-project:7  gpu                 1
+<p>Note: If a <code>.floydignore</code> file already exists in the initialization path, it will not be overridden.</p>
+<h2 id="options">Options</h2>
+<p>There are different ways to specify files, directories, or
+<a href="https://en.wikipedia.org/wiki/Glob_(programming)">glob patterns</a> that you want
+to be ignored. Below is a list with examples:</p>
+<pre><code># Ignore all .dat files in the whole project:
+*.dat
+
+# Ignore all .dat files in some_folder:
+some_folder/*.dat
+
+# Ignore all .dat files in some_folder and its subfolders:
+some_folder/**/*.dat
+
+# Ignore all files (and folders) named .DS_Store
+.DS_Store
+
+# Ignore a specific file named .DS_Store located in some_folder
+some_folder/.DS_Store
+
+# Ignore all files named .DS_Store in some_folder and its subfolders
+some_folder/**/.DS_Store
+
+# Ignore all files in some_folder
+/some_folder/
+
+# Ignore all files in some_folder (works the same as the rule above)
+some_folder/
+
+# Ignore all files in some_folder (works the same as the rule above)
+some_folder
 </code></pre>
 
+<p>You can also whitelist files, directories, and glob patterns by preceding them
+with a <code>!</code>.  Items matching the pattern following the <code>!</code> that were excluded by
+a previous pattern will become included again. It is not possible to re-include
+a file if a parent directory of that file is excluded. Put a backslash (<code>\</code>) in
+front of the first <code>!</code> for patterns that begin with a literal <code>!</code>, for example,
+<code>\!important!.txt</code>.</p>
 <hr />
 <h2 id="help-make-this-document-better">Help make this document better</h2>
 <p>This guide, as well as the rest of our docs, are open-source and available on 
@@ -828,7 +831,7 @@ B8wkLbuGs2mtjhe9jqrkYT  2 hours ago     success            2349  floydhub/tensor
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../logs/" title="floyd logs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../environments/" title="Environments" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -837,19 +840,19 @@ B8wkLbuGs2mtjhe9jqrkYT  2 hours ago     success            2349  floydhub/tensor
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                floyd logs
+                Environments
               </span>
             </div>
           </a>
         
         
-          <a href="../output/" title="floyd output" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../installing_dependencies/" title="Installing extra dependencies" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                floyd output
+                Installing extra dependencies
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
