@@ -518,6 +518,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#why-was-my-cpu-job-killed-without-warning" title="Why was my CPU job Killed without warning?" class="md-nav__link">
+    Why was my CPU job Killed without warning?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#help-make-this-document-better" title="Help make this document better" class="md-nav__link">
     Help make this document better
   </a>
@@ -851,6 +858,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#why-was-my-cpu-job-killed-without-warning" title="Why was my CPU job Killed without warning?" class="md-nav__link">
+    Why was my CPU job Killed without warning?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#help-make-this-document-better" title="Help make this document better" class="md-nav__link">
     Help make this document better
   </a>
@@ -881,7 +895,7 @@ to be in the directory where you initialized the project and you should be able 
 runs. You can also use the <a href="https://www.floydhub.com/projects">web dashboard</a> to view all your
 projects in one place.</p>
 <h3 id="what-do-i-do-when-i-get-what-do-you-do-when-you-get-you-are-over-the-allowed-limits-for-this-operation-consider-upgrading-your-account">What do I do when I get "What do you do when you get “You are over the allowed limits for this operation. Consider upgrading your account”?</h3>
-<p>Floydhub currently allows only 1 active runs per user for trial plan and 3 active runs for individual plan. If you require more concurrency, contact
+<p>Floydhub currently allows only 1 active job per user for trial plan and 3 active jobs for individual plan. If you require more concurrency, contact
 us from the <a href="https://www.floydhub.com/pricing">pricing</a> page.</p>
 <h3 id="i-get-too-many-open-files-error-when-i-run-my-project">I get "Too many open files" error when I run my project.</h3>
 <p>Floyd CLI throws this error when you have too many files in your current directory that needs to be uploaded.
@@ -922,6 +936,23 @@ your state is maintained in memory (both CPU and GPU memory). So the instance ha
 entire duration of your notebook, not just when you are executing commands.</p>
 <p>For example, when you execute <code>import tensorflow</code>
 command, Tensorflow will allocate the entire GPU memory to the current session and waits for the next command. This makes the instance unusable by anyone else, so we have to charge you for the duration your Notebook is alive.</p>
+<h3 id="why-was-my-cpu-job-killed-without-warning">Why was my CPU job Killed without warning?</h3>
+<p>Occasionally, you may notice that your CPU job died without warning. The output logs just display <code>Killed</code>. For example,</p>
+<pre><code class="bash">################################################################################
+
+2017-07-24 03:33:42,530 INFO - Run Output:
+...
+2017-07-24 03:33:52,920 INFO - Using TensorFlow backend.
+2017-07-24 03:34:04,381 INFO - &gt;&gt; loading UNet of size 1152x256...
+2017-07-24 03:34:10,942 INFO - Epoch 1/100
+2017-07-24 03:35:17,221 INFO - Killed
+2017-07-24 03:35:18,680 INFO - 
+################################################################################
+</code></pre>
+
+<p>This happens when your machine runs out of memory (OOM). i.e. your job consumes more memory than is available on our CPU machines.</p>
+<p>All jobs run on FloydHub are executed inside a Docker container. Our current CPU machines have <a href="https://www.floydhub.com/pricing">7GB memory</a>. When memory used by your job exceeds 7GB, Docker automatically kills the job to protect the system and avoid abuse.</p>
+<p>The resolution is to optimize your code to consume less memory. For example, read less data into your in-memory datastructures or reduce your batch size. We will be introducing more powerful CPUs, which higher memory in the near future.</p>
 <hr />
 <h2 id="help-make-this-document-better">Help make this document better</h2>
 <p>This guide, as well as the rest of our docs, are open-source and available on 
