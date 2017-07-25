@@ -518,6 +518,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#why-did-my-job-timeout-after-1-hour" title="Why did my job timeout after 1 hour?" class="md-nav__link">
+    Why did my job timeout after 1 hour?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#why-was-my-cpu-job-killed-without-warning" title="Why was my CPU job Killed without warning?" class="md-nav__link">
     Why was my CPU job Killed without warning?
   </a>
@@ -869,6 +876,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#why-did-my-job-timeout-after-1-hour" title="Why did my job timeout after 1 hour?" class="md-nav__link">
+    Why did my job timeout after 1 hour?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#why-was-my-cpu-job-killed-without-warning" title="Why was my CPU job Killed without warning?" class="md-nav__link">
     Why was my CPU job Killed without warning?
   </a>
@@ -947,6 +961,10 @@ your state is maintained in memory (both CPU and GPU memory). So the instance ha
 entire duration of your notebook, not just when you are executing commands.</p>
 <p>For example, when you execute <code>import tensorflow</code>
 command, Tensorflow will allocate the entire GPU memory to the current session and waits for the next command. This makes the instance unusable by anyone else, so we have to charge you for the duration your Notebook is alive.</p>
+<h3 id="why-did-my-job-timeout-after-1-hour">Why did my job timeout after 1 hour?</h3>
+<p>You are likely in the Free Trial Plan. Jobs run in the trial plan have a maximum runtime of 1 hour. It will automatically timeout after that. </p>
+<p><img alt="1HourTimeout" src="../../img/1HrTimeout.jpg" /></p>
+<p>You can upgrade to the <a href="https://www.floydhub.com/pricing">Paid Plan</a> to overcome these limits.</p>
 <h3 id="why-was-my-cpu-job-killed-without-warning">Why was my CPU job Killed without warning?</h3>
 <p>Occasionally, you may notice that your CPU job died without warning. The output logs just display <code>Killed</code>. For example,</p>
 <pre><code class="bash">################################################################################
