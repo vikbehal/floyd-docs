@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://www.floydhub.com/faqs/plans/">
+        <link rel="canonical" href="https://www.floydhub.com/faqs/environments/">
       
       
         <meta name="author" content="FloydHub Team">
@@ -19,7 +19,7 @@
     
     
       
-        <title>Plans FAQs - FloydHub</title>
+        <title>Environments FAQs - FloydHub</title>
       
     
     
@@ -89,7 +89,7 @@
                 </span>
               
             
-            Plans FAQs
+            Environments FAQs
           
         </span>
       </div>
@@ -453,26 +453,15 @@
           
   <li class="md-nav__item">
     
-      <a href="../environments/" title="Environments FAQs" class="md-nav__link">
-        Environments FAQs
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Plans FAQs
+        Environments FAQs
       </label>
     
-    <a href="./" title="Plans FAQs" class="md-nav__link md-nav__link--active">
-      Plans FAQs
+    <a href="./" title="Environments FAQs" class="md-nav__link md-nav__link--active">
+      Environments FAQs
     </a>
     
       
@@ -484,8 +473,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-in-the-trial-plan" title="What is in the Trial Plan?" class="md-nav__link">
-    What is in the Trial Plan?
+  <a href="#can-i-switch-between-python-2-and-python-3-environments" title="Can I switch between Python 2 and Python 3 environments?" class="md-nav__link">
+    Can I switch between Python 2 and Python 3 environments?
   </a>
   
 </li>
@@ -493,6 +482,17 @@
     </ul>
   
 </nav>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../plans/" title="Plans FAQs" class="md-nav__link">
+        Plans FAQs
+      </a>
     
   </li>
 
@@ -750,8 +750,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-in-the-trial-plan" title="What is in the Trial Plan?" class="md-nav__link">
-    What is in the Trial Plan?
+  <a href="#can-i-switch-between-python-2-and-python-3-environments" title="Can I switch between Python 2 and Python 3 environments?" class="md-nav__link">
+    Can I switch between Python 2 and Python 3 environments?
   </a>
   
 </li>
@@ -767,20 +767,28 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
                
-                 <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/faqs\plans.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+                 <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/faqs\environments.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
                
               
                 
-                  <h1>Plans FAQs</h1>
+                  <h1>Environments FAQs</h1>
                 
-                <h3 id="what-is-in-the-trial-plan">What is in the Trial Plan?</h3>
-<p>FloydHub offers a Trial Plan for users to try out the platform. This plan includes 2 hours of free GPU compute credits (or 20 hours of CPU compute). Please refer to our <a href="../../getstarted/quick_start/">Quick Start Guide</a> or <a href="../../getstarted/quick_start_jupyter/">Jupyter Notebook Guide</a> to try Floyd out!</p>
-<p>The free plan comes with the follow limits:</p>
+                <h3 id="can-i-switch-between-python-2-and-python-3-environments">Can I switch between Python 2 and Python 3 environments?</h3>
+<p>Most of our Python based <a href="../../guides/environments/">environments</a> support both Python 2 and Python 3.</p>
+<p>The default environments are Python 3. But you can use Python 2 by using the <code>:py2</code> tag with the environment name, when available. For example,</p>
 <ul>
-<li>1 concurrent job: This means that you can only run one job at a time</li>
-<li>1 hour job timeout: The maximum runtime of a job on the Trial Plan is 1 hour. It will automatically timeout after that</li>
+<li>Tensorflow 1.2 with Python 3</li>
 </ul>
-<p>You can upgrade to the <a href="https://www.floydhub.com/pricing">Paid Plan</a> to overcome these limits.</p>
+<pre><code class="bash">$ floyd run --env tensorflow-1.2
+</code></pre>
+
+<ul>
+<li>Tensorflow 1.2 with Python 2</li>
+</ul>
+<pre><code class="bash">$ floyd run --env tensorflow-1.2:py2
+</code></pre>
+
+<p>We currently have Python 2 and 3 environments for Tensorflow, Theano, Caffe, PyTorch and Chainer. Please see our <a href="../../guides/environments/">complete list of environments</a> for more details on the <code>--env</code> name.</p>
               
             </article>
           </div>
@@ -793,7 +801,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../environments/" title="Environments FAQs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../job/" title="Job FAQs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -802,19 +810,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Environments FAQs
+                Job FAQs
               </span>
             </div>
           </a>
         
         
-          <a href="../billing/" title="Billing FAQs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../plans/" title="Plans FAQs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Billing FAQs
+                Plans FAQs
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

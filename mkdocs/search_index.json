@@ -491,6 +491,16 @@
             "title": "Help make this document better"
         },
         {
+            "location": "/faqs/environments/",
+            "text": "Can I switch between Python 2 and Python 3 environments?\n\n\nMost of our Python based \nenvironments\n support both Python 2 and Python 3.\n\n\nThe default environments are Python 3. But you can use Python 2 by using the \n:py2\n tag with the environment name, when available. For example,\n\n\n\n\nTensorflow 1.2 with Python 3\n\n\n\n\n$ floyd run --env tensorflow-1.2\n\n\n\n\n\n\nTensorflow 1.2 with Python 2\n\n\n\n\n$ floyd run --env tensorflow-1.2:py2\n\n\n\n\nWe currently have Python 2 and 3 environments for Tensorflow, Theano, Caffe, PyTorch and Chainer. Please see our \ncomplete list of environments\n for more details on the \n--env\n name.",
+            "title": "Environments FAQs"
+        },
+        {
+            "location": "/faqs/environments/#can-i-switch-between-python-2-and-python-3-environments",
+            "text": "Most of our Python based  environments  support both Python 2 and Python 3.  The default environments are Python 3. But you can use Python 2 by using the  :py2  tag with the environment name, when available. For example,   Tensorflow 1.2 with Python 3   $ floyd run --env tensorflow-1.2   Tensorflow 1.2 with Python 2   $ floyd run --env tensorflow-1.2:py2  We currently have Python 2 and 3 environments for Tensorflow, Theano, Caffe, PyTorch and Chainer. Please see our  complete list of environments  for more details on the  --env  name.",
+            "title": "Can I switch between Python 2 and Python 3 environments?"
+        },
+        {
             "location": "/faqs/plans/",
             "text": "What is in the Trial Plan?\n\n\nFloydHub offers a Trial Plan for users to try out the platform. This plan includes 2 hours of free GPU compute credits (or 20 hours of CPU compute). Please refer to our \nQuick Start Guide\n or \nJupyter Notebook Guide\n to try Floyd out!\n\n\nThe free plan comes with the follow limits:\n\n\n\n\n1 concurrent job: This means that you can only run one job at a time\n\n\n1 hour job timeout: The maximum runtime of a job on the Trial Plan is 1 hour. It will automatically timeout after that\n\n\n\n\nYou can upgrade to the \nPaid Plan\n to overcome these limits.",
             "title": "Plans FAQs"
