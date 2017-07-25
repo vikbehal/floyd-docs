@@ -356,26 +356,6 @@
             "title": "Help make this document better"
         },
         {
-            "location": "/faqs/signup/",
-            "text": "How does the free CPU / GPU hours work?\n\n\nEvery one who signups to Floydhub will receive 2 hours of free CPU / GPU time\nfor running your projects. We hope this will give you enough time to evaluate\nFloydhub for your needs. We are working on a new free plan right now to better\nhelp new users explore the platform.\n\n\nIs there a student discount?\n\n\nNot at the moment, but we are currently working out a Student Plan. We will\npost the details very soon :)\n\n\n\n\nHelp make this document better\n\n\nThis guide, as well as the rest of our docs, are open-source and available on \n\nGitHub\n. We welcome your contributions.\n\n\n\n\nSuggest an edit to this page (by clicking the edit icon at the top next to the title).\n\n\nOpen an issue about this page\n to report a problem.",
-            "title": "Pricing FAQs"
-        },
-        {
-            "location": "/faqs/signup/#how-does-the-free-cpu-gpu-hours-work",
-            "text": "Every one who signups to Floydhub will receive 2 hours of free CPU / GPU time\nfor running your projects. We hope this will give you enough time to evaluate\nFloydhub for your needs. We are working on a new free plan right now to better\nhelp new users explore the platform.",
-            "title": "How does the free CPU / GPU hours work?"
-        },
-        {
-            "location": "/faqs/signup/#is-there-a-student-discount",
-            "text": "Not at the moment, but we are currently working out a Student Plan. We will\npost the details very soon :)",
-            "title": "Is there a student discount?"
-        },
-        {
-            "location": "/faqs/signup/#help-make-this-document-better",
-            "text": "This guide, as well as the rest of our docs, are open-source and available on  GitHub . We welcome your contributions.   Suggest an edit to this page (by clicking the edit icon at the top next to the title).  Open an issue about this page  to report a problem.",
-            "title": "Help make this document better"
-        },
-        {
             "location": "/faqs/installation/",
             "text": "Using virtualenv to install floyd-cli\n\n\nWe highly recommend using \nvirtualenv\n for installing and using \nfloyd-cli\n. This helps avoid any library version conflicts and results in a smoother installation process.\n\n\nsudo pip install virtualenv\n\n\n\n\nTo create a virtualenv, you need to pass a path to store the installed packages.\n\n\nvirtualenv ~/floyd\n\n\n\n\nYou can now activate and start using the virtualenv by running:\n\n\nsource ~/floyd/bin/activate\n\n\n\n\nTo install floyd-cli in this virtualenv:\n\n\npip install -U floyd-cli\n\n\n\n\nYou are now ready to use the \nfloyd commands\n. Note: You need to activate your virtualenv using the \nsource\n command above each time you open a new terminal and want to use \nfloyd-cli\n in it.\n\n\nUsing sudo to install floyd-cli\n\n\nTry this if you see a permission error, such as \nPermission denied\n or \nAccess is denied\n. If you are not using virtualenv and you are installing \nfloyd-cli\n globally you may need to use \nsudo\n:\n\n\nsudo pip install -U floyd-cli\n\n\n\n\nDealing with missing dependencies when installing floyd-cli\n\n\nNot all python environments are installed the same way. So sometimes you may run \ninto install issues. If \npip\n cannot install dependencies itself, you may see errors like:\n\n\n...\nFailed building wheel for scandir\n...\n\n\n\n\nor\n\n\n...\nNo distributions matching the version for backports.tempfile (from floyd-cli)\n...\n\n\n\n\nIn such cases, you can install the dependencies directly:\n\n\npip install -U scandir\npip install -U backports.tempfile\n\n\n\n\nand then try installing \nfloyd-cli\n.\n\n\nPython.h: No such file or directory\n\n\nIf you get this error in a linux environment:\n\n\n...\nPython.h: No such file or directory\n\n\n\n\nyou need to install \npython-dev\n package\n\n\nsudo apt-get install python-dev\n\n\n\n\n\n\nHelp make this document better\n\n\nThis guide, as well as the rest of our docs, are open-source and available on \n\nGitHub\n. We welcome your contributions.\n\n\n\n\nSuggest an edit to this page (by clicking the edit icon at the top next to the title).\n\n\nOpen an issue about this page\n to report a problem.",
             "title": "Installation FAQs"
@@ -407,8 +387,18 @@
         },
         {
             "location": "/faqs/authentication/",
-            "text": "Login\n\n\nWindows\n\n\nI get \"Invalid Token\" error on my Windows 10 machine when I run floyd login.\n\n\nIf you are using Windows command shell, there is an issue with pasting the token using the \nstandard \nCtrl + V\n shortcut. You need to use the Shell's Edit menu to paste the token. After copying the token from the browser, right click on the top bar of the command shell and select Edit -> Paste. See image below:\n\n\n\n\nI still get the \"Invalid Token\" error after trying the above suggestion.\n\n\nIn some windows shells (like Git Bash) there is an extra space added to the token field\nbefore you paste the token. So you need to hit Backspace and clear out the field before pasting \nthe token. So the steps are:\n\n\n\n\nType \nfloyd login\n in the console.\n\n\nFrom the FloydHub web page, select the token and click on the \"Copy to clipboard\" button.\n\n\n\nIn the console, hit \"backspace\" a few times to remove the extra characters from the token login prompt request.\n\n\nRight click on the menu bar, and select \"Edit\", and then \"Paste\"\n\n\nThen press \"Enter\"\n\n\n\n\nYou should be able to login successfully now. If it's still not working, please give it a try on powershell.\n\n\n\n\nHelp make this document better\n\n\nThis guide, as well as the rest of our docs, are open-source and available on \n\nGitHub\n. We welcome your contributions.\n\n\n\n\nSuggest an edit to this page (by clicking the edit icon at the top next to the title).\n\n\nOpen an issue about this page\n to report a problem.",
+            "text": "Signup\n\n\nHow does the free CPU / GPU hours work?\n\n\nEvery one who signups to Floydhub will receive 2 hours of free CPU / GPU time\nfor running your projects. We hope this will give you enough time to evaluate\nFloydhub for your needs. We are working on a new free plan right now to better\nhelp new users explore the platform.\n\n\nLogin\n\n\nWindows\n\n\nI get \"Invalid Token\" error on my Windows 10 machine when I run floyd login.\n\n\nIf you are using Windows command shell, there is an issue with pasting the token using the \nstandard \nCtrl + V\n shortcut. You need to use the Shell's Edit menu to paste the token. After copying the token from the browser, right click on the top bar of the command shell and select Edit -> Paste. See image below:\n\n\n\n\nI still get the \"Invalid Token\" error after trying the above suggestion.\n\n\nIn some windows shells (like Git Bash) there is an extra space added to the token field\nbefore you paste the token. So you need to hit Backspace and clear out the field before pasting \nthe token. So the steps are:\n\n\n\n\nType \nfloyd login\n in the console.\n\n\nFrom the FloydHub web page, select the token and click on the \"Copy to clipboard\" button.\n\n\n\nIn the console, hit \"backspace\" a few times to remove the extra characters from the token login prompt request.\n\n\nRight click on the menu bar, and select \"Edit\", and then \"Paste\"\n\n\nThen press \"Enter\"\n\n\n\n\nYou should be able to login successfully now. If it's still not working, please give it a try on powershell.\n\n\n\n\nHelp make this document better\n\n\nThis guide, as well as the rest of our docs, are open-source and available on \n\nGitHub\n. We welcome your contributions.\n\n\n\n\nSuggest an edit to this page (by clicking the edit icon at the top next to the title).\n\n\nOpen an issue about this page\n to report a problem.",
             "title": "Signup and Login FAQs"
+        },
+        {
+            "location": "/faqs/authentication/#signup",
+            "text": "",
+            "title": "Signup"
+        },
+        {
+            "location": "/faqs/authentication/#how-does-the-free-cpu-gpu-hours-work",
+            "text": "Every one who signups to Floydhub will receive 2 hours of free CPU / GPU time\nfor running your projects. We hope this will give you enough time to evaluate\nFloydhub for your needs. We are working on a new free plan right now to better\nhelp new users explore the platform.",
+            "title": "How does the free CPU / GPU hours work?"
         },
         {
             "location": "/faqs/authentication/#login",
@@ -507,13 +497,23 @@
         },
         {
             "location": "/faqs/plans/",
-            "text": "What is in the Trial Plan?\n\n\nFloydHub offers a Trial Plan for users to try out the platform. This plan includes 2 hours of free GPU compute credits (or 20 hours of CPU compute). Please refer to our \nQuick Start Guide\n or \nJupyter Notebook Guide\n to try Floyd out!\n\n\nThe free plan comes with the follow limits:\n\n\n\n\n1 concurrent job: This means that you can only run one job at a time\n\n\n1 hour job timeout: The maximum runtime of a job on the Trial Plan is 1 hour. It will automatically timeout after that\n\n\n\n\nYou can upgrade to the \nPaid Plan\n to overcome these limits.",
+            "text": "What is in the Trial Plan?\n\n\nFloydHub offers a Trial Plan for users to try out the platform. This plan includes 2 hours of free GPU compute credits (or 20 hours of CPU compute). Please refer to our \nQuick Start Guide\n or \nJupyter Notebook Guide\n to try Floyd out!\n\n\nThe free plan comes with the follow limits:\n\n\n\n\n1 concurrent job: This means that you can only run one job at a time\n\n\n1 hour job timeout: The maximum runtime of a job on the Trial Plan is 1 hour. It will automatically timeout after that\n\n\n\n\nYou can upgrade to the \nPaid Plan\n to overcome these limits.\n\n\nWhy did I not get 100 free GPU hours when I signed up?\n\n\nWe offered 100 hours of free GPU for all users during our promotional period. This has ended. \n\n\nIn our current Trial Plan, all users get 2 hours of free GPU compute time for running your projects. We hope this will give you enough time to evaluate Floydhub for your needs. We are working on a new free plan right now to better help new users explore the platform.\n\n\nIs there a student discount?\n\n\nNot at the moment, but we are currently working out a Student Plan. We will\npost the details very soon :)",
             "title": "Plans FAQs"
         },
         {
             "location": "/faqs/plans/#what-is-in-the-trial-plan",
             "text": "FloydHub offers a Trial Plan for users to try out the platform. This plan includes 2 hours of free GPU compute credits (or 20 hours of CPU compute). Please refer to our  Quick Start Guide  or  Jupyter Notebook Guide  to try Floyd out!  The free plan comes with the follow limits:   1 concurrent job: This means that you can only run one job at a time  1 hour job timeout: The maximum runtime of a job on the Trial Plan is 1 hour. It will automatically timeout after that   You can upgrade to the  Paid Plan  to overcome these limits.",
             "title": "What is in the Trial Plan?"
+        },
+        {
+            "location": "/faqs/plans/#why-did-i-not-get-100-free-gpu-hours-when-i-signed-up",
+            "text": "We offered 100 hours of free GPU for all users during our promotional period. This has ended.   In our current Trial Plan, all users get 2 hours of free GPU compute time for running your projects. We hope this will give you enough time to evaluate Floydhub for your needs. We are working on a new free plan right now to better help new users explore the platform.",
+            "title": "Why did I not get 100 free GPU hours when I signed up?"
+        },
+        {
+            "location": "/faqs/plans/#is-there-a-student-discount",
+            "text": "Not at the moment, but we are currently working out a Student Plan. We will\npost the details very soon :)",
+            "title": "Is there a student discount?"
         },
         {
             "location": "/faqs/billing/",
