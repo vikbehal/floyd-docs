@@ -507,6 +507,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#can-i-view-my-jupyter-notebook-after-my-job-has-stopped" title="Can I view my Jupyter Notebook after my job has stopped?" class="md-nav__link">
+    Can I view my Jupyter Notebook after my job has stopped?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-i-restart-a-stopped-or-timed-out-job" title="Can I restart a stopped or timed out job?" class="md-nav__link">
+    Can I restart a stopped or timed out job?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#why-is-my-job-in-the-queued-state-for-several-minutes" title="Why is my job in the "Queued" state for several minutes?" class="md-nav__link">
     Why is my job in the "Queued" state for several minutes?
   </a>
@@ -879,6 +893,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#can-i-view-my-jupyter-notebook-after-my-job-has-stopped" title="Can I view my Jupyter Notebook after my job has stopped?" class="md-nav__link">
+    Can I view my Jupyter Notebook after my job has stopped?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-i-restart-a-stopped-or-timed-out-job" title="Can I restart a stopped or timed out job?" class="md-nav__link">
+    Can I restart a stopped or timed out job?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#why-is-my-job-in-the-queued-state-for-several-minutes" title="Why is my job in the "Queued" state for several minutes?" class="md-nav__link">
     Why is my job in the "Queued" state for several minutes?
   </a>
@@ -978,6 +1006,30 @@ your state is maintained in memory (both CPU and GPU memory). So the instance ha
 entire duration of your notebook, not just when you are executing commands.</p>
 <p>For example, when you execute <code>import tensorflow</code>
 command, Tensorflow will allocate the entire GPU memory to the current session and waits for the next command. This makes the instance unusable by anyone else, so we have to charge you for the duration your Notebook is alive.</p>
+<h3 id="can-i-view-my-jupyter-notebook-after-my-job-has-stopped">Can I view my Jupyter Notebook after my job has stopped?</h3>
+<p>Yes. When you use a Jupyter Notebook on FloydHub, your Notebook is saved periodically in the <code>/output</code> dir. So, your work is not lost after your job has ended, shutdown or timed out.</p>
+<p>You can view your saved Notebook using the <a href="../../commands/output/">floyd output</a> command. Example:</p>
+<pre><code class="bash">$ floyd output saip/projects/mnist-pytorch/3
+</code></pre>
+
+<p>Or in the <code>Output</code> tab of your job on the web dashboard, example: <code>www.floydhub.com/saip/projects/mnist-pytorch/3/output</code></p>
+<h3 id="can-i-restart-a-stopped-or-timed-out-job">Can I restart a stopped or timed out job?</h3>
+<p>Unfortunately, not directly. We will be implementing a single command to do this soon!</p>
+<p>In the meanwhile, you can follow these steps to do this manually:</p>
+<ul>
+<li><strong>Jupyter Notebook</strong>: Your Notebook is <a href="#can-i-view-my-jupyter-notebook-after-my-job-has-stopped">saved periodically</a>. To restart your Notebook after your job has stopped, please download the output of your stopped job to your machine and start another job. Example:</li>
+</ul>
+<pre><code class="bash"># Download the saved Notebook from previous job
+# NOTE: This will overwrite the contents of your current dir
+$ floyd data clone saip/projects/mnist-pytorch/3/output
+
+# Start a new job
+$ floyd run --mode jupyter
+</code></pre>
+
+<ul>
+<li><strong>Script</strong>: If you are running a script/command, you will have to start a new job using the <code>floyd run "&lt;command&gt;"</code> command.</li>
+</ul>
 <h3 id="why-is-my-job-in-the-queued-state-for-several-minutes">Why is my job in the "Queued" state for several minutes?</h3>
 <p>This means that a machine is being prepared to run your job. </p>
 <p>Most times, we have several CPU and GPU machines that are ready and your job can start execution in a few seconds. During high traffic periods, we may not have a machine ready for you and have to spin up a new instance for your job on-demand (details below). This might take up to 10 minutes in some cases. We are actively working on reducing this wait time.</p>
