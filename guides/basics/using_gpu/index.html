@@ -7,23 +7,23 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://www.floydhub.com/guides/mounting_data/">
+        <link rel="canonical" href="https://www.floydhub.com/guides/basics/using_gpu/">
       
       
         <meta name="author" content="FloydHub Team">
       
       
-        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+        <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
       
       <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
     
     
       
-        <title>Mounting Data - FloydHub</title>
+        <title>Using CPU vs GPU - FloydHub</title>
       
     
     
-      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+      <script src="../../../assets/javascripts/modernizr-facb31f4a3.js"></script>
     
     
       
@@ -36,14 +36,14 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-f3ab63f78a.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application-f3ab63f78a.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-02ce7adcc2.palette.css">
       
       
-        <link rel="stylesheet" href="../../css/bootstrap_paper.min.css">
+        <link rel="stylesheet" href="../../../css/bootstrap_paper.min.css">
       
-        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../../css/style.css">
       
     
     
@@ -70,9 +70,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="FloydHub" class=" md-logo  md-header-nav__button">
+        <a href="../../.." title="FloydHub" class=" md-logo  md-header-nav__button">
           
-            <img src="../../img/f_white_small.png" width="24" height="24">
+            <img src="../../../img/f_white_small.png" width="24" height="24">
           
         </a>
       </div>
@@ -88,8 +88,12 @@
                   Guides
                 </span>
               
+                <span class="md-header-nav__parent">
+                  Basics
+                </span>
+              
             
-            Mounting Data
+            Using CPU vs GPU
           
         </span>
       </div>
@@ -154,7 +158,7 @@
   <label class="md-nav__title md-nav__title--site" for="drawer">
     <i class=" md-logo  md-nav__button">
       
-        <img src="../../img/f_white_small.png">
+        <img src="../../../img/f_white_small.png">
       
     </i>
     FloydHub
@@ -188,7 +192,7 @@
       
   <li class="md-nav__item">
     
-      <a href="../.." title="Home" class="md-nav__link">
+      <a href="../../.." title="Home" class="md-nav__link">
         Home
       </a>
     
@@ -215,7 +219,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../getstarted/quick_start/" title="Quick Start" class="md-nav__link">
+      <a href="../../../getstarted/quick_start/" title="Quick Start" class="md-nav__link">
         Quick Start
       </a>
     
@@ -226,7 +230,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../getstarted/quick_start_jupyter/" title="Jupyter Notebook" class="md-nav__link">
+      <a href="../../../getstarted/quick_start_jupyter/" title="Jupyter Notebook" class="md-nav__link">
         Jupyter Notebook
       </a>
     
@@ -258,7 +262,7 @@
           
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1" checked>
     
     <label class="md-nav__link" for="nav-3-1">
       Basics
@@ -274,7 +278,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../basics/install/" title="Install Floyd CLI" class="md-nav__link">
+      <a href="../install/" title="Install Floyd CLI" class="md-nav__link">
         Install Floyd CLI
       </a>
     
@@ -285,7 +289,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../basics/login/" title="Login using Floyd CLI" class="md-nav__link">
+      <a href="../login/" title="Login using Floyd CLI" class="md-nav__link">
         Login using Floyd CLI
       </a>
     
@@ -296,15 +300,10 @@
           
   <li class="md-nav__item">
     
-      <a href="../basics/create_new/" title="Create new Project and Dataset" class="md-nav__link">
+      <a href="../create_new/" title="Create new Project and Dataset" class="md-nav__link">
         Create new Project and Dataset
       </a>
     
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
         
@@ -316,11 +315,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Mounting Data
+        Using CPU vs GPU
       </label>
     
-    <a href="./" title="Mounting Data" class="md-nav__link md-nav__link--active">
-      Mounting Data
+    <a href="./" title="Using CPU vs GPU" class="md-nav__link md-nav__link--active">
+      Using CPU vs GPU
     </a>
     
       
@@ -332,86 +331,17 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#quick-preparation-checklist" title="Quick Preparation Checklist" class="md-nav__link">
-    Quick Preparation Checklist
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#datasets" title="Datasets" class="md-nav__link">
-    Datasets
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mounting-datasets" title="Mounting datasets" class="md-nav__link">
-    Mounting datasets
+  <a href="#running-your-job-on-cpu-vs-gpu" title="Running your job on CPU vs. GPU" class="md-nav__link">
+    Running your job on CPU vs. GPU
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#overview" title="Overview" class="md-nav__link">
-    Overview
+  <a href="#checking-gpu-stats" title="Checking GPU stats" class="md-nav__link">
+    Checking GPU stats
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mounting-the-output-of-another-job" title="Mounting the output of another job" class="md-nav__link">
-    Mounting the output of another job
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mounting-multiple-datasources" title="Mounting multiple datasources" class="md-nav__link">
-    Mounting multiple datasources
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#web-dashboard" title="Web dashboard" class="md-nav__link">
-    Web dashboard
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#details" title="Details" class="md-nav__link">
-    Details
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#datasource-name" title="Datasource name" class="md-nav__link">
-    Datasource name
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mount-point" title="Mount point" class="md-nav__link">
-    Mount point
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#default-mount-points" title="Default mount points" class="md-nav__link">
-    Default mount points
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -427,11 +357,59 @@
   </li>
 
         
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-3-2">
+        Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
           
           
   <li class="md-nav__item">
     
-      <a href="../environments/" title="Environments" class="md-nav__link">
+      <a href="../../data/storing_output/" title="Storing output data" class="md-nav__link">
+        Storing output data
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../data/mounting_data/" title="Mounting Data" class="md-nav__link">
+        Mounting Data
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../environments/" title="Environments" class="md-nav__link">
         Environments
       </a>
     
@@ -442,7 +420,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../floyd_ignore/" title="Ignore files" class="md-nav__link">
+      <a href="../../floyd_ignore/" title="Ignore files" class="md-nav__link">
         Ignore files
       </a>
     
@@ -453,7 +431,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../installing_dependencies/" title="Installing extra dependencies" class="md-nav__link">
+      <a href="../../installing_dependencies/" title="Installing extra dependencies" class="md-nav__link">
         Installing extra dependencies
       </a>
     
@@ -485,7 +463,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../examples/style_transfer/" title="Style Transfer" class="md-nav__link">
+      <a href="../../../examples/style_transfer/" title="Style Transfer" class="md-nav__link">
         Style Transfer
       </a>
     
@@ -517,7 +495,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../faqs/installation/" title="Installation FAQs" class="md-nav__link">
+      <a href="../../../faqs/installation/" title="Installation FAQs" class="md-nav__link">
         Installation FAQs
       </a>
     
@@ -528,7 +506,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../faqs/authentication/" title="Signup and Login FAQs" class="md-nav__link">
+      <a href="../../../faqs/authentication/" title="Signup and Login FAQs" class="md-nav__link">
         Signup and Login FAQs
       </a>
     
@@ -539,7 +517,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../faqs/job/" title="Job FAQs" class="md-nav__link">
+      <a href="../../../faqs/job/" title="Job FAQs" class="md-nav__link">
         Job FAQs
       </a>
     
@@ -550,7 +528,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../faqs/environments/" title="Environments FAQs" class="md-nav__link">
+      <a href="../../../faqs/environments/" title="Environments FAQs" class="md-nav__link">
         Environments FAQs
       </a>
     
@@ -561,7 +539,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../faqs/plans/" title="Plans FAQs" class="md-nav__link">
+      <a href="../../../faqs/plans/" title="Plans FAQs" class="md-nav__link">
         Plans FAQs
       </a>
     
@@ -572,7 +550,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../faqs/billing/" title="Billing FAQs" class="md-nav__link">
+      <a href="../../../faqs/billing/" title="Billing FAQs" class="md-nav__link">
         Billing FAQs
       </a>
     
@@ -604,7 +582,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/" title="floyd" class="md-nav__link">
+      <a href="../../../commands/" title="floyd" class="md-nav__link">
         floyd
       </a>
     
@@ -615,7 +593,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/login/" title="floyd login" class="md-nav__link">
+      <a href="../../../commands/login/" title="floyd login" class="md-nav__link">
         floyd login
       </a>
     
@@ -626,7 +604,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/init/" title="floyd init" class="md-nav__link">
+      <a href="../../../commands/init/" title="floyd init" class="md-nav__link">
         floyd init
       </a>
     
@@ -637,7 +615,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/run/" title="floyd run" class="md-nav__link">
+      <a href="../../../commands/run/" title="floyd run" class="md-nav__link">
         floyd run
       </a>
     
@@ -648,7 +626,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/data/" title="floyd data" class="md-nav__link">
+      <a href="../../../commands/data/" title="floyd data" class="md-nav__link">
         floyd data
       </a>
     
@@ -659,7 +637,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/logs/" title="floyd logs" class="md-nav__link">
+      <a href="../../../commands/logs/" title="floyd logs" class="md-nav__link">
         floyd logs
       </a>
     
@@ -670,7 +648,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/status/" title="floyd status" class="md-nav__link">
+      <a href="../../../commands/status/" title="floyd status" class="md-nav__link">
         floyd status
       </a>
     
@@ -681,7 +659,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/output/" title="floyd output" class="md-nav__link">
+      <a href="../../../commands/output/" title="floyd output" class="md-nav__link">
         floyd output
       </a>
     
@@ -692,7 +670,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/clone/" title="floyd clone" class="md-nav__link">
+      <a href="../../../commands/clone/" title="floyd clone" class="md-nav__link">
         floyd clone
       </a>
     
@@ -703,7 +681,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/info/" title="floyd info" class="md-nav__link">
+      <a href="../../../commands/info/" title="floyd info" class="md-nav__link">
         floyd info
       </a>
     
@@ -714,7 +692,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/stop/" title="floyd stop" class="md-nav__link">
+      <a href="../../../commands/stop/" title="floyd stop" class="md-nav__link">
         floyd stop
       </a>
     
@@ -725,7 +703,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/delete/" title="floyd delete" class="md-nav__link">
+      <a href="../../../commands/delete/" title="floyd delete" class="md-nav__link">
         floyd delete
       </a>
     
@@ -736,7 +714,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/logout/" title="floyd logout" class="md-nav__link">
+      <a href="../../../commands/logout/" title="floyd logout" class="md-nav__link">
         floyd logout
       </a>
     
@@ -747,7 +725,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/upgrade/" title="floyd upgrade" class="md-nav__link">
+      <a href="../../../commands/upgrade/" title="floyd upgrade" class="md-nav__link">
         floyd upgrade
       </a>
     
@@ -758,7 +736,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../commands/version/" title="floyd version" class="md-nav__link">
+      <a href="../../../commands/version/" title="floyd version" class="md-nav__link">
         floyd version
       </a>
     
@@ -790,7 +768,7 @@
           
   <li class="md-nav__item">
     
-      <a href="../../changelogs/1/" title="July 12 2017" class="md-nav__link">
+      <a href="../../../changelogs/1/" title="July 12 2017" class="md-nav__link">
         July 12 2017
       </a>
     
@@ -821,86 +799,17 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#quick-preparation-checklist" title="Quick Preparation Checklist" class="md-nav__link">
-    Quick Preparation Checklist
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#datasets" title="Datasets" class="md-nav__link">
-    Datasets
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mounting-datasets" title="Mounting datasets" class="md-nav__link">
-    Mounting datasets
+  <a href="#running-your-job-on-cpu-vs-gpu" title="Running your job on CPU vs. GPU" class="md-nav__link">
+    Running your job on CPU vs. GPU
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#overview" title="Overview" class="md-nav__link">
-    Overview
+  <a href="#checking-gpu-stats" title="Checking GPU stats" class="md-nav__link">
+    Checking GPU stats
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mounting-the-output-of-another-job" title="Mounting the output of another job" class="md-nav__link">
-    Mounting the output of another job
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mounting-multiple-datasources" title="Mounting multiple datasources" class="md-nav__link">
-    Mounting multiple datasources
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#web-dashboard" title="Web dashboard" class="md-nav__link">
-    Web dashboard
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#details" title="Details" class="md-nav__link">
-    Details
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#datasource-name" title="Datasource name" class="md-nav__link">
-    Datasource name
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mount-point" title="Mount point" class="md-nav__link">
-    Mount point
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#default-mount-points" title="Default mount points" class="md-nav__link">
-    Default mount points
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -920,83 +829,37 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
                
-                 <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/guides\mounting_data.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+                 <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/guides\basics\using_gpu.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
                
               
                 
-                  <h1>Mounting Data</h1>
+                  <h1>Using CPU vs GPU</h1>
                 
-                <p>In this guide, we will explain how to attach a dataset to your project run.</p>
-<h3 id="quick-preparation-checklist">Quick Preparation Checklist</h3>
-<ul>
-<li>You must have a <a href="https://www.floydhub.com/signup">FloydHub account</a></li>
-<li>You must be <a href="https://www.floydhub.com/login">logged in to your web dashboard</a></li>
-<li>You must have <code>floyd-cli</code> <a href="../basics/install/">installed on your computer</a></li>
-</ul>
-<p>You can use the <a href="../../commands/login/">floyd login</a> command to login to your FloydHub account through your command line</p>
-<h2 id="datasets">Datasets</h2>
-<p>Floyd datasets are directories of data files that can be used in a project run. To create a new dataset, please follow 
-<a href="../basics/create_new/#create-a-new-dataset">this guide</a>. You can view the datasets you 
-have created in the <a href="https://www.floydhub.com/datasets">datasets page</a> in the dashboard. You can also view 
-public datasets by searching for it on FloydHub.</p>
-<h2 id="mounting-datasets">Mounting datasets</h2>
-<h3 id="overview">Overview</h3>
-<p>You can mount one or more datasets when you run a job using the <a href="../../commands/run">floyd run</a> command. This automatically makes 
-the mounted datasets available for you to use in your job, without having to download them each time.</p>
-<p>To mount a specific version of a dataset, you need to specify its full name and the mount point. 
-The syntax is <code>--data &lt;data_name&gt;:&lt;mount_point&gt;</code></p>
-<p>For example, to mount the <a href="https://www.floydhub.com/floydhub/datasets/vgg-ilsvrc-19-layers/1">VGG 19-layers</a> dataset under <code>/vgg</code>:</p>
-<pre><code class="bash">floyd run --data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg --mode jupyter
+                <h2 id="running-your-job-on-cpu-vs-gpu">Running your job on CPU vs. GPU</h2>
+<p>When you run a job using the <a href="../../../commands/run/">floyd run</a> command, it is executed on a CPU instance on FloydHub's servers, by default. </p>
+<pre><code class="bash">$ floyd run &quot;python mnist_cnn.py&quot;
 </code></pre>
 
-<p>This will spin up a Jupyter Notebook, inside which you will have access to the VGGNet pre-trained models under <code>/vgg</code>.</p>
-<p><img alt="Mounted Data" src="../../img/mounted_data.jpg" /></p>
-<p><em>Note</em>: You can use the <code>--data</code> flag with <code>floyd run</code> when you are running a command too.</p>
-<pre><code class="bash">$ floyd run --data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg &quot;python train.py&quot;
+<p>You can also force your job to execute on on a CPU using the <code>--cpu</code> flag</p>
+<pre><code class="bash">$ floyd run --cpu &quot;python mnist_cnn.py&quot;
 </code></pre>
 
-<h3 id="mounting-the-output-of-another-job">Mounting the output of another job</h3>
-<p>In FloydHub, you can link jobs by mounting the output of one job as the input of a new job that you are going to run. This allows you to derive from an existing job or restart a stopped or timedout job.</p>
-<p>You can refer to the output of a job by its name with <code>/output</code> appended to it.</p>
-<p>For example: <code>floydhub/projects/handwriting-recognition/12/output</code> refers to the output of the job <code>floydhub/projects/handwriting-recognition/12</code></p>
-<p>You can mount this using the <code>--data</code> flag in the <code>floyd run</code> command, similar to datasets. For example:</p>
-<pre><code class="bash">$ floyd run --data floydhub/projects/handwriting-recognition/12:filtered_training_data &quot;python train.py&quot;
+<p>If you want to run your job on a GPU, simply add the <code>--gpu</code> flag. Just make sure your code is optimized to use the available GPU.</p>
+<pre><code class="bash">$ floyd run --gpu &quot;python mnist_cnn.py&quot;
 </code></pre>
 
-<p>This will make the output of <code>floydhub/projects/handwriting-recognition/12</code> available at <code>/filtered_training_data</code> for the new job to use.</p>
-<p><em>Note</em>: You need to have access to the job to be able to mount it's output.</p>
-<h3 id="mounting-multiple-datasources">Mounting multiple datasources</h3>
-<p>You can attach upto 5 datasources when you run a job using the <code>--data</code> flag in the <a href="../../commands/run">floyd run</a> command. This includes both datasets and job outputs. Ensure that the mount points for the datasets are unique.</p>
-<pre><code class="bash">$ floyd run --data floydhub/datasets/mnist/2:training --data floydhub/datasets/digits/1:test &quot;python script.py&quot;
+<h3 id="checking-gpu-stats">Checking GPU stats</h3>
+<p>You can check the GPU stats by running a dummy job that executes the <code>nvidia-smi</code> command.</p>
+<pre><code class="bash">$ floyd run --gpu &quot;nvidia-smi&quot;
+Syncing code...
+...
+
+$ floyd logs -t &lt;JOB_NAME&gt;
+
+# GPU stats displayed here
 </code></pre>
 
-<p>In this case, the above datasets will be mounted at <code>/training</code> and <code>/test</code> respectively.</p>
-<h3 id="web-dashboard">Web dashboard</h3>
-<p>You can view the mounted datasets and their respective mount points for a specific job by going to the <code>Data</code> tab:</p>
-<p><img alt="Data Mounts" src="../../img/job_data_view.jpg" /></p>
-<h3 id="details">Details</h3>
-<h4 id="datasource-name">Datasource name</h4>
-<p>The full name of a datasource (<code>&lt;username&gt;/datasets/&lt;dataset_name&gt;/&lt;version&gt;</code>) consists of 3 parts: </p>
-<ul>
-<li>Username</li>
-<li>Dataset Name</li>
-<li>Version</li>
-</ul>
-<p>For example: <code>floydhub/datasets/mnist/2</code></p>
-<h4 id="mount-point">Mount point</h4>
-<p>The mount point is an absolute path. For example, <code>--data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg</code> will mount the data at <code>/vgg</code>.</p>
-<p>A common mistake is to look for the mounted data in the current directory (<code>./vgg</code>), rather than using the absolute path (<code>/vgg</code>)</p>
-<h4 id="default-mount-points">Default mount points</h4>
-<p>We highly recommend that you explicitly specify the mount points for your data using the <code>--data &lt;data_name&gt;:&lt;mount_point&gt;</code> convention.</p>
-<p>If, however, you do not specify a mount point, the default values are:</p>
-<ul>
-<li>
-<p>Single data mount: If you only mount one datasource without specifying a mount point, it is mounted at <code>/input</code></p>
-</li>
-<li>
-<p>Multiple data mounts: If you mount multiple datasource without specifying mount points, they will each be mounted under their respective GUIDs (e.g. <code>/xKduBzTr4LAsc6eVPZVPVd</code>). GUIDs are 32-character random strings that difficult to track down, so we highly discourage this pattern.</p>
-</li>
-</ul>
+<p>If you are using a Jupyter Notebook, you can also just execute the <code>!nvidia-smi</code> command inside it. (<em>Make note</em> of the <code>!</code> character at the beginning of the command)</p>
               
             </article>
           </div>
@@ -1009,7 +872,7 @@ The syntax is <code>--data &lt;data_name&gt;:&lt;mount_point&gt;</code></p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../basics/create_new/" title="Create new Project and Dataset" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../create_new/" title="Create new Project and Dataset" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1024,13 +887,13 @@ The syntax is <code>--data &lt;data_name&gt;:&lt;mount_point&gt;</code></p>
           </a>
         
         
-          <a href="../environments/" title="Environments" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../data/storing_output/" title="Storing output data" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Environments
+                Storing output data
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -1074,8 +937,8 @@ The syntax is <code>--data &lt;data_name&gt;:&lt;mount_point&gt;</code></p>
       
     </div>
     
-      <script src="../../assets/javascripts/application-2afe21e0b2.js"></script>
-      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      <script src="../../../assets/javascripts/application-2afe21e0b2.js"></script>
+      <script>var config={url:{base:"../../.."}},app=new Application(config);app.initialize()</script>
       
     
     

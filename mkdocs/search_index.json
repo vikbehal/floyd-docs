@@ -206,62 +206,97 @@
             "title": "Create a new Dataset"
         },
         {
-            "location": "/guides/mounting_data/",
-            "text": "In this guide, we will explain how to attach a dataset to your project run.\n\n\nQuick Preparation Checklist\n\n\n\n\nYou must have a \nFloydHub account\n\n\nYou must be \nlogged in to your web dashboard\n\n\nYou must have \nfloyd-cli\n \ninstalled on your computer\n\n\n\n\nYou can use the \nfloyd login\n command to login to your FloydHub account through your command line\n\n\nDatasets\n\n\nFloyd datasets are directories of data files that can be used in a project run. To create a new dataset, please follow \n\nthis guide\n. You can view the datasets you \nhave created in the \ndatasets page\n in the dashboard. You can also view \npublic datasets by searching for it on FloydHub.\n\n\nMounting datasets\n\n\nOverview\n\n\nYou can mount one or more datasets when you run a job using the \nfloyd run\n command. This automatically makes \nthe mounted datasets available for you to use in your job, without having to download them each time.\n\n\nTo mount a specific version of a dataset, you need to specify its full name and the mount point. \nThe syntax is \n--data <data_name>:<mount_point>\n\n\nFor example, to mount the \nVGG 19-layers\n dataset under \n/vgg\n:\n\n\nfloyd run --data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg --mode jupyter\n\n\n\n\nThis will spin up a Jupyter Notebook, inside which you will have access to the VGGNet pre-trained models under \n/vgg\n.\n\n\n\n\nNote\n: You can use the \n--data\n flag with \nfloyd run\n when you are running a command too.\n\n\n$ floyd run --data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg \"python train.py\"\n\n\n\n\nMounting the output of another job\n\n\nIn FloydHub, you can link jobs by mounting the output of one job as the input of a new job that you are going to run. This allows you to derive from an existing job or restart a stopped or timedout job.\n\n\nYou can refer to the output of a job by its name with \n/output\n appended to it.\n\n\nFor example: \nfloydhub/projects/handwriting-recognition/12/output\n refers to the output of the job \nfloydhub/projects/handwriting-recognition/12\n\n\nYou can mount this using the \n--data\n flag in the \nfloyd run\n command, similar to datasets. For example:\n\n\n$ floyd run --data floydhub/projects/handwriting-recognition/12:filtered_training_data \"python train.py\"\n\n\n\n\nThis will make the output of \nfloydhub/projects/handwriting-recognition/12\n available at \n/filtered_training_data\n for the new job to use.\n\n\nNote\n: You need to have access to the job to be able to mount it's output.\n\n\nMounting multiple datasources\n\n\nYou can attach upto 5 datasources when you run a job using the \n--data\n flag in the \nfloyd run\n command. This includes both datasets and job outputs. Ensure that the mount points for the datasets are unique.\n\n\n$ floyd run --data floydhub/datasets/mnist/2:training --data floydhub/datasets/digits/1:test \"python script.py\"\n\n\n\n\nIn this case, the above datasets will be mounted at \n/training\n and \n/test\n respectively.\n\n\nWeb dashboard\n\n\nYou can view the mounted datasets and their respective mount points for a specific job by going to the \nData\n tab:\n\n\n\n\nDetails\n\n\nDatasource name\n\n\nThe full name of a datasource (\n<username>/datasets/<dataset_name>/<version>\n) consists of 3 parts: \n\n\n\n\nUsername\n\n\nDataset Name\n\n\nVersion\n\n\n\n\nFor example: \nfloydhub/datasets/mnist/2\n\n\nMount point\n\n\nThe mount point is an absolute path. For example, \n--data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg\n will mount the data at \n/vgg\n.\n\n\nA common mistake is to look for the mounted data in the current directory (\n./vgg\n), rather than using the absolute path (\n/vgg\n)\n\n\nDefault mount points\n\n\nWe highly recommend that you explicitly specify the mount points for your data using the \n--data <data_name>:<mount_point>\n convention.\n\n\nIf, however, you do not specify a mount point, the default values are:\n\n\n\n\n\n\nSingle data mount: If you only mount one datasource without specifying a mount point, it is mounted at \n/input\n\n\n\n\n\n\nMultiple data mounts: If you mount multiple datasource without specifying mount points, they will each be mounted under their respective GUIDs (e.g. \n/xKduBzTr4LAsc6eVPZVPVd\n). GUIDs are 32-character random strings that difficult to track down, so we highly discourage this pattern.",
+            "location": "/guides/basics/using_gpu/",
+            "text": "Running your job on CPU vs. GPU\n\n\nWhen you run a job using the \nfloyd run\n command, it is executed on a CPU instance on FloydHub's servers, by default. \n\n\n$ floyd run \"python mnist_cnn.py\"\n\n\n\n\nYou can also force your job to execute on on a CPU using the \n--cpu\n flag\n\n\n$ floyd run --cpu \"python mnist_cnn.py\"\n\n\n\n\nIf you want to run your job on a GPU, simply add the \n--gpu\n flag. Just make sure your code is optimized to use the available GPU.\n\n\n$ floyd run --gpu \"python mnist_cnn.py\"\n\n\n\n\nChecking GPU stats\n\n\nYou can check the GPU stats by running a dummy job that executes the \nnvidia-smi\n command.\n\n\n$ floyd run --gpu \"nvidia-smi\"\nSyncing code...\n...\n\n$ floyd logs -t <JOB_NAME>\n\n# GPU stats displayed here\n\n\n\n\nIf you are using a Jupyter Notebook, you can also just execute the \n!nvidia-smi\n command inside it. (\nMake note\n of the \n!\n character at the beginning of the command)",
+            "title": "Using CPU vs GPU"
+        },
+        {
+            "location": "/guides/basics/using_gpu/#running-your-job-on-cpu-vs-gpu",
+            "text": "When you run a job using the  floyd run  command, it is executed on a CPU instance on FloydHub's servers, by default.   $ floyd run \"python mnist_cnn.py\"  You can also force your job to execute on on a CPU using the  --cpu  flag  $ floyd run --cpu \"python mnist_cnn.py\"  If you want to run your job on a GPU, simply add the  --gpu  flag. Just make sure your code is optimized to use the available GPU.  $ floyd run --gpu \"python mnist_cnn.py\"",
+            "title": "Running your job on CPU vs. GPU"
+        },
+        {
+            "location": "/guides/basics/using_gpu/#checking-gpu-stats",
+            "text": "You can check the GPU stats by running a dummy job that executes the  nvidia-smi  command.  $ floyd run --gpu \"nvidia-smi\"\nSyncing code...\n...\n\n$ floyd logs -t <JOB_NAME>\n\n# GPU stats displayed here  If you are using a Jupyter Notebook, you can also just execute the  !nvidia-smi  command inside it. ( Make note  of the  !  character at the beginning of the command)",
+            "title": "Checking GPU stats"
+        },
+        {
+            "location": "/guides/data/storing_output/",
+            "text": "Storing output data\n\n\nMost jobs generate output files (eg. model checkpoints, logs, evaluation output). In Floyd, \n/output\n is a special directory used to store outputs. \n\n\nAny file or directory you create at runtime under the \n/output\n directory will be retained and available to you for download after your job finishes.\n\n\nExample\n\n\nThis job runs a Python script called \nhelloworld.py\n and pipes its output into the file \n/output/my-output-file.txt\n:\n\n\n$ floyd init quick-start\n$ floyd run \"python helloworld.py > /output/my-output-file.txt\"\nSyncing code ...\n...\n\n\n\n\nSince the file is created under the special \n/output\n directory, it will be saved. You can view or refer to this output using the \nfloyd output\n command\n\n\n$ floyd output floydhub/projects/quick-start/1/output\nOpening output directory in your browser...\n\n\n\n\nAlternatively, you can visit the \nOutput\n tab of the job on your dashboard\n\n\n\n\nUsing output as a data source\n\n\nYou can use the output of one job as the input to your next job. To see how to mount output data, please see \nthis guide\n\n\n\n\nHelp make this document better\n\n\nThis guide, as well as the rest of our docs, are open-source and available on \n\nGitHub\n. We welcome your contributions.\n\n\n\n\nSuggest an edit to this page (by clicking the edit icon at the top next to the title).\n\n\nOpen an issue about this page\n to report a problem.",
+            "title": "Storing output data"
+        },
+        {
+            "location": "/guides/data/storing_output/#storing-output-data",
+            "text": "Most jobs generate output files (eg. model checkpoints, logs, evaluation output). In Floyd,  /output  is a special directory used to store outputs.   Any file or directory you create at runtime under the  /output  directory will be retained and available to you for download after your job finishes.",
+            "title": "Storing output data"
+        },
+        {
+            "location": "/guides/data/storing_output/#example",
+            "text": "This job runs a Python script called  helloworld.py  and pipes its output into the file  /output/my-output-file.txt :  $ floyd init quick-start\n$ floyd run \"python helloworld.py > /output/my-output-file.txt\"\nSyncing code ...\n...  Since the file is created under the special  /output  directory, it will be saved. You can view or refer to this output using the  floyd output  command  $ floyd output floydhub/projects/quick-start/1/output\nOpening output directory in your browser...  Alternatively, you can visit the  Output  tab of the job on your dashboard",
+            "title": "Example"
+        },
+        {
+            "location": "/guides/data/storing_output/#using-output-as-a-data-source",
+            "text": "You can use the output of one job as the input to your next job. To see how to mount output data, please see  this guide",
+            "title": "Using output as a data source"
+        },
+        {
+            "location": "/guides/data/storing_output/#help-make-this-document-better",
+            "text": "This guide, as well as the rest of our docs, are open-source and available on  GitHub . We welcome your contributions.   Suggest an edit to this page (by clicking the edit icon at the top next to the title).  Open an issue about this page  to report a problem.",
+            "title": "Help make this document better"
+        },
+        {
+            "location": "/guides/data/mounting_data/",
+            "text": "In this guide, we will explain how to attach a datasource to your job.\n\n\nDatasets\n\n\nFloyd datasets are directories of data files that can be used in a project run. To create a new dataset, please follow \n\nthis guide\n. You can view the datasets you \nhave created in the \ndatasets page\n in the dashboard. You can also view \npublic datasets by searching for it on FloydHub.\n\n\nMounting datasets\n\n\nOverview\n\n\nYou can mount one or more datasets when you run a job using the \nfloyd run\n command. This automatically makes \nthe mounted datasets available for you to use in your job, without having to download them each time.\n\n\nTo mount a specific version of a dataset, you need to specify its full name and the mount point. \nThe syntax is \n--data <data_name>:<mount_point>\n\n\nFor example, to mount the \nVGG 19-layers\n dataset under \n/vgg\n:\n\n\nfloyd run --data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg --mode jupyter\n\n\n\n\nThis will spin up a Jupyter Notebook, inside which you will have access to the VGGNet pre-trained models under \n/vgg\n.\n\n\n\n\nNote\n: You can use the \n--data\n flag with \nfloyd run\n when you are running a command too.\n\n\n$ floyd run --data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg \"python train.py\"\n\n\n\n\nMounting the output of another job\n\n\nIn FloydHub, you can link jobs by mounting the output of one job as the input of a new job that you are going to run. This allows you to derive from an existing job or restart a stopped or timedout job.\n\n\nYou can refer to the output of a job by its name with \n/output\n appended to it.\n\n\nFor example: \nfloydhub/projects/handwriting-recognition/12/output\n refers to the output of the job \nfloydhub/projects/handwriting-recognition/12\n\n\nYou can mount this using the \n--data\n flag in the \nfloyd run\n command, similar to datasets. For example:\n\n\n$ floyd run --data floydhub/projects/handwriting-recognition/12:filtered_training_data \"python train.py\"\n\n\n\n\nThis will make the output of \nfloydhub/projects/handwriting-recognition/12\n available at \n/filtered_training_data\n for the new job to use.\n\n\nNote\n: You need to have access to the job to be able to mount it's output.\n\n\nMounting multiple datasources\n\n\nYou can attach upto 5 datasources when you run a job using the \n--data\n flag in the \nfloyd run\n command. This includes both datasets and job outputs. Ensure that the mount points for the datasets are unique.\n\n\n$ floyd run --data floydhub/datasets/mnist/2:training --data floydhub/datasets/digits/1:test \"python script.py\"\n\n\n\n\nIn this case, the above datasets will be mounted at \n/training\n and \n/test\n respectively.\n\n\nWeb dashboard\n\n\nYou can view the mounted datasets and their respective mount points for a specific job by going to the \nData\n tab:\n\n\n\n\nDetails\n\n\nDatasource name\n\n\nThe full name of a datasource (\n<username>/datasets/<dataset_name>/<version>\n) consists of 3 parts: \n\n\n\n\nUsername\n\n\nDataset Name\n\n\nVersion\n\n\n\n\nFor example: \nfloydhub/datasets/mnist/2\n\n\nMount point\n\n\nThe mount point is an absolute path. For example, \n--data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg\n will mount the data at \n/vgg\n.\n\n\nA common mistake is to look for the mounted data in the current directory (\n./vgg\n), rather than using the absolute path (\n/vgg\n)\n\n\nDefault mount points\n\n\nWe highly recommend that you explicitly specify the mount points for your data using the \n--data <data_name>:<mount_point>\n convention.\n\n\nIf, however, you do not specify a mount point, the default values are:\n\n\n\n\n\n\nSingle data mount: If you only mount one datasource without specifying a mount point, it is mounted at \n/input\n\n\n\n\n\n\nMultiple data mounts: If you mount multiple datasource without specifying mount points, they will each be mounted under their respective GUIDs (e.g. \n/xKduBzTr4LAsc6eVPZVPVd\n). GUIDs are 32-character random strings that difficult to track down, so we highly discourage this pattern.",
             "title": "Mounting Data"
         },
         {
-            "location": "/guides/mounting_data/#quick-preparation-checklist",
-            "text": "You must have a  FloydHub account  You must be  logged in to your web dashboard  You must have  floyd-cli   installed on your computer   You can use the  floyd login  command to login to your FloydHub account through your command line",
-            "title": "Quick Preparation Checklist"
-        },
-        {
-            "location": "/guides/mounting_data/#datasets",
+            "location": "/guides/data/mounting_data/#datasets",
             "text": "Floyd datasets are directories of data files that can be used in a project run. To create a new dataset, please follow  this guide . You can view the datasets you \nhave created in the  datasets page  in the dashboard. You can also view \npublic datasets by searching for it on FloydHub.",
             "title": "Datasets"
         },
         {
-            "location": "/guides/mounting_data/#mounting-datasets",
+            "location": "/guides/data/mounting_data/#mounting-datasets",
             "text": "",
             "title": "Mounting datasets"
         },
         {
-            "location": "/guides/mounting_data/#overview",
+            "location": "/guides/data/mounting_data/#overview",
             "text": "You can mount one or more datasets when you run a job using the  floyd run  command. This automatically makes \nthe mounted datasets available for you to use in your job, without having to download them each time.  To mount a specific version of a dataset, you need to specify its full name and the mount point. \nThe syntax is  --data <data_name>:<mount_point>  For example, to mount the  VGG 19-layers  dataset under  /vgg :  floyd run --data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg --mode jupyter  This will spin up a Jupyter Notebook, inside which you will have access to the VGGNet pre-trained models under  /vgg .   Note : You can use the  --data  flag with  floyd run  when you are running a command too.  $ floyd run --data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg \"python train.py\"",
             "title": "Overview"
         },
         {
-            "location": "/guides/mounting_data/#mounting-the-output-of-another-job",
+            "location": "/guides/data/mounting_data/#mounting-the-output-of-another-job",
             "text": "In FloydHub, you can link jobs by mounting the output of one job as the input of a new job that you are going to run. This allows you to derive from an existing job or restart a stopped or timedout job.  You can refer to the output of a job by its name with  /output  appended to it.  For example:  floydhub/projects/handwriting-recognition/12/output  refers to the output of the job  floydhub/projects/handwriting-recognition/12  You can mount this using the  --data  flag in the  floyd run  command, similar to datasets. For example:  $ floyd run --data floydhub/projects/handwriting-recognition/12:filtered_training_data \"python train.py\"  This will make the output of  floydhub/projects/handwriting-recognition/12  available at  /filtered_training_data  for the new job to use.  Note : You need to have access to the job to be able to mount it's output.",
             "title": "Mounting the output of another job"
         },
         {
-            "location": "/guides/mounting_data/#mounting-multiple-datasources",
+            "location": "/guides/data/mounting_data/#mounting-multiple-datasources",
             "text": "You can attach upto 5 datasources when you run a job using the  --data  flag in the  floyd run  command. This includes both datasets and job outputs. Ensure that the mount points for the datasets are unique.  $ floyd run --data floydhub/datasets/mnist/2:training --data floydhub/datasets/digits/1:test \"python script.py\"  In this case, the above datasets will be mounted at  /training  and  /test  respectively.",
             "title": "Mounting multiple datasources"
         },
         {
-            "location": "/guides/mounting_data/#web-dashboard",
+            "location": "/guides/data/mounting_data/#web-dashboard",
             "text": "You can view the mounted datasets and their respective mount points for a specific job by going to the  Data  tab:",
             "title": "Web dashboard"
         },
         {
-            "location": "/guides/mounting_data/#details",
+            "location": "/guides/data/mounting_data/#details",
             "text": "",
             "title": "Details"
         },
         {
-            "location": "/guides/mounting_data/#datasource-name",
+            "location": "/guides/data/mounting_data/#datasource-name",
             "text": "The full name of a datasource ( <username>/datasets/<dataset_name>/<version> ) consists of 3 parts:    Username  Dataset Name  Version   For example:  floydhub/datasets/mnist/2",
             "title": "Datasource name"
         },
         {
-            "location": "/guides/mounting_data/#mount-point",
+            "location": "/guides/data/mounting_data/#mount-point",
             "text": "The mount point is an absolute path. For example,  --data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg  will mount the data at  /vgg .  A common mistake is to look for the mounted data in the current directory ( ./vgg ), rather than using the absolute path ( /vgg )",
             "title": "Mount point"
         },
         {
-            "location": "/guides/mounting_data/#default-mount-points",
+            "location": "/guides/data/mounting_data/#default-mount-points",
             "text": "We highly recommend that you explicitly specify the mount points for your data using the  --data <data_name>:<mount_point>  convention.  If, however, you do not specify a mount point, the default values are:    Single data mount: If you only mount one datasource without specifying a mount point, it is mounted at  /input    Multiple data mounts: If you mount multiple datasource without specifying mount points, they will each be mounted under their respective GUIDs (e.g.  /xKduBzTr4LAsc6eVPZVPVd ). GUIDs are 32-character random strings that difficult to track down, so we highly discourage this pattern.",
             "title": "Default mount points"
         },
