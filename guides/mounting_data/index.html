@@ -339,6 +339,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#datasets" title="Datasets" class="md-nav__link">
+    Datasets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mounting-datasets" title="Mounting datasets" class="md-nav__link">
     Mounting datasets
   </a>
@@ -347,15 +354,58 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#data-name" title="Data name" class="md-nav__link">
-    Data name
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#run-command" title="Run command" class="md-nav__link">
-    Run command
+  <a href="#mounting-the-output-of-another-job" title="Mounting the output of another job" class="md-nav__link">
+    Mounting the output of another job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mounting-multiple-datasources" title="Mounting multiple datasources" class="md-nav__link">
+    Mounting multiple datasources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-dashboard" title="Web dashboard" class="md-nav__link">
+    Web dashboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#datasource-name" title="Datasource name" class="md-nav__link">
+    Datasource name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mount-point" title="Mount point" class="md-nav__link">
+    Mount point
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-mount-points" title="Default mount points" class="md-nav__link">
+    Default mount points
   </a>
   
 </li>
@@ -364,25 +414,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#mounting-output-data" title="Mounting output data" class="md-nav__link">
-    Mounting output data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mounting-multiple-datasets" title="Mounting multiple datasets" class="md-nav__link">
-    Mounting multiple datasets
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#web-dashboard" title="Web dashboard" class="md-nav__link">
-    Web dashboard
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -794,6 +828,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#datasets" title="Datasets" class="md-nav__link">
+    Datasets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mounting-datasets" title="Mounting datasets" class="md-nav__link">
     Mounting datasets
   </a>
@@ -802,15 +843,58 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#data-name" title="Data name" class="md-nav__link">
-    Data name
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#run-command" title="Run command" class="md-nav__link">
-    Run command
+  <a href="#mounting-the-output-of-another-job" title="Mounting the output of another job" class="md-nav__link">
+    Mounting the output of another job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mounting-multiple-datasources" title="Mounting multiple datasources" class="md-nav__link">
+    Mounting multiple datasources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-dashboard" title="Web dashboard" class="md-nav__link">
+    Web dashboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details" title="Details" class="md-nav__link">
+    Details
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#datasource-name" title="Datasource name" class="md-nav__link">
+    Datasource name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mount-point" title="Mount point" class="md-nav__link">
+    Mount point
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-mount-points" title="Default mount points" class="md-nav__link">
+    Default mount points
   </a>
   
 </li>
@@ -819,25 +903,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#mounting-output-data" title="Mounting output data" class="md-nav__link">
-    Mounting output data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mounting-multiple-datasets" title="Mounting multiple datasets" class="md-nav__link">
-    Mounting multiple datasets
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#web-dashboard" title="Web dashboard" class="md-nav__link">
-    Web dashboard
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -866,42 +934,69 @@
 <li>You must have <code>floyd-cli</code> <a href="../basics/install/">installed on your computer</a></li>
 </ul>
 <p>You can use the <a href="../../commands/login/">floyd login</a> command to login to your FloydHub account through your command line</p>
-<h2 id="mounting-datasets">Mounting datasets</h2>
-<p>Floyd datasets are directories of data files that can be used in a project run. You can view the datasets you 
-have uploaded in the <a href="https://www.floydhub.com/datasets">datasets page</a> in the dashboard. You can also view 
+<h2 id="datasets">Datasets</h2>
+<p>Floyd datasets are directories of data files that can be used in a project run. To create a new dataset, please follow 
+<a href="../basics/create_new/#create-a-new-dataset">this guide</a>. You can view the datasets you 
+have created in the <a href="https://www.floydhub.com/datasets">datasets page</a> in the dashboard. You can also view 
 public datasets by searching for it on FloydHub.</p>
-<h3 id="data-name">Data name</h3>
-<p>To mount a dataset you need to specify its names along with the version. The full name to use here consists of 3 
-parts: <code>&lt;username&gt;/datasets/&lt;dataset_name&gt;/&lt;version&gt;</code>. </p>
-<p>For example: <code>floydhub/datasets/mnist/2</code>.</p>
-<p>By default the mount path for the dataset is <code>/input</code>. But you can override that by specifying a mount path as 
-part of the data name.</p>
-<p>For example: <code>floydhub/datasets/mnist/2:mnist</code>.</p>
-<p>In this case the directory containing the mnist data files.</p>
-<h3 id="run-command">Run command</h3>
-<p>You can specify the name of the data in the <a href="../../commands/run/">run command</a> using the <code>--data</code> flag. For example:</p>
-<pre><code class="bash">$ floyd run --data floydhub/datasets/mnist/2:mnist &quot;python train.py&quot;
+<h2 id="mounting-datasets">Mounting datasets</h2>
+<h3 id="overview">Overview</h3>
+<p>You can mount one or more datasets when you run a job using the <a href="../../commands/run">floyd run</a> command. This automatically makes 
+the mounted datasets available for you to use in your job, without having to download them each time.</p>
+<p>To mount a specific version of a dataset, you need to specify its full name and the mount point. 
+The syntax is <code>--data &lt;data_name&gt;:&lt;mount_point&gt;</code></p>
+<p>For example, to mount the <a href="https://www.floydhub.com/floydhub/datasets/vgg-ilsvrc-19-layers/1">VGG 19-layers</a> dataset under <code>/vgg</code>:</p>
+<pre><code class="bash">floyd run --data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg --mode jupyter
 </code></pre>
 
-<h2 id="mounting-output-data">Mounting output data</h2>
-<p>In Floyd the output of any project run (that you have access to) can be mounted to a different project run.
-You can refer to the output of a project run by its name with <code>/output</code> appended to it.</p>
-<p>For example: <code>floydhub/projects/handwriting-recognition/12/output</code></p>
-<p>This refers to the output of the job: <code>floydhub/projects/handwriting-recognition/12</code></p>
-<p>You can mount this using the run command similar to datasets. For example:</p>
+<p>This will spin up a Jupyter Notebook, inside which you will have access to the VGGNet pre-trained models under <code>/vgg</code>.</p>
+<p><img alt="Mounted Data" src="../../img/mounted_data.jpg" /></p>
+<p><em>Note</em>: You can use the <code>--data</code> flag with <code>floyd run</code> when you are running a command too.</p>
+<pre><code class="bash">$ floyd run --data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg &quot;python train.py&quot;
+</code></pre>
+
+<h3 id="mounting-the-output-of-another-job">Mounting the output of another job</h3>
+<p>In FloydHub, you can link jobs by mounting the output of one job as the input of a new job that you are going to run. This allows you to derive from an existing job or restart a stopped or timedout job.</p>
+<p>You can refer to the output of a job by its name with <code>/output</code> appended to it.</p>
+<p>For example: <code>floydhub/projects/handwriting-recognition/12/output</code> refers to the output of the job <code>floydhub/projects/handwriting-recognition/12</code></p>
+<p>You can mount this using the <code>--data</code> flag in the <code>floyd run</code> command, similar to datasets. For example:</p>
 <pre><code class="bash">$ floyd run --data floydhub/projects/handwriting-recognition/12:filtered_training_data &quot;python train.py&quot;
 </code></pre>
 
-<h2 id="mounting-multiple-datasets">Mounting multiple datasets</h2>
-<p>You can attach upto 5 datasets when you run a project using the run command. This includes both datasets and 
-project run outputs. Ensure that the mount points for the datasets are unique.</p>
-<pre><code class="bash">$ floyd run --data floydhub/datasets/mnist/2:training --data floydhub/datasets/digits/1:testing &quot;python script.py&quot;
+<p>This will make the output of <code>floydhub/projects/handwriting-recognition/12</code> available at <code>/filtered_training_data</code> for the new job to use.</p>
+<p><em>Note</em>: You need to have access to the job to be able to mount it's output.</p>
+<h3 id="mounting-multiple-datasources">Mounting multiple datasources</h3>
+<p>You can attach upto 5 datasources when you run a job using the <code>--data</code> flag in the <a href="../../commands/run">floyd run</a> command. This includes both datasets and job outputs. Ensure that the mount points for the datasets are unique.</p>
+<pre><code class="bash">$ floyd run --data floydhub/datasets/mnist/2:training --data floydhub/datasets/digits/1:test &quot;python script.py&quot;
 </code></pre>
 
-<p>In this case the above datasets will be mounted at <code>/training</code> and <code>/testing</code> respectively.</p>
-<h2 id="web-dashboard">Web dashboard</h2>
-<p>You can view the mounted datasets in a specific job by going to the <code>data</code> tab:</p>
-<p><img alt="Data Mounts" src="../../img/job_data_view.png" /></p>
+<p>In this case, the above datasets will be mounted at <code>/training</code> and <code>/test</code> respectively.</p>
+<h3 id="web-dashboard">Web dashboard</h3>
+<p>You can view the mounted datasets and their respective mount points for a specific job by going to the <code>Data</code> tab:</p>
+<p><img alt="Data Mounts" src="../../img/job_data_view.jpg" /></p>
+<h3 id="details">Details</h3>
+<h4 id="datasource-name">Datasource name</h4>
+<p>The full name of a datasource (<code>&lt;username&gt;/datasets/&lt;dataset_name&gt;/&lt;version&gt;</code>) consists of 3 parts: </p>
+<ul>
+<li>Username</li>
+<li>Dataset Name</li>
+<li>Version</li>
+</ul>
+<p>For example: <code>floydhub/datasets/mnist/2</code></p>
+<h4 id="mount-point">Mount point</h4>
+<p>The mount point is an absolute path. For example, <code>--data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg</code> will mount the data at <code>/vgg</code>.</p>
+<p>A common mistake is to look for the mounted data in the current directory (<code>./vgg</code>), rather than using the absolute path (<code>/vgg</code>)</p>
+<h4 id="default-mount-points">Default mount points</h4>
+<p>We highly recommend that you explicitly specify the mount points for your data using the <code>--data &lt;data_name&gt;:&lt;mount_point&gt;</code> convention.</p>
+<p>If, however, you do not specify a mount point, the default values are:</p>
+<ul>
+<li>
+<p>Single data mount: If you only mount one datasource without specifying a mount point, it is mounted at <code>/input</code></p>
+</li>
+<li>
+<p>Multiple data mounts: If you mount multiple datasource without specifying mount points, they will each be mounted under their respective GUIDs (e.g. <code>/xKduBzTr4LAsc6eVPZVPVd</code>). GUIDs are 32-character random strings that difficult to track down, so we highly discourage this pattern.</p>
+</li>
+</ul>
               
             </article>
           </div>
