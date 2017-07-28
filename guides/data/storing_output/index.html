@@ -363,8 +363,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
+  <a href="#example-1" title="Example 1" class="md-nav__link">
+    Example 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-2" title="Example 2" class="md-nav__link">
+    Example 2
   </a>
   
 </li>
@@ -811,8 +818,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
+  <a href="#example-1" title="Example 1" class="md-nav__link">
+    Example 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-2" title="Example 2" class="md-nav__link">
+    Example 2
   </a>
   
 </li>
@@ -850,15 +864,34 @@
                 
                 <p>Most jobs generate output files (eg. model checkpoints, logs, evaluation output). In Floyd, <code>/output</code> is a special directory used to store outputs. </p>
 <p>Any file or directory you create at runtime under the <code>/output</code> directory will be retained and available to you for download after your job finishes.</p>
-<h4 id="example">Example</h4>
-<p>This job runs a Python script called <code>helloworld.py</code> and pipes its output into the file <code>/output/my-output-file.txt</code>:</p>
+<h4 id="example-1">Example 1</h4>
+<p>This job runs a Python script called <code>helloworld.py</code> and redirects its output logs into the file <code>/output/my-output-file.txt</code>:</p>
 <pre><code class="bash">$ floyd init quick-start
 $ floyd run &quot;python helloworld.py &gt; /output/my-output-file.txt&quot;
 Syncing code ...
 ...
 </code></pre>
 
-<p>Since the file is created under the special <code>/output</code> directory, it will be saved. You can view or refer to this output using the <a href="../../../commands/output">floyd output</a> command</p>
+<p><em>NOTE</em>: This is a simple example that only stores the standard output of <code>helloworld.py</code>. Since the file is created under the special <code>/output</code> directory, it will be saved even after your job has ended. </p>
+<h4 id="example-2">Example 2</h4>
+<p>If you want to save and retain your model checkpoints and other data inside your code, you should write them to <code>/output</code>.</p>
+<p>Here is a sample Tensorflow example that saves the model weights:</p>
+<p><code>save_restore_model.py</code></p>
+<pre><code class="bash">import tensorflow as tf
+
+...
+
+saver = tf.train.Saver()
+with tf.Session() as sess:
+    sess.run(init)
+    ...
+    save_path = saver.save(sess, '/output/model.ckpt')
+    print(&quot;Model saved in file: %s&quot; % save_path)
+    ...
+</code></pre>
+
+<p>Again, since the model is stored under the special <code>/output</code> directory, they will be saved even after your job ends. </p>
+<p>You can view or refer to this output using the <a href="../../../commands/output">floyd output</a> command</p>
 <pre><code class="bash">$ floyd output floydhub/projects/quick-start/1/output
 Opening output directory in your browser...
 </code></pre>
