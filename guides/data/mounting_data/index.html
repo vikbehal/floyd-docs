@@ -19,7 +19,7 @@
     
     
       
-        <title>Mounting Data - FloydHub</title>
+        <title>Mounting data - FloydHub</title>
       
     
     
@@ -93,7 +93,7 @@
                 </span>
               
             
-            Mounting Data
+            Mounting data
           
         </span>
       </div>
@@ -358,11 +358,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Mounting Data
+        Mounting data
       </label>
     
-    <a href="./" title="Mounting Data" class="md-nav__link md-nav__link--active">
-      Mounting Data
+    <a href="./" title="Mounting data" class="md-nav__link md-nav__link--active">
+      Mounting data
     </a>
     
       
@@ -417,6 +417,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#symlinking-your-mounted-data" title="Symlinking your mounted data" class="md-nav__link">
+    Symlinking your mounted data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#details" title="Details" class="md-nav__link">
     Details
   </a>
@@ -458,6 +465,17 @@
     </ul>
   
 </nav>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../symlink_mounted_data/" title="Symlink mounted data" class="md-nav__link">
+        Symlink mounted data
+      </a>
     
   </li>
 
@@ -904,6 +922,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#symlinking-your-mounted-data" title="Symlinking your mounted data" class="md-nav__link">
+    Symlinking your mounted data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#details" title="Details" class="md-nav__link">
     Details
   </a>
@@ -957,7 +982,7 @@
                
               
                 
-                  <h1>Mounting Data</h1>
+                  <h1>Mounting data</h1>
                 
                 <p>In this guide, we will explain how to attach a datasource to your job.</p>
 <h2 id="datasets">Datasets</h2>
@@ -967,9 +992,9 @@ have created in the <a href="https://www.floydhub.com/datasets">datasets page</a
 public datasets by searching for it on FloydHub.</p>
 <h2 id="mounting-datasets">Mounting datasets</h2>
 <h3 id="overview">Overview</h3>
-<p>You can mount one or more datasets when you run a job using the <a href="../../../commands/run">floyd run</a> command. This automatically makes 
-the mounted datasets available for you to use in your job, without having to download them each time.</p>
-<p>To mount a specific version of a dataset, you need to specify its full name and the mount point. 
+<p>You can mount one or more datasets when you run a job using the <a href="../../../commands/run">floyd run</a> command. 
+This automatically makes the mounted datasets available for you to use in your job, without having to download them each time.</p>
+<p>To mount a specific version of a dataset, you need to specify its <a href="#datasource-name">full name</a> and the <a href="#mount-point">mount point</a>. 
 The syntax is <code>--data &lt;data_name&gt;:&lt;mount_point&gt;</code></p>
 <p>For example, to mount the <a href="https://www.floydhub.com/floydhub/datasets/vgg-ilsvrc-19-layers/1">VGG 19-layers</a> dataset under <code>/vgg</code>:</p>
 <pre><code class="bash">floyd run --data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg --mode jupyter
@@ -1000,6 +1025,9 @@ The syntax is <code>--data &lt;data_name&gt;:&lt;mount_point&gt;</code></p>
 <h3 id="web-dashboard">Web dashboard</h3>
 <p>You can view the mounted datasets and their respective mount points for a specific job by going to the <code>Data</code> tab:</p>
 <p><img alt="Data Mounts" src="../../../img/job_data_view.jpg" /></p>
+<h3 id="symlinking-your-mounted-data">Symlinking your mounted data</h3>
+<p>Sometimes, your code might require your data to be available at a hardcoded location. Or you might want to combine multiple mounted datasources under a single directory. One way to do this would be to copy the data from the mounted locations to the destination, but this is inefficient for large data. <a href="https://en.wikipedia.org/wiki/Symbolic_link">Symlinking</a> is a great solution for this.</p>
+<p>Please see this guide: <a href="../symlink_mounted_data">Symlinking mounted data</a></p>
 <h3 id="details">Details</h3>
 <h4 id="datasource-name">Datasource name</h4>
 <p>The full name of a datasource (<code>&lt;username&gt;/datasets/&lt;dataset_name&gt;/&lt;version&gt;</code>) consists of 3 parts: </p>
@@ -1010,8 +1038,11 @@ The syntax is <code>--data &lt;data_name&gt;:&lt;mount_point&gt;</code></p>
 </ul>
 <p>For example: <code>floydhub/datasets/mnist/2</code></p>
 <h4 id="mount-point">Mount point</h4>
-<p>The mount point is an absolute path. For example, <code>--data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg</code> will mount the data at <code>/vgg</code>.</p>
-<p>A common mistake is to look for the mounted data in the current directory (<code>./vgg</code>), rather than using the absolute path (<code>/vgg</code>)</p>
+<p>The mount point is the name of the directory under which the datasource will be available in your job. </p>
+<ul>
+<li>It <em>cannot</em> contain subdirectories. <code>vgg</code> is a valid mount point, but <code>vgg/2017</code> is not.</li>
+<li>The mount point is an absolute path. For example, <code>--data floydhub/datasets/vgg-ilsvrc-19-layers/1:vgg</code> will mount the data at <code>/vgg</code>. A common mistake is to look for the mounted data in the current directory (<code>./vgg</code>), rather than using the absolute path (<code>/vgg</code>)</li>
+</ul>
 <h4 id="default-mount-points">Default mount points</h4>
 <p>We highly recommend that you explicitly specify the mount points for your data using the <code>--data &lt;data_name&gt;:&lt;mount_point&gt;</code> convention.</p>
 <p>If, however, you do not specify a mount point, the default values are:</p>
@@ -1050,13 +1081,13 @@ The syntax is <code>--data &lt;data_name&gt;:&lt;mount_point&gt;</code></p>
           </a>
         
         
-          <a href="../../environments/" title="Environments" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../symlink_mounted_data/" title="Symlink mounted data" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Environments
+                Symlink mounted data
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
