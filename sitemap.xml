@@ -40,6 +40,12 @@
     </url>
         
     <url>
+     <loc>https://www.floydhub.com</loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>https://www.floydhub.com/guides/environments/</loc>
      <lastmod>2017-07-31</lastmod>
      <changefreq>daily</changefreq>
@@ -47,12 +53,6 @@
         
     <url>
      <loc>https://www.floydhub.com/guides/floyd_ignore/</loc>
-     <lastmod>2017-07-31</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://www.floydhub.com/guides/installing_dependencies/</loc>
      <lastmod>2017-07-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
