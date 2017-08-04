@@ -1,10 +1,11 @@
 
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
         <link rel="canonical" href="https://www.floydhub.com/faqs/environments/">
@@ -13,9 +14,9 @@
         <meta name="author" content="FloydHub Team">
       
       
-        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.0">
     
     
       
@@ -23,7 +24,13 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+      <script src="../../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-bfecc7305d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-02c2a4388f.palette.css">
+      
     
     
       
@@ -36,15 +43,9 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-f3ab63f78a.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
-      
-      
-        <link rel="stylesheet" href="../../css/bootstrap_paper.min.css">
-      
-        <link rel="stylesheet" href="../../css/style.css">
-      
+      <link rel="stylesheet" href="../../css/bootstrap_paper.min.css">
+    
+      <link rel="stylesheet" href="../../css/style.css">
     
     
   </head>
@@ -66,15 +67,15 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <header class="md-header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="FloydHub" class=" md-logo  md-header-nav__button">
-          
+        
+          <a href="https://www.floydhub.com" title="FloydHub" class="md-logo md-header-nav__button">
             <img src="../../img/f_white_small.png" width="24" height="24">
-          
-        </a>
+          </a>
+        
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
@@ -97,26 +98,32 @@
         
           <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
-<div class="md-search" data-md-component="search">
-  <div class="md-search__overlay"></div>
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result"></div>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
       </div>
     </div>
   </div>
 </div>
         
       </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
           <div class="md-header-nav__source">
             
-              
 
 
   
@@ -135,14 +142,16 @@
     </div>
   </a>
 
-            
           </div>
-      </div>
+        </div>
+      
     </div>
   </nav>
 </header>
     
     <div class="md-container">
+      
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -150,13 +159,13 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <i class=" md-logo  md-nav__button">
-      
+    
+      <i class="md-logo md-nav__button">
         <img src="../../img/f_white_small.png">
-      
-    </i>
+      </i>
+    
     FloydHub
   </label>
   
@@ -186,17 +195,21 @@
     
       
       
+      
+
+
   <li class="md-nav__item">
-    
-      <a href="../.." title="Home" class="md-nav__link">
-        Home
-      </a>
-    
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
   </li>
 
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
@@ -204,7 +217,7 @@
     <label class="md-nav__link" for="nav-2">
       Get Started
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
         Get Started
       </label>
@@ -213,23 +226,25 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../getstarted/quick_start/" title="Quick Start" class="md-nav__link">
-        Quick Start
-      </a>
-    
+    <a href="../../getstarted/quick_start/" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../getstarted/quick_start_jupyter/" title="Jupyter Notebook" class="md-nav__link">
-        Jupyter Notebook
-      </a>
-    
+    <a href="../../getstarted/quick_start_jupyter/" title="Jupyter Notebook" class="md-nav__link">
+      Jupyter Notebook
+    </a>
   </li>
 
         
@@ -240,6 +255,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
@@ -247,7 +265,7 @@
     <label class="md-nav__link" for="nav-3">
       Guides
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
         Guides
       </label>
@@ -256,6 +274,9 @@
         
           
           
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
@@ -263,7 +284,7 @@
     <label class="md-nav__link" for="nav-3-1">
       Basics
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-3-1">
         Basics
       </label>
@@ -272,56 +293,61 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../guides/basics/install/" title="Install Floyd CLI" class="md-nav__link">
-        Install Floyd CLI
-      </a>
-    
+    <a href="../../guides/basics/install/" title="Install Floyd CLI" class="md-nav__link">
+      Install Floyd CLI
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../guides/basics/login/" title="Login using Floyd CLI" class="md-nav__link">
-        Login using Floyd CLI
-      </a>
-    
+    <a href="../../guides/basics/login/" title="Login using Floyd CLI" class="md-nav__link">
+      Login using Floyd CLI
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../guides/basics/create_new/" title="Create new Project and Dataset" class="md-nav__link">
-        Create new Project and Dataset
-      </a>
-    
+    <a href="../../guides/basics/create_new/" title="Create new Project and Dataset" class="md-nav__link">
+      Create new Project and Dataset
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../guides/basics/delete/" title="Delete Project, Jobs and Data" class="md-nav__link">
-        Delete Project, Jobs and Data
-      </a>
-    
+    <a href="../../guides/basics/delete/" title="Delete Project, Jobs and Data" class="md-nav__link">
+      Delete Project, Jobs and Data
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../guides/basics/using_gpu/" title="Using CPU vs GPU" class="md-nav__link">
-        Using CPU vs GPU
-      </a>
-    
+    <a href="../../guides/basics/using_gpu/" title="Using CPU vs GPU" class="md-nav__link">
+      Using CPU vs GPU
+    </a>
   </li>
 
         
@@ -332,6 +358,9 @@
         
           
           
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
@@ -339,7 +368,7 @@
     <label class="md-nav__link" for="nav-3-2">
       Jobs
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-3-2">
         Jobs
       </label>
@@ -348,12 +377,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../guides/jobs/installing_dependencies/" title="Installing extra dependencies" class="md-nav__link">
-        Installing extra dependencies
-      </a>
-    
+    <a href="../../guides/jobs/installing_dependencies/" title="Installing extra dependencies" class="md-nav__link">
+      Installing extra dependencies
+    </a>
   </li>
 
         
@@ -364,6 +394,9 @@
         
           
           
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
@@ -371,7 +404,7 @@
     <label class="md-nav__link" for="nav-3-3">
       Data
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-3-3">
         Data
       </label>
@@ -380,34 +413,37 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../guides/data/storing_output/" title="Storing output data" class="md-nav__link">
-        Storing output data
-      </a>
-    
+    <a href="../../guides/data/storing_output/" title="Storing output data" class="md-nav__link">
+      Storing output data
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../guides/data/mounting_data/" title="Mounting data" class="md-nav__link">
-        Mounting data
-      </a>
-    
+    <a href="../../guides/data/mounting_data/" title="Mounting data" class="md-nav__link">
+      Mounting data
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../guides/data/symlink_mounted_data/" title="Symlink mounted data" class="md-nav__link">
-        Symlink mounted data
-      </a>
-    
+    <a href="../../guides/data/symlink_mounted_data/" title="Symlink mounted data" class="md-nav__link">
+      Symlink mounted data
+    </a>
   </li>
 
         
@@ -418,23 +454,25 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../guides/environments/" title="Environments" class="md-nav__link">
-        Environments
-      </a>
-    
+    <a href="../../guides/environments/" title="Environments" class="md-nav__link">
+      Environments
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../guides/floyd_ignore/" title="Ignore files" class="md-nav__link">
-        Ignore files
-      </a>
-    
+    <a href="../../guides/floyd_ignore/" title="Ignore files" class="md-nav__link">
+      Ignore files
+    </a>
   </li>
 
         
@@ -445,6 +483,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
@@ -452,7 +493,7 @@
     <label class="md-nav__link" for="nav-4">
       Examples
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
         Examples
       </label>
@@ -461,12 +502,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../examples/style_transfer/" title="Style Transfer" class="md-nav__link">
-        Style Transfer
-      </a>
-    
+    <a href="../../examples/style_transfer/" title="Style Transfer" class="md-nav__link">
+      Style Transfer
+    </a>
   </li>
 
         
@@ -477,14 +519,19 @@
     
       
       
-  <li class="md-nav__item md-nav__item--nested">
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       FAQs
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
         FAQs
       </label>
@@ -493,40 +540,48 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../installation/" title="Installation FAQs" class="md-nav__link">
-        Installation FAQs
-      </a>
-    
+    <a href="../installation/" title="Installation FAQs" class="md-nav__link">
+      Installation FAQs
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../authentication/" title="Signup and Login FAQs" class="md-nav__link">
-        Signup and Login FAQs
-      </a>
-    
+    <a href="../authentication/" title="Signup and Login FAQs" class="md-nav__link">
+      Signup and Login FAQs
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../job/" title="Job FAQs" class="md-nav__link">
-        Job FAQs
-      </a>
-    
+    <a href="../job/" title="Job FAQs" class="md-nav__link">
+      Job FAQs
+    </a>
   </li>
 
         
           
           
-  <li class="md-nav__item">
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
@@ -554,6 +609,8 @@
   
 </li>
       
+      
+      
     </ul>
   
 </nav>
@@ -563,23 +620,25 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../plans/" title="Plans FAQs" class="md-nav__link">
-        Plans FAQs
-      </a>
-    
+    <a href="../plans/" title="Plans FAQs" class="md-nav__link">
+      Plans FAQs
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../billing/" title="Billing FAQs" class="md-nav__link">
-        Billing FAQs
-      </a>
-    
+    <a href="../billing/" title="Billing FAQs" class="md-nav__link">
+      Billing FAQs
+    </a>
   </li>
 
         
@@ -590,6 +649,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
@@ -597,7 +659,7 @@
     <label class="md-nav__link" for="nav-6">
       Commands
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
         Commands
       </label>
@@ -606,166 +668,181 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/" title="floyd" class="md-nav__link">
-        floyd
-      </a>
-    
+    <a href="../../commands/" title="floyd" class="md-nav__link">
+      floyd
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/login/" title="floyd login" class="md-nav__link">
-        floyd login
-      </a>
-    
+    <a href="../../commands/login/" title="floyd login" class="md-nav__link">
+      floyd login
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/init/" title="floyd init" class="md-nav__link">
-        floyd init
-      </a>
-    
+    <a href="../../commands/init/" title="floyd init" class="md-nav__link">
+      floyd init
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/run/" title="floyd run" class="md-nav__link">
-        floyd run
-      </a>
-    
+    <a href="../../commands/run/" title="floyd run" class="md-nav__link">
+      floyd run
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/data/" title="floyd data" class="md-nav__link">
-        floyd data
-      </a>
-    
+    <a href="../../commands/data/" title="floyd data" class="md-nav__link">
+      floyd data
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/logs/" title="floyd logs" class="md-nav__link">
-        floyd logs
-      </a>
-    
+    <a href="../../commands/logs/" title="floyd logs" class="md-nav__link">
+      floyd logs
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/status/" title="floyd status" class="md-nav__link">
-        floyd status
-      </a>
-    
+    <a href="../../commands/status/" title="floyd status" class="md-nav__link">
+      floyd status
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/output/" title="floyd output" class="md-nav__link">
-        floyd output
-      </a>
-    
+    <a href="../../commands/output/" title="floyd output" class="md-nav__link">
+      floyd output
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/clone/" title="floyd clone" class="md-nav__link">
-        floyd clone
-      </a>
-    
+    <a href="../../commands/clone/" title="floyd clone" class="md-nav__link">
+      floyd clone
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/info/" title="floyd info" class="md-nav__link">
-        floyd info
-      </a>
-    
+    <a href="../../commands/info/" title="floyd info" class="md-nav__link">
+      floyd info
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/stop/" title="floyd stop" class="md-nav__link">
-        floyd stop
-      </a>
-    
+    <a href="../../commands/stop/" title="floyd stop" class="md-nav__link">
+      floyd stop
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/delete/" title="floyd delete" class="md-nav__link">
-        floyd delete
-      </a>
-    
+    <a href="../../commands/delete/" title="floyd delete" class="md-nav__link">
+      floyd delete
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/logout/" title="floyd logout" class="md-nav__link">
-        floyd logout
-      </a>
-    
+    <a href="../../commands/logout/" title="floyd logout" class="md-nav__link">
+      floyd logout
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/upgrade/" title="floyd upgrade" class="md-nav__link">
-        floyd upgrade
-      </a>
-    
+    <a href="../../commands/upgrade/" title="floyd upgrade" class="md-nav__link">
+      floyd upgrade
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/version/" title="floyd version" class="md-nav__link">
-        floyd version
-      </a>
-    
+    <a href="../../commands/version/" title="floyd version" class="md-nav__link">
+      floyd version
+    </a>
   </li>
 
         
@@ -776,6 +853,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
@@ -783,7 +863,7 @@
     <label class="md-nav__link" for="nav-7">
       Changelogs
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
         Changelogs
       </label>
@@ -792,12 +872,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../changelogs/1/" title="July 12 2017" class="md-nav__link">
-        July 12 2017
-      </a>
-    
+    <a href="../../changelogs/1/" title="July 12 2017" class="md-nav__link">
+      July 12 2017
+    </a>
   </li>
 
         
@@ -831,6 +912,8 @@
   
 </li>
       
+      
+      
     </ul>
   
 </nav>
@@ -841,29 +924,35 @@
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
-               
-                 <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/faqs\environments.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
-               
               
+                
+                  <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/faqs\environments.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
                 
                   <h1>Environments FAQs</h1>
                 
-                <h3 id="can-i-switch-between-python-2-and-python-3-environments">Can I switch between Python 2 and Python 3 environments?</h3>
+                <h3 id="can-i-switch-between-python-2-and-python-3-environments">Can I switch between Python 2 and Python 3 environments?<a class="headerlink" href="#can-i-switch-between-python-2-and-python-3-environments" title="Permanent link">&para;</a></h3>
 <p>Most of our Python based <a href="../../guides/environments/">environments</a> support both Python 2 and Python 3.</p>
-<p>The default environments are Python 3. But you can use Python 2 by using the <code>:py2</code> tag with the environment name, when available. For example,</p>
+<p>The default environments are Python 3. But you can use Python 2 by using the <code class="codehilite">:py2</code> tag with the environment name, when available. For example,</p>
 <ul>
-<li>Tensorflow 1.2 with Python 3</li>
+<li>
+<p>Tensorflow 1.2 with Python 3
+<div class="codehilite"><pre><span></span>$ floyd run --env tensorflow-1.2
+</pre></div></p>
+</li>
+<li>
+<p>Tensorflow 1.2 with Python 2
+<div class="codehilite"><pre><span></span>$ floyd run --env tensorflow-1.2:py2
+</pre></div></p>
+</li>
 </ul>
-<pre><code class="bash">$ floyd run --env tensorflow-1.2
-</code></pre>
-
-<ul>
-<li>Tensorflow 1.2 with Python 2</li>
-</ul>
-<pre><code class="bash">$ floyd run --env tensorflow-1.2:py2
-</code></pre>
-
-<p>We currently have Python 2 and 3 environments for Tensorflow, Theano, Caffe, PyTorch and Chainer. Please see our <a href="../../guides/environments/">complete list of environments</a> for more details on the <code>--env</code> name.</p>
+<p>We currently have Python 2 and 3 environments for Tensorflow, Theano, Caffe, PyTorch and Chainer. Please see our <a href="../../guides/environments/">complete list of environments</a> for more details on the <code class="codehilite">--env</code> name.</p>
+                
+                  
+                
+              
+              
+                
               
             </article>
           </div>
@@ -941,8 +1030,10 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application-2afe21e0b2.js"></script>
-      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      <script src="../../assets/javascripts/application-1d6ee6ee6c.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
       
     
     

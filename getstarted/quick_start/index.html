@@ -1,10 +1,11 @@
 
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
         <link rel="canonical" href="https://www.floydhub.com/getstarted/quick_start/">
@@ -13,9 +14,9 @@
         <meta name="author" content="FloydHub Team">
       
       
-        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.0">
     
     
       
@@ -23,7 +24,13 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+      <script src="../../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-bfecc7305d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-02c2a4388f.palette.css">
+      
     
     
       
@@ -36,15 +43,9 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application-f3ab63f78a.css">
-      
-        <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
-      
-      
-        <link rel="stylesheet" href="../../css/bootstrap_paper.min.css">
-      
-        <link rel="stylesheet" href="../../css/style.css">
-      
+      <link rel="stylesheet" href="../../css/bootstrap_paper.min.css">
+    
+      <link rel="stylesheet" href="../../css/style.css">
     
     
   </head>
@@ -66,15 +67,15 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <header class="md-header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="FloydHub" class=" md-logo  md-header-nav__button">
-          
+        
+          <a href="https://www.floydhub.com" title="FloydHub" class="md-logo md-header-nav__button">
             <img src="../../img/f_white_small.png" width="24" height="24">
-          
-        </a>
+          </a>
+        
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
@@ -97,26 +98,32 @@
         
           <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
-<div class="md-search" data-md-component="search">
-  <div class="md-search__overlay"></div>
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result"></div>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
       </div>
     </div>
   </div>
 </div>
         
       </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
           <div class="md-header-nav__source">
             
-              
 
 
   
@@ -135,14 +142,16 @@
     </div>
   </a>
 
-            
           </div>
-      </div>
+        </div>
+      
     </div>
   </nav>
 </header>
     
     <div class="md-container">
+      
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -150,13 +159,13 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <i class=" md-logo  md-nav__button">
-      
+    
+      <i class="md-logo md-nav__button">
         <img src="../../img/f_white_small.png">
-      
-    </i>
+      </i>
+    
     FloydHub
   </label>
   
@@ -186,25 +195,31 @@
     
       
       
+      
+
+
   <li class="md-nav__item">
-    
-      <a href="../.." title="Home" class="md-nav__link">
-        Home
-      </a>
-    
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
   </li>
 
     
       
       
-  <li class="md-nav__item md-nav__item--nested">
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Get Started
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
         Get Started
       </label>
@@ -213,7 +228,12 @@
         
           
           
-  <li class="md-nav__item">
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
@@ -337,6 +357,8 @@
   
 </li>
       
+      
+      
     </ul>
   
 </nav>
@@ -346,12 +368,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../quick_start_jupyter/" title="Jupyter Notebook" class="md-nav__link">
-        Jupyter Notebook
-      </a>
-    
+    <a href="../quick_start_jupyter/" title="Jupyter Notebook" class="md-nav__link">
+      Jupyter Notebook
+    </a>
   </li>
 
         
@@ -362,6 +385,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
@@ -369,7 +395,7 @@
     <label class="md-nav__link" for="nav-3">
       Guides
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
         Guides
       </label>
@@ -378,6 +404,9 @@
         
           
           
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
@@ -385,7 +414,7 @@
     <label class="md-nav__link" for="nav-3-1">
       Basics
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-3-1">
         Basics
       </label>
@@ -394,56 +423,61 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../guides/basics/install/" title="Install Floyd CLI" class="md-nav__link">
-        Install Floyd CLI
-      </a>
-    
+    <a href="../../guides/basics/install/" title="Install Floyd CLI" class="md-nav__link">
+      Install Floyd CLI
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../guides/basics/login/" title="Login using Floyd CLI" class="md-nav__link">
-        Login using Floyd CLI
-      </a>
-    
+    <a href="../../guides/basics/login/" title="Login using Floyd CLI" class="md-nav__link">
+      Login using Floyd CLI
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../guides/basics/create_new/" title="Create new Project and Dataset" class="md-nav__link">
-        Create new Project and Dataset
-      </a>
-    
+    <a href="../../guides/basics/create_new/" title="Create new Project and Dataset" class="md-nav__link">
+      Create new Project and Dataset
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../guides/basics/delete/" title="Delete Project, Jobs and Data" class="md-nav__link">
-        Delete Project, Jobs and Data
-      </a>
-    
+    <a href="../../guides/basics/delete/" title="Delete Project, Jobs and Data" class="md-nav__link">
+      Delete Project, Jobs and Data
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../guides/basics/using_gpu/" title="Using CPU vs GPU" class="md-nav__link">
-        Using CPU vs GPU
-      </a>
-    
+    <a href="../../guides/basics/using_gpu/" title="Using CPU vs GPU" class="md-nav__link">
+      Using CPU vs GPU
+    </a>
   </li>
 
         
@@ -454,6 +488,9 @@
         
           
           
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
@@ -461,7 +498,7 @@
     <label class="md-nav__link" for="nav-3-2">
       Jobs
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-3-2">
         Jobs
       </label>
@@ -470,12 +507,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../guides/jobs/installing_dependencies/" title="Installing extra dependencies" class="md-nav__link">
-        Installing extra dependencies
-      </a>
-    
+    <a href="../../guides/jobs/installing_dependencies/" title="Installing extra dependencies" class="md-nav__link">
+      Installing extra dependencies
+    </a>
   </li>
 
         
@@ -486,6 +524,9 @@
         
           
           
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
@@ -493,7 +534,7 @@
     <label class="md-nav__link" for="nav-3-3">
       Data
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-3-3">
         Data
       </label>
@@ -502,34 +543,37 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../guides/data/storing_output/" title="Storing output data" class="md-nav__link">
-        Storing output data
-      </a>
-    
+    <a href="../../guides/data/storing_output/" title="Storing output data" class="md-nav__link">
+      Storing output data
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../guides/data/mounting_data/" title="Mounting data" class="md-nav__link">
-        Mounting data
-      </a>
-    
+    <a href="../../guides/data/mounting_data/" title="Mounting data" class="md-nav__link">
+      Mounting data
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../guides/data/symlink_mounted_data/" title="Symlink mounted data" class="md-nav__link">
-        Symlink mounted data
-      </a>
-    
+    <a href="../../guides/data/symlink_mounted_data/" title="Symlink mounted data" class="md-nav__link">
+      Symlink mounted data
+    </a>
   </li>
 
         
@@ -540,23 +584,25 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../guides/environments/" title="Environments" class="md-nav__link">
-        Environments
-      </a>
-    
+    <a href="../../guides/environments/" title="Environments" class="md-nav__link">
+      Environments
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../guides/floyd_ignore/" title="Ignore files" class="md-nav__link">
-        Ignore files
-      </a>
-    
+    <a href="../../guides/floyd_ignore/" title="Ignore files" class="md-nav__link">
+      Ignore files
+    </a>
   </li>
 
         
@@ -567,6 +613,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
@@ -574,7 +623,7 @@
     <label class="md-nav__link" for="nav-4">
       Examples
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
         Examples
       </label>
@@ -583,12 +632,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../examples/style_transfer/" title="Style Transfer" class="md-nav__link">
-        Style Transfer
-      </a>
-    
+    <a href="../../examples/style_transfer/" title="Style Transfer" class="md-nav__link">
+      Style Transfer
+    </a>
   </li>
 
         
@@ -599,6 +649,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
@@ -606,7 +659,7 @@
     <label class="md-nav__link" for="nav-5">
       FAQs
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
         FAQs
       </label>
@@ -615,67 +668,73 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../faqs/installation/" title="Installation FAQs" class="md-nav__link">
-        Installation FAQs
-      </a>
-    
+    <a href="../../faqs/installation/" title="Installation FAQs" class="md-nav__link">
+      Installation FAQs
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../faqs/authentication/" title="Signup and Login FAQs" class="md-nav__link">
-        Signup and Login FAQs
-      </a>
-    
+    <a href="../../faqs/authentication/" title="Signup and Login FAQs" class="md-nav__link">
+      Signup and Login FAQs
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../faqs/job/" title="Job FAQs" class="md-nav__link">
-        Job FAQs
-      </a>
-    
+    <a href="../../faqs/job/" title="Job FAQs" class="md-nav__link">
+      Job FAQs
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../faqs/environments/" title="Environments FAQs" class="md-nav__link">
-        Environments FAQs
-      </a>
-    
+    <a href="../../faqs/environments/" title="Environments FAQs" class="md-nav__link">
+      Environments FAQs
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../faqs/plans/" title="Plans FAQs" class="md-nav__link">
-        Plans FAQs
-      </a>
-    
+    <a href="../../faqs/plans/" title="Plans FAQs" class="md-nav__link">
+      Plans FAQs
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../faqs/billing/" title="Billing FAQs" class="md-nav__link">
-        Billing FAQs
-      </a>
-    
+    <a href="../../faqs/billing/" title="Billing FAQs" class="md-nav__link">
+      Billing FAQs
+    </a>
   </li>
 
         
@@ -686,6 +745,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
@@ -693,7 +755,7 @@
     <label class="md-nav__link" for="nav-6">
       Commands
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-6">
         Commands
       </label>
@@ -702,166 +764,181 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/" title="floyd" class="md-nav__link">
-        floyd
-      </a>
-    
+    <a href="../../commands/" title="floyd" class="md-nav__link">
+      floyd
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/login/" title="floyd login" class="md-nav__link">
-        floyd login
-      </a>
-    
+    <a href="../../commands/login/" title="floyd login" class="md-nav__link">
+      floyd login
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/init/" title="floyd init" class="md-nav__link">
-        floyd init
-      </a>
-    
+    <a href="../../commands/init/" title="floyd init" class="md-nav__link">
+      floyd init
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/run/" title="floyd run" class="md-nav__link">
-        floyd run
-      </a>
-    
+    <a href="../../commands/run/" title="floyd run" class="md-nav__link">
+      floyd run
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/data/" title="floyd data" class="md-nav__link">
-        floyd data
-      </a>
-    
+    <a href="../../commands/data/" title="floyd data" class="md-nav__link">
+      floyd data
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/logs/" title="floyd logs" class="md-nav__link">
-        floyd logs
-      </a>
-    
+    <a href="../../commands/logs/" title="floyd logs" class="md-nav__link">
+      floyd logs
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/status/" title="floyd status" class="md-nav__link">
-        floyd status
-      </a>
-    
+    <a href="../../commands/status/" title="floyd status" class="md-nav__link">
+      floyd status
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/output/" title="floyd output" class="md-nav__link">
-        floyd output
-      </a>
-    
+    <a href="../../commands/output/" title="floyd output" class="md-nav__link">
+      floyd output
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/clone/" title="floyd clone" class="md-nav__link">
-        floyd clone
-      </a>
-    
+    <a href="../../commands/clone/" title="floyd clone" class="md-nav__link">
+      floyd clone
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/info/" title="floyd info" class="md-nav__link">
-        floyd info
-      </a>
-    
+    <a href="../../commands/info/" title="floyd info" class="md-nav__link">
+      floyd info
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/stop/" title="floyd stop" class="md-nav__link">
-        floyd stop
-      </a>
-    
+    <a href="../../commands/stop/" title="floyd stop" class="md-nav__link">
+      floyd stop
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/delete/" title="floyd delete" class="md-nav__link">
-        floyd delete
-      </a>
-    
+    <a href="../../commands/delete/" title="floyd delete" class="md-nav__link">
+      floyd delete
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/logout/" title="floyd logout" class="md-nav__link">
-        floyd logout
-      </a>
-    
+    <a href="../../commands/logout/" title="floyd logout" class="md-nav__link">
+      floyd logout
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/upgrade/" title="floyd upgrade" class="md-nav__link">
-        floyd upgrade
-      </a>
-    
+    <a href="../../commands/upgrade/" title="floyd upgrade" class="md-nav__link">
+      floyd upgrade
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../commands/version/" title="floyd version" class="md-nav__link">
-        floyd version
-      </a>
-    
+    <a href="../../commands/version/" title="floyd version" class="md-nav__link">
+      floyd version
+    </a>
   </li>
 
         
@@ -872,6 +949,9 @@
     
       
       
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
@@ -879,7 +959,7 @@
     <label class="md-nav__link" for="nav-7">
       Changelogs
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-7">
         Changelogs
       </label>
@@ -888,12 +968,13 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../../changelogs/1/" title="July 12 2017" class="md-nav__link">
-        July 12 2017
-      </a>
-    
+    <a href="../../changelogs/1/" title="July 12 2017" class="md-nav__link">
+      July 12 2017
+    </a>
   </li>
 
         
@@ -1023,6 +1104,8 @@
   
 </li>
       
+      
+      
     </ul>
   
 </nav>
@@ -1033,60 +1116,60 @@
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
-               
-                 <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/getstarted\quick_start.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
-               
               
+                
+                  <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/getstarted\quick_start.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
                 
                   <h1>Quick Start</h1>
                 
                 <p>In this quick start guide, we will walk you through running your first project on FloydHub. We will train a simple convolutional neural network (CNN) model to recognize handwritten digits using Tensorflow and the MNIST dataset. For more details on the data and the model, please refer to the <a href="https://www.tensorflow.org/get_started/mnist/pros">Tensorflow tutorial</a>.</p>
-<h2 id="what-we-will-accomplish-in-this-guide">What we will accomplish in this guide</h2>
+<h2 id="what-we-will-accomplish-in-this-guide">What we will accomplish in this guide<a class="headerlink" href="#what-we-will-accomplish-in-this-guide" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Learn about FloydHub's web dashboard and <code>floyd-cli</code> tool</li>
+<li>Learn about FloydHub's web dashboard and <code class="codehilite">floyd-cli</code> tool</li>
 <li>Initialize an existing project on your computer</li>
-<li>Run a job using <code>floyd run</code> command to train your deep learning model on FloydHub's GPU servers</li>
+<li>Run a job using <code class="codehilite">floyd run</code> command to train your deep learning model on FloydHub's GPU servers</li>
 <li>View the logs and stored output</li>
 </ul>
-<h2 id="quick-preparation-checklist">Quick preparation checklist</h2>
+<h2 id="quick-preparation-checklist">Quick preparation checklist<a class="headerlink" href="#quick-preparation-checklist" title="Permanent link">&para;</a></h2>
 <ul>
 <li>You must have a <a href="https://www.floydhub.com/login">FloydHub account</a></li>
-<li>You must have <code>floyd-cli</code> <a href="../../guides/basics/install/">installed on your computer</a></li>
+<li>You must have <code class="codehilite">floyd-cli</code> <a href="../../guides/basics/install/">installed on your computer</a></li>
 <li>You must <a href="../../guides/basics/login/">log in to FloydHub through the CLI</a></li>
 </ul>
-<h2 id="web-dashboard-and-floyd-cli">Web dashboard and floyd-cli</h2>
-<p>FloydHub has a <a href="https://www.floydhub.com/projects">web dashboard</a> and a <a href="../../guides/basics/install/">CLI</a> that you can use to interact with FloydHub from your terminal. If you are familiar with Github, think of the CLI tool (<code>floyd</code> command) as the equivalent of the <code>git</code> command. You can initialize projects, run jobs, view logs and outputs, etc. all using the CLI. </p>
+<h2 id="web-dashboard-and-floyd-cli">Web dashboard and floyd-cli<a class="headerlink" href="#web-dashboard-and-floyd-cli" title="Permanent link">&para;</a></h2>
+<p>FloydHub has a <a href="https://www.floydhub.com/projects">web dashboard</a> and a <a href="../../guides/basics/install/">CLI</a> that you can use to interact with FloydHub from your terminal. If you are familiar with Github, think of the CLI tool (<code class="codehilite">floyd</code> command) as the equivalent of the <code class="codehilite">git</code> command. You can initialize projects, run jobs, view logs and outputs, etc. all using the CLI. </p>
 <p>The web dashboard is useful for getting an overview of your work and exploring others' projects and datasets.</p>
-<h2 id="setup">Setup</h2>
-<h3 id="get-the-code">Get the code</h3>
+<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
+<h3 id="get-the-code">Get the code<a class="headerlink" href="#get-the-code" title="Permanent link">&para;</a></h3>
 <p>We will clone the <a href="https://github.com/floydhub/quick-start">quick-start repository</a> from Github and run it on FloydHub. </p>
-<pre><code class="bash">$ git clone https://github.com/floydhub/quick-start.git
-Cloning into 'quick-start'...
+<div class="codehilite"><pre><span></span>$ git clone https://github.com/floydhub/quick-start.git
+Cloning into <span class="s1">&#39;quick-start&#39;</span>...
 ...
-$ cd quick-start
-</code></pre>
+$ <span class="nb">cd</span> quick-start
+</pre></div>
 
-<pre><code class="bash">$ ls
+<div class="codehilite"><pre><span></span>$ ls
 LICENSE    mnist_cnn.py    mnist_cnn.ipynb    README.md
-</code></pre>
+</pre></div>
 
-<p>This repository contains two main files: <code>mnist_cnn.py</code> (a Python script) and <code>mnist_cnn.ipynb</code> (a Jupyter Notebook). In this guide, we will use the Python script. We will explore running Jupyter Notebooks in our <a href="../quick_start_jupyter/">next tutorial</a>.</p>
-<h3 id="initialize-project">Initialize project</h3>
-<p>If you are a new user, you should see a default project named <code>quick-start</code> in your <a href="https://www.floydhub.com/projects">Projects dashboard</a>.</p>
+<p>This repository contains two main files: <code class="codehilite">mnist_cnn.py</code> (a Python script) and <code class="codehilite">mnist_cnn.ipynb</code> (a Jupyter Notebook). In this guide, we will use the Python script. We will explore running Jupyter Notebooks in our <a href="../quick_start_jupyter/">next tutorial</a>.</p>
+<h3 id="initialize-project">Initialize project<a class="headerlink" href="#initialize-project" title="Permanent link">&para;</a></h3>
+<p>If you are a new user, you should see a default project named <code class="codehilite">quick-start</code> in your <a href="https://www.floydhub.com/projects">Projects dashboard</a>.</p>
 <p><img alt="Quick start project" src="../../img/quick_start_project.jpg" /></p>
-<p>If you don't see it, you can create a new project named <code>quick-start</code> and still follow through with the rest of this guide. See <a href="../../guides/basics/create_new/#create-a-new-project">instructions</a> to create a new project.</p>
+<p>If you don't see it, you can create a new project named <code class="codehilite">quick-start</code> and still follow through with the rest of this guide. See <a href="../../guides/basics/create_new/#create-a-new-project">instructions</a> to create a new project.</p>
 <p>A Project is a space for tackling a specific problem. It is a collection of jobs that you run, data, logs and results. If you have used GitHub, projects in FloydHub are a lot like code repositories.</p>
 <p>To start using this project, initialize it in your current directory in your terminal. </p>
-<pre><code class="bash">$ floyd init quick-start
-Project &quot;quick-start&quot; initialized in the current directory
-</code></pre>
+<div class="codehilite"><pre><span></span>$ floyd init quick-start
+Project <span class="s2">&quot;quick-start&quot;</span> initialized in the current directory
+</pre></div>
 
-<p>This tells Floyd that all the jobs you run from this directory belong to the project named <code>quick-start</code>.</p>
-<h2 id="running-your-first-job-on-floydhub">Running your first job on FloydHub</h2>
+<p>This tells Floyd that all the jobs you run from this directory belong to the project named <code class="codehilite">quick-start</code>.</p>
+<h2 id="running-your-first-job-on-floydhub">Running your first job on FloydHub<a class="headerlink" href="#running-your-first-job-on-floydhub" title="Permanent link">&para;</a></h2>
 <p>A Job is created when you execute a command inside a project on FloydHub.</p>
-<p>Running a job on FloydHub is simple. It is very similar to running code on your local machine. Instead, when you use the <code>floyd run</code> command, the CLI syncs your code to the FloydHub's servers and runs it in the cloud. </p>
-<p>For this tutorial, we will run the <code>mnist_cnn.py</code> Python script on FloydHub's GPU servers.</p>
-<pre><code class="bash">$ floyd run --gpu --env tensorflow &quot;python mnist_cnn.py&quot;
+<p>Running a job on FloydHub is simple. It is very similar to running code on your local machine. Instead, when you use the <code class="codehilite">floyd run</code> command, the CLI syncs your code to the FloydHub's servers and runs it in the cloud. </p>
+<p>For this tutorial, we will run the <code class="codehilite">mnist_cnn.py</code> Python script on FloydHub's GPU servers.</p>
+<div class="codehilite"><pre><span></span>$ floyd run --gpu --env tensorflow <span class="s2">&quot;python mnist_cnn.py&quot;</span>
 Syncing code ...
 RUN ID                  NAME               
 ----------------------  -------------------
@@ -1094,63 +1177,69 @@ AKpnXqj9BEU6d8KhmygTyb  alice/quick-start/1
 
 To view the logs enter:
     floyd logs alice/quick-start/1
-</code></pre>
+</pre></div>
 
 <p>Congratulations! Your first job is now running on FloydHub's GPU. Behind the scenes, Floyd does the following:</p>
 <ul>
 <li>Sync your local code to FloydHub's server</li>
-<li>Provision a GPU instance on the cloud (because <code>--gpu</code>)</li>
-<li>Set up a deep learning environment with GPU drivers and Tensorflow installed (because <code>--env tensorflow</code>)</li>
-<li>Execute the command <code>python mnist_cnn.py</code> inside this environment</li>
+<li>Provision a GPU instance on the cloud (because <code class="codehilite">--gpu</code>)</li>
+<li>Set up a deep learning environment with GPU drivers and Tensorflow installed (because <code class="codehilite">--env tensorflow</code>)</li>
+<li>Execute the command <code class="codehilite">python mnist_cnn.py</code> inside this environment</li>
 <li>Store the output logs and generated output data</li>
 <li>Terminate the GPU instance once the command finishes execution</li>
 </ul>
-<h2 id="next-steps">Next steps</h2>
-<h3 id="check-the-status-of-your-job">Check the status of your job</h3>
-<p>You can view the status of your job from your terminal using the <a href="../../commands/status/">floyd status</a> command. You can specify a single job name (e.g. <code>floyd status alice/quick-start/1</code>) to get its status, or the CLI will show the status of all jobs in the current project.</p>
-<pre><code class="bash">$ floyd status
-RUN ID                  CREATED        STATUS    DURATION(s)  NAME                 INSTANCE    DESCRIPTION
+<h2 id="next-steps">Next steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<h3 id="check-the-status-of-your-job">Check the status of your job<a class="headerlink" href="#check-the-status-of-your-job" title="Permanent link">&para;</a></h3>
+<p>You can view the status of your job from your terminal using the <a href="../../commands/status/">floyd status</a> command. You can specify a single job name (e.g. <code class="codehilite">floyd status alice/quick-start/1</code>) to get its status, or the CLI will show the status of all jobs in the current project.</p>
+<div class="codehilite"><pre><span></span>$ floyd status
+RUN ID                  CREATED        STATUS    DURATION<span class="o">(</span>s<span class="o">)</span>  NAME                 INSTANCE    DESCRIPTION
 ----------------------  ---------      --------  -----------  -------------------  ---------   -----------
-AKpnXqj9BEU6d8KhmygTyb  just now       running            15  alice/quick-start:1  gpu         
-</code></pre>
+AKpnXqj9BEU6d8KhmygTyb  just now       running            <span class="m">15</span>  alice/quick-start:1  gpu         
+</pre></div>
 
-<p>You can also view the status of your job in your browser by visiting the <code>Job URL</code> printed by the <code>floyd run</code> command. For example, <code>www.floydhub.com/alice/quick-start/1</code></p>
+<p>You can also view the status of your job in your browser by visiting the <code class="codehilite">Job URL</code> printed by the <code class="codehilite">floyd run</code> command. For example, <code class="codehilite">www.floydhub.com/alice/quick-start/1</code></p>
 <p><img alt="Job run" src="../../img/job_run.jpg" /></p>
-<h3 id="view-output-logs">View output logs</h3>
+<h3 id="view-output-logs">View output logs<a class="headerlink" href="#view-output-logs" title="Permanent link">&para;</a></h3>
 <p>You can view the logs generated by the job from your terminal using the <a href="../../commands/logs/">floyd logs</a> command. You need to specify the job name.</p>
-<pre><code class="bash">$ floyd logs -t alice/quick-start/1
+<div class="codehilite"><pre><span></span>$ floyd logs -t alice/quick-start/1
 ...
-2017-07-12 16:00:07,446 INFO - Starting attempt 1 at 2017-07-12 16:00:07.436349
-2017-07-12 16:00:09,088 INFO - Starting container...
-2017-07-12 16:00:09,297 INFO - 
+<span class="m">2017</span>-07-12 <span class="m">16</span>:00:07,446 INFO - Starting attempt <span class="m">1</span> at <span class="m">2017</span>-07-12 <span class="m">16</span>:00:07.436349
+<span class="m">2017</span>-07-12 <span class="m">16</span>:00:09,088 INFO - Starting container...
+<span class="m">2017</span>-07-12 <span class="m">16</span>:00:09,297 INFO - 
 ...
-##############################################################################
-2017-07-12 16:00:09,297 INFO - Run Output:
-2017-07-12 16:01:46,154 INFO - Successfully downloaded train-images-idx3-ubyte.gz 9912422 bytes.
-2017-07-12 16:01:46,158 INFO - Iter 1280, Minibatch Loss= 39855.289062, Training Accuracy= 0.17969
-2017-07-12 16:01:46,159 INFO - Iter 2560, Minibatch Loss= 14964.132812, Training Accuracy= 0.42969
+<span class="c1">##############################################################################</span>
+<span class="m">2017</span>-07-12 <span class="m">16</span>:00:09,297 INFO - Run Output:
+<span class="m">2017</span>-07-12 <span class="m">16</span>:01:46,154 INFO - Successfully downloaded train-images-idx3-ubyte.gz <span class="m">9912422</span> bytes.
+<span class="m">2017</span>-07-12 <span class="m">16</span>:01:46,158 INFO - Iter <span class="m">1280</span>, Minibatch <span class="nv">Loss</span><span class="o">=</span> <span class="m">39855</span>.289062, Training <span class="nv">Accuracy</span><span class="o">=</span> <span class="m">0</span>.17969
+<span class="m">2017</span>-07-12 <span class="m">16</span>:01:46,159 INFO - Iter <span class="m">2560</span>, Minibatch <span class="nv">Loss</span><span class="o">=</span> <span class="m">14964</span>.132812, Training <span class="nv">Accuracy</span><span class="o">=</span> <span class="m">0</span>.42969
 ...
-##############################################################################
+<span class="c1">##############################################################################</span>
 ...
-</code></pre>
+</pre></div>
 
-<p>The output of your code is printed in the <code>Run Output</code> section of the logs, in between the printed <code>#########</code> lines. Anything you log or print in your code will appear here. Using the <code>-t</code> (tail) flag streams the logs as they are generated.</p>
-<p>You can also view the logs in your browser using your <code>Job URL</code>. <em>Note:</em> Unlike the <code>-t</code> flag in the CLI, the logs displayed in the browser are currently <em>not</em> refreshed dynamically. Please refresh your browser periodically or press <code>F5</code>.</p>
-<h3 id="viewing-the-output">Viewing the output</h3>
+<p>The output of your code is printed in the <code class="codehilite">Run Output</code> section of the logs, in between the printed <code class="codehilite">#########</code> lines. Anything you log or print in your code will appear here. Using the <code class="codehilite">-t</code> (tail) flag streams the logs as they are generated.</p>
+<p>You can also view the logs in your browser using your <code class="codehilite">Job URL</code>. <em>Note:</em> Unlike the <code class="codehilite">-t</code> flag in the CLI, the logs displayed in the browser are currently <em>not</em> refreshed dynamically. Please refresh your browser periodically or press <code class="codehilite">F5</code>.</p>
+<h3 id="viewing-the-output">Viewing the output<a class="headerlink" href="#viewing-the-output" title="Permanent link">&para;</a></h3>
 <p>The model that we trained does not save any models. We will explore how to save models in the following tutorial.</p>
-<h3 id="iterating-on-your-project">Iterating on your project</h3>
+<h3 id="iterating-on-your-project">Iterating on your project<a class="headerlink" href="#iterating-on-your-project" title="Permanent link">&para;</a></h3>
 <p>You can edit your code locally and run new jobs using the <a href="../../commands/run/">floyd run</a> command. The CLI will upload the new version of your code and submit another job. FloydHub manages and keeps track of all the jobs you run in your project. </p>
-<p>To view all the jobs in your current project, you can either use the <code>floyd status</code> command from your CLI, or you can visit the <code>Project URL</code> in your browser.</p>
-<p>Example: <code>www.floydhub.com/alice/quick-start</code></p>
+<p>To view all the jobs in your current project, you can either use the <code class="codehilite">floyd status</code> command from your CLI, or you can visit the <code class="codehilite">Project URL</code> in your browser.</p>
+<p>Example: <code class="codehilite">www.floydhub.com/alice/quick-start</code></p>
 <p><img alt="Project view" src="../../img/project_view.jpg" /></p>
 <hr />
-<h2 id="help-make-this-document-better">Help make this document better</h2>
+<h2 id="help-make-this-document-better">Help make this document better<a class="headerlink" href="#help-make-this-document-better" title="Permanent link">&para;</a></h2>
 <p>This guide, as well as the rest of our docs, are open-source and available on 
 <a href="https://github.com/floydhub/floyd-docs">GitHub</a>. We welcome your contributions.</p>
 <ul>
 <li>Suggest an edit to this page (by clicking the edit icon at the top next to the title).</li>
 <li><a href="https://github.com/floydhub/floyd-docs/issues/new?body=This%20issue%20is%20about%20%3C">Open an issue about this page</a> to report a problem.</li>
 </ul>
+                
+                  
+                
+              
+              
+                
               
             </article>
           </div>
@@ -1228,8 +1317,10 @@ AKpnXqj9BEU6d8KhmygTyb  just now       running            15  alice/quick-start:
       
     </div>
     
-      <script src="../../assets/javascripts/application-2afe21e0b2.js"></script>
-      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      <script src="../../assets/javascripts/application-1d6ee6ee6c.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
       
     
     
