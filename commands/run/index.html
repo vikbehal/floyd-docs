@@ -1087,7 +1087,7 @@
 <tr>
 <td><code>--data &lt;ID:mount&gt;</code></td>
 <td></td>
-<td><code>ID</code> of the data source to link to. <code>mount</code> specifies the path to mount it at. You can use this parameter multiple times. See <a href="../../home/using_datasets">data</a> section for more details.</td>
+<td><code>ID</code> of the data source to link to. <code>mount</code> specifies the path to mount it at. You can use this parameter multiple times. See <a href="../../guides/data/mounting_data">data</a> section for more details.</td>
 </tr>
 <tr>
 <td><code>--mode [jupyter|serve]</code></td>
@@ -1102,7 +1102,7 @@
 <tr>
 <td><code>--env [tensorflow:py3|tensorflow:py2|...]</code></td>
 <td>keras:py3</td>
-<td>Specify the environment you want to use for your project. See <a href="../../home/environments">environments</a> for the full list.</td>
+<td>Specify the environment you want to use for your project. See <a href="../../guides/environments">environments</a> for the full list.</td>
 </tr>
 <tr>
 <td><code>--message &lt;message_str&gt;</code></td>
@@ -1136,7 +1136,7 @@ $ floyd logs floydhub/tensorflow-project/7
 </code></pre>
 
 <h3 id="floyd_requirementstxt">floyd_requirements.txt</h3>
-<p>Floyd runs standard Docker images for various deep learning frameworks.(See <a href="../../home/environments">environments</a> for details). If your 
+<p>Floyd runs standard Docker images for various deep learning frameworks.(See <a href="../../guides/environments">environments</a> for details). If your 
 code requires additional Python dependencies you can specify them in a <code>floyd_requirements.txt</code> file and place it at the root 
 directory of your project. These dependencies will be installed before running your code.</p>
 <h4 id="example_1">Example</h4>
