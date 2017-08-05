@@ -1076,11 +1076,11 @@ Jupyter notebooks.</p>
 <p>This code snipped will train an MNIST model and also store the training summary 
 to a log directory.</p>
 <div class="codehilite"><pre><span></span>git clone https://github.com/floydhub/tensorflow-examples
-cd tensorflow-examples/tensorboard
+<span class="nb">cd</span> tensorflow-examples/tensorboard
 
-# Initialize the current directory to an existing or new project
+<span class="c1"># Initialize the current directory to an existing or new project</span>
 floyd init mnist-tensorboard
-floyd run --tensorboard &quot;python mnist_tensorboard.py --log_dir /output/mnist --max_steps 5000&quot;
+floyd run --tensorboard <span class="s2">&quot;python mnist_tensorboard.py --log_dir /output/mnist --max_steps 5000&quot;</span>
 </pre></div>
 
 <div class="admonition important">
@@ -1100,9 +1100,9 @@ training and test data along with some other values. You may need to click on th
 bars (like <code class="codehilite">accuracy_1</code>) for the graph to open.</p>
 <p>The reason why these values are appearing on the dashboard is because the 
 <code class="codehilite">mnist_tensorboard.py</code> code has the following lines:</p>
-<div class="codehilite"><pre><span></span>tf.summary.scalar(&#39;cross_entropy&#39;, cross_entropy)
-...
-tf.summary.scalar(&#39;accuracy&#39;, accuracy)
+<div class="codehilite"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="s1">&#39;cross_entropy&#39;</span><span class="p">,</span> <span class="n">cross_entropy</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="s1">&#39;accuracy&#39;</span><span class="p">,</span> <span class="n">accuracy</span><span class="p">)</span>
 </pre></div>
 
 <p>You can read more about how to use Tensorboard to log additional information in 
@@ -1135,7 +1135,7 @@ Alternatively you can also view the metrics offline after your
 training is done.</p>
 <p>For that, you need to first download the output of your project to your local 
 machine.</p>
-<div class="codehilite"><pre><span></span>mkdir tensorboard_output &amp;&amp; cd tensorboard_output
+<div class="codehilite"><pre><span></span>mkdir tensorboard_output <span class="o">&amp;&amp;</span> <span class="nb">cd</span> tensorboard_output
 floyd data clone floydhub/mnist-tensorboard/6/output
 </pre></div>
 
@@ -1143,7 +1143,7 @@ floyd data clone floydhub/mnist-tensorboard/6/output
 on your OS. See the Tensorflow install instructions <a href="https://www.tensorflow.org/install/">here</a>.</p>
 <p>After that you can just run the <code class="codehilite">tensorboard</code> command and point it to the output 
 directory downloaded from Floydhub.</p>
-<div class="codehilite"><pre><span></span>tensorboard --logdir=tensorboard_output
+<div class="codehilite"><pre><span></span>tensorboard --logdir<span class="o">=</span>tensorboard_output
 </pre></div>
 
 <p>Then you can view the Tensorboard dashboard on your machine running at 
