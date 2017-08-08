@@ -8,7 +8,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://www.floydhub.com/commands/stop/">
+        <link rel="canonical" href="https://www.floydhub.com/examples/deep_corrector/">
       
       
         <meta name="author" content="FloydHub Team">
@@ -20,7 +20,7 @@
     
     
       
-        <title>floyd stop - FloydHub</title>
+        <title>Deep Text Corrector - FloydHub</title>
       
     
     
@@ -86,11 +86,11 @@
             
               
                 <span class="md-header-nav__parent">
-                  Commands
+                  Examples
                 </span>
               
             
-            floyd stop
+            Deep Text Corrector
           
         </span>
       </div>
@@ -497,10 +497,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Examples
@@ -518,7 +520,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../examples/style_transfer/" title="Style Transfer" class="md-nav__link">
+    <a href="../style_transfer/" title="Style Transfer" class="md-nav__link">
       Style Transfer
     </a>
   </li>
@@ -528,11 +530,112 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../examples/deep_corrector/" title="Deep Text Corrector" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Deep Text Corrector
+      </label>
+    
+    <a href="./" title="Deep Text Corrector" class="md-nav__link md-nav__link--active">
       Deep Text Corrector
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-setup" title="Project setup" class="md-nav__link">
+    Project setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training" title="Training" class="md-nav__link">
+    Training
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dataset" title="Dataset" class="md-nav__link">
+    Dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training_1" title="Training" class="md-nav__link">
+    Training
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluating" title="Evaluating" class="md-nav__link">
+    Evaluating
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improving-your-model" title="Improving your model" class="md-nav__link">
+    Improving your model
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluate-pre-trained-models" title="Evaluate pre-trained models" class="md-nav__link">
+    Evaluate pre-trained models
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serve-model-through-rest-api" title="Serve model through REST API" class="md-nav__link">
+    Serve model through REST API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-next" title="What Next?" class="md-nav__link">
+    What Next?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#help-make-this-document-better" title="Help make this document better" class="md-nav__link">
+    Help make this document better
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -641,12 +744,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
       Commands
@@ -664,7 +765,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../" title="floyd" class="md-nav__link">
+    <a href="../../commands/" title="floyd" class="md-nav__link">
       floyd
     </a>
   </li>
@@ -676,7 +777,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../login/" title="floyd login" class="md-nav__link">
+    <a href="../../commands/login/" title="floyd login" class="md-nav__link">
       floyd login
     </a>
   </li>
@@ -688,7 +789,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../init/" title="floyd init" class="md-nav__link">
+    <a href="../../commands/init/" title="floyd init" class="md-nav__link">
       floyd init
     </a>
   </li>
@@ -700,7 +801,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../run/" title="floyd run" class="md-nav__link">
+    <a href="../../commands/run/" title="floyd run" class="md-nav__link">
       floyd run
     </a>
   </li>
@@ -712,7 +813,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../data/" title="floyd data" class="md-nav__link">
+    <a href="../../commands/data/" title="floyd data" class="md-nav__link">
       floyd data
     </a>
   </li>
@@ -724,7 +825,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../logs/" title="floyd logs" class="md-nav__link">
+    <a href="../../commands/logs/" title="floyd logs" class="md-nav__link">
       floyd logs
     </a>
   </li>
@@ -736,7 +837,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../status/" title="floyd status" class="md-nav__link">
+    <a href="../../commands/status/" title="floyd status" class="md-nav__link">
       floyd status
     </a>
   </li>
@@ -748,7 +849,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../output/" title="floyd output" class="md-nav__link">
+    <a href="../../commands/output/" title="floyd output" class="md-nav__link">
       floyd output
     </a>
   </li>
@@ -760,7 +861,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../clone/" title="floyd clone" class="md-nav__link">
+    <a href="../../commands/clone/" title="floyd clone" class="md-nav__link">
       floyd clone
     </a>
   </li>
@@ -772,7 +873,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../info/" title="floyd info" class="md-nav__link">
+    <a href="../../commands/info/" title="floyd info" class="md-nav__link">
       floyd info
     </a>
   </li>
@@ -782,71 +883,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        floyd stop
-      </label>
-    
-    <a href="./" title="floyd stop" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../commands/stop/" title="floyd stop" class="md-nav__link">
       floyd stop
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#usage" title="Usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#options" title="Options" class="md-nav__link">
-    Options
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#description" title="Description" class="md-nav__link">
-    Description
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#help-make-this-document-better" title="Help make this document better" class="md-nav__link">
-    Help make this document better
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -856,7 +897,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../delete/" title="floyd delete" class="md-nav__link">
+    <a href="../../commands/delete/" title="floyd delete" class="md-nav__link">
       floyd delete
     </a>
   </li>
@@ -868,7 +909,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../logout/" title="floyd logout" class="md-nav__link">
+    <a href="../../commands/logout/" title="floyd logout" class="md-nav__link">
       floyd logout
     </a>
   </li>
@@ -880,7 +921,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../upgrade/" title="floyd upgrade" class="md-nav__link">
+    <a href="../../commands/upgrade/" title="floyd upgrade" class="md-nav__link">
       floyd upgrade
     </a>
   </li>
@@ -892,7 +933,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../version/" title="floyd version" class="md-nav__link">
+    <a href="../../commands/version/" title="floyd version" class="md-nav__link">
       floyd version
     </a>
   </li>
@@ -958,29 +999,70 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage" title="Usage" class="md-nav__link">
-    Usage
+  <a href="#project-setup" title="Project setup" class="md-nav__link">
+    Project setup
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#options" title="Options" class="md-nav__link">
-    Options
+  <a href="#training" title="Training" class="md-nav__link">
+    Training
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dataset" title="Dataset" class="md-nav__link">
+    Dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#training_1" title="Training" class="md-nav__link">
+    Training
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluating" title="Evaluating" class="md-nav__link">
+    Evaluating
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#description" title="Description" class="md-nav__link">
-    Description
+  <a href="#improving-your-model" title="Improving your model" class="md-nav__link">
+    Improving your model
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
+  <a href="#evaluate-pre-trained-models" title="Evaluate pre-trained models" class="md-nav__link">
+    Evaluate pre-trained models
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serve-model-through-rest-api" title="Serve model through REST API" class="md-nav__link">
+    Serve model through REST API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-next" title="What Next?" class="md-nav__link">
+    What Next?
   </a>
   
 </li>
@@ -1006,42 +1088,109 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/commands/stop.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                  <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/examples/deep_corrector.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
-                  <h1>floyd stop</h1>
+                  <h1>Deep Text Corrector</h1>
                 
-                <p>Terminate a queued or running job.</p>
-<h3 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>floyd stop NAME
+                <p>Deep Text Corrector is an Tensorflow project made by <a href="https://github.com/atpaino/deep-text-corrector">Alex Paino</a> for correcting
+grammatical errors in short sentences. For example, the message "I'm going to
+store" would be unaffected by typical autocorrection systems, when the user
+most likely intendend to write "I'm going to <em>the</em> store".</p>
+<p>In this guide we will train a Tensorflow model for correcting sentences and use
+it to evaluate input sentences.  Finally we will deploy the trained model as a
+REST endpoint that can be used to evaluate input sequences in real time.</p>
+<h2 id="project-setup">Project setup<a class="headerlink" href="#project-setup" title="Permanent link">&para;</a></h2>
+<p>The code for this project is available on Floyd's <a href="https://github.com/floydhub/deep-text-corrector">Github page</a>. Clone the project and
+<a href="../../commands/init">initialize</a> a floyd project.</p>
+<div class="codehilite"><pre><span></span>$ git clone https://github.com/floydhub/deep-text-corrector
+$ <span class="nb">cd</span> deep-text-corrector
+$ floyd init deep-text-corrector
 </pre></div>
 
-<h3 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name, shorthand</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>NAME or ID</td>
-<td></td>
-<td>Name or ID of your job.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h3>
-<p>Sometimes you want to terminate a job before it can finish. The stop command sends a request 
-to the server to stop the job. You can view the <a href="../status">status</a> of the job to confirm. When you stop 
-a job, you will be charged only for the duration your job was running.</p>
-<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>$ floyd stop floydhub/projects/tensorflow-example/4
-Experiment shutdown request submitted. Check status to confirm shutdown
+<h2 id="training">Training<a class="headerlink" href="#training" title="Permanent link">&para;</a></h2>
+<h3 id="dataset">Dataset<a class="headerlink" href="#dataset" title="Permanent link">&para;</a></h3>
+<p>For this project we will use the Cornel Movie-Dialogs Corpus for training and testing.
+The dataset should be preprocessed and split into 3 sets: 80% for training, and 10%
+each for validation and testing. This preprocessed dataset is available publicly on
+<a href="https://www.floydhub.com/floydhub/datasets/deep-text-corrector/1">FloydHub</a>.</p>
+<h3 id="training_1">Training<a class="headerlink" href="#training_1" title="Permanent link">&para;</a></h3>
+<p>You can train the deep corrector model by running <code class="codehilite">correct_text.py</code> script with required
+parameters. Below is the <a href="../../commands/run">command</a> to start a training job on Floyd:</p>
+<div class="codehilite"><pre><span></span>$ floyd run --gpu --env tensorflow-0.12:py2 --data floydhub/datasets/deep-text-corrector/1 <span class="s2">&quot;python correct_text.py --num_steps 1000 --train_path /input/data/movie_dialog_train.txt --val_path /input/data/movie_dialog_val.txt --config DefaultMovieDialogConfig --data_reader_type MovieDialogReader --output_path /output&quot;</span>
 </pre></div>
 
+<p>Notes:</p>
+<ul>
+<li>The input dataset is passed using the <code class="codehilite">--data</code> parameter. This mounts the pre-processed
+Cornell Movie Dialog dataset at <code class="codehilite">/input</code> path. You will notice that other parameters use files
+mounted in this path.</li>
+<li>The data name <a href="https://www.floydhub.com/floydhub/datasets/deep-text-corrector/1">floydhub/datasets/deep-text-corrector/1</a>
+points to the pre-processed dataset on FloydHub.</li>
+<li>The job is running on a gpu instance (Because of the <code class="codehilite">--gpu</code> flag).</li>
+<li>This project uses Tensorflow-0.12 installed on Python 2. (See the <code class="codehilite">--env</code> flag)</li>
+</ul>
+<p>This job takes about 10 minutes to run and generate a model. You can follow along the progress
+by using the <a href="../../commands/logs/">logs</a> command.</p>
+<div class="codehilite"><pre><span></span>$ floyd logs &lt;JOB_NAME&gt; -t
+</pre></div>
+
+<p>Floyd saves any content stored in the <code class="codehilite">/output</code> directory after the job is
+finished. This output can be used as a datasource in the next project.  To get
+the name of the output generated by your job use the
+<a href="../../commands/info/">info</a> command.</p>
+<div class="codehilite"><pre><span></span>$ floyd info &lt;JOB_NAME&gt;
+</pre></div>
+
+<h2 id="evaluating">Evaluating<a class="headerlink" href="#evaluating" title="Permanent link">&para;</a></h2>
+<p>To evaluate your model you can run the <code class="codehilite">correct_text.py</code> script with the <code class="codehilite">decode</code> flag.
+You need a file containing short messages for evaluation. The <code class="codehilite">test.txt</code> file already has some
+inputs. You can update or add more strings to this file - one per line. You also need to
+use the output from the training step above as the datasource in this step.</p>
+<div class="codehilite"><pre><span></span>floyd run --env tensorflow-0.12:py2 --data &lt;REPLACE_WITH_JOB_OUTPUT_NAME&gt; <span class="s2">&quot;python correct_text.py --train_path /input/data/movie_dialog_train.txt --test_path test.txt --config DefaultMovieDialogConfig --data_reader_type MovieDialogReader --input_path /input --decode&quot;</span>
+</pre></div>
+
+<p>You can track the status of the run with the status or logs command. The logs should print the
+concerted messages from the test.txt file.</p>
+<div class="codehilite"><pre><span></span>$ floyd status &lt;JOB_NAME&gt;
+$ floyd logs &lt;JOB_NAME&gt; -t
+</pre></div>
+
+<h2 id="improving-your-model">Improving your model<a class="headerlink" href="#improving-your-model" title="Permanent link">&para;</a></h2>
+<p>You may notice that the output does not look great. In fact, the algorithm would've added more
+mistakes into the sentences than correct it. That is because we ran the training for a small number
+of iterations. To train a fully working model try the training step again, this time by setting
+the flag <code class="codehilite">num_steps</code> to a large value. In general, about 20000 steps are necessary to give a
+working corrector model. (Note: This takes a few hours to run on the GPU instance)</p>
+<h2 id="evaluate-pre-trained-models">Evaluate pre-trained models<a class="headerlink" href="#evaluate-pre-trained-models" title="Permanent link">&para;</a></h2>
+<p>If you want to try out a pre-trained model, FloydHub has a public job output for
+this. You can mount it with job output name:
+<a href="https://www.floydhub.com/floydhub/projects/deep-text-corrector/23/output">floydhub/deep-text-corrector/23/output</a>
+.</p>
+<div class="codehilite"><pre><span></span>floyd run --env tensorflow-0.12:py2 --data floydhub/deep-text-corrector/23/output <span class="s2">&quot;python correct_text.py --train_path /input/data/movie_dialog_train.txt --test_path test.txt --config DefaultMovieDialogConfig --data_reader_type MovieDialogReader --input_path /input --decode&quot;</span>
+</pre></div>
+
+<p>This model should perform better on the given inputs compared to the previous one.</p>
+<h2 id="serve-model-through-rest-api">Serve model through REST API<a class="headerlink" href="#serve-model-through-rest-api" title="Permanent link">&para;</a></h2>
+<p>FloydHub supports seving mode for demo and testing purpose. If you run a job
+with <code class="codehilite">--mode serve</code> flag, FloydHub will run the <code class="codehilite">app.py</code> file in your prorject
+and attach it to a dynamic service endpoint:</p>
+<div class="codehilite"><pre><span></span>floyd run --mode serve --env tensorflow-0.12:py2 --data floydhub/deep-text-corrector/23/output:input
+</pre></div>
+
+<p>The above command will print out a service endpoint for this job in your terminal console.</p>
+<p>The service endpoint will take couple minutes to become ready. Once it's up, you can interact with the model by sending text you want to correct:</p>
+<div class="codehilite"><pre><span></span>curl -X POST -d <span class="s1">&#39;I see it tomorrow&#39;</span> &lt;REPLACE_WITH_YOUR_SERVICE_ENDPOINT&gt;
+</pre></div>
+
+<p>Any job running in serving mode will stay up until it reaches maximum runtime. So
+once you are done testing, remember to shutdown the job.</p>
+<p><em>Note that this feature is in preview mode and is not production ready yet</em></p>
+<h2 id="what-next">What Next?<a class="headerlink" href="#what-next" title="Permanent link">&para;</a></h2>
+<p>The model was trained using movie dialogues which are not the greatest sources of gramatically correct
+sentences. An improvement to this approach would be to use other datasources like <a href="https://www.gutenberg.org/">Project Gutenberg</a>.
+This project was also discussed on <a href="https://news.ycombinator.com/item?id=13350972">HackerNews</a> and you can
+find lots of interesting alternatives there.</p>
 <hr />
 <h2 id="help-make-this-document-better">Help make this document better<a class="headerlink" href="#help-make-this-document-better" title="Permanent link">&para;</a></h2>
 <p>This guide, as well as the rest of our docs, are open-source and available on 
@@ -1068,7 +1217,7 @@ Experiment shutdown request submitted. Check status to confirm shutdown
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../info/" title="floyd info" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../style_transfer/" title="Style Transfer" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1077,19 +1226,19 @@ Experiment shutdown request submitted. Check status to confirm shutdown
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                floyd info
+                Style Transfer
               </span>
             </div>
           </a>
         
         
-          <a href="../delete/" title="floyd delete" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../faqs/installation/" title="Installation FAQs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                floyd delete
+                Installation FAQs
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
