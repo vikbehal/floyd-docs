@@ -737,7 +737,7 @@
         },
         {
             "location": "/faqs/billing/",
-            "text": "What payment types do you accept?\n\u00b6\n\n\nCurrently, we accept credit or debit cards, including Visa, MasterCard and American Express.\n\n\nDo you keep my credit card information?\n\u00b6\n\n\nNo, we do not retain any credit card information. We use\n\nStripe\n to process payments.\n\n\nWhen will my credit card be charged?\n\u00b6\n\n\nYou can see your billing due date in the \nUsage\n tab on your Floydhub dashboard.\n\n\n\n\nHelp make this document better\n\u00b6\n\n\nThis guide, as well as the rest of our docs, are open-source and available on \n\nGitHub\n. We welcome your contributions.\n\n\n\n\nSuggest an edit to this page (by clicking the edit icon at the top next to the title).\n\n\nOpen an issue about this page\n to report a problem.",
+            "text": "What payment types do you accept?\n\u00b6\n\n\nCurrently, we accept credit or debit cards, including Visa, MasterCard and American Express.\n\n\nDo you keep my credit card information?\n\u00b6\n\n\nNo, we do not retain any credit card information. We use\n\nStripe\n to process payments.\n\n\nWhen will my credit card be charged?\n\u00b6\n\n\nYou can see your billing due date in the \nUsage\n tab on your Floydhub settings.\n\n\nWhat will I be charged for?\n\u00b6\n\n\nYou are charged for your compute (CPU/GPU) usage and storage.\n\n\n\n\n\n\nCompute\n: You will be charged exactly for the duration that your job runs, rounded off to the nearest second. You will be charged our \ncurrent rates\n for CPU or GPU, depending on the compute instance your job runs in.\n\n\nNote that you are only charged for compute when your job is in the \nRunning\n state. You will \nnot\n be charged when your job is in any other state, including \nQueued\n and \nShutdown\n.\n\n\n\n\n\n\nStorage\n: You will also be charged for the storage you consume, rounded off to the nearest kB. You will be charged for the duration of your storage per our \ncurrent rates\n.\n\n\nStorage is consumed by the datasets that you upload, your code and the data that your jobs output.\n\n\n\n\n\n\n\n\nHelp make this document better\n\u00b6\n\n\nThis guide, as well as the rest of our docs, are open-source and available on \n\nGitHub\n. We welcome your contributions.\n\n\n\n\nSuggest an edit to this page (by clicking the edit icon at the top next to the title).\n\n\nOpen an issue about this page\n to report a problem.",
             "title": "Billing FAQs"
         },
         {
@@ -752,8 +752,13 @@
         },
         {
             "location": "/faqs/billing/#when-will-my-credit-card-be-charged",
-            "text": "You can see your billing due date in the  Usage  tab on your Floydhub dashboard.",
+            "text": "You can see your billing due date in the  Usage  tab on your Floydhub settings.",
             "title": "When will my credit card be charged?"
+        },
+        {
+            "location": "/faqs/billing/#what-will-i-be-charged-for",
+            "text": "You are charged for your compute (CPU/GPU) usage and storage.    Compute : You will be charged exactly for the duration that your job runs, rounded off to the nearest second. You will be charged our  current rates  for CPU or GPU, depending on the compute instance your job runs in.  Note that you are only charged for compute when your job is in the  Running  state. You will  not  be charged when your job is in any other state, including  Queued  and  Shutdown .    Storage : You will also be charged for the storage you consume, rounded off to the nearest kB. You will be charged for the duration of your storage per our  current rates .  Storage is consumed by the datasets that you upload, your code and the data that your jobs output.",
+            "title": "What will I be charged for?"
         },
         {
             "location": "/faqs/billing/#help-make-this-document-better",

@@ -660,6 +660,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#what-will-i-be-charged-for" title="What will I be charged for?" class="md-nav__link">
+    What will I be charged for?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#help-make-this-document-better" title="Help make this document better" class="md-nav__link">
     Help make this document better
   </a>
@@ -960,6 +967,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#what-will-i-be-charged-for" title="What will I be charged for?" class="md-nav__link">
+    What will I be charged for?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#help-make-this-document-better" title="Help make this document better" class="md-nav__link">
     Help make this document better
   </a>
@@ -991,7 +1005,19 @@
 <p>No, we do not retain any credit card information. We use
 <a href="https://stripe.com/">Stripe</a> to process payments.</p>
 <h3 id="when-will-my-credit-card-be-charged">When will my credit card be charged?<a class="headerlink" href="#when-will-my-credit-card-be-charged" title="Permanent link">&para;</a></h3>
-<p>You can see your billing due date in the <code class="codehilite">Usage</code> tab on your Floydhub dashboard.</p>
+<p>You can see your billing due date in the <a href="https://dev.floydhub.com/settings/billing/">Usage</a> tab on your Floydhub settings.</p>
+<h3 id="what-will-i-be-charged-for">What will I be charged for?<a class="headerlink" href="#what-will-i-be-charged-for" title="Permanent link">&para;</a></h3>
+<p>You are charged for your compute (CPU/GPU) usage and storage.</p>
+<ul>
+<li>
+<p><strong>Compute</strong>: You will be charged exactly for the duration that your job runs, rounded off to the nearest second. You will be charged our <a href="https://www.floydhub.com/pricing">current rates</a> for CPU or GPU, depending on the compute instance your job runs in.</p>
+<p>Note that you are only charged for compute when your job is in the <em>Running</em> state. You will <em>not</em> be charged when your job is in any other state, including <em>Queued</em> and <em>Shutdown</em>.</p>
+</li>
+<li>
+<p><strong>Storage</strong>: You will also be charged for the storage you consume, rounded off to the nearest kB. You will be charged for the duration of your storage per our <a href="https://www.floydhub.com/pricing">current rates</a>.</p>
+<p>Storage is consumed by the datasets that you upload, your code and the data that your jobs output.</p>
+</li>
+</ul>
 <hr />
 <h2 id="help-make-this-document-better">Help make this document better<a class="headerlink" href="#help-make-this-document-better" title="Permanent link">&para;</a></h2>
 <p>This guide, as well as the rest of our docs, are open-source and available on 
