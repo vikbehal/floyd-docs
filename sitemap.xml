@@ -68,6 +68,12 @@
     </url>
         
     <url>
+     <loc>https://www.floydhub.com/examples/cyclegan/</loc>
+     <lastmod>2017-08-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>https://www.floydhub.com/examples/deep_corrector/</loc>
      <lastmod>2017-08-07</lastmod>
      <changefreq>daily</changefreq>
