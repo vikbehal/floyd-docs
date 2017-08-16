@@ -706,6 +706,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#why-are-my-logs-not-displayed-in-real-time" title="Why are my logs not displayed in real-time?" class="md-nav__link">
+    Why are my logs not displayed in real-time?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#why-did-my-job-timeout-after-1-hour" title="Why did my job timeout after 1 hour?" class="md-nav__link">
     Why did my job timeout after 1 hour?
   </a>
@@ -1126,6 +1133,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#why-are-my-logs-not-displayed-in-real-time" title="Why are my logs not displayed in real-time?" class="md-nav__link">
+    Why are my logs not displayed in real-time?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#why-did-my-job-timeout-after-1-hour" title="Why did my job timeout after 1 hour?" class="md-nav__link">
     Why did my job timeout after 1 hour?
   </a>
@@ -1258,6 +1272,15 @@ $ floyd run --mode jupyter
 <p><img alt="1HourTimeout" src="../../img/SettingUpInstance.jpg" /></p>
 <p>When you execute a <code class="codehilite">floyd run --mode jupyter</code> command, the CLI waits for a CPU or GPU machine to be ready before it opens up an interactive Jupyter Notebook for your work on. Usually, this takes a few seconds, but during high traffic periods it can take up to 10 minutes in some cases.</p>
 <p>For more details on why it takes time, please see <a href="#why-is-my-job-in-the-queued-state-for-several-minutes">Why is my job in the "Queued" state for several minutes?</a></p>
+<h3 id="why-are-my-logs-not-displayed-in-real-time">Why are my logs not displayed in real-time?<a class="headerlink" href="#why-are-my-logs-not-displayed-in-real-time" title="Permanent link">&para;</a></h3>
+<p>You can stream your logs from the CLI using the <code class="codehilite">floyd logs -t &lt;JOB_NAME&gt;</code> command. However, sometimes you may notice that the logs are not displayed in real-time. This is because of output buffering. Please make sure that your logs are flushed out if you prefer to view real-time logs.</p>
+<p>For example, in Python:</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="o">...</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+</pre></div>
+
 <h3 id="why-did-my-job-timeout-after-1-hour">Why did my job timeout after 1 hour?<a class="headerlink" href="#why-did-my-job-timeout-after-1-hour" title="Permanent link">&para;</a></h3>
 <p>You are likely in the Free Trial Plan. Jobs run in the trial plan have a maximum runtime of 1 hour. It will automatically timeout after that. </p>
 <p><img alt="1HourTimeout" src="../../img/1HrTimeout.jpg" /></p>
