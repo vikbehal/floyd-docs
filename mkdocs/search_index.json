@@ -792,38 +792,193 @@
         },
         {
             "location": "/faqs/plans/",
-            "text": "What is in the Trial Plan?\n\u00b6\n\n\nFloydHub offers a Trial Plan for users to try out the platform. This plan includes 2 hours of free GPU compute credits (or 20 hours of CPU compute). Please refer to our \nQuick Start Guide\n or \nJupyter Notebook Guide\n to try Floyd out!\n\n\nThe free plan comes with the follow limits:\n\n\n\n\n1 concurrent job: This means that you can only run one job at a time\n\n\n1 hour job timeout: The maximum runtime of a job on the Trial Plan is 1 hour. It will automatically timeout after that\n\n\n\n\nYou can upgrade to the \nPaid Plan\n to overcome these limits.\n\n\nWhy did I not get 100 free GPU hours when I signed up?\n\u00b6\n\n\nWe offered 100 hours of free GPU for all users during our promotional period. This has ended. \n\n\nIn our current Trial Plan, all users get 2 hours of free GPU or 20 hours of CPU compute time for running your projects. We hope this will give you enough time to evaluate Floydhub for your needs. We are working on a new free plan right now to better help new users explore the platform.\n\n\nIs there a student discount?\n\u00b6\n\n\nNot at the moment, but we are currently working out a Student Plan. We will\npost the details very soon :)\n\n\nPayment processing failed. Whay am I unable to add my payment method?\n\u00b6\n\n\nWhen you upgrade from the Trial plan to a Paid plan, you will be prompted to enter your payment information. When you enter your details, you may received a \"Error: Payment processing failed\" error notification.\n\n\n\n\nSome common causes are:\n\n\n\n\nCredit and Debit cards only\n: We currently accept only Visa and Mastercard credit and debit cards. Since our billing is based on usage and is recurring, we do not accept prepaid cards. Please ensure you are using a valid credit or debit card.\n\n\nBalance\n: We issue a small $0-1 transaction on your card as a pending authorization request between our billing system and the bank that issued your credit or debit card. If this authorization fails, you won't be able to add your card. Please ensure you have enough balance and are using a valid card. \nNote\n: This is an authorization request only, not an actual charge.\n\n\nFraud Detection\n: We use Stripe for managing all our payments. They have their own fraud detection algorithm which can decline some cards. Please try a different payment method.\n\n\n\n\nIf you are still unable to add your payment, please contact us directly at \nsupport@floydhub.com\n.",
+            "text": "Please see here for \nBilling FAQs\n\n\nPlans\n\u00b6\n\n\nWhich Plan is right for me?\n\u00b6\n\n\nFree Plan\n\u00b6\n\n\nIf you're just exploring, the Free plan is for you! You are automatically enrolled in the Free plan when you sign up on FloydHub. It includes \n20 hours of free CPU every month. You cannot, however, use a GPU or run multiple jobs \nin parallel.\n\n\nData Scientist Plan\n\u00b6\n\n\nOur Data Scientist plans offer varying levels of \njob concurrency\n, GPU computing hours \nand storage. You can also purchase \nPowerups\n to add more compute hours to supplement your plan.\n\n\nData Scientist Base Plan\n: If you are getting started with deep learning and primarily use Jupyter Notebooks, the Base plan should work well for you. You can run 2 concurrent jobs on GPU and get 100 GB of storage included in the plan. \n\n\nData Scientist Plus and Pro Plans\n: If you are a more advanced user, you may need more job concurrency to run multiple parallel experiments and more storage for your data. The Plus and Pro plans will serve you better. \n\n\nPlease see the \nfeature comparison table\n for a full list of features.\n\n\nWhat is in the Trial plan?\n\u00b6\n\n\nAll users that sign up on FloydHub are automatically enrolled in the Free plan. Additionally, we offer 2 hours of free GPU credits to try out FloydHub. The GPU credits expire in 14 days, but you will be able to use all the features of the Free plan forever.\n\n\nTake FloydHub for a pin with our \nQuick Start Guide\n or \nJupyter Notebook Guide\n!\n\n\nWhat is included in the Free plan?\n\u00b6\n\n\nThe free plan comes with the following:\n\n\n\n\n20 hours of CPU compute / month\n\n\n10 GB free storage\n\n\nUnlimited public projects and datasets\n\n\nConcurrent jobs: You can only run one job at a time\n\n\n6 hour job timeout: The maximum runtime of a job on the Trial Plan is 6 hours. It will automatically timeout after that\n\n\n\n\nYou can upgrade to one of the \nData Scientist Plan\n to overcome these limits.\n\n\nDo the plans come with preemptible or dedicated instances?\n\u00b6\n\n\nThe GPU and CPU compute hours included in your plan (Free or Data Scientist) are \n\npreemptible instances\n. This means that there is a small chance that your job will be terminated without notice. In practice, this happens infrequently and this is perfect for most users. If you need \ndedicated instances\n for your jobs, you \ncan buy the GPU+ or CPU+ Powerups.\n\n\nWhat happened to the old Pay-as-you-go Individual Plan?\n\u00b6\n\n\nWe are transitioning from the Individual Plan, which offered a pay-as-you-go payment method, to our current pricing plan. The Individual Plan is no longer available for new users. \n\n\nI am in the Pay-as-you-go Individual Plan. What will happen to me?\n\u00b6\n\n\nIf you signed up for the Individual Plan before August 20\nth\n 2017, you will be grandfathered till October 1\nst\n 2017. After this, you will be automatically enrolled in the Free plan. Please note that any remaining promotional credits will also expire on this date.\n\n\nPlease \nupgrade\n to one of the Data Scientist plans to continue using FloydHub without interruption. We will also be reaching out to you with more information about this transition.\n\n\nWhy did I not get 100 free GPU hours when I signed up?\n\u00b6\n\n\nWe offered 100 hours of free GPU for all users during our promotional period. This has ended.\n\n\nWill my free credits expire?\n\u00b6\n\n\nThe current Trial plan includes 2 hours of free GPU credits. These will expire 14 days from the day you sign up. After 14 days, you will be transitioned to our Free plan.\n\n\nAre there any academic discounts for students?\n\u00b6\n\n\nWe don't have discounts. However, a lot of students create content for us. If you are willing to contribute high quality content to FLoydHub, we will give you \nfree GPU credits\n in exchange! \n\n\nContent we are looking for: \n\n\n\n\nTechnical blogs on deep learning and AI\n\n\nFloydHub tutorials, text or video\n\n\nPort popular deep learning projects to FloydHub\n\n\nCreate interesting datasets\n\n\n<Insert your own idea here>\n\n\n\n\nIf this is interesting to you, please let us know about it \nhere\n.\n\n\nCompute\n\u00b6\n\n\nWhat is job concurrency?\n\u00b6\n\n\nJob concurrency is the number of jobs you can run in parallel. Each plan has a limit \non the number of concurrent jobs you can run. For example, in the Free plan, \nyou can only run 1 job at a time. In the Data Scientist Pro plan, you can run up \nto 8 jobs in parallel.\n\n\nHaving a higher concurrency is useful when you want to parallelize your training, for \nexample while hyperparameter sweeping.\n\n\nWhat will happen to my running job when I run out of computing credits?\n\u00b6\n\n\nYou job will be shutdown immediately when you run out of computing credits. \n\n\nIf you run long-running jobs and expect them to exceed the computing hours offered by your plan, you can purchase \nPowerups\n.\n\n\nYou can also enable auto-refresh on your Powerups to ensure your long-running jobs are never killed because you ran out of computing hours. We'll automatically refresh your selected Powerup so that your job can continue running.\n\n\nPreemptible Instances\n\u00b6\n\n\nPreemptible instances have medium job uptime SLA of 98%. This means that there is a small chance that your job can be terminated (preempted) at any point during its runtime by FloydHub if it requires access to those resources for other, higher priority tasks. \n\n\nPreemptible instances (CPU / GPU) offer top notch compute at affordable prices, in exchange for fault tolerance.\n\n\nNote that SLA refers to what we can guarantee. In practice, this happens infrequently. Historically, less than 0.1% of jobs run on FloydHub have encountered interruption. However, you need to be aware that there is the possibility.\n\n\nDedicated Instances\n\u00b6\n\n\nDedicated instances have high job uptime SLA of 99.95%. Use dedicated instances for your jobs if they are critical or not fault tolerant. You can purchase '+' \nPowerups\n (CPU+ / GPU+) to utilize dedicated instances.\n\n\nWhy do you use preemptible instances?\n\u00b6\n\n\nTo be able to offer you compute at a much lower cost.\n\n\nWe have a fixed pool of resources that we have to allocate amongst all our users. Some of our users require dedicated instances and are willing to pay the premium for uninterrupted access. But, the majority of our users can tolerate a 98% job uptime SLA for the significant price savings that preemptible instances offer.\n\n\nShould I use Dedicated instances?\n\u00b6\n\n\nIf your job is not fault tolerant and cannot withstand a small (<2%) chance \nof your job being shutdown without notice, you should use our \n\"+\"\n Dedicated instances. \nPrice sensitivity also plays a factor - dedicated instances are more expensive than \npremptible instances.\n\n\nGiven that deep learning models typically train over long periods of time, it \nis good practice to build your application to be fault tolerant by regularly checkpointing your training.\n\n\nWhat is the difference between GPU vs. GPU+ and CPU vs. CPU+?\n\u00b6\n\n\nGPU and CPU are preemptible instances. GPU+ and CPU+ are dedicated instances.\n\n\nWhat is the SLA of Preemptible instances and Dedicated instances?\n\u00b6\n\n\nPreemptible instances have 98% job up time SLA. Dedicated instances have 99.95% job up time SLA.\n\n\nWill I get a refund if my job is preempted?\n\u00b6\n\n\nNo. \n\n\nOur preemptible instances have a 98% job uptime SLA. By using them, you are accepting a small chance \nof your job being terminated without notice, in exchange for paying a much lower price than dedicated instances.\n\n\nPowerups\n\u00b6\n\n\nWhat are Powerups?\n\u00b6\n\n\nYour subscription plan comes with a monthly quota of CPU and GPU computing hours. \nIf you need more computing hours, you can buy Powerups to supplement your plan.\n\n\nWhat Powerups should I buy?\n\u00b6\n\n\nThis depends on your computing needs. We offer multiple tiers of Powerups:\n\n\n\n\nPreemptible vs. Dedicated\n: CPU / GPU are affordable \npreemptible instances\n, CPU+ / GPU+ are high-reliability \ndedicated instances\n.\n\n\n10 vs. 50 vs. 100 hours\n: Purchase a pack that suits your computing needs. Note that the larger packs offer compute at a much cheaper rate/hour than smaller packs.\n\n\nAuto-refresh\n: You can enable auto-refresh on any pack.\n\n\n\n\nIf you are \njust starting out\n and need more computing hours than your plan offers, you can start with the \nGPU10 Powerup\n. \n\n\nIf you run \nlong-running jobs\n, you should purchase the \nGPU100 with auto-refresh enabled\n, to ensure that you never run out of computing credits.\n\n\nIf you run \ncritical jobs\n that are not fault-tolerant, you should purchase the \nGPU+ Powerup\n.\n\n\nHow can I buy Powerups?\n\u00b6\n\n\nYou can purchase them from your \nPowerups Dashboard\n\n\nCan I buy a Powerup if I am in the Free Plan?\n\u00b6\n\n\nNo. You have to be enrolled in one of the Data Scientist plans to be eligible for \npurchasing Powerups.\n\n\nDo Powerups expire?\n\u00b6\n\n\nYes. Powerups are valid for 1 year from the date of purchase.\n\n\nWhy would I enable auto-refresh?\n\u00b6\n\n\nAuto-refresh ensures your long-running jobs are never killed because you \nran out of computing hours\n. We'll automatically refresh your selected Powerup so that your Job can continue running.\n\n\nStorage\n\u00b6\n\n\nHow much storage do I get?\n\u00b6\n\n\nEach plan comes with its own storage limit. For example, the Free plan has \n10GB storage, while the Data Scientist Pro plan has 400GB. Please see the \n\nfeature comparison table\n for details.\n\n\nWhat counts against my storage?\n\u00b6\n\n\nStorage is consumed by the datasets that you upload, your code and the data that your jobs output.\n\n\nNote that you are only responsible for the data that you own. For example, if you use a public dataset in your job, you won't be charged for it.\n\n\nCan I buy more storage than my plan offers?\n\u00b6\n\n\nThe Data Scientist Pro plan includes 400GB of storage. If this doesn't fit your needs, \nplease contact us at \nsupport@floydhub.com\n.\n\n\nWe will soon have a storage Powerup that can you buy to add more storage to your base plan. \n\n\n\n\nHelp make this document better\n\u00b6\n\n\nThis guide, as well as the rest of our docs, are open-source and available on \n\nGitHub\n. We welcome your contributions.\n\n\n\n\nSuggest an edit to this page (by clicking the edit icon at the top next to the title).\n\n\nOpen an issue about this page\n to report a problem.",
             "title": "Plans FAQs"
         },
         {
+            "location": "/faqs/plans/#plans",
+            "text": "",
+            "title": "Plans"
+        },
+        {
+            "location": "/faqs/plans/#which-plan-is-right-for-me",
+            "text": "",
+            "title": "Which Plan is right for me?"
+        },
+        {
+            "location": "/faqs/plans/#free-plan",
+            "text": "If you're just exploring, the Free plan is for you! You are automatically enrolled in the Free plan when you sign up on FloydHub. It includes \n20 hours of free CPU every month. You cannot, however, use a GPU or run multiple jobs \nin parallel.",
+            "title": "Free Plan"
+        },
+        {
+            "location": "/faqs/plans/#data-scientist-plan",
+            "text": "Our Data Scientist plans offer varying levels of  job concurrency , GPU computing hours \nand storage. You can also purchase  Powerups  to add more compute hours to supplement your plan.  Data Scientist Base Plan : If you are getting started with deep learning and primarily use Jupyter Notebooks, the Base plan should work well for you. You can run 2 concurrent jobs on GPU and get 100 GB of storage included in the plan.   Data Scientist Plus and Pro Plans : If you are a more advanced user, you may need more job concurrency to run multiple parallel experiments and more storage for your data. The Plus and Pro plans will serve you better.   Please see the  feature comparison table  for a full list of features.",
+            "title": "Data Scientist Plan"
+        },
+        {
             "location": "/faqs/plans/#what-is-in-the-trial-plan",
-            "text": "FloydHub offers a Trial Plan for users to try out the platform. This plan includes 2 hours of free GPU compute credits (or 20 hours of CPU compute). Please refer to our  Quick Start Guide  or  Jupyter Notebook Guide  to try Floyd out!  The free plan comes with the follow limits:   1 concurrent job: This means that you can only run one job at a time  1 hour job timeout: The maximum runtime of a job on the Trial Plan is 1 hour. It will automatically timeout after that   You can upgrade to the  Paid Plan  to overcome these limits.",
-            "title": "What is in the Trial Plan?"
+            "text": "All users that sign up on FloydHub are automatically enrolled in the Free plan. Additionally, we offer 2 hours of free GPU credits to try out FloydHub. The GPU credits expire in 14 days, but you will be able to use all the features of the Free plan forever.  Take FloydHub for a pin with our  Quick Start Guide  or  Jupyter Notebook Guide !",
+            "title": "What is in the Trial plan?"
+        },
+        {
+            "location": "/faqs/plans/#what-is-included-in-the-free-plan",
+            "text": "The free plan comes with the following:   20 hours of CPU compute / month  10 GB free storage  Unlimited public projects and datasets  Concurrent jobs: You can only run one job at a time  6 hour job timeout: The maximum runtime of a job on the Trial Plan is 6 hours. It will automatically timeout after that   You can upgrade to one of the  Data Scientist Plan  to overcome these limits.",
+            "title": "What is included in the Free plan?"
+        },
+        {
+            "location": "/faqs/plans/#do-the-plans-come-with-preemptible-or-dedicated-instances",
+            "text": "The GPU and CPU compute hours included in your plan (Free or Data Scientist) are  preemptible instances . This means that there is a small chance that your job will be terminated without notice. In practice, this happens infrequently and this is perfect for most users. If you need  dedicated instances  for your jobs, you \ncan buy the GPU+ or CPU+ Powerups.",
+            "title": "Do the plans come with preemptible or dedicated instances?"
+        },
+        {
+            "location": "/faqs/plans/#what-happened-to-the-old-pay-as-you-go-individual-plan",
+            "text": "We are transitioning from the Individual Plan, which offered a pay-as-you-go payment method, to our current pricing plan. The Individual Plan is no longer available for new users.",
+            "title": "What happened to the old Pay-as-you-go Individual Plan?"
+        },
+        {
+            "location": "/faqs/plans/#i-am-in-the-pay-as-you-go-individual-plan-what-will-happen-to-me",
+            "text": "If you signed up for the Individual Plan before August 20 th  2017, you will be grandfathered till October 1 st  2017. After this, you will be automatically enrolled in the Free plan. Please note that any remaining promotional credits will also expire on this date.  Please  upgrade  to one of the Data Scientist plans to continue using FloydHub without interruption. We will also be reaching out to you with more information about this transition.",
+            "title": "I am in the Pay-as-you-go Individual Plan. What will happen to me?"
         },
         {
             "location": "/faqs/plans/#why-did-i-not-get-100-free-gpu-hours-when-i-signed-up",
-            "text": "We offered 100 hours of free GPU for all users during our promotional period. This has ended.   In our current Trial Plan, all users get 2 hours of free GPU or 20 hours of CPU compute time for running your projects. We hope this will give you enough time to evaluate Floydhub for your needs. We are working on a new free plan right now to better help new users explore the platform.",
+            "text": "We offered 100 hours of free GPU for all users during our promotional period. This has ended.",
             "title": "Why did I not get 100 free GPU hours when I signed up?"
         },
         {
-            "location": "/faqs/plans/#is-there-a-student-discount",
-            "text": "Not at the moment, but we are currently working out a Student Plan. We will\npost the details very soon :)",
-            "title": "Is there a student discount?"
+            "location": "/faqs/plans/#will-my-free-credits-expire",
+            "text": "The current Trial plan includes 2 hours of free GPU credits. These will expire 14 days from the day you sign up. After 14 days, you will be transitioned to our Free plan.",
+            "title": "Will my free credits expire?"
         },
         {
-            "location": "/faqs/plans/#payment-processing-failed-whay-am-i-unable-to-add-my-payment-method",
-            "text": "When you upgrade from the Trial plan to a Paid plan, you will be prompted to enter your payment information. When you enter your details, you may received a \"Error: Payment processing failed\" error notification.   Some common causes are:   Credit and Debit cards only : We currently accept only Visa and Mastercard credit and debit cards. Since our billing is based on usage and is recurring, we do not accept prepaid cards. Please ensure you are using a valid credit or debit card.  Balance : We issue a small $0-1 transaction on your card as a pending authorization request between our billing system and the bank that issued your credit or debit card. If this authorization fails, you won't be able to add your card. Please ensure you have enough balance and are using a valid card.  Note : This is an authorization request only, not an actual charge.  Fraud Detection : We use Stripe for managing all our payments. They have their own fraud detection algorithm which can decline some cards. Please try a different payment method.   If you are still unable to add your payment, please contact us directly at  support@floydhub.com .",
-            "title": "Payment processing failed. Whay am I unable to add my payment method?"
+            "location": "/faqs/plans/#are-there-any-academic-discounts-for-students",
+            "text": "We don't have discounts. However, a lot of students create content for us. If you are willing to contribute high quality content to FLoydHub, we will give you  free GPU credits  in exchange!   Content we are looking for:    Technical blogs on deep learning and AI  FloydHub tutorials, text or video  Port popular deep learning projects to FloydHub  Create interesting datasets  <Insert your own idea here>   If this is interesting to you, please let us know about it  here .",
+            "title": "Are there any academic discounts for students?"
+        },
+        {
+            "location": "/faqs/plans/#compute",
+            "text": "",
+            "title": "Compute"
+        },
+        {
+            "location": "/faqs/plans/#what-is-job-concurrency",
+            "text": "Job concurrency is the number of jobs you can run in parallel. Each plan has a limit \non the number of concurrent jobs you can run. For example, in the Free plan, \nyou can only run 1 job at a time. In the Data Scientist Pro plan, you can run up \nto 8 jobs in parallel.  Having a higher concurrency is useful when you want to parallelize your training, for \nexample while hyperparameter sweeping.",
+            "title": "What is job concurrency?"
+        },
+        {
+            "location": "/faqs/plans/#what-will-happen-to-my-running-job-when-i-run-out-of-computing-credits",
+            "text": "You job will be shutdown immediately when you run out of computing credits.   If you run long-running jobs and expect them to exceed the computing hours offered by your plan, you can purchase  Powerups .  You can also enable auto-refresh on your Powerups to ensure your long-running jobs are never killed because you ran out of computing hours. We'll automatically refresh your selected Powerup so that your job can continue running.",
+            "title": "What will happen to my running job when I run out of computing credits?"
+        },
+        {
+            "location": "/faqs/plans/#preemptible-instances",
+            "text": "Preemptible instances have medium job uptime SLA of 98%. This means that there is a small chance that your job can be terminated (preempted) at any point during its runtime by FloydHub if it requires access to those resources for other, higher priority tasks.   Preemptible instances (CPU / GPU) offer top notch compute at affordable prices, in exchange for fault tolerance.  Note that SLA refers to what we can guarantee. In practice, this happens infrequently. Historically, less than 0.1% of jobs run on FloydHub have encountered interruption. However, you need to be aware that there is the possibility.",
+            "title": "Preemptible Instances"
+        },
+        {
+            "location": "/faqs/plans/#dedicated-instances",
+            "text": "Dedicated instances have high job uptime SLA of 99.95%. Use dedicated instances for your jobs if they are critical or not fault tolerant. You can purchase '+'  Powerups  (CPU+ / GPU+) to utilize dedicated instances.",
+            "title": "Dedicated Instances"
+        },
+        {
+            "location": "/faqs/plans/#why-do-you-use-preemptible-instances",
+            "text": "To be able to offer you compute at a much lower cost.  We have a fixed pool of resources that we have to allocate amongst all our users. Some of our users require dedicated instances and are willing to pay the premium for uninterrupted access. But, the majority of our users can tolerate a 98% job uptime SLA for the significant price savings that preemptible instances offer.",
+            "title": "Why do you use preemptible instances?"
+        },
+        {
+            "location": "/faqs/plans/#should-i-use-dedicated-instances",
+            "text": "If your job is not fault tolerant and cannot withstand a small (<2%) chance \nof your job being shutdown without notice, you should use our  \"+\"  Dedicated instances. \nPrice sensitivity also plays a factor - dedicated instances are more expensive than \npremptible instances.  Given that deep learning models typically train over long periods of time, it \nis good practice to build your application to be fault tolerant by regularly checkpointing your training.",
+            "title": "Should I use Dedicated instances?"
+        },
+        {
+            "location": "/faqs/plans/#what-is-the-difference-between-gpu-vs-gpu-and-cpu-vs-cpu",
+            "text": "GPU and CPU are preemptible instances. GPU+ and CPU+ are dedicated instances.",
+            "title": "What is the difference between GPU vs. GPU+ and CPU vs. CPU+?"
+        },
+        {
+            "location": "/faqs/plans/#what-is-the-sla-of-preemptible-instances-and-dedicated-instances",
+            "text": "Preemptible instances have 98% job up time SLA. Dedicated instances have 99.95% job up time SLA.",
+            "title": "What is the SLA of Preemptible instances and Dedicated instances?"
+        },
+        {
+            "location": "/faqs/plans/#will-i-get-a-refund-if-my-job-is-preempted",
+            "text": "No.   Our preemptible instances have a 98% job uptime SLA. By using them, you are accepting a small chance \nof your job being terminated without notice, in exchange for paying a much lower price than dedicated instances.",
+            "title": "Will I get a refund if my job is preempted?"
+        },
+        {
+            "location": "/faqs/plans/#powerups",
+            "text": "",
+            "title": "Powerups"
+        },
+        {
+            "location": "/faqs/plans/#what-are-powerups",
+            "text": "Your subscription plan comes with a monthly quota of CPU and GPU computing hours. \nIf you need more computing hours, you can buy Powerups to supplement your plan.",
+            "title": "What are Powerups?"
+        },
+        {
+            "location": "/faqs/plans/#what-powerups-should-i-buy",
+            "text": "This depends on your computing needs. We offer multiple tiers of Powerups:   Preemptible vs. Dedicated : CPU / GPU are affordable  preemptible instances , CPU+ / GPU+ are high-reliability  dedicated instances .  10 vs. 50 vs. 100 hours : Purchase a pack that suits your computing needs. Note that the larger packs offer compute at a much cheaper rate/hour than smaller packs.  Auto-refresh : You can enable auto-refresh on any pack.   If you are  just starting out  and need more computing hours than your plan offers, you can start with the  GPU10 Powerup .   If you run  long-running jobs , you should purchase the  GPU100 with auto-refresh enabled , to ensure that you never run out of computing credits.  If you run  critical jobs  that are not fault-tolerant, you should purchase the  GPU+ Powerup .",
+            "title": "What Powerups should I buy?"
+        },
+        {
+            "location": "/faqs/plans/#how-can-i-buy-powerups",
+            "text": "You can purchase them from your  Powerups Dashboard",
+            "title": "How can I buy Powerups?"
+        },
+        {
+            "location": "/faqs/plans/#can-i-buy-a-powerup-if-i-am-in-the-free-plan",
+            "text": "No. You have to be enrolled in one of the Data Scientist plans to be eligible for \npurchasing Powerups.",
+            "title": "Can I buy a Powerup if I am in the Free Plan?"
+        },
+        {
+            "location": "/faqs/plans/#do-powerups-expire",
+            "text": "Yes. Powerups are valid for 1 year from the date of purchase.",
+            "title": "Do Powerups expire?"
+        },
+        {
+            "location": "/faqs/plans/#why-would-i-enable-auto-refresh",
+            "text": "Auto-refresh ensures your long-running jobs are never killed because you  ran out of computing hours . We'll automatically refresh your selected Powerup so that your Job can continue running.",
+            "title": "Why would I enable auto-refresh?"
+        },
+        {
+            "location": "/faqs/plans/#storage",
+            "text": "",
+            "title": "Storage"
+        },
+        {
+            "location": "/faqs/plans/#how-much-storage-do-i-get",
+            "text": "Each plan comes with its own storage limit. For example, the Free plan has \n10GB storage, while the Data Scientist Pro plan has 400GB. Please see the  feature comparison table  for details.",
+            "title": "How much storage do I get?"
+        },
+        {
+            "location": "/faqs/plans/#what-counts-against-my-storage",
+            "text": "Storage is consumed by the datasets that you upload, your code and the data that your jobs output.  Note that you are only responsible for the data that you own. For example, if you use a public dataset in your job, you won't be charged for it.",
+            "title": "What counts against my storage?"
+        },
+        {
+            "location": "/faqs/plans/#can-i-buy-more-storage-than-my-plan-offers",
+            "text": "The Data Scientist Pro plan includes 400GB of storage. If this doesn't fit your needs, \nplease contact us at  support@floydhub.com .  We will soon have a storage Powerup that can you buy to add more storage to your base plan.",
+            "title": "Can I buy more storage than my plan offers?"
+        },
+        {
+            "location": "/faqs/plans/#help-make-this-document-better",
+            "text": "This guide, as well as the rest of our docs, are open-source and available on  GitHub . We welcome your contributions.   Suggest an edit to this page (by clicking the edit icon at the top next to the title).  Open an issue about this page  to report a problem.",
+            "title": "Help make this document better"
         },
         {
             "location": "/faqs/billing/",
-            "text": "What payment types do you accept?\n\u00b6\n\n\nCurrently, we accept credit or debit cards, including Visa, MasterCard and American Express.\n\n\nDo you keep my credit card information?\n\u00b6\n\n\nNo, we do not retain any credit card information. We use\n\nStripe\n to process payments.\n\n\nWhen will my credit card be charged?\n\u00b6\n\n\nYou can see your billing due date in the \nUsage\n tab on your Floydhub settings.\n\n\nWhat will I be charged for?\n\u00b6\n\n\nYou are charged for your compute (CPU/GPU) usage and storage.\n\n\n\n\n\n\nCompute\n: You will be charged exactly for the duration that your job runs, rounded off to the nearest second. You will be charged our \ncurrent rates\n for CPU or GPU, depending on the compute instance your job runs in.\n\n\nNote that you are only charged for compute when your job is in the \nRunning\n state. You will \nnot\n be charged when your job is in any other state, including \nQueued\n and \nShutdown\n.\n\n\n\n\n\n\nStorage\n: You will also be charged for the storage you consume, rounded off to the nearest kB. You will be charged for the duration of your storage per our \ncurrent rates\n.\n\n\nStorage is consumed by the datasets that you upload, your code and the data that your jobs output.\n\n\n\n\n\n\n\n\nHelp make this document better\n\u00b6\n\n\nThis guide, as well as the rest of our docs, are open-source and available on \n\nGitHub\n. We welcome your contributions.\n\n\n\n\nSuggest an edit to this page (by clicking the edit icon at the top next to the title).\n\n\nOpen an issue about this page\n to report a problem.",
+            "text": "Please see here for \nPlan FAQs\n\n\nPayment Questions\n\u00b6\n\n\nWhat forms of payments do you accept?\n\u00b6\n\n\nWe accept Visa, MasterCard, American Express and Discover credit and debit cards. We do not accept prepaid cards at the moment. \n\n\nWe are a US based company. If you are outside the US, please ensure your card has \ninternational transactions enabled.\n\n\nDo you keep my credit card information?\n\u00b6\n\n\nNo, we do not retain any credit card information. We use\n\nStripe\n to process payments.\n\n\nPayment processing failed. Whay am I unable to add my payment method?\n\u00b6\n\n\nWhen you submit your payment details, you may received a \"Error: Payment processing failed\" error notification.\n\n\n\n\nSome common causes are:\n\n\n\n\nCredit and Debit cards only\n: We currently accept only Visa, Mastercard and AmEx credit and debit cards. We do not accept prepaid cards. Please ensure you are using a valid credit or debit card.\n\n\nBalance\n: We issue a small $0-1 transaction on your card as a pending authorization request between our billing system and the bank that issued your credit or debit card. If this authorization fails, you won't be able to add your card. Please ensure you have enough balance and are using a valid card. \nNote\n: This is an authorization request only, not an actual charge.\n\n\nFraud Detection\n: We use Stripe for managing all our payments. They have their own fraud detection algorithm which can decline some cards. Please try a different payment method.\n\n\nInternational Cards\n: We are a US based company. If you are outside the US please ensure your card has international transactions enabled.\n\n\n\n\nIf you are still unable to add your payment, please contact us directly at \nsupport@floydhub.com\n.\n\n\nBilling Questions\n\u00b6\n\n\nWhat am I billed for?\n\u00b6\n\n\nYour usage includes compute (CPU / GPU) usage and storage consumption. \n\n\n\n\n\n\nCompute\n: You will be billed exactly for the duration that your job runs, rounded off to the nearest second.\n\n\nNote that you are only charged for compute when your job is in the \nRunning\n state. You will \nnot\n be charged when your job is in any other state, including \nQueued\n and \nShutdown\n.\n\n\n\n\n\n\nStorage\n: You will also be charged for the storage you consume, rounded off to the nearest kB. \n\n\nStorage is consumed by the datasets that you upload, your code and the data that your jobs output.\n\n\n\n\n\n\nWhen will my card be charged?\n\u00b6\n\n\nFor subscription plans, your card will be charged every month on the day you upgraded to the plan. For example, if you upgraded from the Free to the Data Scientist Pro plan on the 22\nnd\n of August, you will be charged immediately. You will be then billed on the 22\nnd\n of every month.\n\n\nWhen you purchase Powerups, either directly from the \nPowerups Dashboard\n or via auto-refresh, you will be charged at the time of purchase.\n\n\nCan I upgrade or downgrade my plan?\n\u00b6\n\n\nYou can upgrade or downgrade your subscriptions at anytime from your \nPlans page\n under Settings on your dashboard.\n\n\nWhen you upgrade, you will be immediately elevated to the new plan. When you downgrade, your new plan will start at the end of your billing cycle (since you will have already paid for the month in advance).\n\n\nUpgrades and downgrades inside the Data Scientist plans do not affect any Powerups you \nmay have purchased.\n\n\nHow do upgrades work?\n\u00b6\n\n\nWhen you upgrade from the Free plan to a paid plan, you will be charged immediately. You will then be billed on the 1 month anniversary of your subscription date every month. For example, if you upgrade on August 20\nth\n, 2017, you will be charged on that day and on the 20\nth\n of every subsequent month.\n\n\nWhen you upgrade from one paid plan to another, you will be charged for your new plan on a pro-rated basis. Lets say your billing cycle is on the 20\nth\n of every month. If you upgrade from the Data Scientist Base to the Pro plan on the 5\nth\n, you will be charged for the new plan on a pro-rated basis (5\nth\n to 20\nth\n).\n\n\nHow do downgrades work?\n\u00b6\n\n\nYou can downgrade at any time to a lower or Free plan. \n\n\nIf you are over the usage limits for the plan you are downgrading to, you will have to handle that first. For example, if you are downgrading from the Data Scientist Pro to Base plan, but have 300GB data, you will have to delete some of your data before downgrading since the Base plan only offers 100 GB.\n\n\nIf you downgrade to the Free plan, you will no longer have access to any Powerups that you may have purchased.\n\n\nHow do I remove my credit card?\n\u00b6\n\n\nPlease downgrade to the Free plan. We will remove your credit card at the end of your billing cycle.\n\n\nDo you offer refunds?\n\u00b6\n\n\nNo, we do not offer refunds. If there are extenuating circumstances, please open a ticket by contacting our support team.\n\n\n\n\nHelp make this document better\n\u00b6\n\n\nThis guide, as well as the rest of our docs, are open-source and available on \n\nGitHub\n. We welcome your contributions.\n\n\n\n\nSuggest an edit to this page (by clicking the edit icon at the top next to the title).\n\n\nOpen an issue about this page\n to report a problem.",
             "title": "Billing FAQs"
         },
         {
-            "location": "/faqs/billing/#what-payment-types-do-you-accept",
-            "text": "Currently, we accept credit or debit cards, including Visa, MasterCard and American Express.",
-            "title": "What payment types do you accept?"
+            "location": "/faqs/billing/#payment-questions",
+            "text": "",
+            "title": "Payment Questions"
+        },
+        {
+            "location": "/faqs/billing/#what-forms-of-payments-do-you-accept",
+            "text": "We accept Visa, MasterCard, American Express and Discover credit and debit cards. We do not accept prepaid cards at the moment.   We are a US based company. If you are outside the US, please ensure your card has \ninternational transactions enabled.",
+            "title": "What forms of payments do you accept?"
         },
         {
             "location": "/faqs/billing/#do-you-keep-my-credit-card-information",
@@ -831,14 +986,49 @@
             "title": "Do you keep my credit card information?"
         },
         {
-            "location": "/faqs/billing/#when-will-my-credit-card-be-charged",
-            "text": "You can see your billing due date in the  Usage  tab on your Floydhub settings.",
-            "title": "When will my credit card be charged?"
+            "location": "/faqs/billing/#payment-processing-failed-whay-am-i-unable-to-add-my-payment-method",
+            "text": "When you submit your payment details, you may received a \"Error: Payment processing failed\" error notification.   Some common causes are:   Credit and Debit cards only : We currently accept only Visa, Mastercard and AmEx credit and debit cards. We do not accept prepaid cards. Please ensure you are using a valid credit or debit card.  Balance : We issue a small $0-1 transaction on your card as a pending authorization request between our billing system and the bank that issued your credit or debit card. If this authorization fails, you won't be able to add your card. Please ensure you have enough balance and are using a valid card.  Note : This is an authorization request only, not an actual charge.  Fraud Detection : We use Stripe for managing all our payments. They have their own fraud detection algorithm which can decline some cards. Please try a different payment method.  International Cards : We are a US based company. If you are outside the US please ensure your card has international transactions enabled.   If you are still unable to add your payment, please contact us directly at  support@floydhub.com .",
+            "title": "Payment processing failed. Whay am I unable to add my payment method?"
         },
         {
-            "location": "/faqs/billing/#what-will-i-be-charged-for",
-            "text": "You are charged for your compute (CPU/GPU) usage and storage.    Compute : You will be charged exactly for the duration that your job runs, rounded off to the nearest second. You will be charged our  current rates  for CPU or GPU, depending on the compute instance your job runs in.  Note that you are only charged for compute when your job is in the  Running  state. You will  not  be charged when your job is in any other state, including  Queued  and  Shutdown .    Storage : You will also be charged for the storage you consume, rounded off to the nearest kB. You will be charged for the duration of your storage per our  current rates .  Storage is consumed by the datasets that you upload, your code and the data that your jobs output.",
-            "title": "What will I be charged for?"
+            "location": "/faqs/billing/#billing-questions",
+            "text": "",
+            "title": "Billing Questions"
+        },
+        {
+            "location": "/faqs/billing/#what-am-i-billed-for",
+            "text": "Your usage includes compute (CPU / GPU) usage and storage consumption.     Compute : You will be billed exactly for the duration that your job runs, rounded off to the nearest second.  Note that you are only charged for compute when your job is in the  Running  state. You will  not  be charged when your job is in any other state, including  Queued  and  Shutdown .    Storage : You will also be charged for the storage you consume, rounded off to the nearest kB.   Storage is consumed by the datasets that you upload, your code and the data that your jobs output.",
+            "title": "What am I billed for?"
+        },
+        {
+            "location": "/faqs/billing/#when-will-my-card-be-charged",
+            "text": "For subscription plans, your card will be charged every month on the day you upgraded to the plan. For example, if you upgraded from the Free to the Data Scientist Pro plan on the 22 nd  of August, you will be charged immediately. You will be then billed on the 22 nd  of every month.  When you purchase Powerups, either directly from the  Powerups Dashboard  or via auto-refresh, you will be charged at the time of purchase.",
+            "title": "When will my card be charged?"
+        },
+        {
+            "location": "/faqs/billing/#can-i-upgrade-or-downgrade-my-plan",
+            "text": "You can upgrade or downgrade your subscriptions at anytime from your  Plans page  under Settings on your dashboard.  When you upgrade, you will be immediately elevated to the new plan. When you downgrade, your new plan will start at the end of your billing cycle (since you will have already paid for the month in advance).  Upgrades and downgrades inside the Data Scientist plans do not affect any Powerups you \nmay have purchased.",
+            "title": "Can I upgrade or downgrade my plan?"
+        },
+        {
+            "location": "/faqs/billing/#how-do-upgrades-work",
+            "text": "When you upgrade from the Free plan to a paid plan, you will be charged immediately. You will then be billed on the 1 month anniversary of your subscription date every month. For example, if you upgrade on August 20 th , 2017, you will be charged on that day and on the 20 th  of every subsequent month.  When you upgrade from one paid plan to another, you will be charged for your new plan on a pro-rated basis. Lets say your billing cycle is on the 20 th  of every month. If you upgrade from the Data Scientist Base to the Pro plan on the 5 th , you will be charged for the new plan on a pro-rated basis (5 th  to 20 th ).",
+            "title": "How do upgrades work?"
+        },
+        {
+            "location": "/faqs/billing/#how-do-downgrades-work",
+            "text": "You can downgrade at any time to a lower or Free plan.   If you are over the usage limits for the plan you are downgrading to, you will have to handle that first. For example, if you are downgrading from the Data Scientist Pro to Base plan, but have 300GB data, you will have to delete some of your data before downgrading since the Base plan only offers 100 GB.  If you downgrade to the Free plan, you will no longer have access to any Powerups that you may have purchased.",
+            "title": "How do downgrades work?"
+        },
+        {
+            "location": "/faqs/billing/#how-do-i-remove-my-credit-card",
+            "text": "Please downgrade to the Free plan. We will remove your credit card at the end of your billing cycle.",
+            "title": "How do I remove my credit card?"
+        },
+        {
+            "location": "/faqs/billing/#do-you-offer-refunds",
+            "text": "No, we do not offer refunds. If there are extenuating circumstances, please open a ticket by contacting our support team.",
+            "title": "Do you offer refunds?"
         },
         {
             "location": "/faqs/billing/#help-make-this-document-better",
