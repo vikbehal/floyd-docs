@@ -598,6 +598,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#using-conda-to-install-floyd-cli" title="Using conda to install floyd-cli" class="md-nav__link">
+    Using conda to install floyd-cli
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-sudo-to-install-floyd-cli" title="Using sudo to install floyd-cli" class="md-nav__link">
     Using sudo to install floyd-cli
   </a>
@@ -965,6 +972,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#using-conda-to-install-floyd-cli" title="Using conda to install floyd-cli" class="md-nav__link">
+    Using conda to install floyd-cli
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#using-sudo-to-install-floyd-cli" title="Using sudo to install floyd-cli" class="md-nav__link">
     Using sudo to install floyd-cli
   </a>
@@ -1028,6 +1042,14 @@
 </pre></div>
 
 <p>You are now ready to use the <a href="">floyd commands</a>. Note: You need to activate your virtualenv using the <code class="codehilite">source</code> command above each time you open a new terminal and want to use <code class="codehilite">floyd-cli</code> in it.</p>
+<h3 id="using-conda-to-install-floyd-cli">Using conda to install floyd-cli<a class="headerlink" href="#using-conda-to-install-floyd-cli" title="Permanent link">&para;</a></h3>
+<p>If you are using Anaconda Python, you can also use <code class="codehilite">conda</code> to install <code class="codehilite">floyd-cli</code>, instead of <code class="codehilite">virtualenv</code>. </p>
+<div class="codehilite"><pre><span></span>conda create -n &lt;insert-your-env-name-here&gt;
+<span class="nb">source</span> activate &lt;insert-your-env-name-here&gt;
+pip install -U floyd-cli
+</pre></div>
+
+<p>Please see <a href="https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/">this guide</a> on creating virtual environments for Python with conda.</p>
 <h3 id="using-sudo-to-install-floyd-cli">Using sudo to install floyd-cli<a class="headerlink" href="#using-sudo-to-install-floyd-cli" title="Permanent link">&para;</a></h3>
 <p>Try this if you see a permission error, such as <code class="codehilite">Permission denied</code> or <code class="codehilite">Access is denied</code>. If you are not using virtualenv and you are installing <code class="codehilite">floyd-cli</code> globally you may need to use <code class="codehilite">sudo</code>:</p>
 <div class="codehilite"><pre><span></span>sudo pip install -U floyd-cli
