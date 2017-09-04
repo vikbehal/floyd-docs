@@ -89,6 +89,7 @@ you need to install `python-dev` package
 ```bash
 sudo apt-get install python-dev
 ```
-
+If you get same error on windows environment:
+Please install either `python2-devel` or `python3-devel` by executing Cygwin's `setup-x86_64.exe` and selecting package depending upon python version. Once done, pls. re-open cygwin terminal
 
 {!contributing.md!}
